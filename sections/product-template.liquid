@@ -112,7 +112,7 @@
     <div class="grid__item {{ product_description_width }}">
       <div class="product-single__meta">
 
-        <h1 class="product-single__title">{{ product.title }}</h1>
+        <h1 class="product-single__title">{{ product.title }} {{ product.metafields.customAttributes.style-number }}</h1>
 
           <div class="product__price">
             {% include 'product-price', variant: current_variant %}
@@ -207,7 +207,7 @@
                      data-popup="button">
                 </div>
             <!-- / Autoinstall code -->
-        
+
             <!-- Autoinstall code -->
                 <div data-app="eastsideco_sizeGuides"
                      data-shop="{{ shop.permanent_domain }}"
@@ -216,7 +216,7 @@
                      data-popup="button">
                 </div>
             <!-- / Autoinstall code -->
-        
+
         </div>
 
         {% if section.settings.show_share_buttons %}
