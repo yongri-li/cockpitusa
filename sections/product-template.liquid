@@ -8,7 +8,7 @@
   <meta itemprop="image" content="{{ product.featured_image.src | img_url: '800x' }}">
 
   <div class="section-title desktop-12 mobile-3">
-    <h1>{{ product.title }}</h1>
+    <h1>{{ product.title }} {{ product.metafields.customAttributes.style-number }}</h1>
   </div>
   <div class="product-photos desktop-6 mobile-3" data-product-gallery>
     {%- if product.featured_image -%}
