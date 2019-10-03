@@ -1,35 +1,24 @@
-<ul class="list--inline pagination">
-  {% unless paginate.previous.is_link %}
-    <li aria-hidden="true">
-      <button class="btn btn--tertiary btn--narrow" disabled>
-        {% include 'icon-arrow-left' %}
-        <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span>
-      </button>
-    </li>
-    {% else %}
-    <li>
-      <a href="{{ paginate.previous.url }}" class="btn btn--tertiary btn--narrow">
-        {% include 'icon-arrow-left' %}
-        <span class="icon__fallback-text">{{ 'general.pagination.previous' | t }}</span>
-      </a>
-    </li>
-  {% endunless %}
-  <li class="pagination__text">
-    {{ 'general.pagination.current_page' | t: current: paginate.current_page, total: paginate.pages }}
-  </li>
-  {% unless paginate.next.is_link %}
-    <li aria-hidden="true">
-      <button class="btn btn--tertiary btn--narrow" disabled>
-        {% include 'icon-arrow-right' %}
-        <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span>
-      </button>
-    </li>
-  {% else %}
-    <li>
-      <a href="{{ paginate.next.url }}" class="btn btn--tertiary btn--narrow">
-        {% include 'icon-arrow-right' %}
-        <span class="icon__fallback-text">{{ 'general.pagination.next' | t }}</span>
-      </a>
-    </li>
-  {% endunless %}
-</ul>
+  <div id="pagination" class="desktop-12 mobile-3">
+    <span class="count">
+      {% if template != 'list-collections' %}
+      {{ 'general.pagination.showing_items' | t }}{% endif %} {{ paginate.current_offset | plus: 1 }}-{% if paginate.next %}{{ paginate.current_offset | plus: paginate.page_size }}{% else %}{{ paginate.items }}{% endif %} {{ 'general.pagination.of' | t }} {{ paginate.items }}.
+    </span>
+
+    {% if paginate.previous %}
+      {{ '<' | link_to: paginate.previous.url }}
+    {% endif %}
+    {% for part in paginate.parts %}
+      {% if part.is_link %}
+        {{ part.title | link_to: part.url }}
+      {% else %}
+        {% if part.title == '&hellip;' %}
+          {{ part.title }}
+        {% else %}
+          <span class="current">{{ part.title }}</span>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+    {% if paginate.next %}
+      {{ '>' | link_to: paginate.next.url }}
+    {% endif %}
+  </div>

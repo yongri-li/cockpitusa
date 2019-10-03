@@ -1,95 +1,127 @@
-{% paginate search.results by 10 %}
+{% paginate search.results by 24 %}
 
-<div class="page-width">
-  {% if search.performed == false %}
-    <div class="text-center">
-      <h1 class="h2">{{ 'general.search.title' | t }}</h1>
-  {% else %}
-    <div class="section-header text-center">
-      <h1 class="h2">
-        <span class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}:</span>
-        {{ 'general.search.results_with_count' | t: terms: search.terms, count: search.results_count }}
-      </h1>
-  {% endif %}
-      <div class="grid">
-        <div class="grid__item medium-up--two-fifths medium-up--push-three-tenths">
-          <form action="/search" method="get" role="search" class="search">
-            <div aria-live="polite" class="form-message form-message--error search-result-error-message hide" data-search-error-message>
-              <ul id="error-search-form">
-                <li>{{ 'general.search.empty_search_message' | t }}</li>
-              </ul>
-            </div>
+<div class="section-title desktop-12 mobile-3">
+  <h1>{{ 'general.search.title' | t }}</h1>
+</div>
 
-            <div class="input-group">
-              <input type="search"
-                id="SearchInput"
-                class="input-group__field search__input"
-                name="q"
-                value="{{ search.terms | escape }}"
-                placeholder="{{ 'general.search.placeholder' | t }}"
-                aria-label="{{ 'general.search.placeholder' | t }}"
-                >
-              <span class="input-group__btn">
-                <button id="SearchResultSubmit" class="btn search__submit" type="submit">{{ 'general.search.submit' | t }}</button>
-              </span>
-            </div>
-          </form>
-        </div>
-      </div>
+<div id="page" class="desktop-12 tablet-6 mobile-3">
 
-      {% if search.performed and search.results_count == 0 %}
-        <hr class="hr--small hr--invisible" aria-hidden="true" />
-        <div class="rte">
+  <div id="search-bar">
+    <form action="/search" method="get">
+      {% if search.performed %}
+        {% if search.results_count == 0 %}
           <p>{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
-        </div>
+        {% else %}
+          <p>{{ 'general.search.results_for_html' | t: terms: search.terms }}</p>
+        {% endif %}
       {% endif %}
+      <input type="text" name="q" id="q" placeholder="{{ 'general.search.placeholder' | t }}"/>
+    </form>
   </div>
 </div>
 
 
-{% if search.performed %}
-  {% if search.results_count > 0 %}
-    <hr aria-hidden="true" />
-  {% endif %}
-  <h2 class="visually-hidden">{{ 'general.search.heading' | t: count: search.results_count }}</h2>
-  <ul class="page-width list-view-items">
-    {% for item in search.results %}
-      <li class="list-view-item">
-          {% if item.object_type == 'product' %}
-            {% include 'product-card-list', product: item %}
-          {% else %}
-            <div class="product-card product-card--list">
-              <a href="{{ item.url }}" class="full-width-link">
-                <span class="visually-hidden">{{ item.title }}</span>
-              </a>
-              <div class="list-view-item__link">
-                {% if item.image %}
-                  <div class="list-view-item__image-column">
-                    <div class="list-view-item__image-wrapper product-card__image-wrapper">
-                      <img class="list-view-item__image" src="{{ item.image.src | img_url: '600x600' }}" alt="{{ item.image.alt | escape }}">
-                    </div>
-                  </div>
-                {% endif %}
 
-                <div class="list-view-item__title-column">
-                  <div class="list-view-item__title" aria-hidden="true">
-                    <span class="product-card__title">{{ item.title }}</span>
-                  </div>
-                  <div>
-                    {% if item.published_at %}{{ item.published_at | date: "%b %d, %Y" }} &#8212; {% endif %}
-                    {{ item.content | strip_html | truncate: 200 }}
-                  </div>
-                </div>
+
+
+{% if search.performed %}
+
+<div class="desktop-12 tablet-6 mobile-3" id="four-per-row">
+  <div id="product-loop">
+    {% for item in search.results %}
+      <div class="product {% if settings.products_per_row  == '3' %}desktop-4{% cycle ' first', '', ' last' %}{% elsif settings.products_per_row == '4' %}desktop-3{% cycle ' first', '', '', ' last' %}{% endif %} mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
+        <div class="collection-image ci">
+
+          {% if item.object_type == 'article' %}
+            <!--'item' is an article All article object properties can be accessed. -->
+            {% if item.image %}
+              <a href="{{ item.url }}" title="{{ item.title | escape }}">
+                {%- include 'basic-responsive-image', type: item.image  -%}
+                <noscript>
+                  <img src="{{ item.image | img_url: '800x' }}" alt="{{ item.image.alt }}">
+                </noscript>
+              </a>
+            {% else %}
+              <div class="search-content prod-image">
+                {{ item.content | strip_html | trancate: 200 }}
               </div>
+            {% endif %}
+          {% elsif item.object_type == 'page' %}
+            <!--'item' is a page. All page object properties can be accessed. -->
+
+            {% if item.content contains "img" %}
+              {% assign feat_image = item.content | split: 'src="' %}
+              {% assign feat_image = feat_image[1] | split: '"' | first | replace: '//cdn', 'http://cdn' | replace: 'http:http://', 'http://' | remove: 'https:'  %}
+              <a href="{{ item.url }}" title="{{ item.title | escape }}">
+                <img src="{{ feat_image }}" alt="{{ item.title }}">
+              </a>
+            {% else %}
+              <div class="search-content prod-image">
+                {{ item.content | strip_html | trancate: 200 }}
+              </div>
+            {% endif %}
+
+          {% else %}
+            <!-- 'item' is a product. All product object properties can be accessed.-->
+            {% if item.available %}
+              {% for col in item.collections %}
+                {% if col.handle == 'new' %}
+                  <div class="new icn">{{ 'products.general.new' | t }}</div>
+                {% endif %}
+              {% endfor %}
+              {% if item.price < item.compare_at_price %}
+                <div class="sale-item icn">{{ 'products.general.sale' | t }}</div>
+              {% endif %}
+
+            {% else %}
+              <div class="so icn">{{ 'products.general.sold' | t }}</div>
+            {% endif %}
+
+            <a href="{{ item.url }}" title="{{ item.title | escape }}">
+              {% include 'basic-responsive-image', type: item.featured_image %}
+              <noscript>
+                <img src="{{ item.featured_image | img_url: '800x' }}" alt="{{ item.featured_image.alt }}">
+              </noscript>
+            </a>
+          {% endif %}
+
+        </div>
+
+        <div class="product-details">
+          <a href="{{ item.url }}">
+            {% if item.object_type == 'product' %}
+              {% if settings.vendor %}
+                <h4>{{ item.vendor }}</h4>
+              {% endif %}
+            {% endif %}
+            <h3>{{ item.title }}</h3>
+          </a>
+          {% if item.object_type == 'product' %}
+            <div class="price">
+              {% if item.price < item.compare_at_price %}
+                <div class="onsale"><span class="money">{{ item.price | money }}</span></div>
+                <div class="was"><span class="money">{{ item.compare_at_price | money }}</span></div>
+              {% else %}
+                <div class="prod-price">
+                  {% if item.price_varies %}
+                    {{ 'products.general.from' | t }} <span class="money">{{ item.price_min | money }}</span> - <span class="money">{{ item.price_max | money }}</span>
+                  {% else %}
+                    <span class="money">{{ item.price | money }}</span>
+                  {% endif %}
+                </div>
+              {% endif %}
             </div>
           {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
+        </div>
 
-  {% if paginate.pages > 1 %}
-    {% include 'pagination' %}
-  {% endif %}
+
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% include 'pagination' %}
+
 {% endif %}
 
 {% endpaginate %}
