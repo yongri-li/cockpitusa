@@ -1,6 +1,6 @@
-<div class="single-article desktop-6 {% if template == 'index' %}tablet-3{% else %}tablet-6{% endif %} mobile-3">
+<div class="single-article desktop-12  {% if template == 'index' %}tablet-3{% else %}tablet-12{% endif %} mobile-3">
 
-  <h3>
+  <h3 style="text-align: left;">
     <a href="{{ article.url }}">
       {{ article.title }}
     </a>
@@ -35,7 +35,7 @@
       {% if article.excerpt != blank %}
         {{ article.excerpt }}
       {% else %}
-        {{ article.content | strip_html | truncatewords: 30 }}
+        {{ article.content | strip_html | truncatewords: 90 }}
       {% endif %}
     </div>
 

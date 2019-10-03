@@ -11,7 +11,6 @@
 
   <div id="content" class="row">
 
-
     <div class="section-title desktop-12 mobile-3">
       <h1>
         {% if current_tags %}
@@ -36,7 +35,7 @@
     {% paginate blog.articles by 50 %}
 
     {% if section.settings.blog_sidebar %}
-      <div id="blog-sidebar" class="desktop-2 tablet-2 mobile-3">
+      <div id="blog-sidebar" class="desktop-3 tablet-3 mobile-3">
 
       {% if section.settings.recent_posts %}
         <h4>{{ section.settings.recent_title }}</h4>
@@ -66,7 +65,7 @@
     </div>
     {% endif %}
 
-    <ul id="blog-articles" class="{% if section.settings.blog_sidebar %}desktop-8 {% else %}desktop-12 {% endif %}tablet-4 mobile-3">
+    <ul id="blog-articles" class="{% if section.settings.blog_sidebar %}desktop-9 {% else %}desktop-12 {% endif %}tablet-4 mobile-3">
       {% for article in blog.articles  %}
         {% include 'article-loop' %}
       {% endfor %}
