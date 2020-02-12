@@ -1700,7 +1700,7 @@
             "type": "text",
             "settings": {
               "title": "About",
-              "footer_text": "<p><a href=\"\/pages\/about-cockpit-usa\" title=\"Cockpit USA - We Aim to Preserve and Pass on Classic American Heritage\">About Cockpit USA&nbsp;<\/a><\/p>\n<p><a href=\"\/pages\/our-showroom-location\" title=\"Visit Our Showroom or the American Airpower Museum - Cockpit USA\">Visit Us<\/a><\/p>\n<p><a href=\"\/pages\/our-press\" title=\"Cockpit USA Press Page\">Our Press<\/a><\/p>\n<p><a href=\"\/pages\/style-guide\" title=\"Style guide\">Style Guide<\/a><\/p>\n<p><\/p>\n<p><\/p>"
+              "footer_text": "<p><a href=\"\/pages\/about-cockpit-usa\" title=\"Cockpit USA - We Aim to Preserve and Pass on Classic American Heritage\">About Cockpit USA&nbsp;<\/a><\/p>\n<p><a href=\"\/pages\/our-showroom-location\" title=\"Visit Our Showroom or the American Airpower Museum - Cockpit USA\">Visit Us<\/a><\/p>\n<p><a href=\"\/pages\/our-press\" title=\"Cockpit USA Press Page\">Our Press<\/a><\/p>\n<p><a href=\"\/pages\/style-guide\" title=\"Style guide\">Style Guide<\/a><\/p>\n<p><a href=\"https:\/\/issuu.com\/jeffclyman\/docs\/cockpitusa-catalog-2017-web?e=2618113\/56428410\" title=\"https:\/\/issuu.com\/jeffclyman\/docs\/cockpitusa-catalog-2017-web?e=2618113\/56428410\">Our Catalog<\/a><\/p>\n<p><\/p>"
             }
           },
           "1479846461263": {
@@ -1791,20 +1791,20 @@
         "type": "blog-template",
         "settings": {
           "image": "",
-          "text": "<p>Add some descriptive text to your all collections page.<\/p>",
+          "text": "",
           "blog_sidebar": true,
           "recent_posts": true,
           "recent_title": "Explore",
           "post_tags": true,
           "tags_title": "Categories",
-          "show_facebook_like": true,
+          "show_facebook_like": false,
           "facebook_title": "Connect"
         }
       },
       "1479856147659": {
         "type": "featured-blog",
         "settings": {
-          "blog": "history-3",
+          "blog": "d-day",
           "heading": "From Our Blog",
           "heading_color": "#000",
           "background_color": "#f6f6f6",
@@ -1873,7 +1873,7 @@
               "image": "shopify:\/\/shop_images\/G9A2135.jpg",
               "image_width": "33%",
               "link": "",
-              "heading": "Knightrider Trucker",
+              "heading": "Midnight Sheepskin Trucker",
               "heading_color": "#f7f7f7"
             }
           },
