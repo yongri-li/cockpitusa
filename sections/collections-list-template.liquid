@@ -33,6 +33,7 @@
       </div>
       <div class="clear"></div>
       {% for product in collection.products limit: 4 %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
       <div class="product-collection desktop-3{% cycle ' first', '', '', ' last' %} tablet-half mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
         {% include 'product-listing' %}
       </div>

@@ -27,11 +27,11 @@
         {%- endif -%}
         <div id="product-price">
           <span class="product-price" itemprop="price">
-            <span class="money">{{ price }}</span>
+            <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ price }}</span></span>
           </span>
           {% if current_variant.compare_at_price > current_variant.price %}
             <span class="was">
-              <span class="money">{{ compare_price }}</span>
+              <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ compare_price }}</span></span>
             </span>
           {% endif %}
         </div><div class="clear"></div>
@@ -41,7 +41,7 @@
          <select id="product-select-{{ product.id }}" name='id'>
            {% for variant in product.variants %}
              <option value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-               {{ variant.title }} - {{ variant.price | money }}
+               {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
              </option>
            {% endfor %}
          </select>
@@ -52,7 +52,7 @@
          <select id="product-select-{{ product.id }}" name='id'>
            {% for variant in product.variants %}
              <option data-sku="{{ variant.sku }}" value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-               {{ variant.title }} - {{ variant.price | money }}
+               {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
              </option>
            {% endfor %}
          </select>
@@ -61,7 +61,7 @@
        <select id="product-select-{{ product.id }}" name="id" {% if product.variants.size == 1 %}style="display: none;"{% endif %}>
          {% for variant in product.variants %}
            <option value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-             {{ variant.title }} - {{ variant.price | money }}
+             {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
            </option>
          {% endfor %}
        </select>
@@ -109,6 +109,9 @@
       </div>
     </div>
   {% endform %}
+
+{%- render 'shappify-bdl-load-bundle' -%}
+
 </div>
 
 {% if settings.ajax_cart_method == 'drawer' %}

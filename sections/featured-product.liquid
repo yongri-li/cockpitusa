@@ -1,5 +1,7 @@
 {%- assign product = all_products[section.settings.featured_product] -%}
 
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
+
 {% assign current_variant = product.selected_or_first_available_variant %}
 
 {% if product == empty %}

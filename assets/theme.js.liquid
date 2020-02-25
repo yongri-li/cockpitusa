@@ -949,11 +949,19 @@ theme.ProductForm = function (context, events) {
 
       if ( !variant ) {
         events.trigger("variantunavailable");
-        return;
+        
+if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  BOLD.common.eventEmitter.emit('BOLD_COMMON_variant_changed');
+}
+ return;
       }
 
       if ( product.variants.length == 1 ) {
-        return;
+        
+if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  BOLD.common.eventEmitter.emit('BOLD_COMMON_variant_changed');
+}
+ return;
       }
 
       events.trigger("variantchange", variant);
@@ -962,7 +970,11 @@ theme.ProductForm = function (context, events) {
         events.trigger("variantchange:image", variant.featured_image.id);
       }
 
-    },
+    
+if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  BOLD.common.eventEmitter.emit('BOLD_COMMON_variant_changed');
+}
+},
     enableHistoryState: config.enable_history
   });
 

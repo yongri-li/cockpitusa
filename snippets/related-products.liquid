@@ -21,6 +21,7 @@
   <div class="collection-carousel">
     {% assign current_product_found = false %}
     {% for prod in collection.products limit: 50 %}
+<script type='application/json' class='bold-product-json'>{{ prod | json }}</script>
       {% if prod.title == product.title %}
         {% assign current_product_found = true %}
       {% else %}
@@ -55,7 +56,7 @@
               <div class="price">
                 {% if product.price < prod.compare_at_price %}
                   <div class="onsale">
-                    <span class="money">{{ prod.price | money }}</span>
+                    <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ prod.price | money }}</span></span>
                   </div>
                   <div class="was">
                   <span class="money">{{ prod.compare_at_price | money }}</span>
@@ -63,9 +64,9 @@
                 {% else %}
                   <div class="prod-price">
                     {% if prod.price_varies %}
-                      {{ 'products.general.from' | t }} <span class="money">{{ prod.price_min | money }}</span> - <span class="money">{{ prod.price_max | money }}</span>
+                      {{ 'products.general.from' | t }} <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ prod.price_min | money }}</span></span> - <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ prod.price_max | money }}</span></span>
                     {% else %}
-                      <span class="money">{{ prod.price | money }}</span>
+                      <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ prod.price | money }}</span></span>
                     {% endif %}
                   </div>
                 {% endif %}

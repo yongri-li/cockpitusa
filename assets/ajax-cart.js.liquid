@@ -325,7 +325,11 @@ var ajaxCart = (function(module, $) {
       Shopify.StorefrontExpressButtons.initialize();
     }   
     
-  };
+  
+if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+}
+};
 
   adjustCart = function () {
     // Delegate all events because elements reload with the cart
