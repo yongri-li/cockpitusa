@@ -253,6 +253,14 @@ var ajaxCart = (function(module, $) {
   };
 
   buildCart = function (cart) {
+if(typeof window.BOLD !== 'undefined'
+  && typeof window.BOLD.common !== 'undefined'
+  && typeof window.BOLD.common.cartDoctor !== 'undefined') {
+    // NOTE: "cart" should be the variable containing the cart json data
+    cart = window.BOLD.common.cartDoctor.fix(cart);
+}
+
+
     // Start with a fresh cart div
     $cartContainer.empty();
 
