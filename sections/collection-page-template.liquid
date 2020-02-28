@@ -36,14 +36,7 @@
 
       <div class="clear"></div>
 
-      <div id="product-loop">
-        {% for product in collection.products %}
-<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
-          <div class="product {% if section.settings.products_per_row  == 2 %}desktop-6{% cycle ' first', ' last' %}{% elsif section.settings.products_per_row  == 3 %}desktop-4{% cycle ' first', '', ' last' %}{% elsif section.settings.products_per_row == 4 %}desktop-3{% cycle ' first', '', '', ' last' %}{% endif %} tablet-half mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
-            {% include 'product-listing' %}
-          </div>
-        {% endfor %}
-      </div>
+      {% include 'mm-search' %}
     </div>
 
     <div class="clear"></div>

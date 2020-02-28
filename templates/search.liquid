@@ -29,7 +29,7 @@
 <div class="desktop-12 tablet-6 mobile-3" id="four-per-row">
   <div id="product-loop">
     {% for item in search.results %}
-    <script type='application/json' class='bold-product-json'>{{ item | json }}</script>
+<script type='application/json' class='bold-product-json'>{{ item | json }}</script>
       <div class="product {% if settings.products_per_row  == '3' %}desktop-4{% cycle ' first', '', ' last' %}{% elsif settings.products_per_row == '4' %}desktop-3{% cycle ' first', '', '', ' last' %}{% endif %} mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
         <div class="collection-image ci">
 

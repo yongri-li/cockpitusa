@@ -1483,9 +1483,9 @@
     "footer_input_text": "#000000",
     "footer_button": "#000000",
     "footer_button_text": "#ffffff",
-    "main_font": "baskerville_no_2_n4",
-    "nav_font": "baskerville_no_2_n4",
-    "heading_font": "baskerville_no_2_n4",
+    "main_font": "avenir_next_n4",
+    "nav_font": "avenir_next_n4",
+    "heading_font": "avenir_next_n4",
     "font-size": 13,
     "h1-size": 22,
     "h2-size": 19,
@@ -1665,7 +1665,7 @@
             "type": "mega_menu",
             "settings": {
               "menu_item": "Shop",
-              "nav_image": "shopify:\/\/shop_images\/G9A1290.jpg",
+              "nav_image": "shopify:\/\/shop_images\/Image-Gallery-3.jpg",
               "link": "shopify:\/\/collections\/field-jackets-parkas"
             }
           }
@@ -1674,9 +1674,9 @@
           "1562604536612"
         ],
         "settings": {
-          "full_width_header": true,
+          "full_width_header": false,
           "header_cover": false,
-          "header_border": true,
+          "header_border": false,
           "show_announcement_text": true,
           "announcement_text": "Free Shipping on orders over $1000",
           "announcement_text_size": 24,
@@ -1684,9 +1684,9 @@
           "cart_position": "header",
           "cart_icon": "cart",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
-          "logo_max_width": 135,
+          "logo_max_width": 195,
           "logo_align": "left",
-          "logo_size": 19,
+          "logo_size": 22,
           "logo_transform": "uppercase",
           "logo_weight": "700",
           "nav_style": "full",
@@ -1741,19 +1741,55 @@
               "heading": "The Suede Trucker",
               "subheading": "@mr.rutherford",
               "slide_text_color": "#000000",
-              "link": "",
-              "button_text": "Add a button",
+              "link": "shopify:\/\/products\/airman-suede-bomber-jacket",
+              "button_text": "",
               "cta_color": "#ffffff",
-              "cta_background": "#000000",
+              "cta_background": "rgba(0,0,0,0)",
               "caption_horizontal": "left",
               "caption_vertical": 50,
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
+          },
+          "1582816179504": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Super-Fortress-Ben-Breuster-1200x800.jpg",
+              "heading": "",
+              "subheading": "",
+              "slide_text_color": "rgba(0,0,0,0)",
+              "link": "",
+              "button_text": "",
+              "cta_color": "rgba(0,0,0,0)",
+              "cta_background": "rgba(0,0,0,0)",
+              "caption_horizontal": "left",
+              "caption_vertical": 5,
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 10
+            }
+          },
+          "1582816209090": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Women_s-Bombers-1200x800.jpg",
+              "heading": "",
+              "subheading": "",
+              "slide_text_color": "rgba(0,0,0,0)",
+              "link": "",
+              "button_text": "",
+              "cta_color": "rgba(0,0,0,0)",
+              "cta_background": "rgba(0,0,0,0)",
+              "caption_horizontal": "left",
+              "caption_vertical": 5,
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 10
+            }
           }
         },
         "block_order": [
-          "1478800373635-0"
+          "1478800373635-0",
+          "1582816179504",
+          "1582816209090"
         ],
         "settings": {
           "slideshow": "content",
@@ -1769,7 +1805,7 @@
         "type": "instagram",
         "settings": {
           "heading": "Follow us on Instagram",
-          "instagram_access_token": "290629991.5ea0515.0c8e7ce625aa42e68fc7a98d666e28d8",
+          "instagram_access_token": "",
           "instagram_heading_color": "#000000",
           "instagram_background_color": "rgba(0,0,0,0)"
         }
@@ -1902,10 +1938,10 @@
       "1518209628906": {
         "type": "featured-collection",
         "settings": {
-          "heading": "D-Day Collection",
+          "heading": "Leather Jackets",
           "heading_color": "#000",
           "background_color": "#fff",
-          "collection": "d-day-collection",
+          "collection": "leather-jackets",
           "homepage_product_layout": "carousel",
           "limit": 6,
           "grid": 4
