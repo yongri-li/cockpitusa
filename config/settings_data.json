@@ -5053,7 +5053,7 @@
           "product_description_position": "below",
           "lower_description": "medium",
           "lower_description_background": "#f8f3f0",
-          "show_product_size_chart": false,
+          "show_product_size_chart": true,
           "show_product_video": false,
           "show_product_model": false,
           "enable_product_reviews": false,
