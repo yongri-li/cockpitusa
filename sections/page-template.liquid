@@ -106,6 +106,14 @@
       <div id="page_content" class="{{ width }} mobile-3">
         <div class="rte">
           {{ page.content }}
+
+          {% if page.handle == 'style-guide' %}
+          {% include 'style-guide' %}
+          {% endif %}
+          {% if page.handle == 'digital-catalog' %}
+          {% include 'digital-catalog' %}
+          {% endif %}
+
         </div>
       </div>
 
