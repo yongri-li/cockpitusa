@@ -24,6 +24,12 @@
             </h1>
           </div>
 
+          <div class="span-12">
+          {% include 'mm-search' %}
+          </div>
+
+          {% comment %}
+
           {% if section.settings.filter_position == 'left_sidebar' %}
             <div class="desktop-sidebar desktop-3 tablet-6 mobile-3 span-3">
               {% include 'collection-sidebar' %}
@@ -189,49 +195,12 @@
           <div class="clear"></div>
 
           {% include 'pagination' %}
+          {% endcomment %}
+
         </div>
       </div>
     {% if section.settings.full_width %}</div>{% endif %}
   {% endpaginate %}
-  <script type="text/javascript">
-    $('#collection-filters').offcanvas({
-      modifiers: 'right, overlay', // default options
-      triggerButton: '#filtersButton' // btn to open offcanvas
-    });
-  </script>
-  <style media="screen">
-    #full-width-filter .filter,
-    #collection-page-template .show-filter,
-    #sidebar .filter {
-      color: {{ section.settings.filter_text_color }};
-      border: 1px solid {{ section.settings.filter_border_color }};
-      background-color: {{ section.settings.filter_bg_color }};
-    }
-    ul.filter-list {
-      color: {{ section.settings.filter_text_color }};
-      background-color: {{ section.settings.filter_bg_color }};
-    }
-    #full-width-filter button.filter-menu:after, #sidebar .filter h4:after {
-      background-color: transparent;
-      color: {{ section.settings.filter_text_color }};
-    }
-    ul.filter-list li a {
-      color: {{ section.settings.filter_text_color }};
-    }
-    #sidebar .filter h4, .filter-menu h4 {
-      border-color: {{ section.settings.filter_border_color }};
-      color: {{ section.settings.filter_text_color }};
-    }
-    #collection-filters {
-      background: {{ section.settings.filter_bg_color }};
-      color: {{ section.settings.filter_text_color }};
-      padding: 20px;
-      margin: 0;
-    }
-    #collection-filters h2 {
-      color: {{ section.settings.filter_text_color }};
-    }
-  </style>
 </div>
 
 {% schema %}

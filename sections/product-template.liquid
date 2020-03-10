@@ -110,7 +110,7 @@
       <div {% if template != 'product.quick' %}id="sticky-item"{% endif %} class="product-description {% if template != 'product.quick' %} is_sticky{% endif %}">
 
         <div class="section-title">
-          <h1>{{ product.title }}</h1>
+          <h1>{{ product.title }} {{ product.metafields.customAttributes.style-number }}</h1>
         </div>
 
         {% if template != 'product.quick' %}
@@ -174,13 +174,10 @@
                   {% endfor %}
                 {% endunless %}
                 {% if section.settings.size_chart_type == 'product-tab' and product.description contains '[#size]' %}
-                  {% assign shortcode_description = product.description | split: '[/size]' | first | split: '[#size]' | last %}
-                  {% if section.settings.size_chart_content == 'individual' %}
                     <a data-fancybox class="product-size-chart" data-src="#product-size-chart" href="javascript:;"><i class="fas fa-ruler"></i> {{ 'products.product.sizing' | t }}</a>
                     <div id="product-size-chart" style="display: none;">
                       {{ shortcode_description }}
                     </div>
-                  {% endif %}
                 {% endif %}
               </section>
             </div>
@@ -216,34 +213,6 @@
           </div>
         {% endif %}
       {% if template != 'product.quick' %}
-        {% if product.description contains '[#size]' or product.description contains '[#video]' or product.description contains '[#other]' %}
-          <div class="product-extra">
-            {% if section.settings.show_product_size_chart and product.description contains '[#size]' %}
-              {% assign shortcode_description = product.description | split: '[/size]' | first | split: '[#size]' | last %}
-              <a data-fancybox class="product-size-chart" data-src="#product-size-chart" href="javascript:;">{{ 'products.product.sizing' | t }}
-                <div id="product-size-chart" style="display: none;">
-                  {{ shortcode_description }}
-                </div>
-              </a>
-            {% endif %}
-            {% if section.settings.show_product_video and product.description contains '[#video]' %}
-              {% assign shortcode_description = product.description | split: '[/video]' | first | split: '[#video]' | last %}
-              <a data-fancybox class="product-video" data-src="#product-video" href="javascript:;"><i class="la la-play-circle"></i> {{ 'products.product.video' | t }}
-                <div id="product-video" style="display: none;">
-                  {{ shortcode_description }}
-                </div>
-              </a>
-            {% endif %}
-            {% if section.settings.show_product_model and product.description contains '[#other]' %}
-              <a data-fancybox class="product-model" data-src="#product-model" href="javascript:;"><i class="la la-info-circle"></i> {{ 'products.product.model' | t }}
-                <div id="product-model" style="display: none;">
-                  {% assign shortcode_description = product.description | split: '[/other]' | first | split: '[#other]' | last %}
-                  {{ shortcode_description }}
-                </div>
-              </a>
-            {% endif %}
-          </div>
-        {% endif %}
 
         {% if section.settings.product_description_position == 'below' %}
           <div class="clear"></div>

@@ -72,6 +72,31 @@
      <input  type="hidden" id="{{ variant.id }}" name="id" data-sku="{{ variant.sku }}" value="{{ product.variants[0].id }}" />
     {% endif %}
 
+    <div class="product-extra">
+        <a data-fancybox class="product-size-chart" data-src="#product-size-chart" href="javascript:;">{{ 'products.product.sizing' | t }}
+          <div id="product-size-chart" style="display: none;">
+            {% include 'mm-size' %}
+          </div>
+        </a>
+      {% if section.settings.show_product_video and product.description contains '[#video]' %}
+        {% assign shortcode_description = product.description | split: '[/video]' | first | split: '[#video]' | last %}
+        <a data-fancybox class="product-video" data-src="#product-video" href="javascript:;"><i class="la la-play-circle"></i> {{ 'products.product.video' | t }}
+          <div id="product-video" style="display: none;">
+            {{ shortcode_description }}
+          </div>
+        </a>
+      {% endif %}
+      {% if section.settings.show_product_model and product.description contains '[#other]' %}
+        <a data-fancybox class="product-model" data-src="#product-model" href="javascript:;"><i class="la la-info-circle"></i> {{ 'products.product.model' | t }}
+          <div id="product-model" style="display: none;">
+            {% assign shortcode_description = product.description | split: '[/other]' | first | split: '[#other]' | last %}
+            {{ shortcode_description }}
+          </div>
+        </a>
+      {% endif %}
+    </div>
+    <br>
+
     {% if section.settings.show_sku %}
       <div class="sku">
         <label style="display: inline-block; line-height: 1.6em;">{{ 'customer.order.details.sku' | t }}:</label> <span class="variant_sku">{{ current_variant.sku }}</span>
@@ -87,6 +112,8 @@
      </div>
      <div class="clear"></div>
    {% endif %}
+
+
 
     {% if current_variant.available %}
       <div class="product-add">

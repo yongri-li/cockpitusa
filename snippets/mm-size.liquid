@@ -1,0 +1,26 @@
+{% for tag in product.tags %}
+{% if tag contains 'Mens Regular Fit' %}
+<img src="{{ 'Mens-Regular-Fit-Size-Guide.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Mens Slim Fit' %}
+<img src="{{ 'Mens-Slim-Fit-Size-Chart.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Mens Full Fit' %}
+<img src="{{ 'Mens-Full-Fit-size-chart.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Mens Swimwear' %}
+<img src="{{ 'Mens-Swimwear-Fit-Guide.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Womens True Fit' %}
+<img src="{{ 'Womens-True-Fit-Guide.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Womens Slim Fit' %}
+<img src="{{ 'Womens-Slim-Fit-Guide.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Hats Fit Guide' %}
+<img src="{{ 'hats-Size-Charts.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% if tag contains 'Gloves Fit Guide' %}
+<img src="{{ 'Gloves-Fit-Guide.jpg' | asset_url }}" width="100%">
+{% endif %}
+{% endfor %}
