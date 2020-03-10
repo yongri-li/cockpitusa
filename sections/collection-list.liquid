@@ -1,27 +1,6 @@
-<section class="homepage-collection-list-{{ section.id }} index-section collection-loop homepage-section no-fouc" data-section-id="{{ section.id }}">
+<section class="homepage-collection-list-{{ section.id }} collection-loop homepage-section no-fouc" data-section-id="{{ section.id }}">
+{% if section.settings.full_width %}<div class="gridlock-fluid"><div class="row">{% endif %}
 
-  {% comment %}When showing each collection as it's own carousel{% endcomment %}
-  {% if section.settings.collection_layout == 'carousel' %}
-    {% for block in section.blocks %}
-      {%- assign collection = collections[block.settings.collection] -%}
-      <div class="section-title row">
-        {% if block.settings.collection == blank %}
-          <h2>
-            <a href="#">Collection {{ forloop.index }}</a>
-          </h2>
-        {% else %}
-          <h2>
-            <a href="{{ collection.url }}" title="{{ collection_title }}">{{ collection.title }}</a>
-          </h2>
-        {% endif %}
-      </div>
-      <article class="row collection-loop">
-        {% include 'homepage-collections-loop' %}
-      </article>
-    {% endfor %}
-
-  {% comment %}When showing each collection as a grid item{% endcomment %}
-  {% elsif section.settings.collection_layout == 'grid' %}
     {% if section.settings.heading != blank %}
       <div class="section-title row">
         <h2>
@@ -62,12 +41,11 @@
         </div>
       {% endfor %}
     </article>
-  {% endif %}
 
   {% if section.blocks.size == 0 %}
     {% include 'onboard-collection' %}
   {% endif %}
-
+{% if section.settings.full_width %}</div></div>{% endif %}
 </section>
 <div class="clear"></div>
 
@@ -85,8 +63,14 @@
 {% schema %}
 {
   "name": "Collection list",
+  "class": "index-section",
   "max_blocks": 12,
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width"
+    },
     {
       "type": "text",
       "id": "heading",
@@ -104,21 +88,6 @@
       "id": "background_color",
       "label": "Background color",
       "default": "#fff"
-    },
-    {
-      "type": "select",
-      "id": "collection_layout",
-      "label": "Collections layout",
-      "options": [
-        {
-          "value": "grid",
-          "label": "Grid"
-        },
-        {
-          "value": "carousel",
-          "label": "Carousel"
-        }
-      ]
     },
     {
       "type": "range",

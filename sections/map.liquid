@@ -18,7 +18,8 @@
 <section id="MapSection--{{ section.id }}"
   class="map-section map-section--{{ state }}"
   data-section-id="{{ section.id }}"
-  data-section-type="map">
+  data-section-type="map"
+  data-aos="{{ settings.scroll_animation }}">
 
   <script data-map-config type="application/json">
     {
@@ -284,6 +285,7 @@
 {% schema %}
   {
     "name": "Map",
+    "class": "index-section",
     "settings": [
       {
         "type": "header",

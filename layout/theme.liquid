@@ -10,9 +10,8 @@
   {% include 'google-fonts' %}
   {% include 'social-media-meta-tags' %}
 
-  <!-- SEO
-================================================== -->
-
+    <!-- SEO
+  ================================================== -->
   <title>
     {% if template == 'index' %}{% if page_title contains 'Welcome' %}{{ shop.name }} &ndash; Welcome{% else %}{{ page_title }}{% endif %}{% elsif template == '404' %}Page Not Found{% elsif page_title contains shop.name %}{{ page_title }}{% else %}{{ page_title }} &ndash; {{ shop.name }}{% endif %}
   </title>
@@ -21,25 +20,20 @@
   {% endif %}
   <link rel="canonical" href="{{ canonical_url }}" />
 
-  <!-- CSS
-================================================== -->
+    <!-- CSS
+  ================================================== -->
 
   {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
   {{ 'queries.css' | asset_url | stylesheet_tag }}
 
-  <!-- JS
-================================================== -->
+    <!-- JS
+  ================================================== -->
 
   {{ "//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" | script_tag }}
   {{ "//unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js" | script_tag }}
 
-  {% if settings.show_multiple_currencies %}
-    {% include 'currencies' %}
-  {% endif %}
-
   {{ 'theme.js' | asset_url | script_tag }}
   {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-  {% if template  == 'index'  %}{{ 'instafeed.js' | asset_url | script_tag }}{% endif %}
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -51,8 +45,6 @@
   {{ "customer_area.js"  | shopify_asset_url | script_tag }}
   {% endif %}
   {{ content_for_header }}
-{%- render 'bold-pr' -%}
-{%- render 'bold-common' -%}
   <link rel="next" href="/next"/>
   <link rel="prev" href="/prev"/>
 
@@ -60,40 +52,50 @@
 
 <body class="gridlock shifter-left {{ template }}">
   {% if settings.ajax_cart_method == 'drawer' %}
-  {% include 'timber-cart' %}
+    {% include 'timber-cart' %}
   {% endif %}
+
   <div class="shifter-page {% if settings.ajax_cart_method == 'drawer' %} is-moved-by-drawer{% endif %}" id="PageContainer">
+
     {% section 'header' %}
     <div class="page-wrap">
-      {% if template == 'index' or template contains 'blog' or template contains 'list-collections' %}
-      {{ content_for_layout }}
-      {% else %}
-      <div id="content" class="row">
-        {% if settings.breadcrumb %}
-        {% include 'breadcrumb' %}
-        {% endif %}
+    {% if settings.scrolling_bar_position == 'header' %}
+      {% section 'scrolling-announcements' %}
+    {% endif %}
+
+      {% if template == 'index' or template contains 'blog' or template contains 'collection' or template contains 'page' or template contains 'product' %}
         {{ content_for_layout }}
-      </div>
+      {% else %}
+        <div id="content" class="row">
+          {% include 'breadcrumb' %}
+          {{ content_for_layout }}
+        </div>
       {% endif %}
     </div>
+
+    {% unless template == 'index' %}
+      {% section 'featured-content' %}
+    {% endunless %}
+
+    {% if settings.scrolling_bar_position == 'above_footer' %}
+      {% section 'scrolling-announcements' %}
+    {% endif %}
+
     {% section 'footer' %}
+
+    {% if settings.scrolling_bar_position == 'below_footer' %}
+      {% section 'scrolling-announcements' %}
+    {% endif %}
+
     {% include 'popup' %}
-    <div style='display:none'>
-      <div id='search_popup' style='padding:30px;'>
-        <!-- BEGIN #subs-container -->
-        <div id="subs-container" class="clearfix">
-          <div id="search">
-            <form action="/search" method="get">
-              <input type="text" name="q" id="q" placeholder="{{ 'general.search.placeholder' | t }}"/>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
   {% section 'mobile-navigation' %}
 
-  <a href="#" class="scrollup"><i class="fa fa-chevron-up" aria-hidden="true"></i> TOP</a>
+  <a href="#" class="scrollup"><i class="la la-chevron-up" aria-hidden="true"></i> TOP</a>
+
+  <div class="fancybox-wrapper"></div>
+  <div class="clear"></div>
+
   <!-- Begin Recently Viewed Products -->
   <script type="text/javascript" charset="utf-8">
     //<![CDATA[
@@ -103,9 +105,11 @@
     }
     //]]>
   </script>
+
   {{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
   {{ 'jquery.products.min.js' | asset_url | script_tag }}
 
+  <!-- Facebook Widget -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -113,11 +117,13 @@
   js = d.createElement(s); js.id = id;
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=127142210767229";
   fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+  <!-- Ajax Cart -->
+  {{ 'handlebars.min.js' | asset_url | script_tag }}
+  {% include 'ajax-cart-template' %}
 
   {% if settings.ajax_cart_method == 'drawer' %}
-    {{ 'handlebars.min.js' | asset_url | script_tag }}
-    {% include 'ajax-cart-template' %}
     {{ 'ajax-cart.js' | asset_url | script_tag }}
     <script>
       jQuery(function($) {
@@ -126,22 +132,28 @@
           cartContainer: '#CartContainer',
           addToCartSelector: '#AddToCart',
           cartCountSelector: '.CartCount',
+          cartCostSelector: '.CartCost',
           moneyFormat: {{ shop.money_format | json }}
-       });
-      });
-      jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
-        // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
-        timber.RightDrawer.open();
-      });
-      {% if settings.show_multiple_currencies %}
+        });
+        });
+        {% if settings.ajax_cart_method == 'drawer' %}
+        jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
+          // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
+          timber.RightDrawer.open();
+        });
+        {% endif %}
+        {% if settings.show_multiple_currencies %}
         jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
           // Convert currency when ajaxcart opens
           Currency.convertAll(shopCurrency, Currency.currentCurrency);
         });
-      {% endif %}
+        {% endif %}
     </script>
+  {% else %}
+    {% include 'ajaxify-cart' %}
   {% endif %}
 
+  <!-- No JS -->
   <script>
     function loadJS(u) {
         var r = document.getElementsByTagName("script")[0],
@@ -149,10 +161,10 @@
         s.src = u;
         r.parentNode.insertBefore(s, r);
     }
-
-    if (!window.HTMLPictureElement) {
-    loadJS("https://afarkas.github.io/lazysizes/plugins/respimg/ls.respimg.min.js");
-    }
+  </script>
+  <script>
+      document.documentElement.className =
+         document.documentElement.className.replace("no-js","js");
   </script>
 
   <!-- Responsive Images -->
@@ -161,14 +173,18 @@
   {{ 'lazysizes.min.js' | asset_url | script_tag }}
 
   <script>
-      document.documentElement.className =
-         document.documentElement.className.replace("no-js","js");
+    if (!window.HTMLPictureElement) {
+      loadJS("https://afarkas.github.io/lazysizes/plugins/respimg/ls.respimg.min.js");
+    }
   </script>
 
+  <!-- JS Variable Helpers -->
   <script>
-$( 'a[href^="http://"]' ).attr( 'target','_blank' )
-$( 'a[href^="https://"]' ).attr( 'target','_blank' )
-</script>
+      var template = {{ template | json }};
+  </script>
+
+  <!-- Fancybox JS -->
+  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
 
 </body>
 </html>

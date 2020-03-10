@@ -1,8 +1,6 @@
 <footer data-section-id="{{ section.id }}">
   <div id="footer-wrapper">
-    <div id="footer" class="row no-fouc">
-
-
+    <div id="footer" class="row">
     {% case section.blocks.size %}
       {% when 0 %}
       {% when 1 %}
@@ -18,19 +16,21 @@
       {% for block in section.blocks %}
       {% case block.type %}
       {% when 'menu' %}
-      <div class="{{ column_width }}">
-        <h4>{{ block.settings.title }}</h4>
-        <ul {{ block.shopify_attributes }}>
-          {% for link in linklists[block.settings.footer_nav].links %}
-            <li>{{ link.title | link_to: link.url }}</li>
-          {% endfor %}
-        </ul>
+      <div class="{{ column_width }} footer-menu">
+        <div class="togglecontent"><h4>{{ block.settings.title }}</h4></div>
+        <div class="footer-block-content">
+          <ul {{ block.shopify_attributes }}>
+            {% for link in linklists[block.settings.footer_nav].links %}
+              <li>{{ link.title | link_to: link.url }}</li>
+            {% endfor %}
+          </ul>
+        </div>
       </div>
       {% when 'newsletter' %}
-      <div class="{{ column_width }}">
-        <h4>{{ block.settings.title | escape }}</h4>
-        {{ block.settings.mailing_subheading }}
-        <div id="footer_signup">
+      <div class="{{ column_width }} footer-menu">
+        <div class="togglecontent"><h4>{{ block.settings.title | escape }}</h4></div>
+        <div id="footer_signup" class="footer-block-content">
+          {{ block.settings.mailing_subheading }}
           <p>{{ settings.footer_signup_text | escape }}</p>
             {% form 'customer' %}
             {{ form.errors | default_errors }}
@@ -45,9 +45,9 @@
         </div>
       </div>
       {% when 'text' %}
-      <div class="{{ column_width }}">
-        <h4>{{ block.settings.title | escape }}</h4>
-        <div class="rte">{{ block.settings.footer_text }}</div>
+      <div class="{{ column_width }} footer-menu">
+        <div class="togglecontent"><h4>{{ block.settings.title | escape }}</h4></div>
+        <div class="rte footer-block-content">{{ block.settings.footer_text }}</div>
       </div>
       {% endcase %}
       {% endfor %}
@@ -57,63 +57,63 @@
         {% if settings.facebook_url != blank %}
           <li>
             <a href="{{ settings.facebook_url }}" target="_blank">
-              <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+              <i class="fab fa-facebook-f la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.instagram-id != blank %}
           <li>
             <a href="//instagram.com/{{ settings.instagram-id }}" target="_blank">
-              <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+              <i class="la la-instagram la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.twittername != blank %}
           <li>
             <a href="{{ settings.twittername }}" target="_blank">
-              <i class="fa fa-twitter fa-2x" aria-hidden="true"></i>
+              <i class="la la-twitter la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.pinterest_url != blank %}
           <li>
             <a href="{{ settings.pinterest_url }}" target="_blank">
-              <i class="fa fa-pinterest fa-2x" aria-hidden="true"></i>
+              <i class="la la-pinterest la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.tumblr_url != blank %}
           <li>
             <a href="{{ settings.tumblr_url }}" target="_blank">
-              <i class="fa fa-tumblr fa-2x" aria-hidden="true"></i>
+              <i class="la la-tumblr la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.youtube_url != blank %}
           <li>
             <a href="{{ settings.youtube_url }}" target="_blank">
-              <i class="fa fa-youtube fa-2x" aria-hidden="true"></i>
+              <i class="la la-youtube la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.googleplus_url != blank %}
           <li>
             <a href="{{ settings.googleplus_url }}" target="_blank">
-              <i class="fa fa-google-plus-official fa-2x" aria-hidden="true"></i>
+              <i class="la la-google-plus la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.snapchat-id != blank %}
           <li>
             <a href="//snapchat.com/add/{{ settings.snapchat-id }}" target="_blank">
-              <i class="fa fa-snapchat-ghost fa-2x" aria-hidden="true"></i>
+              <i class="fab fa-snapchat-ghost la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
         {% if settings.weibo-id != blank %}
           <li>
             <a href="//weibo.com/{{ settings.weibo-id }}" target="_blank">
-              <i class="fa fa-weibo fa-2x" aria-hidden="true"></i>
+              <i class="la la-weibo la-2x" aria-hidden="true"></i>
             </a>
           </li>
         {% endif %}
@@ -121,18 +121,7 @@
       <div class="clear"></div>
       <div class="credit desktop-12 tablet-6 mobile-3">
 
-        <a href="https://www.bbb.org/us/ny/new-york/profile/clothing/cockpit-usa-0121-534?bluerefx=1">
-          <img src="{{ 'BBB-Profile-Image.png' | asset_url }}" width="250px" style="width: 250px!important; max-width: 250px!important; padding: 20px">
-        </a>
-
-        <a href="https://uscontractorregistration.com/">
-          <img src="{{ 'Verified-Vendor-2019-2020-sm.png' | asset_url }}" width="100px" style="width: 120px!important; max-width: 120px!important; padding: 20px">
-        </a>
-
-
         <div id="payment">
-
-
           {% if section.settings.show_credit_cards %}
             {% for type in shop.enabled_payment_types %}
               {{ type | payment_type_svg_tag: class:'payment-icon' }}
@@ -141,8 +130,7 @@
         </div>
 
         <p>
-          {{ 'layout.footer.copyright' | t }} &copy; {{ 'now' | date: "%Y" }} {{ shop.name | link_to: '/' }} •
-          <a href="https://www.shopify.com/?ref=minion-made" target="blank"> Powered by Shopify.</a>
+          <small><a href="{{ routes.root_url }}">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</a> • {{ powered_by_link }}</small>
         </p>
       </div>
     </div>
@@ -153,12 +141,8 @@
   #footer-wrapper {
     text-align: {{ section.settings.footer_text_align }};
   }
-
-  #footer-wrapper h4 {
-    text-transform: {{ section.settings.footer_title_transform }};
-    font-size: {{ section.settings.footer_title_size }}px;
-  }
 </style>
+
 
 {% schema %}
 {
@@ -183,50 +167,6 @@
             "label": "Right"
           }
         ]
-      },
-      {
-        "type": "select",
-        "id": "footer_title_weight",
-        "label": "Footer title weight",
-        "options": [
-          {
-            "value": "300",
-            "label": "Light"
-          },
-          {
-            "value": "500",
-            "label": "Normal"
-          },
-          {
-            "value": "700",
-            "label": "Bold"
-          }
-        ]
-      },
-      {
-        "type": "select",
-        "id": "footer_title_transform",
-        "label": "Footer title case",
-        "options": [
-          {
-            "value": "uppercase",
-            "label": "Uppercase"
-          },
-          {
-            "value": "inherit",
-            "label": "regular"
-          }
-        ]
-      },
-      {
-        "type": "range",
-        "id": "footer_title_size",
-        "min": 12,
-        "max": 36,
-        "step": 1,
-        "unit": "px",
-        "label": "Footer title size",
-        "default": 14
       },
       {
         "type": "checkbox",

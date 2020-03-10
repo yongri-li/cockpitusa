@@ -8,6 +8,9 @@
 
   <div id="search-bar">
     <form action="/search" method="get">
+      <input type="text" name="q" id="q" placeholder="{{ 'general.search.placeholder' | t }}"/>
+      <input type="hidden" name="type" value="product">
+      <input value="{{ 'general.search.submit' | t }}" name="submit" id="search_button" class="button" type="submit">
       {% if search.performed %}
         {% if search.results_count == 0 %}
           <p>{{ 'general.search.no_results_html' | t: terms: search.terms }}</p>
@@ -15,25 +18,21 @@
           <p>{{ 'general.search.results_for_html' | t: terms: search.terms }}</p>
         {% endif %}
       {% endif %}
-      <input type="text" name="q" id="q" placeholder="{{ 'general.search.placeholder' | t }}"/>
+
     </form>
   </div>
 </div>
 
 
-
-
-
 {% if search.performed %}
 
 <div class="desktop-12 tablet-6 mobile-3" id="four-per-row">
-  <div id="product-loop">
+  <div class="grid_wrapper product-loop">
     {% for item in search.results %}
-<script type='application/json' class='bold-product-json'>{{ item | json }}</script>
-      <div class="product {% if settings.products_per_row  == '3' %}desktop-4{% cycle ' first', '', ' last' %}{% elsif settings.products_per_row == '4' %}desktop-3{% cycle ' first', '', '', ' last' %}{% endif %} mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
+      <div class="product-index desktop-3 tablet-2 mobile-half span-3" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
         <div class="collection-image ci">
 
-          {% if item.object_type == 'article' %}
+<!-- Article -->{% if item.object_type == 'article' %}
             <!--'item' is an article All article object properties can be accessed. -->
             {% if item.image %}
               <a href="{{ item.url }}" title="{{ item.title | escape }}">
@@ -47,7 +46,7 @@
                 {{ item.content | strip_html | trancate: 200 }}
               </div>
             {% endif %}
-          {% elsif item.object_type == 'page' %}
+<!-- PAGE -->{% elsif item.object_type == 'page' %}
             <!--'item' is a page. All page object properties can be accessed. -->
 
             {% if item.content contains "img" %}
@@ -62,7 +61,7 @@
               </div>
             {% endif %}
 
-          {% else %}
+<!-- Product -->{% else %}
             <!-- 'item' is a product. All product object properties can be accessed.-->
             {% if item.available %}
               {% for col in item.collections %}
@@ -73,19 +72,31 @@
               {% if item.price < item.compare_at_price %}
                 <div class="sale-item icn">{{ 'products.general.sale' | t }}</div>
               {% endif %}
-
             {% else %}
               <div class="so icn">{{ 'products.general.sold' | t }}</div>
             {% endif %}
-
-            <a href="{{ item.url }}" title="{{ item.title | escape }}">
-              {% include 'basic-responsive-image', type: item.featured_image %}
-              <noscript>
-                <img src="{{ item.featured_image | img_url: '800x' }}" alt="{{ item.featured_image.alt }}">
-              </noscript>
-            </a>
+            {% if item.featured_image %}
+              <a href="{{ item.url }}" title="{{ item.title | escape }}">
+                <div class="reveal">
+                  {% include "basic-responsive-image", type: item.featured_image %}
+                  <noscript>
+                    <img src="{{ item.featured_image | img_url: '1024x' }}" alt="{{ item.featured_image.alt | escape }}">
+                  </noscript>
+                  {% if settings.image_flip and item.images.size > 1 %}
+                    <div class="hidden">
+                      {% include "basic-responsive-image", type: item.images[1] %}
+                      <noscript>
+                        <img src="{{ item.images[1] | img_url: '1024x' }}" alt="{{ item.images[1].alt | escape }}">
+                      </noscript>
+                    </div>
+                  {% endif %}
+                </div>
+              </a>
+            {%- else -%}
+              {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
+              {{ 'item-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
+            {%- endif -%}
           {% endif %}
-
         </div>
 
         <div class="product-details">
@@ -98,20 +109,22 @@
             <h3>{{ item.title }}</h3>
           </a>
           {% if item.object_type == 'product' %}
+          {% unless item.template_suffix == 'not-for-sale' %}
             <div class="price">
               {% if item.price < item.compare_at_price %}
-                <div class="onsale"><span class="money">{{ item.price | money }}</span></div>
-                <div class="was"><span class="money">{{ item.compare_at_price | money }}</span></div>
+                <div class="onsale">{{ item.price | money }}</div>
+                <div class="was">{{ item.compare_at_price | money }}</div>
               {% else %}
                 <div class="prod-price">
                   {% if item.price_varies %}
-                    {{ 'products.general.from' | t }} <span class="money">{{ item.price_min | money }}</span> - <span class="money">{{ item.price_max | money }}</span>
+                    {{ 'products.general.from' | t }} {{ item.price_min | money }} - {{ item.price_max | money }}
                   {% else %}
-                    <span class="money">{{ item.price | money }}</span>
+                    {{ item.price | money }}
                   {% endif %}
                 </div>
               {% endif %}
             </div>
+            {% endunless %}
           {% endif %}
         </div>
 

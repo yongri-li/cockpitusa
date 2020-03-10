@@ -1,4 +1,5 @@
-<section id="newsletter" class="homepage-newsletter gridlock-fluid">
+<section id="newsletter" class="homepage-newsletter gridlock-fluid"
+data-aos="{{ settings.scroll_animation }}">
   <div class="row">
     <div class="section-header row">
       {% if section.settings.heading != blank %}
@@ -48,7 +49,9 @@
   }
   section.homepage-newsletter h2 {
     color: {{ section.settings.heading_color }} !important;
+    {% if settings.section_titles != 'text_only' %}
     border-color: {{ section.settings.heading_color }} !important;
+    {% endif %}
   }
 
   section.homepage-newsletter p {
@@ -80,12 +83,6 @@
         "id": "heading",
         "label": "Heading",
         "default": "Subscribe to our newsletter"
-      },
-      {
-        "type": "color",
-        "id": "heading_color",
-        "label": "Heading Color",
-        "default": "#000000"
       },
       {
         "type": "richtext",
@@ -121,6 +118,12 @@
             "label": "Bold"
           }
         ]
+      },
+      {
+        "type": "color",
+        "id": "heading_color",
+        "label": "Heading Color",
+        "default": "#000000"
       },
       {
         "type": "color",

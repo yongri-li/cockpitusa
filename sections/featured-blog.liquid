@@ -1,10 +1,15 @@
-<section class="homepage-blog-{{ section.id }} index-section no-fouc" data-section-id="{{ section.id }}">
+<section class="homepage-blog-{{ section.id }} blog-template"
+data-aos="{{ settings.scroll_animation }}"
+ data-section-id="{{ section.id }}">
+
+  {% if section.settings.full_width %}<div class="gridlock-fluid"><div class="row">{% endif %}
+  {%- assign blog = blogs[section.settings.blog] -%}
   {% if section.settings.heading != blank %}
     <div class="section-title row">
-      <h2>{{ section.settings.heading | escape }}</h2>
+      <h2><a href="{{ blog.url }}">{{ section.settings.heading | escape }}</a></h2>
     </div>
   {% endif %}
-  {%- assign blog = blogs[section.settings.blog] -%}
+
   {%- assign post_limit = section.settings.post_limit -%}
   <div class="row">
     {% if blog == blank %}
@@ -15,6 +20,8 @@
       {% endfor %}
     {% endif %}
   </div>
+  {% if section.settings.full_width %}</div></div>{% endif %}
+
 </section>
 <div class="clear"></div>
 
@@ -23,9 +30,11 @@
     background: {{ section.settings.background_color }};
     padding-bottom: 0;
   }
-  section.homepage-blog-{{ section.id }} h2 {
+  section.homepage-blog-{{ section.id }} h2, section.homepage-blog-{{ section.id }} h2 a {
     color: {{ section.settings.heading_color }} !important;
+    {% if settings.section_titles != 'text_only' %}
     border-color: {{ section.settings.heading_color }} !important;
+    {% endif %}
   }
 </style>
 
@@ -33,7 +42,13 @@
 {% schema %}
 {
   "name": "Blog posts",
+  "class": "index-section",
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Full width"
+    },
     {
       "id": "blog",
       "type": "blog",
@@ -60,11 +75,23 @@
     {
       "type": "range",
       "id": "post_limit",
-      "min": 2,
+      "min": 1,
       "max": 10,
-      "step": 2,
+      "step": 1,
       "label": "Posts shown",
       "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "post_tags",
+      "label": "Show tags",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_author",
+      "label": "Show post author",
+      "default": true
     }
   ],
   "presets": [

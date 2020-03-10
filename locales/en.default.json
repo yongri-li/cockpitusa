@@ -27,15 +27,17 @@
     },
     "newsletter_form": {
       "newsletter_email": "Join our mailing list",
+      "thanks": "Thank you for joining",
+      "popup_thanks": "Thank you for joining, here is your coupon code:",
       "email_placeholder": "Email address",
       "confirmation": "Thanks for joining!",
-      "submit": "Subscribe"
+      "submit": "Join"
     },
     "search": {
       "no_results_html": "Your search for \"{{ terms }}\" did not yield any results.",
       "results_for_html": "Your search for \"{{ terms }}\" revealed the following:",
-      "title": "Search our store",
-      "placeholder": "Enter your search terms",
+      "title": "Search",
+      "placeholder": "Search",
       "submit": "Search"
     }
   },
@@ -72,20 +74,32 @@
   "cart": {
     "general": {
       "title": "My Cart",
+      "summary": "Cart Summary",
       "close_cart": "Close",
-      "shipping_at_checkout": "Shipping calculated at check out",
+      "shipping": "Shipping",
+      "tax": "Tax",
+      "at_checkout": "Calculated at checkout",
       "empty": "Your cart is currently empty.",
       "product": "Product",
       "price": "Price",
       "qty": "Qty",
-      "total": "Total",
       "remove": "Remove",
+      "total": "Total",
       "subtotal": "Subtotal",
       "continue": "Continue Shopping",
       "update": "Update Cart",
       "checkout": "Check Out",
-      "note": "Please leave special instructions below:",
-      "recently_viewed": "You also Viewed"
+      "note": "Order Special Instructions",
+      "recently_viewed": "You also Viewed",
+      "cart_discount": "Discount Code (Applied at Checkout)",
+      "free_shipping_before": "You are only",
+      "free_shipping_after": "away from Free Domestic Shipping!",
+      "free_shipping_qualified": "Your order qualifies for Free Domestic Shipping!",
+      "free_shipping_exclusions": "(Excludes International)",
+      "discounts": "Discounts",
+      "savings": "Total Savings",
+      "discount_applied": "Discount Applied!",
+      "items": "Item(s)"
     }
   },
   "collections": {
@@ -106,22 +120,24 @@
       "date_descending": "Date, new to old",
       "date_ascending": "Date, old to new"
     },
-    "filtering": {
-      "title": "Quick filter",
-      "all": "All"
-    },
     "filter": {
-      "shop_by_size": "Shop by Style",
-      "shop_by_color": "Shop by Color",
-      "shop_by_material": "Shop by Type"
+      "filtering_by": "Filtering By:",
+      "refine": "Refine"
     }
   },
   "contact": {
     "form": {
       "name": "Name",
+      "firstname": "First Name",
+      "lastname": "Last Name",
+      "subject": "Subject",
+      "companyname": "Company",
+      "address": "Address",
       "email": "Email",
       "phone": "Phone Number",
       "message": "Message",
+      "websiteurl": "Website URL",
+      "acceptsmarketing": "Subscribe to stay updated with new products and offers!",
       "send": "Send",
       "post_success": "Thanks for contacting us. We'll get back to you as soon as possible."
     }
@@ -129,6 +145,8 @@
   "customer": {
     "account": {
       "title": "Account",
+      "logout": "logout",
+      "signup": "Login or create an account",
       "details": "Account Details",
       "view_addresses": "View Addresses",
       "return": "Return to Account Details"
@@ -249,7 +267,9 @@
       "quick_view": "Quick View",
       "from": "From",
       "view_full": "View Full Details",
-      "related": "More in this Collection"
+      "related": "More in this Collection",
+      "sale_price": "Sale",
+      "regular_price": "Regular"
     },
     "product": {
       "designer": "Designer",
@@ -258,8 +278,24 @@
       "compare_at": "Compare at",
       "add_to_cart": "Add to Cart",
       "quantity": "Quantity",
-      "monogram": "Add Monogram",
-      "back_to": "Back To"
+      "select_options": "View options",
+      "details": "Details",
+      "sizing": "Sizing",
+      "video": "Video",
+      "model": "Product Care",
+      "back_to": "Back To",
+      "adding": "Adding...",
+      "thank_you": "Thank You!",
+      "added": "Added to Cart",
+      "view_cart": "View Cart",
+      "or": "or",
+      "continue": "Continue Shopping",
+      "qty_error_first": "Only",
+      "qty_error_last": "of this item is available",
+      "qty_sold_out": "This item is soldout",
+      "back_in_stock": "Please send me an email when this is available",
+      "back_in_stock_confirm": "Thanks, we will contact you when this is available",
+      "readmore": "Read More"
     }
   },
   "gift_cards": {

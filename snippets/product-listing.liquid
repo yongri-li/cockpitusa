@@ -36,41 +36,60 @@
       {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
       {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
+    {% if settings.quickview %}
+      <div class="product-info">
+        <a data-fancybox="quick-view" data-type="ajax" class="fancybox.ajax product-modal" rel="nofollow" href="{{ product.url | within: collection }}?view=quick">
+          {{ 'products.general.quick_view' | t }}
+        </a>
+      </div>
+    {% endif %}
   </div>
-
-  {% if settings.quickview %}
-    <div class="product-info">
-      <a class="fancybox.ajax product-modal" rel="nofollow" href="{{ product.url }}?view=quick">
-        {{ 'products.general.quick_view' | t }}
-      </a>
-    </div>
-  {% endif %}
 
 <div class="product-details">
   <a href="{{ product.url | within: collection }}">
-    <h3>{{ product.title }} {{ product.metafields.customAttributes.style-number }}</h3>
     {% if settings.vendor %}
       <h4>{{ product.vendor }}</h4>
     {% endif %}
+    <h3>{{ product.title }}</h3>
   </a>
 
+  {% unless product.template_suffix == 'not-for-sale' %}
   <div class="price">
     {% if product.price < product.compare_at_price %}
       <div class="onsale">
-        <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ product.price | money }}</span></span>
+        {{ product.price | money }}
       </div>
       <div class="was-listing">
-        <span class="money">{{ product.compare_at_price | money }}</span>
+        {{ product.compare_at_price | money }}
       </div>
     {% else %}
       <div class="prod-price">
         {% if product.price_varies %}
-          {{ 'products.general.from' | t }} <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ product.price_min | money }}</span></span> - <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ product.price_max | money }}</span></span>
+          {{ 'products.general.from' | t }} {{ product.price_min | money }} - {{ product.price_max | money }}
         {% else %}
-          <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ product.price | money }}</span></span>
+          {{ product.price | money }}
         {% endif %}
       </div>
     {% endif %}
   </div>
+
+  <div class="product_listing_options">
+  {% if product.variants.size > 1 %}
+     {% if settings.product_info == 'sizes' and product.available %}
+       {% include 'show-sizes' %}
+     {% elsif settings.product_info == 'colors' and product.available %}
+       {% include 'show-colors' %}
+     {% endif %}
+   {% endif %}
+
+  {% if settings.product_info == 'add_to_cart' and settings.quickview == false %}
+    {% include 'product-grid-add' %}
+  {% endif %}
+
+  {% if settings.show_reviews %}
+    <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
+  {% endif %}
+  </div>
+    {% endunless %}
 
 </div>

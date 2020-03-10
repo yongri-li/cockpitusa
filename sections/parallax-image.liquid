@@ -1,11 +1,16 @@
 {% assign img_url = section.settings.image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
 
+{% if section.settings.background_effect == 'parallax' %}
+  {% assign background_effect = 'data-section-type="parallax-section"' %}
+{% endif %}
+
 <section
-  class="parallax-{{ section.id }} index-section parallax parallax-window no-fouc lazyload"
-  data-section-type="parallax-section"
+  class="parallax-{{ section.id }} parallax parallax-window lazyload lazyload-fade"
+  {{ background_effect }}
   data-bgset="{% include 'bgset', image: section.settings.image %}"
   data-sizes="auto"
-  data-section-id="{{ section.id }}" >
+  data-mirror-container=".parallax-{{ section.id }}"
+  data-section-id="{{ section.id }}">
 
   <article class="row">
     <div class="parallax-content desktop-12 tablet-6 mobile-3">
@@ -36,10 +41,38 @@
 </section>
 
 <div class="clear"></div>
-
-
-
 <style>
+  {% if section.settings.background_effect == 'parallax' %}
+    .parallax-mirror {
+      -webkit-backface-visibility: hidden;
+      -webkit-transform-style: preserve-3d;
+    }
+    .parallax-slider {
+      webkit-transform: translate3d(0,0,0);
+      -webkit-backface-visibility:hidden;
+    }
+  {% elsif section.settings.background_effect == 'fixed' %}
+    .parallax-{{ section.id }} {
+      background-attachment: fixed;
+      background-size: cover;
+      overflow: hidden;
+      background-position: center center !important;
+    }
+  {% elsif section.settings.background_effect == 'none' %}
+    .parallax-{{ section.id }} {
+      background-image: url('{{ section.settings.image | img_url: '1024x' }}');
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center center !important;
+    }
+  {% endif %}
+
+  .no-js .parallax-{{ section.id }} {
+    background-image: url('{{ section.settings.image | img_url: '1024x' }}');
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+  }
   .parallax-{{ section.id }} article {
     display: table;
     height: {{ section.settings.page_height }}px;
@@ -55,10 +88,12 @@
       font-size: 16px;
     }
   }
-  section.parallax-{{ section.id }} .parallax-text h2, section.parallax-{{ section.id }} .parallax-text a h2, section.parallax-{{ section.id }} .parallax-text a:visited h2 {
+  .parallax-{{ section.id }} .parallax-text h2,
+  .parallax-{{ section.id }} .parallax-text a h2,
+  .parallax-{{ section.id }} .parallax-text a:visited h2 {
     color: {{ section.settings.heading_color }};
   }
-  section.parallax-{{ section.id }} .parallax-text a:hover h2 {
+  .parallax-{{ section.id }} .parallax-text a:hover h2 {
     opacity: 0.8;
   }
   .parallax-{{ section.id }} .parallax-text p {
@@ -73,22 +108,19 @@
       font-size: 14px;
     }
   }
-  .parallax-{{ section.id }} .parallax-text a.button, .parallax-{{ section.id }} .parallax-text a.button:visited {
+  .parallax-{{ section.id }} .parallax-text a.button,
+  .parallax-{{ section.id }} .parallax-text a.button:visited {
     background: {{ section.settings.button_color }};
     color: {{ section.settings.button_text_color }};
+    font-weight: {{ section.settings.button_weight }};
   }
   .parallax-text a.button:hover {
     opacity: 0.8;
   }
-  .no-js .parallax-{{ section.id }} {
-    background-image: url('{{ section.settings.image | img_url: '1024x' }}');
-    background-size: cover !important;
-    background-repeat: no-repeat !important;
-    background-position: center center !important;
-  }
-  @media screen and ( min-width: 1220px ) {
-    section.parallax-{{ section.id }} {
-      background-size: 100% !important;
+  @media screen and ( max-width: 740px ) {
+    .parallax-{{ section.id }} article {
+      height: initial;
+      min-height: 200px;
     }
   }
   @media screen and ( max-width: 1024px ) {
@@ -97,24 +129,37 @@
       background-size: cover !important;
     }
   }
-  @media screen and ( max-width: 740px ) {
-    section.parallax-{{ section.id }} article {
-      height: initial;
-      min-height: 200px;
-    }
-  }
-
 </style>
 
 
 {% schema %}
   {
     "name": "Image with text overlay",
+    "class": "index-section",
     "settings": [
       {
         "type": "image_picker",
         "id": "image",
         "label": "Image"
+      },
+      {
+        "type": "select",
+        "id": "background_effect",
+        "label": "Image effect",
+        "options": [
+          {
+            "value": "fixed",
+            "label": "Fixed in place"
+          },
+          {
+            "value": "none",
+            "label": "Scrolls with content"
+          },
+          {
+            "value": "parallax",
+            "label": "Parallax scrolling"
+          }
+        ]
       },
       {
         "type": "range",
@@ -225,6 +270,25 @@
        "label": "Button text",
   	   "default": "Add a button",
   	   "info": "Visible only if a link is chosen"
+      },
+      {
+        "type": "select",
+        "id": "button_weight",
+        "label": "Button weight",
+        "options": [
+          {
+            "value": "light",
+            "label": "Light"
+          },
+          {
+            "value": "normal",
+            "label": "Normal"
+          },
+          {
+            "value": "bold",
+            "label": "Bold"
+          }
+        ]
       },
       {
         "type": "url",

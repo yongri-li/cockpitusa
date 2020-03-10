@@ -1,25 +1,5 @@
 
   {% form 'product', product, data-product-form:product_form_config %}
-
-  <script class="product-json" type="application/json">
-    {{ product | json }}
-  </script>
-
-  <!-- collection breadcrumbs -->
-  {% if collection %}
-    <div class="desktop-1 right mobile-hide">
-      {% if collection.previous_product %}
-        {{ '<i class="fa fa-angle-left" aria-hidden="true"></i>' | link_to: collection.previous_product }}
-      {% endif %}
-        &nbsp;
-        {% if collection.next_product %}
-        {{ '<i class="fa fa-angle-right" aria-hidden="true"></i>' | link_to: collection.next_product }}
-      {% endif %}
-    </div>
-  {% endif %}
-
-  <div class="product-description">
-
     {% if section.settings.show_vendor %}
       <h3>{{ 'products.product.designer' | t }}: {{ product.vendor }}</h3>
       <div class="clear"></div>
@@ -37,52 +17,48 @@
     {%- endif -%}
     <div id="product-price">
       <span class="product-price" itemprop="price">
-        <span class="{% if onsale %}onsale{% endif %} money"><span class="money" data-product-id="{{ product.id }}">{{ price }}</span></span>
+        <span class="{% if onsale %}onsale{% endif %} money">{{ price }}</span>
       </span>
       {% if onsale %}
         <span class="was">
-          <span class="money"><span class="money" data-product-id="{{ product.id }}">{{ compare_price }}</span></span>
+          {{ compare_price }}
         </span>
       {% else %}
         <span class="was"></span>
       {% endif %}
     </div><div class="clear"></div>
 
-    {% if section.settings.product_note != blank %}
-      <p class="product-note">
-        {{ section.settings.product_note | escape }}
-      </p><div class="clear"></div>
-    {% endif %}
-
     {% if product.options.size > 1 %}
-     <div class="select" {% if product.variants.size == 1 %}style="display: none;"{% endif %}>
+     <div class="select" {% if product.variants.size == 1 or section.settings.product_variants == 'swatches' %}style="display: none;"{% endif %}>
        <select id="product-select-{{ product.id }}" name='id'>
          {% for variant in product.variants %}
            <option value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-             {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
+             {{ variant.title }} - {{ variant.price | money }}
            </option>
          {% endfor %}
        </select>
      </div>
+      {% if section.settings.product_variants == 'swatches' %}
+        {% for option in product.options_with_values %}
+          {% include "swatch" %}
+        {% endfor %}
+      {% endif %}
     {% elsif product.options.size == 1 and product.variants.size > 1 %}
-     <div class="select">
+    <div class="select" {% if product.variants.size == 1 or section.settings.product_variants == 'swatches' %}style="display: none;"{% endif %}>
        <label>{{ product.options[0] }}</label>
        <select id="product-select-{{ product.id }}" name='id'>
          {% for variant in product.variants %}
            <option data-sku="{{ variant.sku }}" value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-             {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
+             {{ variant.title }} - {{ variant.price | money }}
            </option>
          {% endfor %}
        </select>
      </div>
-    {% elsif product.variants.size == 1 %}
-     <select id="product-select-{{ product.id }}" name="id" {% if product.variants.size == 1 %}style="display: none;"{% endif %}>
-       {% for variant in product.variants %}
-         <option value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-           {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
-         </option>
+     {% if section.settings.product_variants == 'swatches' %}
+       {% for option in product.options_with_values %}
+         {% include "swatch" %}
        {% endfor %}
-     </select>
+     {% endif %}
     {% else %}
      <div class="what-is-it">
        {% if product.options.first != 'Title' %}
@@ -101,13 +77,16 @@
         <label style="display: inline-block; line-height: 1.6em;">{{ 'customer.order.details.sku' | t }}:</label> <span class="variant_sku">{{ current_variant.sku }}</span>
       </div><div class="clear"></div>
     {% endif %}
-    
-    {%- if section.settings.show_quantity_selector -%}
-      <div class="product-qty selector-wrapper">
-        <label for="quantity">{{ 'products.product.quantity' | t }}</label>
-        <input min="1" type="number" class="quantity" name="quantity" value="1" />
-      </div>
-    {%- endif -%}
+
+    {% if section.settings.show_quantity_selector %}
+     <div class="product-qty selector-wrapper">
+        <h5>{{ 'products.product.quantity' | t }}</h5>
+        <a class="downer quantity-control-down">-</a>
+        <input min="1" type="text" name="quantity" class="product-quantity" value="1" {% unless current_variant.inventory_management == blank or current_variant.inventory_policy == 'continue' %} max="{{ current_variant.inventory_quantity }}" {% endunless %} />
+        <a class="up quantity-control-up">+</a>
+     </div>
+     <div class="clear"></div>
+   {% endif %}
 
     {% if current_variant.available %}
       <div class="product-add">
@@ -123,8 +102,23 @@
     {{ form | payment_button }}
     {% endif %}
 
-  </div>
+    {% if section.settings.back_in_stock %}
+    <div class="back_in_stock"{% if current_variant.available %} style="display: none"{% endif %}>
+        {{ section.settings.back_in_stock_text }}
+        {%- assign vnt = variant.title -%}
+        {% if product.available == false %}
+        <script>
+        $(".back_in_stock").click(function(){
+          event.stopPropagation();
+          $(".back-in-stock-snippet").toggle();
+        });
+        </script>
+      {% endif %}
+    </div>
+    {% endif %}
+
 {% endform %}
 
-{%- render 'shappify-bdl-load-bundle' -%}
-
+{% if section.settings.back_in_stock %}
+{% include 'back-in-stock-form' %}
+{% endif %}

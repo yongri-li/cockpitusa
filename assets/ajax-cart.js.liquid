@@ -87,7 +87,7 @@ ShopifyAPI.addItemFromForm = function(form, callback, errorCallback) {
     },
     error: function(XMLHttpRequest, textStatus) {
       if ((typeof errorCallback) === 'function') {
-        errorCallback(XMLHttpRequest, textStatus);
+        errorCallback(XMLHttpRequest, textStatus, form);
       }
       else {
         ShopifyAPI.onError(XMLHttpRequest, textStatus);
@@ -235,13 +235,13 @@ var ajaxCart = (function(module, $) {
     ShopifyAPI.getCart(cartUpdateCallback);
   };
 
-  itemErrorCallback = function (XMLHttpRequest, textStatus) {
+  itemErrorCallback = function (XMLHttpRequest, textStatus, form) {
     var data = eval('(' + XMLHttpRequest.responseText + ')');
     $addToCart.removeClass('is-adding is-added');
-
     if (!!data.message) {
       if (data.status == 422) {
-        $formContainer.after('<div class="errors qty-error">'+ data.description +'</div>')
+        var $addButtoncontainer = $('.product-add', form);
+        $addButtoncontainer.before('<div class="errors qty-error">'+ data.description +'</div>')
       }
     }
   };
@@ -252,15 +252,7 @@ var ajaxCart = (function(module, $) {
     buildCart(cart);
   };
 
-  buildCart = function (cart) {
-if(typeof window.BOLD !== 'undefined'
-  && typeof window.BOLD.common !== 'undefined'
-  && typeof window.BOLD.common.cartDoctor !== 'undefined') {
-    // NOTE: "cart" should be the variable containing the cart json data
-    cart = window.BOLD.common.cartDoctor.fix(cart);
-}
-
-
+  buildCart = function(cart) {
     // Start with a fresh cart div
     $cartContainer.empty();
 
@@ -274,29 +266,77 @@ if(typeof window.BOLD !== 'undefined'
 
     // Handlebars.js cart layout
     var items = [],
-        item = {},
-        data = {},
-        source = $("#CartTemplate").html(),
-        template = Handlebars.compile(source);
+      item = {},
+      data = {},
+      source = $('#CartTemplate').html(),
+      template = Handlebars.compile(source);
 
     // Add each item to our handlebars.js data
     $.each(cart.items, function(index, cartItem) {
-
       /* Hack to get product image thumbnail
        *   - If image is not null
        *     - Remove file extension, add _small, and re-add extension
        *     - Create server relative link
        *   - A hard-coded url of no-image
       */
-      if (cartItem.image != null){
-        var prodImg = cartItem.image.replace(/(\.[^.]*)$/, "_small$1").replace('http:', '');
+      var prodImg;
+      if (cartItem.image !== null) {
+        prodImg = cartItem.image
+          .replace(/(\.[^.]*)$/, '_small$1')
+          .replace('http:', '');
       } else {
-        var prodImg = "//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif";
+        prodImg =
+          '//cdn.shopify.com/s/assets/admin/no-image-medium-cc9732cb976dd349a0df1d39816fbcc7.gif';
+      }
+
+      if (cartItem.properties !== null) {
+        $.each(cartItem.properties, function(key, value) {
+          if (key.charAt(0) === '_' || !value) {
+            delete cartItem.properties[key];
+          }
+        });
+      }
+
+      if (cartItem.properties !== null) {
+        $.each(cartItem.properties, function(key, value) {
+          if (key.charAt(0) === '_' || !value) {
+            delete cartItem.properties[key];
+          }
+        });
+      }
+
+      if (cartItem.line_level_discount_allocations.length !== 0) {
+        for (var discount in cartItem.line_level_discount_allocations) {
+          var amount =
+            cartItem.line_level_discount_allocations[discount].amount;
+
+          cartItem.line_level_discount_allocations[
+            discount
+          ].formattedAmount = Shopify.formatMoney(
+            amount,
+            settings.moneyFormat
+          );
+        }
+      }
+
+      if (cart.cart_level_discount_applications.length !== 0) {
+        for (var cartDiscount in cart.cart_level_discount_applications) {
+          var cartAmount =
+            cart.cart_level_discount_applications[cartDiscount]
+              .total_allocated_amount;
+
+          cart.cart_level_discount_applications[
+            cartDiscount
+          ].formattedAmount = Shopify.formatMoney(
+            cartAmount,
+            settings.moneyFormat
+          );
+        }
       }
 
       // Create item's data object and add to 'items' array
       item = {
-        id: cartItem.variant_id,
+        key: cartItem.key,
         line: index + 1, // Shopify uses a 1+ index in the API
         url: cartItem.url,
         img: prodImg,
@@ -306,7 +346,17 @@ if(typeof window.BOLD !== 'undefined'
         itemAdd: cartItem.quantity + 1,
         itemMinus: cartItem.quantity - 1,
         itemQty: cartItem.quantity,
-        price: Shopify.formatMoney(cartItem.price, settings.moneyFormat),
+        price: Shopify.formatMoney(
+          cartItem.original_line_price,
+          settings.moneyFormat
+        ),
+        discountedPrice: Shopify.formatMoney(
+          cartItem.final_line_price,
+          settings.moneyFormat
+        ),
+        discounts: cartItem.line_level_discount_allocations,
+        discountsApplied:
+          cartItem.line_level_discount_allocations.length === 0 ? false : true,
         vendor: cartItem.vendor
       };
 
@@ -317,8 +367,23 @@ if(typeof window.BOLD !== 'undefined'
     data = {
       items: items,
       note: cart.note,
-      totalPrice: Shopify.formatMoney(cart.total_price, settings.moneyFormat)
-    }
+      subTotalPrice: Shopify.formatMoney(
+        cart.items_subtotal_price,
+        settings.moneyFormat
+      ),
+      totalPrice: Shopify.formatMoney(
+        cart.total_price,
+        settings.moneyFormat
+      ),
+      cartTotalDiscounts: Shopify.formatMoney(
+        cart.total_discount,
+        settings.moneyFormat
+      ),
+      cartDiscounts: cart.cart_level_discount_applications,
+      cartDiscountsApplied:
+        cart.cart_level_discount_applications.length === 0 ? false : true,
+      cartTotalSavings: cart.cart_level_discount_applications.length === 0 && cart.total_discount > 0
+    };
 
     $cartContainer.append(template(data));
 
@@ -328,16 +393,12 @@ if(typeof window.BOLD !== 'undefined'
   cartCallback = function(cart) {
     $body.removeClass('drawer--is-loading');
     $body.trigger('ajaxCart.afterCartLoad', cart);
-    
+
      if (window.Shopify && Shopify.StorefrontExpressButtons) {
       Shopify.StorefrontExpressButtons.initialize();
-    }   
-    
-  
-if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
-  BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
-}
-};
+    }
+
+  };
 
   adjustCart = function () {
     // Delegate all events because elements reload with the cart
@@ -507,9 +568,6 @@ if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common
           qty -= 1;
           if (qty <= 1) qty = 1;
         }
-
-        // Update the input's number
-        $qtySelector.val(qty);
       });
     }
   };
@@ -528,8 +586,8 @@ if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common
     init: init,
     load: loadCart
   };
-  
-  
+
+
 
   return module;
 
