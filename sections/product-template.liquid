@@ -174,7 +174,7 @@
                   {% endfor %}
                 {% endunless %}
                 {% if section.settings.size_chart_type == 'product-tab' and product.description contains '[#size]' %}
-                    <a data-fancybox class="product-size-chart" data-src="#product-size-chart" href="javascript:;"><i class="fas fa-ruler"></i> {{ 'products.product.sizing' | t }}</a>
+                    <a data-fancybox class="product-size-chart" data-src="#product-size-chart" href="javascript:;"><i class="fas fa-ruler"></i> Size Chart</a>
                     <div id="product-size-chart" style="display: none;">
                       {{ shortcode_description }}
                     </div>
