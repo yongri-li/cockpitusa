@@ -1,3 +1,4 @@
+{% include 'spurit_po2_section_snippet', product: all_products[section.settings.featured_product], products: null %}
 {%- assign product = all_products[section.settings.featured_product] -%}
 {% assign current_variant = product.selected_or_first_available_variant %}
 {% if product == empty %}

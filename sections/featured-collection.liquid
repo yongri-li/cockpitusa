@@ -1,3 +1,4 @@
+{% include 'spurit_po2_section_snippet', product: null, products: collections[section.settings.collection].products %}
 <section class="homepage-featured-collection-{{ section.id }} homepage-products"
 data-section-id="{{ section.id }}"
 {% if section.settings.homepage_product_layout == 'carousel' %}data-section-type="carousel-section"{% endif %}

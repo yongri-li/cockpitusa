@@ -85,7 +85,7 @@
 
     {% include 'pagination' %}
 
-    {% endpaginate %}
+    {% assign sp_paginate_by = paginate.page_size %}{% endpaginate %}
 
   </div>
   <style media="screen">
@@ -100,7 +100,7 @@
     }
   </style>
 </div>
-{% schema %}
+{% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}{% schema %}
   {
     "name": "Blog",
     "settings": [

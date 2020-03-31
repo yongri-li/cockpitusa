@@ -200,10 +200,10 @@
         </div>
       </div>
     {% if section.settings.full_width %}</div>{% endif %}
-  {% endpaginate %}
+  {% assign sp_paginate_by = paginate.page_size %}{% endpaginate %}
 </div>
 
-{% schema %}
+{% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}{% schema %}
 {
   "name": "Collection Page",
 	"max_blocks":12,
