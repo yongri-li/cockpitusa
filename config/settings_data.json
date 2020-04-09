@@ -4724,16 +4724,16 @@
     "footer_input_text": "#000000",
     "footer_button": "#000000",
     "footer_button_text": "#ffffff",
-    "main_font": "assistant_n4",
-    "nav_font": "assistant_n4",
-    "heading_font": "assistant_n4",
-    "font-size": 13,
-    "h1-size": 22,
-    "h2-size": 18,
-    "h3-size": 16,
-    "h4-size": 16,
+    "main_font": "baskerville_no_2_n4",
+    "nav_font": "lora_n4",
+    "heading_font": "baskerville_no_2_n4",
+    "font-size": 17,
+    "h1-size": 25,
+    "h2-size": 27,
+    "h3-size": 27,
+    "h4-size": 28,
     "h5-size": 16,
-    "nav_size": 15,
+    "nav_size": 18,
     "section_title_border": 1,
     "section_title_align": "center",
     "section_titles": "short_below",
@@ -4747,7 +4747,7 @@
     "details_align": "center",
     "image_flip": true,
     "vendor": false,
-    "show_reviews": false,
+    "show_reviews": true,
     "quickview": true,
     "product_info": "add_to_cart",
     "color_swatch_options": "variant-image",
@@ -4780,7 +4780,7 @@
     "googleplus_url": "",
     "snapchat-id": "",
     "weibo-id": "",
-    "popup": true,
+    "popup": false,
     "test_mode": false,
     "show_discount_code": true,
     "generic_coupon_code": "10CPT",
@@ -4988,7 +4988,7 @@
           "logo_alt": "",
           "logo_max_width": 195,
           "logo_position": "inline",
-          "logo_align": "left",
+          "logo_align": "center",
           "main_nav": "main-menu",
           "product_menu": true
         }
@@ -5314,87 +5314,87 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
+          "1559067219938-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Suede-Shirt-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
+              "text_align": "left",
+              "caption_horizontal": 18,
+              "caption_vertical": 50,
+              "mobile_image": "",
+              "hide_caption_background": false,
+              "heading": "New Spring Styles",
+              "subheading": "The Suede Work Shirt",
+              "link": "",
+              "button_text": "Shop Now",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#0d0101",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 10
+            }
+          },
           "1583332518768": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Suede-Trucker-Z21Z002.jpg",
               "text_align": "left",
-              "caption_horizontal": 50,
+              "caption_horizontal": 18,
               "caption_vertical": 50,
               "mobile_image": "",
               "hide_caption_background": false,
-              "heading": "",
-              "subheading": "",
-              "link": "",
-              "button_text": "",
+              "heading": "The Suede Trucker",
+              "subheading": "Featured on Style Icon Eric Rutherford.",
+              "link": "shopify:\/\/collections\/new-arrivals",
+              "button_text": "Shop Now",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
-              "slide_text_color": "rgba(0,0,0,0)",
-              "cta_color": "rgba(0,0,0,0)",
-              "cta_background": "rgba(0,0,0,0)",
+              "slide_text_color": "#060000",
+              "cta_color": "#ffffff",
+              "cta_background": "#070000",
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
-            }
-          },
-          "1559067219938-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Super-Fortress-Ben-Breuster-1200x800.jpg",
-              "text_align": "left",
-              "caption_horizontal": 20,
-              "caption_vertical": 45,
-              "mobile_image": "",
-              "hide_caption_background": false,
-              "heading": "",
-              "subheading": "",
-              "link": "shopify:\/\/collections",
-              "button_text": "",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#c8a88d",
-              "cta_color": "#ffffff",
-              "cta_background": "rgba(0,0,0,0)",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 10
             }
           },
           "1559067219938-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Women_s-Bombers-1200x800.jpg",
-              "text_align": "right",
-              "caption_horizontal": 87,
-              "caption_vertical": 39,
+              "image": "shopify:\/\/shop_images\/Seer-Sucker-Jacket-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
+              "text_align": "left",
+              "caption_horizontal": 18,
+              "caption_vertical": 50,
               "mobile_image": "",
               "hide_caption_background": false,
-              "heading": "",
-              "subheading": "",
-              "link": "shopify:\/\/collections",
-              "button_text": "",
+              "heading": "Navy Seersucker MA-1",
+              "subheading": "Beach weight outerwear",
+              "link": "shopify:\/\/collections\/new-arrivals",
+              "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
-              "slide_text_color": "#554237",
+              "slide_text_color": "#060300",
               "cta_color": "#ffffff",
-              "cta_background": "rgba(0,0,0,0)",
+              "cta_background": "#060300",
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 10
             }
           }
         },
         "block_order": [
-          "1583332518768",
           "1559067219938-1",
+          "1583332518768",
           "1559067219938-0"
         ],
         "settings": {
           "slider_speed": 8,
-          "slide_heading_size": 20,
+          "slide_heading_size": 36,
           "slide_heading_weight": "700",
           "subheading_size": 13,
-          "cta_size": 14,
+          "cta_size": 18,
           "cta_weight": "400"
         }
       },
@@ -5413,10 +5413,10 @@
         "type": "featured-collection",
         "settings": {
           "full_width": true,
-          "heading": "Light Weight",
+          "heading": "Heritage Collection",
           "heading_color": "#000000",
           "background_color": "#ffffff",
-          "collection": "lightweight-jackets",
+          "collection": "heritage-collection",
           "homepage_product_layout": "carousel",
           "limit": 6,
           "grid": 4,
@@ -5557,6 +5557,7 @@
       },
       "1561574067213": {
         "type": "gallery",
+        "disabled": true,
         "blocks": {
           "1561574067213-0": {
             "type": "image",
@@ -5626,9 +5627,10 @@
       },
       "1561574293261": {
         "type": "parallax-image",
+        "disabled": true,
         "settings": {
           "image": "shopify:\/\/shop_images\/Cockpit_USA-4211_373d2bc2-439a-4b75-804a-e19fecb6b716.jpg",
-          "background_effect": "parallax",
+          "background_effect": "fixed",
           "page_height": 400,
           "heading": "",
           "heading_font_size": 26,
@@ -5647,6 +5649,7 @@
       },
       "1561574432974": {
         "type": "featured-blog",
+        "disabled": true,
         "settings": {
           "full_width": false,
           "blog": "d-day",
@@ -5660,6 +5663,7 @@
       },
       "1583332882727": {
         "type": "slideshow",
+        "disabled": true,
         "blocks": {
           "1583332882727-0": {
             "type": "image",
@@ -5699,6 +5703,7 @@
       },
       "1583333080349": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "full_width": false,
           "heading": "Womens",
@@ -5719,12 +5724,65 @@
           "homepage_social_color": "#000",
           "homepage_social_background": "#fff"
         }
+      },
+      "1586279190981": {
+        "type": "image-with-text-row",
+        "settings": {
+          "full_width": true,
+          "remove_top_padding": false,
+          "remove_bottom_padding": false,
+          "image": "shopify:\/\/shop_images\/Image-Gallery-2.jpg",
+          "layout": "left",
+          "image_width": "50%",
+          "text_align": "left",
+          "title": "Heritage Collection",
+          "text": "<p>ADD CAPTION HERE<\/p>",
+          "link": "shopify:\/\/collections\/heritage-collection",
+          "button": "Shop Here"
+        }
+      },
+      "1586279538889": {
+        "type": "collection-list",
+        "blocks": {
+          "1586279538889-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "top-gun"
+            }
+          },
+          "1586279538889-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "kids"
+            }
+          },
+          "1586279538889-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "bomber-jackets"
+            }
+          }
+        },
+        "block_order": [
+          "1586279538889-0",
+          "1586279538889-1",
+          "1586279538889-2"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "Featured Collections",
+          "heading_color": "#000",
+          "background_color": "#fff",
+          "grid": 3
+        }
       }
     },
     "content_for_index": [
       "1559067219938",
       "1561574067213",
+      "1586279190981",
       "1559084715445",
+      "1586279538889",
       "1583332882727",
       "1583333080349",
       "1561574293261",
