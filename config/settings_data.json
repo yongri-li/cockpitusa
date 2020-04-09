@@ -5292,7 +5292,7 @@
         ],
         "settings": {
           "page_size": "full_page",
-          "sidebar_positon": "left"
+          "sidebar_positon": "none"
         }
       },
       "scrolling-announcements": {
@@ -5719,7 +5719,7 @@
       "1583333445952": {
         "type": "social-links",
         "settings": {
-          "heading": "Follow Us",
+          "heading": "",
           "show_mailchimp": false,
           "homepage_social_color": "#000",
           "homepage_social_background": "#fff"
@@ -5731,7 +5731,7 @@
           "full_width": true,
           "remove_top_padding": false,
           "remove_bottom_padding": false,
-          "image": "shopify:\/\/shop_images\/Image-Gallery-2.jpg",
+          "image": "shopify:\/\/shop_images\/Heritage-Photo.jpg",
           "layout": "left",
           "image_width": "50%",
           "text_align": "left",
@@ -5775,6 +5775,114 @@
           "background_color": "#fff",
           "grid": 3
         }
+      },
+      "1586448235577": {
+        "type": "slideshow-video",
+        "blocks": {
+          "1586448235577-1": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=sHfju5LJhHw",
+              "video_url_mp4": "",
+              "video_heading": "Our Story",
+              "video_subheading": "",
+              "video_slide_text_color": "#fbf9f9",
+              "video_button_link": "https:\/\/cockpit-usa.myshopify.com\/admin\/themes\/80734683229\/editor#\/pages\/about-cockpit-usa",
+              "video_button_text": "Read more here",
+              "video_button_link_2": "",
+              "video_button_text_2": "Add a 2nd button",
+              "video_cta_color": "#ffffff",
+              "video_cta_background": "#000000",
+              "video_caption_alignment": "left",
+              "caption_horizontal_position": 5,
+              "caption_vertical_position": 5,
+              "video_caption_background": "transparent",
+              "video_caption_background_opacity": 20,
+              "video_caption_border": "transparent"
+            }
+          },
+          "1586448235577-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/download-1.jpg",
+              "image_heading": "Movies & TV",
+              "image_subheading": "Iconic moments in movie and television history.",
+              "image_button_link": "",
+              "image_button_text": "Add a button",
+              "image_button_text_2": "Add a 2nd button",
+              "image_button_link_2": "",
+              "image_caption_alignment": "left",
+              "caption_horizontal_position": 50,
+              "caption_vertical_position": 50,
+              "image_slide_text_color": "#000000",
+              "image_cta_color": "#ffffff",
+              "image_cta_background": "#000000",
+              "image_caption_background": "transparent",
+              "image_caption_background_opacity": 20,
+              "image_caption_border": "transparent"
+            }
+          },
+          "1586448235577-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/IMG_2739.jpg",
+              "image_heading": "Off Duty",
+              "image_subheading": "The Cockpit USA Blog",
+              "image_button_link": "",
+              "image_button_text": "Read More Here",
+              "image_button_text_2": "Add a 2nd button",
+              "image_button_link_2": "",
+              "image_caption_alignment": "left",
+              "caption_horizontal_position": 50,
+              "caption_vertical_position": 50,
+              "image_slide_text_color": "#ffffff",
+              "image_cta_color": "#ffffff",
+              "image_cta_background": "#000000",
+              "image_caption_background": "transparent",
+              "image_caption_background_opacity": 20,
+              "image_caption_border": "transparent"
+            }
+          }
+        },
+        "block_order": [
+          "1586448235577-1",
+          "1586448235577-0",
+          "1586448235577-2"
+        ],
+        "settings": {
+          "full_width": true,
+          "slide_controls": "dots",
+          "video_audio": "off",
+          "slide_height": 38,
+          "slide_heading_size": 15,
+          "slide_heading_weight": "bold",
+          "subheading_size": 14,
+          "cta_size": 12,
+          "cta_weight": "bold",
+          "use_mobile_height": true
+        }
+      },
+      "1586452665539": {
+        "type": "parallax-image",
+        "disabled": true,
+        "settings": {
+          "image": "",
+          "background_effect": "fixed",
+          "page_height": 400,
+          "heading": "Image with text overlay",
+          "heading_font_size": 26,
+          "heading_font_weight": "400",
+          "heading_color": "#000",
+          "subheading": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.",
+          "subheading_font_size": 16,
+          "subheading_font_weight": "400",
+          "subheading_color": "#000",
+          "button_text": "Add a button",
+          "button_weight": "light",
+          "button_link": "",
+          "button_text_color": "#fff",
+          "button_color": "#000"
+        }
       }
     },
     "content_for_index": [
@@ -5787,7 +5895,9 @@
       "1583333080349",
       "1561574293261",
       "1561574432974",
-      "1583333445952"
+      "1586448235577",
+      "1583333445952",
+      "1586452665539"
     ]
   }
 }
