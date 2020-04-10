@@ -5056,7 +5056,7 @@
           "show_product_size_chart": true,
           "show_product_video": false,
           "show_product_model": false,
-          "enable_product_reviews": false,
+          "enable_product_reviews": true,
           "reviews_heading": "Customer Reviews"
         }
       },
@@ -5325,7 +5325,7 @@
               "hide_caption_background": false,
               "heading": "New Spring Styles",
               "subheading": "The Suede Work Shirt",
-              "link": "",
+              "link": "shopify:\/\/products\/suede-shirt",
               "button_text": "Shop Now",
               "second_button": false,
               "second_link": "",
@@ -5360,6 +5360,29 @@
               "caption_background_opacity": 20
             }
           },
+          "1586456743704": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Amelia-Coat-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800-2.jpg",
+              "text_align": "left",
+              "caption_horizontal": 18,
+              "caption_vertical": 50,
+              "mobile_image": "",
+              "hide_caption_background": false,
+              "heading": "Amelia Trench",
+              "subheading": "Inspired by Amelia Earhart",
+              "link": "shopify:\/\/products\/amelia-trench",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#050000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          },
           "1559067219938-0": {
             "type": "image",
             "settings": {
@@ -5371,7 +5394,7 @@
               "hide_caption_background": false,
               "heading": "Navy Seersucker MA-1",
               "subheading": "Beach weight outerwear",
-              "link": "shopify:\/\/collections\/new-arrivals",
+              "link": "shopify:\/\/products\/seersucker-ma-1-jacket",
               "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
@@ -5387,6 +5410,7 @@
         "block_order": [
           "1559067219938-1",
           "1583332518768",
+          "1586456743704",
           "1559067219938-0"
         ],
         "settings": {
@@ -5736,7 +5760,7 @@
           "image_width": "50%",
           "text_align": "left",
           "title": "Heritage Collection",
-          "text": "<p>ADD CAPTION HERE<\/p>",
+          "text": "<p>Preserving American history, the Cockpit USA Heritage collection is an offering of leather, textile, and sheepskin jackets. Each style is modeled after it's original design, made of the finest materials and genuine craftsmanship. Proudly made in the U.S.A..&nbsp;<\/p>",
           "link": "shopify:\/\/collections\/heritage-collection",
           "button": "Shop Here"
         }
@@ -5784,7 +5808,7 @@
             "settings": {
               "video_url": "https:\/\/www.youtube.com\/watch?v=sHfju5LJhHw",
               "video_url_mp4": "",
-              "video_heading": "Our Story",
+              "video_heading": "Our Story | TV & Movies | Blog",
               "video_subheading": "",
               "video_slide_text_color": "#fbf9f9",
               "video_button_link": "https:\/\/cockpit-usa.myshopify.com\/admin\/themes\/80734683229\/editor#\/pages\/about-cockpit-usa",
