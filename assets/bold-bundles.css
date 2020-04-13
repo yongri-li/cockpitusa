@@ -25,7 +25,7 @@ Generated at 2020-04-13 04:17:00
 .bold-bundles-widget {
   box-sizing: border-box;
   border-style: solid;
-  border-width: 1px;
+  border-width: 0px;
   border-color: #c0c0c0;
   cursor: default;
   margin-top: 20px;
@@ -559,6 +559,3 @@ margin-top:10px
   color: #FFF;
 }
 /* Bundles cart loader CSS end */
-
-
-
