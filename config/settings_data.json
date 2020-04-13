@@ -4678,7 +4678,7 @@
     "scroll_background": "#ffffff",
     "submenu_color": "#000000",
     "dropdown_background": "#fff",
-    "nav_border_color": "#dbdbdb",
+    "nav_border_color": "#acacac",
     "secondary_color": "rgba(0,0,0,0)",
     "background": "#ffffff",
     "header_color": "#000000",
@@ -4688,7 +4688,7 @@
     "dotted_color": "#ffffff",
     "accent_color": "#fdfdfd",
     "button_color": "#000000",
-    "button_hover": "#727272",
+    "button_hover": "#000000",
     "button_text": "#ffffff",
     "secondary_button_color": "#acacac",
     "secondary_button_hover": "#3a3a3a",
@@ -5066,8 +5066,8 @@
           "image": "",
           "text": "",
           "text_align": "left",
-          "post_tags": true,
-          "show_author": true,
+          "post_tags": false,
+          "show_author": false,
           "excerpt_bg_color": "#f8f3f0",
           "excerpt_text_color": "#000000"
         }
@@ -5238,37 +5238,9 @@
       },
       "article-template": {
         "type": "article-template",
-        "blocks": {
-          "1559157030361": {
-            "type": "image",
-            "settings": {
-              "image": "",
-              "link": ""
-            }
-          },
-          "1559157041053": {
-            "type": "text_note",
-            "settings": {
-              "textbox_heading": "Text Header",
-              "textbox_subheading": "<p>Text paragraph<\/p>"
-            }
-          },
-          "1559157085335": {
-            "type": "menu",
-            "settings": {
-              "side_nav": "main-menu",
-              "title": "Menu Linklist"
-            }
-          }
-        },
-        "block_order": [
-          "1559157030361",
-          "1559157041053",
-          "1559157085335"
-        ],
         "settings": {
-          "post_tags": true,
-          "show_author": true,
+          "post_tags": false,
+          "show_author": false,
           "social": true,
           "heading": "Other Articles",
           "featured_article_1": "",
@@ -5314,29 +5286,6 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
-          "1559067219938-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Shirt-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
-              "text_align": "left",
-              "caption_horizontal": 18,
-              "caption_vertical": 50,
-              "mobile_image": "",
-              "hide_caption_background": false,
-              "heading": "New Spring Styles",
-              "subheading": "The Suede Work Shirt",
-              "link": "shopify:\/\/products\/suede-shirt",
-              "button_text": "Shop Now",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#ffffff",
-              "cta_background": "#0d0101",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 10
-            }
-          },
           "1583332518768": {
             "type": "image",
             "settings": {
@@ -5360,27 +5309,27 @@
               "caption_background_opacity": 20
             }
           },
-          "1586456743704": {
+          "1586543685640": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Amelia-Coat-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800-2.jpg",
-              "text_align": "left",
-              "caption_horizontal": 18,
-              "caption_vertical": 50,
+              "image": "shopify:\/\/shop_images\/Suede-Shop-2-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
+              "text_align": "center",
+              "caption_horizontal": 51,
+              "caption_vertical": 60,
               "mobile_image": "",
               "hide_caption_background": false,
-              "heading": "Amelia Trench",
-              "subheading": "Inspired by Amelia Earhart",
-              "link": "shopify:\/\/products\/amelia-trench",
+              "heading": "The Suede Shop",
+              "subheading": "Tell your brand's story through images",
+              "link": "shopify:\/\/collections\/the-suede-shop",
               "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
+              "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
-              "cta_background": "#050000",
+              "cta_background": "#0b0101",
               "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
+              "caption_background_opacity": 10
             }
           },
           "1559067219938-0": {
@@ -5405,17 +5354,40 @@
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 10
             }
+          },
+          "1586797559843": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Suede-Shirt-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 50,
+              "caption_vertical": 50,
+              "mobile_image": "",
+              "hide_caption_background": false,
+              "heading": "Add a title to your image",
+              "subheading": "Tell your brand's story through images",
+              "link": "",
+              "button_text": "Add a button",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "transparent",
+              "caption_background_opacity": 20
+            }
           }
         },
         "block_order": [
-          "1559067219938-1",
           "1583332518768",
-          "1586456743704",
-          "1559067219938-0"
+          "1586543685640",
+          "1559067219938-0",
+          "1586797559843"
         ],
         "settings": {
-          "slider_speed": 8,
-          "slide_heading_size": 36,
+          "slider_speed": 6,
+          "slide_heading_size": 34,
           "slide_heading_weight": "700",
           "subheading_size": 13,
           "cta_size": 18,
@@ -5760,7 +5732,7 @@
           "image_width": "50%",
           "text_align": "left",
           "title": "Heritage Collection",
-          "text": "<p>Preserving American history, the Cockpit USA Heritage collection is an offering of leather, textile, and sheepskin jackets. Each style is modeled after it's original design, made of the finest materials and genuine craftsmanship. Proudly made in the U.S.A..&nbsp;<\/p>",
+          "text": "<p>Preserving American history, the Cockpit USA Heritage collection is an offering of leather, textile, and sheepskin jackets. Each style is modeled after it's original design, made of the finest materials and genuine craftsmanship. Proudly made in the U.S.A.&nbsp;<\/p>",
           "link": "shopify:\/\/collections\/heritage-collection",
           "button": "Shop Here"
         }
@@ -5828,37 +5800,37 @@
           "1586448235577-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/download-1.jpg",
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2020-04-13_at_1.33.50_PM.png",
               "image_heading": "Movies & TV",
-              "image_subheading": "Iconic moments in movie and television history.",
-              "image_button_link": "",
-              "image_button_text": "Add a button",
+              "image_subheading": "Cockpit USA as seen on Apple TV's Amazing Stories",
+              "image_button_link": "https:\/\/cockpit-usa.myshopify.com\/pages\/media",
+              "image_button_text": "More here",
               "image_button_text_2": "Add a 2nd button",
               "image_button_link_2": "",
               "image_caption_alignment": "left",
-              "caption_horizontal_position": 50,
-              "caption_vertical_position": 50,
-              "image_slide_text_color": "#000000",
-              "image_cta_color": "#ffffff",
+              "caption_horizontal_position": 5,
+              "caption_vertical_position": 5,
+              "image_slide_text_color": "#fdfdfd",
+              "image_cta_color": "#fffcfc",
               "image_cta_background": "#000000",
               "image_caption_background": "transparent",
-              "image_caption_background_opacity": 20,
+              "image_caption_background_opacity": 10,
               "image_caption_border": "transparent"
             }
           },
           "1586448235577-2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/IMG_2739.jpg",
-              "image_heading": "Off Duty",
-              "image_subheading": "The Cockpit USA Blog",
-              "image_button_link": "",
+              "image": "shopify:\/\/shop_images\/kids.jpg",
+              "image_heading": "Blue Collar Prep",
+              "image_subheading": "Cockpit USA Blog",
+              "image_button_link": "https:\/\/www.cockpitusa.com\/blog\/2019\/11\/12\/joint-forces-featuring-eric-wertz-from-bluecollarprep\/",
               "image_button_text": "Read More Here",
               "image_button_text_2": "Add a 2nd button",
               "image_button_link_2": "",
               "image_caption_alignment": "left",
-              "caption_horizontal_position": 50,
-              "caption_vertical_position": 50,
+              "caption_horizontal_position": 5,
+              "caption_vertical_position": 5,
               "image_slide_text_color": "#ffffff",
               "image_cta_color": "#ffffff",
               "image_cta_background": "#000000",
@@ -5875,13 +5847,13 @@
         ],
         "settings": {
           "full_width": true,
-          "slide_controls": "dots",
+          "slide_controls": "arrows",
           "video_audio": "off",
           "slide_height": 38,
-          "slide_heading_size": 15,
+          "slide_heading_size": 22,
           "slide_heading_weight": "bold",
-          "subheading_size": 14,
-          "cta_size": 12,
+          "subheading_size": 18,
+          "cta_size": 14,
           "cta_weight": "bold",
           "use_mobile_height": true
         }
