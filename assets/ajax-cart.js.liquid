@@ -253,6 +253,14 @@ var ajaxCart = (function(module, $) {
   };
 
   buildCart = function(cart) {
+if(typeof window.BOLD !== 'undefined'
+  && typeof window.BOLD.common !== 'undefined'
+  && typeof window.BOLD.common.cartDoctor !== 'undefined') {
+    // NOTE: "cart" should be the variable containing the cart json data
+    cart = window.BOLD.common.cartDoctor.fix(cart);
+}
+
+
     // Start with a fresh cart div
     $cartContainer.empty();
 
@@ -398,7 +406,11 @@ var ajaxCart = (function(module, $) {
       Shopify.StorefrontExpressButtons.initialize();
     }
 
-  };
+  
+if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
+  BOLD.common.eventEmitter.emit('BOLD_COMMON_cart_loaded');
+}
+};
 
   adjustCart = function () {
     // Delegate all events because elements reload with the cart

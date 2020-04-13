@@ -17,11 +17,11 @@
     {%- endif -%}
     <div id="product-price">
       <span class="product-price" itemprop="price">
-        <span class="{% if onsale %}onsale{% endif %} money">{{ price }}</span>
+        <span class="{% if onsale %}onsale{% endif %} money"><span class="money" data-product-id="{{ product.id }}">{{ price }}</span></span>
       </span>
       {% if onsale %}
         <span class="was">
-          {{ compare_price }}
+          <span class="money" data-product-id="{{ product.id }}">{{ compare_price }}</span>
         </span>
       {% else %}
         <span class="was"></span>
@@ -33,7 +33,7 @@
        <select id="product-select-{{ product.id }}" name='id'>
          {% for variant in product.variants %}
            <option value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-             {{ variant.title }} - {{ variant.price | money }}
+             {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
            </option>
          {% endfor %}
        </select>
@@ -49,7 +49,7 @@
        <select id="product-select-{{ product.id }}" name='id'>
          {% for variant in product.variants %}
            <option data-sku="{{ variant.sku }}" value="{{ variant.id }}" {% if variant == current_variant %}selected="selected"{% endif %}>
-             {{ variant.title }} - {{ variant.price | money }}
+             {{ variant.title }} - <span class="money" data-product-id="{{ product.id }}">{{ variant.price | money }}</span>
            </option>
          {% endfor %}
        </select>
@@ -145,6 +145,9 @@
     {% endif %}
 
 {% endform %}
+
+{%- render 'shappify-bdl-load-bundle' -%}
+
 
 {% if section.settings.back_in_stock %}
 {% include 'back-in-stock-form' %}

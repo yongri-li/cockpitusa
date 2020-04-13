@@ -17,6 +17,7 @@
       {% endfor %}
     {% else %}
       {% for product in collection.products %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
         <div class="lazyOwl product" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
           {% include 'product-listing' %}
         </div>

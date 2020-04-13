@@ -273,6 +273,7 @@
             <div class="row feat-col-{{ block.id }} featured-collection" data-section-id="{{ block.id }}" data-aos="{{ settings.scroll_animation }}" data-section-type="carousel-section" {{ block.shopify_attributes }}>
               <div class="collection-carousel" data-slider-controls="{{ block.settings.slide_controls }}" data-grid="{{ block.settings.fc_grid }}" {{ block.shopify_attributes }}>
                 {% for product in coll.products limit: prod_limit  %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
                   <div class="product-index" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
                     {% include 'product-listing' | with coll %}
                   </div>

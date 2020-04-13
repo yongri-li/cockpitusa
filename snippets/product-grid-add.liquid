@@ -17,6 +17,9 @@
         <input id="AddToCart" type="submit" name="button" class="add clearfix" value="{{ 'products.product.add_to_cart' | t }}" />
       </div>
     {% endform %}
+
+{%- render 'shappify-bdl-load-bundle' -%}
+
   {% else %}
     <div class="product-add">
       <a class="add options button clearfix" href="{{ product.url | within: collection }}">{{ 'products.product.select_options' | t }}</a>

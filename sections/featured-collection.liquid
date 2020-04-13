@@ -33,6 +33,7 @@ data-aos="{{ settings.scroll_animation }}">
     {% endcase %}
     <div class="product-loop row">
       {% for product in collection.products limit: prod_limit  %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
         <div class="product-index {{ grid_item_width }} mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
           {% include 'product-listing' %}
         </div>
@@ -43,6 +44,7 @@ data-aos="{{ settings.scroll_animation }}">
 
     <div class="collection-carousel" data-slider-controls="{{ section.settings.slide_controls }}" data-grid="{{ section.settings.grid }}">
       {% for product in collection.products limit: prod_limit  %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
       <div class="product-index" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
         {% include 'product-listing' %}
       </div>

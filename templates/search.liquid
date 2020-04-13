@@ -29,6 +29,7 @@
 <div class="desktop-12 tablet-6 mobile-3" id="four-per-row">
   <div class="grid_wrapper product-loop">
     {% for item in search.results %}
+<script type='application/json' class='bold-product-json'>{{ item | json }}</script>
       <div class="product-index desktop-3 tablet-2 mobile-half span-3" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
         <div class="collection-image ci">
 

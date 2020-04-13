@@ -57,7 +57,7 @@
   <div class="price">
     {% if product.price < product.compare_at_price %}
       <div class="onsale">
-        {{ product.price | money }}
+        <span class="money" data-product-id="{{ product.id }}">{{ product.price | money }}</span>
       </div>
       <div class="was-listing">
         {{ product.compare_at_price | money }}
@@ -65,9 +65,9 @@
     {% else %}
       <div class="prod-price">
         {% if product.price_varies %}
-          {{ 'products.general.from' | t }} {{ product.price_min | money }} - {{ product.price_max | money }}
+          {{ 'products.general.from' | t }} <span class="money" data-product-id="{{ product.id }}">{{ product.price_min | money }}</span> - <span class="money" data-product-id="{{ product.id }}">{{ product.price_max | money }}</span>
         {% else %}
-          {{ product.price | money }}
+          <span class="money" data-product-id="{{ product.id }}">{{ product.price | money }}</span>
         {% endif %}
       </div>
     {% endif %}

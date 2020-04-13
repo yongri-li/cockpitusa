@@ -151,6 +151,7 @@
 
             <div class="grid_wrapper product-loop{% if section.settings.infinite_scroll %} is_infinite{% endif %}">
               {% for product in collection.products %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
                 <div class="{{ grid_item_width }} product-index" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}" data-aos="{{ settings.scroll_animation }}">
                   {% include 'product-listing' %}
                 </div>

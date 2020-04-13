@@ -72,6 +72,7 @@
             <h2><a href="{{ collection.url }}" title="{{ collection_title }}">{{ collection.title }}</a></h2>
           </div>
           {% for product in collection.products limit: lim %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
             <div class="product-index {{ grid_item_width }}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}" data-aos="{{ settings.scroll_animation }}">
               {% include 'product-listing' %}
             </div>

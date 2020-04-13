@@ -155,6 +155,7 @@
 
       <ul class="grid grid--uniform{% if collection.products_count > 0 %} grid--view-items{% endif %}">
         {% for product in collection.products %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
           <li class="grid__item grid__item--{{section.id}} {{ grid_item_width }}">
             {% include 'product-card-grid', max_height: max_height %}
           </li>
@@ -194,6 +195,7 @@
     {% else %}
       <ul class="list-view-items">
         {% for product in collection.products %}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
           <li class="list-view-item">
             {% include 'product-card-list', product: product %}
           </li>

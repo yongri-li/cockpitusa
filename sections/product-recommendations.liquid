@@ -5,6 +5,7 @@
       {%- if recommendations.products_count > 0 -%}
         <h4 class="desktop-12 tablet-6 mobile-3 span-12">{{ section.settings.product_recommendations_heading }}</h4>
           {%- for product in recommendations.products -%}
+<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
           <div class="product product-index span-3 desktop-3 tablet-fourth">
             <a href="{{ product.url }}">
               <div class="ci">
@@ -13,7 +14,7 @@
               <div class="product-details">
                 {% if section.settings.show_recommendations_vendor %}<h4 class="product__vendor">{{ product.vendor }}</h4>{% endif %}
                 <h3 class="product__title">{{ product.title }}</h3>
-                <p class="product__price">{{ product.price | money}}</p>
+                <p class="product__price"><span class="money" data-product-id="{{ product.id }}">{{ product.price | money}}</span></p>
               </div>
             </a>
           </div>
