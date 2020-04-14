@@ -5312,10 +5312,10 @@
           "1586543685640": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Shop-2-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
+              "image": "shopify:\/\/shop_images\/Suede-Shop-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 51,
-              "caption_vertical": 60,
+              "caption_horizontal": 55,
+              "caption_vertical": 77,
               "mobile_image": "",
               "hide_caption_background": false,
               "heading": "The Suede Shop",
@@ -5386,10 +5386,10 @@
           "1586797559843"
         ],
         "settings": {
-          "slider_speed": 6,
+          "slider_speed": 4,
           "slide_heading_size": 34,
           "slide_heading_weight": "700",
-          "subheading_size": 13,
+          "subheading_size": 16,
           "cta_size": 18,
           "cta_weight": "400"
         }
