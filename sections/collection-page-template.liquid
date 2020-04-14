@@ -3,9 +3,11 @@
   {% paginate collection.products by number %}
   {% assign sidebar = false %}
 
+  {% if collection.description contains '[banner]' %}
     <div class="collection-banner">
       {% include 'collection-banner-image' %}
     </div>
+  {% endif %}
 
     {% if section.settings.full_width %}<div class="gridlock-fluid">{% endif %}
       <div id="content" class="row">
@@ -23,7 +25,7 @@
 
             <br><br>
 
-            {{ collection.description | remove: '[banner]' }}
+            {{ collection.description | remove: '[banner]' | remove: 'collection.title' }}
           </div>
 
 
