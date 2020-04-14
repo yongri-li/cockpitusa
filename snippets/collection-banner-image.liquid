@@ -2,13 +2,9 @@
 
 {% assign img_url = banner | file_img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
 
-{% if collection.image %}
-  <img src="{{ collection | img_url: '3000x' }}"  alt="{{ collection.title | escape }}" width="100%"/>
-{% else %}
 <div class="collection-banner box-ratio">
   <img class="lazyload lazyload-fade"
     data-src="{{ img_url }}"
     data-sizes="auto"
     alt="{{ collection.title | escape }}">
 </div>
-{% endif %}
