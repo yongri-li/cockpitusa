@@ -5289,11 +5289,11 @@
           "1583332518768": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Trucker-Z21Z002.jpg",
+              "image": "shopify:\/\/shop_images\/Suede-Trucker-2-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "left",
               "caption_horizontal": 18,
               "caption_vertical": 50,
-              "mobile_image": "",
+              "mobile_image": "shopify:\/\/shop_images\/Suede-Trucker-Mobile-Banner.jpg",
               "hide_caption_background": false,
               "heading": "The Suede Trucker",
               "subheading": "Featured on Style Icon Eric Rutherford.",
@@ -5316,7 +5316,7 @@
               "text_align": "center",
               "caption_horizontal": 55,
               "caption_vertical": 77,
-              "mobile_image": "",
+              "mobile_image": "shopify:\/\/shop_images\/Suede-Shop-Monile-Banner.jpg",
               "hide_caption_background": false,
               "heading": "The Suede Shop",
               "subheading": "Tell your brand's story through images",
@@ -5335,11 +5335,11 @@
           "1559067219938-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Seer-Sucker-Jacket-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
+              "image": "shopify:\/\/shop_images\/Seer-Sucker-Jacket-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "left",
               "caption_horizontal": 18,
               "caption_vertical": 50,
-              "mobile_image": "",
+              "mobile_image": "shopify:\/\/shop_images\/Seersucker-MA-1-Mobile-Slide.jpg",
               "hide_caption_background": false,
               "heading": "Navy Seersucker MA-1",
               "subheading": "Beach weight outerwear",
