@@ -206,6 +206,10 @@
         </div>
         {% endunless %}
 
+
+
+
+
         {% if template == 'product.quick' %}
           <div class="rte">
           {{ product.description | truncatewords: 20 }}<br />
@@ -213,6 +217,9 @@
           </div>
         {% endif %}
       {% if template != 'product.quick' %}
+
+      <div class="clear"></div>
+      {%- render 'shappify-bdl-load-bundle' -%}
 
         {% if section.settings.product_description_position == 'below' %}
           <div class="clear"></div>
