@@ -4986,7 +4986,7 @@
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
           "logo_alt": "",
-          "logo_max_width": 195,
+          "logo_max_width": 220,
           "logo_position": "inline",
           "logo_align": "center",
           "main_nav": "main-menu",
@@ -5354,36 +5354,12 @@
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 10
             }
-          },
-          "1586797559843": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Shirt-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "left",
-              "caption_horizontal": 50,
-              "caption_vertical": 50,
-              "mobile_image": "",
-              "hide_caption_background": false,
-              "heading": "Add a title to your image",
-              "subheading": "Tell your brand's story through images",
-              "link": "",
-              "button_text": "Add a button",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "transparent",
-              "caption_background_opacity": 20
-            }
           }
         },
         "block_order": [
           "1583332518768",
           "1586543685640",
-          "1559067219938-0",
-          "1586797559843"
+          "1559067219938-0"
         ],
         "settings": {
           "slider_speed": 4,
@@ -5430,12 +5406,106 @@
       "page-custom-one": {
         "type": "page-custom-one",
         "blocks": {
+          "1586968370980": {
+            "type": "image_text_overlay",
+            "settings": {
+              "pio_image": "shopify:\/\/shop_images\/Header_3034683_16.9-1024x576.jpg",
+              "pio_background_effect": "fixed",
+              "pio_page_height": 500,
+              "pio_heading": "Movie Heroes",
+              "pio_heading_font_size": 28,
+              "pio_heading_font_weight": "400",
+              "pio_heading_color": "#f3f3f3",
+              "pio_subheading": "Our iconic designs immortalized in television & movies throughout cinematic history.",
+              "pio_subheading_font_size": 16,
+              "pio_subheading_font_weight": "400",
+              "pio_subheading_color": "#f0e9e9",
+              "pio_button_text": "Add a button",
+              "pio_button_weight": "light",
+              "pio_button_link": "",
+              "pio_button_text_color": "#fff",
+              "pio_button_color": "#000000"
+            }
+          },
+          "1586977873104": {
+            "type": "rich_text",
+            "settings": {
+              "rt_heading": "As seen on ...",
+              "rt_text": "<p>Cockpit USA featured on some of today's unforgettable T.V. Shows and Movies.&nbsp;<\/p>",
+              "rt_page": "",
+              "rt_alignment": "center",
+              "rt_text_width": 600,
+              "rt_text_size": 15
+            }
+          },
+          "1586968497914": {
+            "type": "text_columns_with_images",
+            "settings": {
+              "txt_image_1": "shopify:\/\/shop_images\/The-Rift-Shopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
+              "txt_link_1": "",
+              "txt_title_text_1": "Amazing Stories",
+              "txt_text_1": "<p>\"The Rift\" episode number 5, aired April on 3rd directed by Mark Mylod and created by Stephen Spielberg available on Apple TV+. Tells a story of&nbsp;a WWII pilot who crashes in modern-day Ohio, a young widow and her stepson are swept up in his search for home. Featuring a hand painted A-2 bomber jacket supplied by Cockpit USA. Shop here.&nbsp;<\/p>",
+              "button_text_1": "Shop here",
+              "txt_image_2": "shopify:\/\/shop_images\/Black-List-Dispatch-Jacket-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
+              "txt_link_2": "shopify:\/\/products\/dispatch-motorcycle-jacket",
+              "txt_title_text_2": "Black List",
+              "txt_text_2": "<p>Actor Enrique Murciano wears Cockpit USA in NBC's The Black List.&nbsp;<\/p>",
+              "button_text_2": "Explore",
+              "txt_image_3": "shopify:\/\/shop_images\/Sabrina-Lamb-Skin-G-1-Cockpit-USAShopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
+              "txt_link_3": "shopify:\/\/products\/u-s-navy-lambskin-g-1-flight-jacket",
+              "txt_title_text_3": "Sabrina",
+              "txt_text_3": "<p>The Cockpit USA lambskin G-1 jacket worn by actor Ross Lynch who plays Harvey Kinkle in Netflix's Sabrina (Seasons 1-3)<\/p>",
+              "button_text_3": "Shop here"
+            }
+          },
+          "1586979442312": {
+            "type": "rich_text",
+            "settings": {
+              "rt_heading": "Celebrity Placement",
+              "rt_text": "<p>Our favorite actors and musicians wearing Cockpit USA&nbsp;<\/p>",
+              "rt_page": "",
+              "rt_alignment": "center",
+              "rt_text_width": 600,
+              "rt_text_size": 15
+            }
+          },
+          "1586979595676": {
+            "type": "text_columns_with_images",
+            "settings": {
+              "txt_image_1": "shopify:\/\/shop_images\/Leo-Dicarpio-Horsehide-Peacoat-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
+              "txt_link_1": "shopify:\/\/products\/vintage-leather-naval-officers-coat",
+              "txt_title_text_1": "Leonardo Dicaprio",
+              "txt_text_1": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "button_text_1": "Explore",
+              "txt_image_2": "shopify:\/\/shop_images\/Tom-Hardy-Esquire-Z2109-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
+              "txt_link_2": "shopify:\/\/products\/r-a-f-sheepskin-bomber-jacket",
+              "txt_title_text_2": "Tom Hardy",
+              "txt_text_2": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "button_text_2": "Explore",
+              "txt_image_3": "shopify:\/\/shop_images\/Alicia-Keys-Souvenir-Jacket-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
+              "txt_link_3": "shopify:\/\/products\/40th-anniversary-flying-tigers-tour-jacket",
+              "txt_title_text_3": "Alicia Keys",
+              "txt_text_3": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "button_text_3": "Explore"
+            }
+          },
+          "1586968542761": {
+            "type": "rich_text",
+            "settings": {
+              "rt_heading": "Movie Heroes Collection",
+              "rt_text": "<p>Inspired by those who make history, the movie heroes collection is a&nbsp;capsule of styles that are as recognizable as the heroes who have worn them.&nbsp;&nbsp;<\/p>",
+              "rt_page": "",
+              "rt_alignment": "left",
+              "rt_text_width": 1200,
+              "rt_text_size": 19
+            }
+          },
           "1559155132772": {
             "type": "image_blocks",
             "settings": {
-              "image_1": "",
+              "image_1": "shopify:\/\/shop_images\/w21g002-amelia-jacket.jpg",
               "link_1": "",
-              "heading_1": "",
+              "heading_1": "ENTER TEXT HERE",
               "button_1": "",
               "heading_color_1": "#ffffff",
               "button_color_1": "#ffffff",
@@ -5445,11 +5515,11 @@
               "vertical_position_1": 12,
               "horizontal_position_1": 14,
               "align_text_1": "left",
-              "image_2": "",
+              "image_2": "shopify:\/\/shop_images\/jerome-z201036t-movie-heroes-top-gun.jpg",
               "link_2": "",
-              "heading_2": "",
+              "heading_2": "TOP GUN",
               "button_2": "",
-              "heading_color_2": "#ffffff",
+              "heading_color_2": "#000000",
               "button_color_2": "#ffffff",
               "button_background_2": "#000",
               "size_2": 24,
@@ -5457,7 +5527,7 @@
               "vertical_position_2": 12,
               "horizontal_position_2": 14,
               "align_text_2": "left",
-              "image_3": "",
+              "image_3": "shopify:\/\/shop_images\/w74u003-b15-marylin.jpg",
               "link_3": "",
               "heading_3": "",
               "button_3": "",
@@ -5471,62 +5541,29 @@
               "align_text_3": "left"
             }
           },
-          "1559152904168": {
-            "type": "accordion",
+          "1586968469119": {
+            "type": "featured_video",
             "settings": {
-              "ac_section_heading": "Using Accordion for FAQ's",
-              "ac_heading_1": "Question #1",
-              "ac_content_1": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
-              "ac_heading_2": "Question #2",
-              "ac_content_2": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
-              "ac_heading_3": "Question #3",
-              "ac_content_3": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<\/p>",
-              "ac_heading_4": "",
-              "ac_content_4": "",
-              "ac_heading_5": "",
-              "ac_content_5": "",
-              "ac_heading_6": "",
-              "ac_content_6": "",
-              "ac_heading_7": "",
-              "ac_content_7": "",
-              "ac_heading_8": "",
-              "ac_content_8": "",
-              "ac_heading_9": "",
-              "ac_content_9": "",
-              "ac_heading_10": "",
-              "ac_content_10": ""
-            }
-          },
-          "1559153532894": {
-            "type": "page_contact_form",
-            "settings": {
-              "cf_heading": "Custom Contact Form",
-              "cf_max_width": 800,
-              "cf_show_first_name": true,
-              "cf_show_last_name": true,
-              "cf_show_company_name": false,
-              "cf_show_address": false,
-              "cf_show_website_url": false,
-              "cf_show_phone": false,
-              "cf_show_subject": false,
-              "cf_show_custom_field_one": true,
-              "cf_custom_field_one": "",
-              "cf_custom_field_one_type": "input",
-              "cf_show_custom_field_two": true,
-              "cf_custom_field_two": "Order #",
-              "cf_custom_field_two_type": "input"
+              "fv_display_wide": false,
+              "fv_heading": "Featured video",
+              "fv_video_url": ""
             }
           }
         },
         "block_order": [
+          "1586968370980",
+          "1586977873104",
+          "1586968497914",
+          "1586979442312",
+          "1586979595676",
+          "1586968542761",
           "1559155132772",
-          "1559152904168",
-          "1559153532894"
+          "1586968469119"
         ],
         "settings": {
-          "heading": "Featured collection",
-          "color": "#000",
-          "background": "#f7f7f7",
+          "heading": "Movie Heroes",
+          "color": "#fffdfd",
+          "background": "#ffffff",
           "border_top": false,
           "border_bottom": false
         }
@@ -5878,6 +5915,13 @@
           "button_link": "",
           "button_text_color": "#fff",
           "button_color": "#000"
+        }
+      },
+      "shop-the-look": {
+        "type": "shop-the-look",
+        "settings": {
+          "full_width": false,
+          "heading": "Shop the Look"
         }
       }
     },
