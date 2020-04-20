@@ -5545,8 +5545,8 @@
             "type": "featured_video",
             "settings": {
               "fv_display_wide": false,
-              "fv_heading": "Featured video",
-              "fv_video_url": ""
+              "fv_heading": "Maverick",
+              "fv_video_url": "https:\/\/www.youtube.com\/watch?v=g4U4BQW9OEk"
             }
           }
         },
@@ -5789,17 +5789,17 @@
               "collection": "kids"
             }
           },
-          "1586279538889-2": {
+          "1587153009101": {
             "type": "featured_collection",
             "settings": {
-              "collection": "bomber-jackets"
+              "collection": "women"
             }
           }
         },
         "block_order": [
           "1586279538889-0",
           "1586279538889-1",
-          "1586279538889-2"
+          "1587153009101"
         ],
         "settings": {
           "full_width": true,
@@ -5840,7 +5840,7 @@
               "image": "shopify:\/\/shop_images\/Screen_Shot_2020-04-13_at_1.33.50_PM.png",
               "image_heading": "Movies & TV",
               "image_subheading": "Cockpit USA as seen on Apple TV's Amazing Stories",
-              "image_button_link": "https:\/\/cockpit-usa.myshopify.com\/pages\/media",
+              "image_button_link": "https:\/\/cockpit-usa.myshopify.com\/pages\/media-2",
               "image_button_text": "More here",
               "image_button_text_2": "Add a 2nd button",
               "image_button_link_2": "",
