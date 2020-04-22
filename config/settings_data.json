@@ -4956,7 +4956,7 @@
             "type": "mega_menu",
             "settings": {
               "menu_item": "Shop",
-              "nav_image": "shopify:\/\/shop_images\/Cockpit_USA-4211_373d2bc2-439a-4b75-804a-e19fecb6b716.jpg",
+              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-Menu-3600x5400_e7bf8453-15aa-4ebb-a297-07ac94d3093d.jpg",
               "link": "shopify:\/\/collections"
             }
           },
@@ -4990,7 +4990,7 @@
           "logo_position": "inline",
           "logo_align": "center",
           "main_nav": "main-menu",
-          "product_menu": true
+          "product_menu": false
         }
       },
       "footer": {
@@ -5291,8 +5291,8 @@
             "settings": {
               "image": "shopify:\/\/shop_images\/Suede-Trucker-2-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "left",
-              "caption_horizontal": 18,
-              "caption_vertical": 50,
+              "caption_horizontal": 21,
+              "caption_vertical": 18,
               "mobile_image": "shopify:\/\/shop_images\/Suede-Trucker-Mobile-Banner.jpg",
               "hide_caption_background": false,
               "heading": "The Suede Trucker",
@@ -5305,6 +5305,29 @@
               "slide_text_color": "#060000",
               "cta_color": "#ffffff",
               "cta_background": "#070000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          },
+          "1587486857120": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Weathered-Field-Jacket-Full-Width-1920x900_3d22c4f0-c47f-4987-bdbe-db067c179e97.jpg",
+              "text_align": "center",
+              "caption_horizontal": 79,
+              "caption_vertical": 21,
+              "mobile_image": "shopify:\/\/shop_images\/Weathered-Field-Jacket-Moile-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Field Jacket Shop",
+              "subheading": "Featuring the Weathered Field Jacket",
+              "link": "shopify:\/\/collections\/mens-field-jackets",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
@@ -5335,15 +5358,15 @@
           "1559067219938-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Seer-Sucker-Jacket-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/M-86-Royce-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "left",
-              "caption_horizontal": 18,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Seersucker-MA-1-Mobile-Slide.jpg",
+              "caption_horizontal": 79,
+              "caption_vertical": 21,
+              "mobile_image": "shopify:\/\/shop_images\/M-86_-Flight-Bomber-Jacket-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Navy Seersucker MA-1",
-              "subheading": "Beach weight outerwear",
-              "link": "shopify:\/\/products\/seersucker-ma-1-jacket",
+              "heading": "M-86© Flight Bomber Jacket",
+              "subheading": "Perfect for Spring",
+              "link": "shopify:\/\/products\/m-86©-flight-bomber-jacket",
               "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
@@ -5354,12 +5377,37 @@
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 10
             }
+          },
+          "1587485858832": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Flight-Suit-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 55,
+              "caption_vertical": 61,
+              "mobile_image": "shopify:\/\/shop_images\/Flight-Suit.jpg",
+              "hide_caption_background": false,
+              "heading": "Cotton Flight Suit",
+              "subheading": "Perfect for comfort & suitable for all seasons",
+              "link": "shopify:\/\/products\/cockpit-usa-cotton-flight-suit",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
           }
         },
         "block_order": [
           "1583332518768",
+          "1587486857120",
           "1586543685640",
-          "1559067219938-0"
+          "1559067219938-0",
+          "1587485858832"
         ],
         "settings": {
           "slider_speed": 4,
@@ -5389,8 +5437,8 @@
           "heading_color": "#000000",
           "background_color": "#ffffff",
           "collection": "heritage-collection",
-          "homepage_product_layout": "carousel",
-          "limit": 6,
+          "homepage_product_layout": "grid",
+          "limit": 4,
           "grid": 4,
           "slide_controls": "arrows"
         }
@@ -5444,9 +5492,9 @@
               "txt_image_1": "shopify:\/\/shop_images\/The-Rift-Shopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
               "txt_link_1": "",
               "txt_title_text_1": "Amazing Stories",
-              "txt_text_1": "<p>\"The Rift\" episode number 5, aired April on 3rd directed by Mark Mylod and created by Stephen Spielberg available on Apple TV+. Tells a story of&nbsp;a WWII pilot who crashes in modern-day Ohio, a young widow and her stepson are swept up in his search for home. Featuring a hand painted A-2 bomber jacket supplied by Cockpit USA. Shop here.&nbsp;<\/p>",
+              "txt_text_1": "<p>\"The Rift\" episode number 5, aired on April 3rd directed by Mark Mylod and created by Stephen Spielberg available on Apple TV+. Tells a story of&nbsp;a WWII pilot who crashes into modern-day Ohio, featuring actor Austin Stowell wearing a hand painted 40th Anniversary A-2 flight jacket supplied by Cockpit USA. Shop here.&nbsp;<\/p>",
               "button_text_1": "Shop here",
-              "txt_image_2": "shopify:\/\/shop_images\/Black-List-Dispatch-Jacket-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
+              "txt_image_2": "shopify:\/\/shop_images\/Black-List-Dispatch-2-Jacket-Shopify-Template-Image-Gallery-View-3600x5400_ee2977be-b653-47e3-a2a1-189208d05462.jpg",
               "txt_link_2": "shopify:\/\/products\/dispatch-motorcycle-jacket",
               "txt_title_text_2": "Black List",
               "txt_text_2": "<p>Actor Enrique Murciano wears Cockpit USA in NBC's The Black List.&nbsp;<\/p>",
@@ -5475,17 +5523,17 @@
               "txt_image_1": "shopify:\/\/shop_images\/Leo-Dicarpio-Horsehide-Peacoat-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
               "txt_link_1": "shopify:\/\/products\/vintage-leather-naval-officers-coat",
               "txt_title_text_1": "Leonardo Dicaprio",
-              "txt_text_1": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "txt_text_1": "",
               "button_text_1": "Explore",
               "txt_image_2": "shopify:\/\/shop_images\/Tom-Hardy-Esquire-Z2109-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
               "txt_link_2": "shopify:\/\/products\/r-a-f-sheepskin-bomber-jacket",
               "txt_title_text_2": "Tom Hardy",
-              "txt_text_2": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "txt_text_2": "",
               "button_text_2": "Explore",
               "txt_image_3": "shopify:\/\/shop_images\/Alicia-Keys-Souvenir-Jacket-Shopify-Template-Image-Gallery-View-3600x5400.jpg",
               "txt_link_3": "shopify:\/\/products\/40th-anniversary-flying-tigers-tour-jacket",
               "txt_title_text_3": "Alicia Keys",
-              "txt_text_3": "<p>Pair large text with an image to give focus to your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+              "txt_text_3": "",
               "button_text_3": "Explore"
             }
           },
@@ -5503,8 +5551,8 @@
           "1559155132772": {
             "type": "image_blocks",
             "settings": {
-              "image_1": "shopify:\/\/shop_images\/w21g002-amelia-jacket.jpg",
-              "link_1": "",
+              "image_1": "shopify:\/\/shop_images\/Amelia-Jacket-Media-Page-Gallery-600x400.jpg",
+              "link_1": "shopify:\/\/products\/the-amelia-jacket",
               "heading_1": "ENTER TEXT HERE",
               "button_1": "",
               "heading_color_1": "#ffffff",
@@ -5515,8 +5563,8 @@
               "vertical_position_1": 12,
               "horizontal_position_1": 14,
               "align_text_1": "left",
-              "image_2": "shopify:\/\/shop_images\/jerome-z201036t-movie-heroes-top-gun.jpg",
-              "link_2": "",
+              "image_2": "shopify:\/\/shop_images\/Top-Gun-Shopify-Template-Three-Images-ormore-Gallery-600x400-2.jpg",
+              "link_2": "shopify:\/\/products\/movie-heroes©-top-gun-navy-g-1-jacket",
               "heading_2": "TOP GUN",
               "button_2": "",
               "heading_color_2": "#000000",
@@ -5527,8 +5575,8 @@
               "vertical_position_2": 12,
               "horizontal_position_2": 14,
               "align_text_2": "left",
-              "image_3": "shopify:\/\/shop_images\/w74u003-b15-marylin.jpg",
-              "link_3": "",
+              "image_3": "shopify:\/\/shop_images\/Marilyn-Media-b15Gallery-600x400.jpg",
+              "link_3": "shopify:\/\/products\/womens-b-15-bomber-jacket",
               "heading_3": "",
               "button_3": "",
               "heading_color_3": "#ffffff",
@@ -5751,6 +5799,7 @@
       },
       "1583333445952": {
         "type": "social-links",
+        "disabled": true,
         "settings": {
           "heading": "",
           "show_mailchimp": false,
@@ -5764,7 +5813,7 @@
           "full_width": true,
           "remove_top_padding": false,
           "remove_bottom_padding": false,
-          "image": "shopify:\/\/shop_images\/Heritage-Photo.jpg",
+          "image": "shopify:\/\/shop_images\/Heritage-Photo-Color.jpg",
           "layout": "left",
           "image_width": "50%",
           "text_align": "left",
