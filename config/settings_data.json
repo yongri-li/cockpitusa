@@ -4799,7 +4799,7 @@
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
     "checkout_logo_position": "left",
-    "checkout_logo_size": "medium",
+    "checkout_logo_size": "large",
     "checkout_body_background_image": "",
     "checkout_body_background_color": "#ffffff",
     "checkout_input_background_color_mode": "white",
@@ -4956,7 +4956,7 @@
             "type": "mega_menu",
             "settings": {
               "menu_item": "Shop",
-              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-Menu-3600x5400_e7bf8453-15aa-4ebb-a297-07ac94d3093d.jpg",
+              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-2-Menu-3600x5400.jpg",
               "link": "shopify:\/\/collections"
             }
           },
@@ -4990,7 +4990,7 @@
           "logo_position": "inline",
           "logo_align": "center",
           "main_nav": "main-menu",
-          "product_menu": false
+          "product_menu": true
         }
       },
       "footer": {
@@ -5038,10 +5038,10 @@
           "image_section_size": "medium",
           "image_options": "static",
           "thumbnails": "right",
-          "thumbs_to_show": 2,
+          "thumbs_to_show": 4,
           "slide_controls": "arrows",
           "description_background": "rgba(0,0,0,0)",
-          "show_vendor": true,
+          "show_vendor": false,
           "show_sku": false,
           "show_quantity_selector": true,
           "product_variants": "swatches",
@@ -5050,7 +5050,7 @@
           "back_in_stock_text": "<p>Email me when this is available<\/p>",
           "show_payment_button": true,
           "show_social_share": true,
-          "product_description_position": "below",
+          "product_description_position": "above",
           "lower_description": "medium",
           "lower_description_background": "#f8f3f0",
           "show_product_size_chart": true,
@@ -5229,7 +5229,7 @@
           "products_per_page": 24,
           "infinite_scroll": false,
           "description_position": "bottom_description",
-          "filter_position": "top_filters",
+          "filter_position": "left_sidebar",
           "is_sticky": false,
           "filter_bg_color": "rgba(0,0,0,0)",
           "filter_border_color": "#ffffff",
@@ -5243,9 +5243,9 @@
           "show_author": false,
           "social": true,
           "heading": "Other Articles",
-          "featured_article_1": "",
-          "featured_article_2": "",
-          "featured_article_3": ""
+          "featured_article_1": "blog\/the-fishtail-parka",
+          "featured_article_2": "blog\/glenn-miller-and-americas-big-band",
+          "featured_article_3": "blog\/the-iconic-cockpit-usa-collection"
         }
       },
       "page-template": {
@@ -5286,6 +5286,29 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
+          "1587753083564": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Heritage-Jeff-Image-2-Slideshow-Full-Width-1920x900_ec96b1d4-c598-4873-a604-7f3449b43a95.jpg",
+              "text_align": "left",
+              "caption_horizontal": 21,
+              "caption_vertical": 18,
+              "mobile_image": "shopify:\/\/shop_images\/Heritage-Slide-JeffMobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Cockpit USA",
+              "subheading": "Preserving American History through our garments since 1975.",
+              "link": "shopify:\/\/collections\/heritage-collection",
+              "button_text": "Shop Heritage Collection",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          },
           "1583332518768": {
             "type": "image",
             "settings": {
@@ -5377,37 +5400,14 @@
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 10
             }
-          },
-          "1587485858832": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Flight-Suit-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 55,
-              "caption_vertical": 61,
-              "mobile_image": "shopify:\/\/shop_images\/Flight-Suit.jpg",
-              "hide_caption_background": false,
-              "heading": "Cotton Flight Suit",
-              "subheading": "Perfect for comfort & suitable for all seasons",
-              "link": "shopify:\/\/products\/cockpit-usa-cotton-flight-suit",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
           }
         },
         "block_order": [
+          "1587753083564",
           "1583332518768",
           "1587486857120",
           "1586543685640",
-          "1559067219938-0",
-          "1587485858832"
+          "1559067219938-0"
         ],
         "settings": {
           "slider_speed": 4,
@@ -5492,13 +5492,13 @@
               "txt_image_1": "shopify:\/\/shop_images\/The-Rift-Shopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
               "txt_link_1": "",
               "txt_title_text_1": "Amazing Stories",
-              "txt_text_1": "<p>\"The Rift\" episode number 5, aired on April 3rd directed by Mark Mylod and created by Stephen Spielberg available on Apple TV+. Tells a story of&nbsp;a WWII pilot who crashes into modern-day Ohio, featuring actor Austin Stowell wearing a hand painted 40th Anniversary A-2 flight jacket supplied by Cockpit USA. Shop here.&nbsp;<\/p>",
+              "txt_text_1": "<p>35 Years after being featured in Steven Spielberg&rsquo;s Amazing Stories Episode &ldquo;The Mission&rdquo; Cockpit USA once again has joined the Amazing Stories Universe. Cockpit USA is featured in this month&rsquo;s Episode 5 &ldquo;The Rift&rdquo; of AppleTV+&rsquo;s latest iteration of the Amazing Stories series on actor Austin Stowell who plays a heroic WWII Flying Tiger Pilot. We won&rsquo;t give away the plot, but actor Austin Stowell wears the Cockpit USA &ldquo;40th Anniversary&rdquo; A-2 that was custom painted, styled, and distressed by our Cockpit USA in house team of Artists for the production. Be sure to watch Amazing Stories on AppleTV+ and you can check out the look here at Cockpit USA.<\/p>",
               "button_text_1": "Shop here",
               "txt_image_2": "shopify:\/\/shop_images\/Black-List-Dispatch-2-Jacket-Shopify-Template-Image-Gallery-View-3600x5400_ee2977be-b653-47e3-a2a1-189208d05462.jpg",
               "txt_link_2": "shopify:\/\/products\/dispatch-motorcycle-jacket",
               "txt_title_text_2": "Black List",
               "txt_text_2": "<p>Actor Enrique Murciano wears Cockpit USA in NBC's The Black List.&nbsp;<\/p>",
-              "button_text_2": "Explore",
+              "button_text_2": "Shop here",
               "txt_image_3": "shopify:\/\/shop_images\/Sabrina-Lamb-Skin-G-1-Cockpit-USAShopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
               "txt_link_3": "shopify:\/\/products\/u-s-navy-lambskin-g-1-flight-jacket",
               "txt_title_text_3": "Sabrina",
@@ -5596,6 +5596,32 @@
               "fv_heading": "Maverick",
               "fv_video_url": "https:\/\/www.youtube.com\/watch?v=g4U4BQW9OEk"
             }
+          },
+          "1587671125525": {
+            "type": "accordion",
+            "settings": {
+              "ac_section_heading": "Custom & Costume Design",
+              "ac_heading_1": "Cockpit USA as seen in....",
+              "ac_content_1": "<p>Description and content for Item 1.<\/p>",
+              "ac_heading_2": "Item 2",
+              "ac_content_2": "<p>Description and content for Item 2.<\/p>",
+              "ac_heading_3": "Item 3",
+              "ac_content_3": "<p>Description and content for Item 3.<\/p>",
+              "ac_heading_4": "Item 4",
+              "ac_content_4": "<p>Description and content for Item 4.<\/p>",
+              "ac_heading_5": "Item 5",
+              "ac_content_5": "<p>Description and content for Item 5.<\/p>",
+              "ac_heading_6": "Item 6",
+              "ac_content_6": "<p>Description and content for Item 6.<\/p>",
+              "ac_heading_7": "Item 7",
+              "ac_content_7": "<p>Description and content for Item 7.<\/p>",
+              "ac_heading_8": "Item 8",
+              "ac_content_8": "<p>Description and content for Item 8.<\/p>",
+              "ac_heading_9": "Item 9",
+              "ac_content_9": "<p>Description and content for Item 9.<\/p>",
+              "ac_heading_10": "Item 10",
+              "ac_content_10": "<p>Description and content for Item 10.<\/p>"
+            }
           }
         },
         "block_order": [
@@ -5606,7 +5632,8 @@
           "1586979595676",
           "1586968542761",
           "1559155132772",
-          "1586968469119"
+          "1586968469119",
+          "1587671125525"
         ],
         "settings": {
           "heading": "Movie Heroes",
@@ -5813,7 +5840,7 @@
           "full_width": true,
           "remove_top_padding": false,
           "remove_bottom_padding": false,
-          "image": "shopify:\/\/shop_images\/Heritage-Photo-Color.jpg",
+          "image": "shopify:\/\/shop_images\/Heritage-Photo.jpg",
           "layout": "left",
           "image_width": "50%",
           "text_align": "left",
@@ -5910,7 +5937,7 @@
               "image": "shopify:\/\/shop_images\/kids.jpg",
               "image_heading": "Blue Collar Prep",
               "image_subheading": "Cockpit USA Blog",
-              "image_button_link": "https:\/\/www.cockpitusa.com\/blog\/2019\/11\/12\/joint-forces-featuring-eric-wertz-from-bluecollarprep\/",
+              "image_button_link": "",
               "image_button_text": "Read More Here",
               "image_button_text_2": "Add a 2nd button",
               "image_button_link_2": "",
@@ -5971,6 +5998,99 @@
         "settings": {
           "full_width": false,
           "heading": "Shop the Look"
+        }
+      },
+      "page-custom-two": {
+        "type": "page-custom-two",
+        "blocks": {
+          "page-custom-two-0": {
+            "type": "page_title",
+            "settings": {
+              "pt_align": "center"
+            }
+          },
+          "page-custom-two-1": {
+            "type": "page_content",
+            "settings": {
+              "pc_align": "center",
+              "pc_max_width": 800
+            }
+          },
+          "1587756059949": {
+            "type": "image_blocks",
+            "settings": {
+              "image_1": "",
+              "link_1": "",
+              "heading_1": "Our collections",
+              "button_1": "Explore",
+              "heading_color_1": "#ffffff",
+              "button_color_1": "#ffffff",
+              "button_background_1": "#000",
+              "size_1": 24,
+              "text_options_1": "on_image",
+              "vertical_position_1": 12,
+              "horizontal_position_1": 14,
+              "align_text_1": "left",
+              "image_2": "",
+              "link_2": "",
+              "heading_2": "Our collections",
+              "button_2": "Explore",
+              "heading_color_2": "#ffffff",
+              "button_color_2": "#ffffff",
+              "button_background_2": "#000",
+              "size_2": 24,
+              "text_options_2": "on_image",
+              "vertical_position_2": 12,
+              "horizontal_position_2": 14,
+              "align_text_2": "left",
+              "image_3": "",
+              "link_3": "",
+              "heading_3": "Our collections",
+              "button_3": "Explore",
+              "heading_color_3": "#ffffff",
+              "button_color_3": "#ffffff",
+              "button_background_3": "#000",
+              "size_3": 24,
+              "text_options_3": "on_image",
+              "vertical_position_3": 12,
+              "horizontal_position_3": 14,
+              "align_text_3": "left"
+            }
+          },
+          "1587756081083": {
+            "type": "image_text_overlay",
+            "settings": {
+              "pio_image": "",
+              "pio_background_effect": "fixed",
+              "pio_page_height": 400,
+              "pio_heading": "Image with text overlay",
+              "pio_heading_font_size": 26,
+              "pio_heading_font_weight": "400",
+              "pio_heading_color": "#000",
+              "pio_subheading": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.",
+              "pio_subheading_font_size": 16,
+              "pio_subheading_font_weight": "400",
+              "pio_subheading_color": "#000",
+              "pio_button_text": "Add a button",
+              "pio_button_weight": "light",
+              "pio_button_link": "",
+              "pio_button_text_color": "#fff",
+              "pio_button_color": "#000"
+            }
+          }
+        },
+        "block_order": [
+          "page-custom-two-0",
+          "1587756081083",
+          "page-custom-two-1",
+          "1587756059949"
+        ],
+        "settings": {
+          "heading": "Featured collection",
+          "color": "#000",
+          "background": "#f7f7f7",
+          "border_top": false,
+          "border_bottom": false
         }
       }
     },
