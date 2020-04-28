@@ -4956,8 +4956,8 @@
             "type": "mega_menu",
             "settings": {
               "menu_item": "Shop",
-              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-2-Menu-3600x5400.jpg",
-              "link": "shopify:\/\/collections"
+              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-Menu-2-3600x5400.jpg",
+              "link": "shopify:\/\/pages\/digital-catalog"
             }
           },
           "1561573685623": {
@@ -5243,9 +5243,9 @@
           "show_author": false,
           "social": true,
           "heading": "Other Articles",
-          "featured_article_1": "blog\/the-fishtail-parka",
-          "featured_article_2": "blog\/glenn-miller-and-americas-big-band",
-          "featured_article_3": "blog\/the-iconic-cockpit-usa-collection"
+          "featured_article_1": "",
+          "featured_article_2": "",
+          "featured_article_3": ""
         }
       },
       "page-template": {
@@ -5296,9 +5296,9 @@
               "mobile_image": "shopify:\/\/shop_images\/Heritage-Slide-JeffMobile-Slide-Template.jpg",
               "hide_caption_background": false,
               "heading": "Cockpit USA",
-              "subheading": "Preserving American History through our garments since 1975.",
+              "subheading": "Preserving American history through our garments since 1975.",
               "link": "shopify:\/\/collections\/heritage-collection",
-              "button_text": "Shop Heritage Collection",
+              "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
@@ -5414,7 +5414,7 @@
           "slide_heading_size": 34,
           "slide_heading_weight": "700",
           "subheading_size": 16,
-          "cta_size": 18,
+          "cta_size": 16,
           "cta_weight": "400"
         }
       },
@@ -5760,7 +5760,7 @@
         "disabled": true,
         "settings": {
           "full_width": false,
-          "blog": "d-day",
+          "blog": "",
           "heading": "Our Blog",
           "heading_color": "#000000",
           "background_color": "#ffffff",
@@ -6009,6 +6009,27 @@
               "pt_align": "center"
             }
           },
+          "1587756081083": {
+            "type": "image_text_overlay",
+            "settings": {
+              "pio_image": "shopify:\/\/shop_images\/Pilots_ReviewingMap.jpg",
+              "pio_background_effect": "fixed",
+              "pio_page_height": 400,
+              "pio_heading": "Government Contracted",
+              "pio_heading_font_size": 26,
+              "pio_heading_font_weight": "700",
+              "pio_heading_color": "#000",
+              "pio_subheading": "Suppling the U.S. Government and additional military personnel since the 1980's.",
+              "pio_subheading_font_size": 23,
+              "pio_subheading_font_weight": "400",
+              "pio_subheading_color": "#000",
+              "pio_button_text": "Add a button",
+              "pio_button_weight": "bold",
+              "pio_button_link": "",
+              "pio_button_text_color": "#fff",
+              "pio_button_color": "#000"
+            }
+          },
           "page-custom-two-1": {
             "type": "page_content",
             "settings": {
@@ -6019,63 +6040,94 @@
           "1587756059949": {
             "type": "image_blocks",
             "settings": {
-              "image_1": "",
-              "link_1": "",
-              "heading_1": "Our collections",
-              "button_1": "Explore",
-              "heading_color_1": "#ffffff",
+              "image_1": "shopify:\/\/shop_images\/Z21V41-Mil-Spec-Page.jpg",
+              "link_1": "shopify:\/\/products\/u-s-a-f-21st-century-a-2-jacket",
+              "heading_1": "A- 2 Flight Jacket",
+              "button_1": "Shop Here",
+              "heading_color_1": "#000000",
               "button_color_1": "#ffffff",
               "button_background_1": "#000",
-              "size_1": 24,
-              "text_options_1": "on_image",
+              "size_1": 34,
+              "text_options_1": "below_image",
               "vertical_position_1": 12,
               "horizontal_position_1": 14,
               "align_text_1": "left",
-              "image_2": "",
-              "link_2": "",
-              "heading_2": "Our collections",
-              "button_2": "Explore",
-              "heading_color_2": "#ffffff",
+              "image_2": "shopify:\/\/shop_images\/Nomex-Jacket-Marion-Mil-Spec-Image-Gallery-View-3600x5400.jpg",
+              "link_2": "shopify:\/\/products\/nomex-cwu-modified-45p-jacket-with-removable-lining",
+              "heading_2": "Nomex CWU Modified 45P Jacket",
+              "button_2": "Shop Here",
+              "heading_color_2": "#000000",
               "button_color_2": "#ffffff",
               "button_background_2": "#000",
               "size_2": 24,
-              "text_options_2": "on_image",
+              "text_options_2": "below_image",
               "vertical_position_2": 12,
               "horizontal_position_2": 14,
               "align_text_2": "left",
-              "image_3": "",
-              "link_3": "",
-              "heading_3": "Our collections",
-              "button_3": "Explore",
-              "heading_color_3": "#ffffff",
+              "image_3": "shopify:\/\/shop_images\/Z201035MC-COW-HIDE-miL-sPEC-Image-Gallery-View-3600x5400.jpg",
+              "link_3": "shopify:\/\/products\/cockpit-g-1-bomber-jacket",
+              "heading_3": "G-1 Bomber Jacket",
+              "button_3": "Shop Here",
+              "heading_color_3": "#0a0a0a",
               "button_color_3": "#ffffff",
               "button_background_3": "#000",
               "size_3": 24,
-              "text_options_3": "on_image",
+              "text_options_3": "below_image",
               "vertical_position_3": 12,
               "horizontal_position_3": 14,
               "align_text_3": "left"
             }
           },
-          "1587756081083": {
-            "type": "image_text_overlay",
+          "1588093890802": {
+            "type": "rich_text",
             "settings": {
-              "pio_image": "",
-              "pio_background_effect": "fixed",
-              "pio_page_height": 400,
-              "pio_heading": "Image with text overlay",
-              "pio_heading_font_size": 26,
-              "pio_heading_font_weight": "400",
-              "pio_heading_color": "#000",
-              "pio_subheading": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.",
-              "pio_subheading_font_size": 16,
-              "pio_subheading_font_weight": "400",
-              "pio_subheading_color": "#000",
-              "pio_button_text": "Add a button",
-              "pio_button_weight": "light",
-              "pio_button_link": "",
-              "pio_button_text_color": "#fff",
-              "pio_button_color": "#000"
+              "rt_heading": "Mil-spec",
+              "rt_text": "<p>Cockpit USA items made to military specifications.&nbsp;<\/p>",
+              "rt_page": "",
+              "rt_alignment": "center",
+              "rt_text_width": 600,
+              "rt_text_size": 15
+            }
+          },
+          "1588094019757": {
+            "type": "image_blocks",
+            "settings": {
+              "image_1": "shopify:\/\/shop_images\/m-51-field-jacket-olive-front-Z26L007.jpg",
+              "link_1": "",
+              "heading_1": "Field Jacket",
+              "button_1": "Shop Here",
+              "heading_color_1": "#000000",
+              "button_color_1": "#ffffff",
+              "button_background_1": "#000",
+              "size_1": 24,
+              "text_options_1": "below_image",
+              "vertical_position_1": 12,
+              "horizontal_position_1": 14,
+              "align_text_1": "left",
+              "image_2": "shopify:\/\/shop_images\/wool-lined-wwii-american-tanker-jacket-brittish-khaki-front-Z21821N.jpg",
+              "link_2": "",
+              "heading_2": "Our collections",
+              "button_2": "Shop Here",
+              "heading_color_2": "#000000",
+              "button_color_2": "#ffffff",
+              "button_background_2": "#000",
+              "size_2": 24,
+              "text_options_2": "below_image",
+              "vertical_position_2": 12,
+              "horizontal_position_2": 14,
+              "align_text_2": "left",
+              "image_3": "shopify:\/\/shop_images\/cockpit-usa-z36c001-flight-suit-khaki-front-closed-edit-1.jpg",
+              "link_3": "",
+              "heading_3": "Flight Suits",
+              "button_3": "Explore",
+              "heading_color_3": "#000000",
+              "button_color_3": "#ffffff",
+              "button_background_3": "#000",
+              "size_3": 24,
+              "text_options_3": "below_image",
+              "vertical_position_3": 12,
+              "horizontal_position_3": 14,
+              "align_text_3": "left"
             }
           }
         },
@@ -6083,7 +6135,9 @@
           "page-custom-two-0",
           "1587756081083",
           "page-custom-two-1",
-          "1587756059949"
+          "1587756059949",
+          "1588093890802",
+          "1588094019757"
         ],
         "settings": {
           "heading": "Featured collection",
