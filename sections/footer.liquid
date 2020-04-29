@@ -29,8 +29,7 @@
       {% when 'newsletter' %}
       <div class="{{ column_width }} footer-menu">
         <div class="togglecontent"><h4>{{ block.settings.title | escape }}</h4></div>
-
-        <br><br>
+        <center>
           <a href="https://americanairpowermuseum.com/" target="blank">
             <img src="{{ 'AAM-NEW-LOGO.png' | asset_url }}" width="125px">
           </a>
@@ -38,6 +37,7 @@
           <p>Proud sponsors of the<br> American Airpower Museum.</p>
           <p><a href="https://americanairpowermuseum.com/" target="blank">www.americanairpowermuseum.org</a></p>
 
+        </center>
         <div id="footer_signup" class="footer-block-content">
           {{ block.settings.mailing_subheading }}
           <p>{{ settings.footer_signup_text | escape }}</p>
