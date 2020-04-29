@@ -5404,8 +5404,8 @@
         },
         "block_order": [
           "1587753083564",
-          "1583332518768",
           "1587486857120",
+          "1583332518768",
           "1586543685640",
           "1559067219938-0"
         ],
@@ -6093,7 +6093,7 @@
             "type": "image_blocks",
             "settings": {
               "image_1": "shopify:\/\/shop_images\/m-51-field-jacket-olive-front-Z26L007.jpg",
-              "link_1": "",
+              "link_1": "shopify:\/\/products\/m-51-field-jacket",
               "heading_1": "Field Jacket",
               "button_1": "Shop Here",
               "heading_color_1": "#000000",
@@ -6117,7 +6117,7 @@
               "horizontal_position_2": 14,
               "align_text_2": "left",
               "image_3": "shopify:\/\/shop_images\/cockpit-usa-z36c001-flight-suit-khaki-front-closed-edit-1.jpg",
-              "link_3": "",
+              "link_3": "shopify:\/\/products\/cockpit-usa-cotton-flight-suit",
               "heading_3": "Flight Suits",
               "button_3": "Explore",
               "heading_color_3": "#000000",
