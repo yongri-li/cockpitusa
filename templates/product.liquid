@@ -1,2 +1,13 @@
 {% section 'product-template' %}
 {% section 'product-recommendations' %}
+<div style="padding: 0 2% 0">
+  <div id="product-reviews" class="{{ lower }} mobile-3">
+    <div class="section-title">
+      <h3>{{ section.settings.reviews_heading }}</h3>
+    </div>
+    <div id="shopify-product-reviews" data-id="{{product.id}}">
+      {{ product.metafields.spr.reviews }}
+    </div>
+  </div>
+</div>
+<div class="clear"></div>
