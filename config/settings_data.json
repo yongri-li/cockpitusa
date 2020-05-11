@@ -4727,13 +4727,13 @@
     "main_font": "baskerville_no_2_n4",
     "nav_font": "lora_n4",
     "heading_font": "baskerville_no_2_n4",
-    "font-size": 17,
-    "h1-size": 25,
+    "font-size": 20,
+    "h1-size": 27,
     "h2-size": 27,
     "h3-size": 27,
     "h4-size": 28,
     "h5-size": 16,
-    "nav_size": 18,
+    "nav_size": 14,
     "section_title_border": 1,
     "section_title_align": "center",
     "section_titles": "short_below",
@@ -4794,7 +4794,7 @@
     "popup_image": "content",
     "popup_background_color": "#ffffff",
     "email_image": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
-    "favicon": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
+    "favicon": "shopify:\/\/shop_images\/Favicon-Shopify-URL-Image.jpg",
     "show_multiple_currencies": true,
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
@@ -4956,7 +4956,7 @@
             "type": "mega_menu",
             "settings": {
               "menu_item": "Shop",
-              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-Menu-2-3600x5400.jpg",
+              "nav_image": "shopify:\/\/shop_images\/Vol8-catalog_623608ca-9377-4b6a-8376-6bed3d89ceb8.jpg",
               "link": "shopify:\/\/pages\/digital-catalog"
             }
           },
@@ -5309,29 +5309,6 @@
               "caption_background_opacity": 20
             }
           },
-          "1583332518768": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Trucker-2-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "left",
-              "caption_horizontal": 21,
-              "caption_vertical": 18,
-              "mobile_image": "shopify:\/\/shop_images\/Suede-Trucker-Mobile-Banner.jpg",
-              "hide_caption_background": false,
-              "heading": "The Suede Trucker",
-              "subheading": "Featured on Style Icon Eric Rutherford.",
-              "link": "shopify:\/\/collections\/new-arrivals",
-              "button_text": "Shop Now",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#060000",
-              "cta_color": "#ffffff",
-              "cta_background": "#070000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
           "1587486857120": {
             "type": "image",
             "settings": {
@@ -5351,6 +5328,29 @@
               "slide_text_color": "#000000",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          },
+          "1583332518768": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Suede-Trucker-2-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 21,
+              "caption_vertical": 18,
+              "mobile_image": "shopify:\/\/shop_images\/Suede-Trucker-Mobile-Banner.jpg",
+              "hide_caption_background": false,
+              "heading": "The Suede Trucker",
+              "subheading": "Featured on Style Icon Eric Rutherford.",
+              "link": "shopify:\/\/collections\/new-arrivals",
+              "button_text": "Shop Now",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#060000",
+              "cta_color": "#ffffff",
+              "cta_background": "#070000",
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
@@ -5937,7 +5937,7 @@
               "image": "shopify:\/\/shop_images\/kids.jpg",
               "image_heading": "Blue Collar Prep",
               "image_subheading": "Cockpit USA Blog",
-              "image_button_link": "",
+              "image_button_link": "https:\/\/cockpit-usa.myshopify.com\/blogs\/blog\/joint-forces-featuring-eric-wertz-from-bluecollarprep",
               "image_button_text": "Read More Here",
               "image_button_text_2": "Add a 2nd button",
               "image_button_link_2": "",
