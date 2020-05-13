@@ -64,7 +64,7 @@
               <div class="item-pricing">
                 <p><b>{{ 'cart.general.price' | t }}</b></p>
                 <p><span class="cart-item-price money {% if item.original_price > item.final_price or item.variant.compare_at_price > item.final_price %}onsale{% endif %}" data-key="{{item.key}}" style="margin-right: 5px;"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>{{ item.final_price | money }}</span>
-                  <del>{% if item.original_price > item.final_price %}{{ item.original_price | money }}{% elsif item.variant.compare_at_price > item.final_price %}{{ item.variant.compare_at_price | money }}{% endif %}</del>/p>
+                  <del>{% if item.original_price > item.final_price %}{{ item.original_price | money }}{% elsif item.variant.compare_at_price > item.final_price %}{{ item.variant.compare_at_price | money }}{% endif %}</del>
               </div>
               <div class="qty">
                 <label for="quantity">{{ 'products.product.quantity' | t }}</label>
