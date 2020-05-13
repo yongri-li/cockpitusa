@@ -17,7 +17,9 @@
 
       <div class="desktop-8 tablet-6 mobile-3">
         <h1 class="page-title">{{ 'cart.general.title' | t }} <span class="CartCount">{{ cart.item_count }} {{ 'cart.general.items' | t }}</span></h1>
-
+        {% if settings.show_shipping_countdown %}
+          {% include 'cart-free-shipping' %}
+        {% endif %}
         {% for item in cart.items %}
           <div class="cart-item">
             <a class="remove" href="#" onclick="remove_item({{ item.variant.id }}); return false;"><span>+</span></a>
@@ -86,14 +88,14 @@
           </div>
         {% endfor %}
 
-        <div class="payment-types">
-          {% for type in shop.enabled_payment_types %}
-            <img src="{{ type | payment_type_img_url }}" />
-          {% endfor %}
-        </div>
+
+        <div class="clear"></div>
+         <input type="submit" name="update" id="update-cart" value="{{ 'cart.general.update' | t }}" class="outline-button" />
+
+
 
       </div>
-      <div id="basket-right" class="desktop-4 tablet-6 mobile-3">
+      <div id="basket-right" class="desktop-4 tablet-6 mobile-3" style="border-left: 1px solid #eee;">
         <h2>{{ 'cart.general.summary' | t }}</h2>
         <div class="cart-final-details">
           <div class="subtotal">
@@ -137,9 +139,7 @@
           </div>
         </div>
         <div class="cart-extras rte-accordion row">
-          {% if settings.show_shipping_countdown %}
-            {% include 'cart-free-shipping' %}
-          {% endif %}
+
           {% if settings.show_cart_notes %}
             <div id="cart-notes" class="item">
               <input class="trigger" id="item-one" type="checkbox" name="items" />
@@ -155,14 +155,9 @@
         </div>
         <div class="cart-buttons">
           <input type="submit" name="checkout" id="checkout" value="{{ 'cart.general.checkout' | t }}" class="button" />
-          <h5 class="or-divider text-center"><span>Or</span></h5>
           <div class="clear"></div>
 
-          <div class="clear"></div>
 
-          <div class="clear"></div>
-           <input type="submit" name="update" id="update-cart" value="{{ 'cart.general.update' | t }}" class="outline-button" />
-           <a class="outline-button" href="/collections">{{ 'cart.general.continue' | t }}</a>
         </div>
       </div>
     </form>
@@ -189,9 +184,3 @@
     });
   </script>
 </div>
-
-<style>
-.outline-button {
-  font-size: 90%!important
-}
-</style>
