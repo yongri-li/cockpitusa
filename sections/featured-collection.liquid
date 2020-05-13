@@ -21,20 +21,20 @@ data-aos="{{ settings.scroll_animation }}">
   {% if section.settings.homepage_product_layout == 'grid' %}
     {% case section.settings.grid %}
       {% when 2 %}
-        {%- assign grid_item_width = 'desktop-6 tablet-3 mobile-half' -%}
+        {%- assign grid_item_width = 'desktop-6 tablet-3 ' -%}
       {% when 3 %}
-        {%- assign grid_item_width = 'desktop-4 tablet-2 mobile-half' -%}
+        {%- assign grid_item_width = 'desktop-4 tablet-2 ' -%}
       {% when 4 %}
-        {%- assign grid_item_width = 'desktop-3 tablet-2 mobile-half' -%}
+        {%- assign grid_item_width = 'desktop-3 tablet-2 ' -%}
       {% when 5 %}
-        {%- assign grid_item_width = 'desktop-fifth tablet-fifth mobile-half' -%}
+        {%- assign grid_item_width = 'desktop-fifth tablet-fifth ' -%}
       {% when 6 %}
-        {%- assign grid_item_width = 'desktop-2 tablet-2 mobile-half' -%}
+        {%- assign grid_item_width = 'desktop-2 tablet-2 ' -%}
     {% endcase %}
     <div class="product-loop row">
       {% for product in collection.products limit: prod_limit  %}
 <script type='application/json' class='bold-product-json'>{{ product | json }}</script>
-        <div class="product-index {{ grid_item_width }} mobile-half" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
+        <div class="product-index {{ grid_item_width }}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
           {% include 'product-listing' %}
         </div>
       {% endfor %}
