@@ -85,6 +85,13 @@
             </div>
           </div>
         {% endfor %}
+
+        <div class="payment-types">
+          {% for type in shop.enabled_payment_types %}
+            <img src="{{ type | payment_type_img_url }}" />
+          {% endfor %}
+        </div>
+
       </div>
       <div id="basket-right" class="desktop-4 tablet-6 mobile-3">
         <h2>{{ 'cart.general.summary' | t }}</h2>
@@ -150,17 +157,9 @@
           <input type="submit" name="checkout" id="checkout" value="{{ 'cart.general.checkout' | t }}" class="button" />
           <h5 class="or-divider text-center"><span>Or</span></h5>
           <div class="clear"></div>
-          {% if additional_checkout_buttons %}
-            <div class="additional-checkout-buttons">
-              {{ content_for_additional_checkout_buttons }}
-            </div>
-          {% endif %}
+
           <div class="clear"></div>
-          <div class="payment-types">
-            {% for type in shop.enabled_payment_types %}
-              <img src="{{ type | payment_type_img_url }}" />
-            {% endfor %}
-          </div>
+
           <div class="clear"></div>
            <input type="submit" name="update" id="update-cart" value="{{ 'cart.general.update' | t }}" class="outline-button" />
            <a class="outline-button" href="/collections">{{ 'cart.general.continue' | t }}</a>
@@ -190,3 +189,9 @@
     });
   </script>
 </div>
+
+<style>
+.outline-button {
+  font-size: 90%!important
+}
+</style>
