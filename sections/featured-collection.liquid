@@ -21,19 +21,19 @@ data-aos="{{ settings.scroll_animation }}">
   {% if section.settings.homepage_product_layout == 'grid' %}
     {% case section.settings.grid %}
       {% when 2 %}
-        {%- assign grid_item_width = 'desktop-6 tablet-3 ' -%}
+        {%- assign grid_item_width = 'desktop-6 tablet-3 mobile-100' -%}
       {% when 3 %}
-        {%- assign grid_item_width = 'desktop-4 tablet-2 ' -%}
+        {%- assign grid_item_width = 'desktop-4 tablet-2 mobile-100' -%}
       {% when 4 %}
-        {%- assign grid_item_width = 'desktop-3 tablet-2 ' -%}
+        {%- assign grid_item_width = 'desktop-3 tablet-2 mobile-100' -%}
       {% when 5 %}
         {%- assign grid_item_width = 'desktop-fifth tablet-fifth ' -%}
       {% when 6 %}
-        {%- assign grid_item_width = 'desktop-2 tablet-2 ' -%}
+        {%- assign grid_item_width = 'desktop-2 tablet-2 mobile-100' -%}
     {% endcase %}
     <div class="product-loop row">
       {% for product in collection.products limit: prod_limit  %}
-<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
+        <script type='application/json' class='bold-product-json'>{{ product | json }}</script>
         <div class="product-index {{ grid_item_width }}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
           {% include 'product-listing' %}
         </div>
@@ -122,6 +122,9 @@ data-aos="{{ settings.scroll_animation }}">
     width: calc(100% - 96px)
   }
   @media screen and (max-width: 780px) {
+    .mobile-100 {
+      width: 100%!important;
+    }
     .collection-carousel .slick-arrow {
       width: 30px;
       height: 30px;
@@ -135,6 +138,7 @@ data-aos="{{ settings.scroll_animation }}">
       font-size: 22px !important;
     }
   }
+
 </style>
 
 {% schema %}
