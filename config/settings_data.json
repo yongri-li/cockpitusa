@@ -4956,7 +4956,7 @@
             "type": "mega_menu",
             "settings": {
               "menu_item": "Shop",
-              "nav_image": "shopify:\/\/shop_images\/Vol8-catalog_623608ca-9377-4b6a-8376-6bed3d89ceb8.jpg",
+              "nav_image": "shopify:\/\/shop_images\/Catalog-Mega-Menu-2-3600x5400.jpg",
               "link": "shopify:\/\/pages\/digital-catalog"
             }
           },
@@ -5371,7 +5371,7 @@
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
+              "slide_text_color": "#000000",
               "cta_color": "#ffffff",
               "cta_background": "#0b0101",
               "caption_background": "rgba(0,0,0,0)",
