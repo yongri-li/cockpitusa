@@ -4980,7 +4980,7 @@
           "header_cover": false,
           "header_border": false,
           "show_announcement": true,
-          "announcement_text": "<p>Free Shipping on orders over $1000<\/p>",
+          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1000<\/a><\/p>",
           "announcement_text_size": 24,
           "top_nav": "",
           "cart_position": "header",
@@ -5269,8 +5269,19 @@
       },
       "scrolling-announcements": {
         "type": "scrolling-announcements",
+        "blocks": {
+          "1590160618893": {
+            "type": "text",
+            "settings": {
+              "text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"\">Return Policy &amp; International<\/a>&nbsp;Orders<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "1590160618893"
+        ],
         "settings": {
-          "hidden_on_homepage": true,
+          "hidden_on_homepage": false,
           "arrows": true,
           "autoplay": true,
           "desktop_slides_shown": 3,
@@ -5845,7 +5856,7 @@
           "image_width": "50%",
           "text_align": "left",
           "title": "Heritage Collection",
-          "text": "<p>Preserving American history, the Cockpit USA Heritage collection is an offering of leather, textile, and sheepskin jackets. Each style is modeled after it's original design, made of the finest materials and genuine craftsmanship. Proudly made in the U.S.A.&nbsp;<\/p>",
+          "text": "<p>Born from a passion for history and inspired by the iconic styles that have defined our heroes. Finely crafted tributes to the aviators, sailors, and soldiers who wore these classic garments with each one having a story that preserves their legacy through timeless style.<\/p>",
           "link": "shopify:\/\/collections\/heritage-collection",
           "button": "Shop Here"
         }
@@ -5910,27 +5921,6 @@
               "video_caption_border": "transparent"
             }
           },
-          "1586448235577-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Screen_Shot_2020-04-13_at_1.33.50_PM.png",
-              "image_heading": "Movies & TV",
-              "image_subheading": "Cockpit USA as seen on Apple TV's Amazing Stories",
-              "image_button_link": "https:\/\/cockpit-usa.myshopify.com\/pages\/media-2",
-              "image_button_text": "More here",
-              "image_button_text_2": "Add a 2nd button",
-              "image_button_link_2": "",
-              "image_caption_alignment": "left",
-              "caption_horizontal_position": 5,
-              "caption_vertical_position": 5,
-              "image_slide_text_color": "#fdfdfd",
-              "image_cta_color": "#fffcfc",
-              "image_cta_background": "#000000",
-              "image_caption_background": "transparent",
-              "image_caption_background_opacity": 10,
-              "image_caption_border": "transparent"
-            }
-          },
           "1586448235577-2": {
             "type": "image",
             "settings": {
@@ -5955,7 +5945,6 @@
         },
         "block_order": [
           "1586448235577-1",
-          "1586448235577-0",
           "1586448235577-2"
         ],
         "settings": {
