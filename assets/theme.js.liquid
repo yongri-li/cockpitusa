@@ -952,6 +952,9 @@ $(document).ready(function(){
     $Sidebar.toggleClass("open");
   });
 
+/*============================================================================
+
+REMOVE MOBILE FOOTER MODULE //. [6/4/2020]
 
   (function mobileFooter() {
     Events.on("mediaquery:mobile", footerHide);
@@ -961,13 +964,12 @@ $(document).ready(function(){
       } else {
         $(".footer-block-content").hide();
         $('#footer').find('.togglecontent').click(function(){
-          $(this).next().slideToggle('fast');
           $(".footer-block-content").not($(this).next()).hide('fast');
         });
       }
     }
   })();
-
+==============================================================================*/
 
   (function productSocialShare() {
     $(window).on('load resize orientationchange', function() {
@@ -1083,7 +1085,7 @@ theme.ProductForm = function (context, events, Product) {
 
       if ( !variant ) {
         events.trigger("variantunavailable");
-        
+
 if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
   BOLD.common.eventEmitter.emit('BOLD_COMMON_variant_changed');
 }
@@ -1091,7 +1093,7 @@ if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common
       }
 
       if ( Product.variants.length == 1 ) {
-        
+
 if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
   BOLD.common.eventEmitter.emit('BOLD_COMMON_variant_changed');
 }
@@ -1107,7 +1109,7 @@ if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common
       if ( variant.featured_image ) {
         events.trigger("variantchange:image", variant.featured_image.id);
       }
-    
+
 if (window.BOLD && BOLD.common && BOLD.common.eventEmitter && typeof BOLD.common.eventEmitter.emit === 'function'){
   BOLD.common.eventEmitter.emit('BOLD_COMMON_variant_changed');
 }
