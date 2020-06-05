@@ -2067,6 +2067,30 @@ ul#main-nav li.dropdown:hover > ul.megamenu {
   .mega-container {
     display: none;
   }
+
+  #search_reveal {
+    display: block!important;
+    position: relative;
+    width: 100%;
+    margin: 10px auto 10px;
+    text-align: center;
+  }
+
+  input#search_button {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 100px;
+    margin-bottom: 0;
+  }
+
+  #search_reveal input#q {
+    height: 62px;
+    margin-bottom: 0;
+    line-height: 62px;
+    border: 1px solid {{ settings.dotted_color }};
+  }
+
 }
 
 .mega-container {
@@ -9777,4 +9801,32 @@ div#thumbnail-gallery {
   #product-content {
     display: block;
   }
+}
+
+
+@media screen and (max-width: 740px) {
+
+  #search_reveal {
+    display: block!important;
+    position: relative;
+    width: 100%;
+    margin: 10px auto 10px;
+    text-align: center;
+  }
+
+  input#search_button {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    width: 100px;
+    margin-bottom: 0;
+  }
+
+  #search_reveal input#q {
+    height: 62px;
+    margin-bottom: 0;
+    line-height: 62px;
+    border: 1px solid {{ settings.dotted_color }};
+  }
+
 }
