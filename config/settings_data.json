@@ -4795,7 +4795,7 @@
     "popup_background_color": "#ffffff",
     "email_image": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
     "favicon": "shopify:\/\/shop_images\/Favicon-Shopify-URL-Image.jpg",
-    "show_multiple_currencies": true,
+    "show_multiple_currencies": false,
     "checkout_header_image": "",
     "checkout_logo_image": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
     "checkout_logo_position": "left",
