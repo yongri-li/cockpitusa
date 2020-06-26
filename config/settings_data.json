@@ -5300,14 +5300,14 @@
           "1587753083564": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Heritage-Jeff-Image-2-Slideshow-Full-Width-1920x900_ec96b1d4-c598-4873-a604-7f3449b43a95.jpg",
-              "text_align": "left",
-              "caption_horizontal": 21,
-              "caption_vertical": 18,
-              "mobile_image": "shopify:\/\/shop_images\/Heritage-Slide-JeffMobile-Slide-Template.jpg",
+              "image": "shopify:\/\/shop_images\/Fathers-day-family-photo-8-Clymans-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 20,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Fathers-Day-Mobile-Slide-2-Template.jpg",
               "hide_caption_background": false,
               "heading": "Cockpit USA",
-              "subheading": "Preserving American history through our garments since 1975.",
+              "subheading": "Family owned for 45 years",
               "link": "shopify:\/\/collections\/heritage-collection",
               "button_text": "Shop Here",
               "second_button": false,
@@ -5323,15 +5323,15 @@
           "1587486857120": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Weathered-Field-Jacket-Full-Width-1920x900_3d22c4f0-c47f-4987-bdbe-db067c179e97.jpg",
+              "image": "shopify:\/\/shop_images\/Z26D105-SEERSUCKER-1-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 79,
-              "caption_vertical": 21,
-              "mobile_image": "shopify:\/\/shop_images\/Weathered-Field-Jacket-Moile-Template.jpg",
+              "caption_horizontal": 24,
+              "caption_vertical": 35,
+              "mobile_image": "shopify:\/\/shop_images\/Z26D105-Seer-Sucker-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Field Jacket Shop",
-              "subheading": "Featuring the Weathered Field Jacket",
-              "link": "shopify:\/\/collections\/mens-field-jackets",
+              "heading": "Summer Items",
+              "subheading": "Featuring the Seersucker Bomber Jacket, Sunglasses, and Accessories.",
+              "link": "shopify:\/\/collections\/summer-shop",
               "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
@@ -5346,15 +5346,15 @@
           "1583332518768": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Trucker-2-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "left",
+              "image": "shopify:\/\/shop_images\/Z12B101D-Brooklyn-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "center",
               "caption_horizontal": 21,
-              "caption_vertical": 18,
-              "mobile_image": "shopify:\/\/shop_images\/Suede-Trucker-Mobile-Banner.jpg",
+              "caption_vertical": 32,
+              "mobile_image": "shopify:\/\/shop_images\/Z12B101D-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "The Suede Trucker",
-              "subheading": "Featured on Style Icon Eric Rutherford.",
-              "link": "shopify:\/\/collections\/new-arrivals",
+              "heading": "Tee Shirt Shop",
+              "subheading": "Featuring the Brooklyn Navy Yard Tee",
+              "link": "shopify:\/\/collections\/graphic-t-shirts",
               "button_text": "Shop Now",
               "second_button": false,
               "second_link": "",
@@ -5366,50 +5366,27 @@
               "caption_background_opacity": 20
             }
           },
-          "1586543685640": {
+          "1593192315913": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Suede-Shop-Shopify-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/New-Tanker-Jacket-2-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 55,
-              "caption_vertical": 77,
-              "mobile_image": "shopify:\/\/shop_images\/Suede-Shop-Shopify-Template-Image-Slideshow-not-Full-Width-1200x800.jpg",
+              "caption_horizontal": 28,
+              "caption_vertical": 35,
+              "mobile_image": "shopify:\/\/shop_images\/New-Tanker-Jacket-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "The Suede Shop",
-              "subheading": "Classic Suede styles for Men and Women",
-              "link": "shopify:\/\/collections\/the-suede-shop",
+              "heading": "The New Light Weight Tanker Jacket",
+              "subheading": "Proudly Made in The USA",
+              "link": "shopify:\/\/products\/light-weight-tanker-jacket",
               "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
               "slide_text_color": "#000000",
               "cta_color": "#ffffff",
-              "cta_background": "#0b0101",
+              "cta_background": "#000000",
               "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 10
-            }
-          },
-          "1559067219938-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/M-86-Royce-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "left",
-              "caption_horizontal": 79,
-              "caption_vertical": 21,
-              "mobile_image": "shopify:\/\/shop_images\/M-86_-Flight-Bomber-Jacket-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "M-86© Flight Bomber Jacket",
-              "subheading": "Perfect for Spring",
-              "link": "shopify:\/\/products\/m-86©-flight-bomber-jacket",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#060300",
-              "cta_color": "#ffffff",
-              "cta_background": "#060300",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 10
+              "caption_background_opacity": 20
             }
           }
         },
@@ -5417,14 +5394,13 @@
           "1587753083564",
           "1587486857120",
           "1583332518768",
-          "1586543685640",
-          "1559067219938-0"
+          "1593192315913"
         ],
         "settings": {
           "slider_speed": 4,
-          "slide_heading_size": 34,
+          "slide_heading_size": 30,
           "slide_heading_weight": "700",
-          "subheading_size": 16,
+          "subheading_size": 20,
           "cta_size": 16,
           "cta_weight": "400"
         }
