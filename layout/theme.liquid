@@ -192,5 +192,6 @@
   {{ 'jquery.fancybox.js' | asset_url | script_tag }}
 
 {% render 'spurit_po2_theme_snippet' %}
-{% include 'mw_GP_objects' %}</body>
+{% include 'mw_GP_objects' %}{% render 'upsell-now', customer: customer, product: product, template: template, cart: cart %}
+  </body>
 </html>

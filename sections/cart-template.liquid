@@ -82,7 +82,7 @@
                       <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                     </dt>
                     <dd>
-                      <s>{{ item.original_price | money }}</s>
+                      <s><div class="un-line-item-unit-price" data-id="{{ item.key }}">{{ item.original_price | money }}</div></s>
                     </dd>
                     <dt>
                       <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
@@ -92,7 +92,7 @@
                     </dd>
                   </dl>
                 {%- else -%}
-                  {{ item.original_price | money }}
+                  <div class="un-line-item-unit-price" data-id="{{ item.key }}">{{ item.original_price | money }}</div>
                 {%- endif -%}
 
                 {%- if item.line_level_discount_allocations != blank -%}
@@ -125,7 +125,7 @@
                       <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                     </dt>
                     <dd>
-                      <s>{{ item.original_line_price | money }}</s>
+                      <s><div class="un-line-item-total" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div></s>
                     </dd>
                     <dt>
                       <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
@@ -135,7 +135,7 @@
                     </dd>
                   </dl>
                 {%- else -%}
-                  {{ item.original_line_price | money }}
+                  <div class="un-line-item-total" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div>
                 {%- endif -%}
               </td>
             </tr>
