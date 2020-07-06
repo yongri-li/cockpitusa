@@ -5297,50 +5297,27 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
-          "1587753083564": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Fathers-day-family-photo-8-Clymans-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 20,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Fathers-Day-Mobile-Slide-2-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "Cockpit USA",
-              "subheading": "Family owned for 45 years",
-              "link": "shopify:\/\/collections\/heritage-collection",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
           "1587486857120": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z26D105-SEERSUCKER-1-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Seer-Sucker-2-July-4th-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "center",
               "caption_horizontal": 24,
               "caption_vertical": 35,
-              "mobile_image": "shopify:\/\/shop_images\/Z26D105-Seer-Sucker-Mobile-Slide-Template.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Seer-Sucker-Summer-Shop-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Summer Items",
-              "subheading": "Featuring the Seersucker Bomber Jacket, Sunglasses, and Accessories.",
-              "link": "shopify:\/\/collections\/summer-shop",
-              "button_text": "Shop Here",
+              "heading": "Saluting the Red White and Blue",
+              "subheading": "Happy 4th of July!  Shop classic American Styles from Cockpit USA",
+              "link": "shopify:\/\/collections\/patriotic-apparel",
+              "button_text": "Explore Here",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
               "slide_text_color": "#000000",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
+              "caption_background": "#ffffff",
+              "caption_background_opacity": 30
             }
           },
           "1583332518768": {
@@ -5391,7 +5368,6 @@
           }
         },
         "block_order": [
-          "1587753083564",
           "1587486857120",
           "1583332518768",
           "1593192315913"
