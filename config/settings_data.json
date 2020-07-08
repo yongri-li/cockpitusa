@@ -5282,9 +5282,9 @@
         ],
         "settings": {
           "hidden_on_homepage": false,
-          "arrows": true,
+          "arrows": false,
           "autoplay": true,
-          "desktop_slides_shown": 3,
+          "desktop_slides_shown": 1,
           "slider_speed": 8,
           "info_text": "#080400",
           "info_background": "rgba(0,0,0,0)",
