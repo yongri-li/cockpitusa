@@ -5297,29 +5297,6 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
-          "1587486857120": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Seer-Sucker-2-July-4th-Image-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 24,
-              "caption_vertical": 35,
-              "mobile_image": "shopify:\/\/shop_images\/Seer-Sucker-Summer-Shop-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "Saluting the Red White and Blue",
-              "subheading": "Happy 4th of July!  Shop classic American Styles from Cockpit USA",
-              "link": "shopify:\/\/collections\/patriotic-apparel",
-              "button_text": "Explore Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "#ffffff",
-              "caption_background_opacity": 30
-            }
-          },
           "1583332518768": {
             "type": "image",
             "settings": {
@@ -5365,10 +5342,33 @@
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
+          },
+          "1596055610351": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Impoted-items-13-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 17,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/Imported-Blue-Eagle-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "",
+              "subheading": "",
+              "link": "shopify:\/\/collections\/imported-styles",
+              "button_text": "Shop Sale",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#14213d",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
           }
         },
         "block_order": [
-          "1587486857120",
+          "1596055610351",
           "1583332518768",
           "1593192315913"
         ],
