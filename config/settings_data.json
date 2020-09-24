@@ -4980,7 +4980,7 @@
           "header_cover": false,
           "header_border": false,
           "show_announcement": true,
-          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1000<\/a><\/p>",
+          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1,000<\/a>&nbsp;&amp;&nbsp;<a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>&nbsp;<\/p>",
           "announcement_text_size": 24,
           "top_nav": "",
           "cart_position": "header",
@@ -5297,42 +5297,19 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
-          "1583332518768": {
+          "1596055610351": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z12B101D-Brooklyn-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Catalog-Vintage-Template-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 21,
-              "caption_vertical": 32,
-              "mobile_image": "shopify:\/\/shop_images\/Z12B101D-Mobile-Slide-Template.jpg",
+              "caption_horizontal": 75,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Vintage-Catalog-Collage-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Tee Shirt Shop",
-              "subheading": "Featuring the Brooklyn Navy Yard Tee",
-              "link": "shopify:\/\/collections\/graphic-t-shirts",
-              "button_text": "Shop Now",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#060000",
-              "cta_color": "#ffffff",
-              "cta_background": "#070000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
-          "1593192315913": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/New-Tanker-Jacket-2-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 28,
-              "caption_vertical": 35,
-              "mobile_image": "shopify:\/\/shop_images\/New-Tanker-Jacket-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "The New Light Weight Tanker Jacket",
-              "subheading": "Proudly Made in The USA",
-              "link": "shopify:\/\/products\/light-weight-tanker-jacket",
-              "button_text": "Shop Here",
+              "heading": "Celebrating 45 Years of Cockpit USA",
+              "subheading": "We're giving away a free leather jacket every two weeks!",
+              "link": "https:\/\/cockpitusa.com\/pages\/the-cockpit-story",
+              "button_text": "Our Story",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
@@ -5343,25 +5320,48 @@
               "caption_background_opacity": 20
             }
           },
-          "1596055610351": {
+          "1599147152165": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Impoted-items-13-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "left",
-              "caption_horizontal": 17,
-              "caption_vertical": 100,
-              "mobile_image": "shopify:\/\/shop_images\/Imported-Blue-Eagle-Mobile-Slide-Template.jpg",
+              "image": "shopify:\/\/shop_images\/Clip-Jacket-Through-years-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 51,
+              "caption_vertical": 74,
+              "mobile_image": "shopify:\/\/shop_images\/Clip-Jacket-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
               "heading": "",
-              "subheading": "",
-              "link": "shopify:\/\/collections\/imported-styles",
-              "button_text": "Shop Sale",
+              "subheading": "Win !!! The Classic \"Air Rescue Parka\" ©",
+              "link": "shopify:\/\/products\/air-rescue-parka-©",
+              "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
-              "second_button_text": "Button 2 text",
+              "second_button_text": "",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 40
+            }
+          },
+          "1599856398832": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Air-Rescue-Parka-2-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 30,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Air-Rescue-Parka-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Your Turn",
+              "subheading": "Share your Cockpit Style  #45YearsOfCockpitUSA on Instagram or below.",
+              "link": "shopify:\/\/pages\/contest",
+              "button_text": "Enter To Win",
+              "second_button": true,
+              "second_link": "shopify:\/\/products\/air-rescue-parka-©",
+              "second_button_text": "Shop The Look",
               "slide_text_color": "#000000",
               "cta_color": "#ffffff",
-              "cta_background": "#14213d",
+              "cta_background": "#000000",
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
@@ -5369,15 +5369,15 @@
         },
         "block_order": [
           "1596055610351",
-          "1583332518768",
-          "1593192315913"
+          "1599147152165",
+          "1599856398832"
         ],
         "settings": {
           "slider_speed": 4,
           "slide_heading_size": 30,
           "slide_heading_weight": "700",
-          "subheading_size": 20,
-          "cta_size": 16,
+          "subheading_size": 28,
+          "cta_size": 15,
           "cta_weight": "400"
         }
       },
@@ -5628,57 +5628,56 @@
       },
       "1561574067213": {
         "type": "gallery",
-        "disabled": true,
         "blocks": {
           "1561574067213-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/B6-B_W-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z2567M-2-Antique-Lamb-Image-Gallery-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/collections\/dresses",
-              "heading": "",
-              "button": "",
-              "heading_color": "#554237",
+              "link": "shopify:\/\/collections\/a-2-flight-jackets",
+              "heading": "A-2 Flight Jackets",
+              "button": "Explore Here",
+              "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
               "text_options": "on_image",
-              "vertical_position": 50,
-              "horizontal_position": 30,
+              "vertical_position": 12,
+              "horizontal_position": 50,
               "align_text": "center"
             }
           },
           "1561574067213-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/G9A2156.jpg",
+              "image": "shopify:\/\/shop_images\/M-65-Field-Jacket-Image-Gallery-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/collections\/playsuits-rompers",
-              "heading": "",
-              "button": "",
+              "link": "shopify:\/\/collections\/field-deck-jackets",
+              "heading": "Field & Deck Jackets",
+              "button": "Explore Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000",
               "text_options": "on_image",
-              "vertical_position": 50,
-              "horizontal_position": 24,
-              "align_text": "left"
+              "vertical_position": 12,
+              "horizontal_position": 50,
+              "align_text": "center"
             }
           },
           "1561574067213-2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Trucker-Peter-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z2102MB-B-3-final-3-Image-Gallery-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/collections\/tops",
-              "heading": "",
-              "button": "",
-              "heading_color": "#554237",
+              "link": "shopify:\/\/collections\/b-3-bomber-jackets",
+              "heading": "B-3 Bomber Jackets",
+              "button": "Explore Here",
+              "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000",
               "text_options": "on_image",
-              "vertical_position": 50,
-              "horizontal_position": 36,
-              "align_text": "left"
+              "vertical_position": 12,
+              "horizontal_position": 50,
+              "align_text": "center"
             }
           }
         },
@@ -5689,112 +5688,11 @@
         ],
         "settings": {
           "full_width": true,
-          "heading": "",
+          "heading": "Classic Styles",
           "promo_background_color": "#fff",
-          "promo_heading_weight": "bold",
-          "promo_heading_size": 30,
+          "promo_heading_weight": "light",
+          "promo_heading_size": 23,
           "promo_button_size": 14
-        }
-      },
-      "1561574293261": {
-        "type": "parallax-image",
-        "disabled": true,
-        "settings": {
-          "image": "shopify:\/\/shop_images\/Cockpit_USA-4211_373d2bc2-439a-4b75-804a-e19fecb6b716.jpg",
-          "background_effect": "fixed",
-          "page_height": 400,
-          "heading": "",
-          "heading_font_size": 26,
-          "heading_font_weight": "700",
-          "heading_color": "#554237",
-          "subheading": "",
-          "subheading_font_size": 16,
-          "subheading_font_weight": "400",
-          "subheading_color": "#000000",
-          "button_text": "Our Story",
-          "button_weight": "light",
-          "button_link": "shopify:\/\/pages\/about-cockpit-usa",
-          "button_text_color": "#fff",
-          "button_color": "#000"
-        }
-      },
-      "1561574432974": {
-        "type": "featured-blog",
-        "disabled": true,
-        "settings": {
-          "full_width": false,
-          "blog": "",
-          "heading": "Our Blog",
-          "heading_color": "#000000",
-          "background_color": "#ffffff",
-          "post_limit": 2,
-          "post_tags": true,
-          "show_author": true
-        }
-      },
-      "1583332882727": {
-        "type": "slideshow",
-        "disabled": true,
-        "blocks": {
-          "1583332882727-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Cockpit_USA-4860-Edit_7a7ab9fc-f730-4f12-a67c-a6cfe51969ec.jpg",
-              "text_align": "left",
-              "caption_horizontal": 50,
-              "caption_vertical": 50,
-              "mobile_image": "",
-              "hide_caption_background": false,
-              "heading": "",
-              "subheading": "",
-              "link": "",
-              "button_text": "",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "",
-              "slide_text_color": "rgba(0,0,0,0)",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "transparent",
-              "caption_background_opacity": 20
-            }
-          }
-        },
-        "block_order": [
-          "1583332882727-0"
-        ],
-        "settings": {
-          "slider_speed": 5,
-          "slide_heading_size": 20,
-          "slide_heading_weight": "700",
-          "subheading_size": 13,
-          "cta_size": 20,
-          "cta_weight": "400"
-        }
-      },
-      "1583333080349": {
-        "type": "featured-collection",
-        "disabled": true,
-        "settings": {
-          "full_width": false,
-          "heading": "Womens",
-          "heading_color": "#000",
-          "background_color": "#fff",
-          "collection": "women",
-          "homepage_product_layout": "carousel",
-          "limit": 6,
-          "grid": 4,
-          "slide_controls": "arrows"
-        }
-      },
-      "1583333445952": {
-        "type": "social-links",
-        "disabled": true,
-        "settings": {
-          "heading": "",
-          "show_mailchimp": false,
-          "homepage_social_color": "#000",
-          "homepage_social_background": "#fff"
         }
       },
       "1586279190981": {
@@ -5803,7 +5701,7 @@
           "full_width": true,
           "remove_top_padding": false,
           "remove_bottom_padding": false,
-          "image": "shopify:\/\/shop_images\/Heritage-Photo.jpg",
+          "image": "shopify:\/\/shop_images\/Heritage-Shopify-Template-Two-Images-Gallery-900x600.jpg",
           "layout": "left",
           "image_width": "50%",
           "text_align": "left",
@@ -5811,127 +5709,6 @@
           "text": "<p>Born from a passion for history and inspired by the iconic styles that have defined our heroes. Finely crafted tributes to the aviators, sailors, and soldiers who wore these classic garments with each one having a story that preserves their legacy through timeless style.<\/p>",
           "link": "shopify:\/\/collections\/heritage-collection",
           "button": "Shop Here"
-        }
-      },
-      "1586279538889": {
-        "type": "collection-list",
-        "blocks": {
-          "1586279538889-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "top-gun"
-            }
-          },
-          "1586279538889-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "kids"
-            }
-          },
-          "1587153009101": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "women"
-            }
-          }
-        },
-        "block_order": [
-          "1586279538889-0",
-          "1586279538889-1",
-          "1587153009101"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "Featured Collections",
-          "heading_color": "#000",
-          "background_color": "#fff",
-          "grid": 3
-        }
-      },
-      "1586448235577": {
-        "type": "slideshow-video",
-        "blocks": {
-          "1586448235577-1": {
-            "type": "video",
-            "settings": {
-              "video_url": "https:\/\/www.youtube.com\/watch?v=sHfju5LJhHw",
-              "video_url_mp4": "",
-              "video_heading": "Our Story | TV & Movies | Blog",
-              "video_subheading": "",
-              "video_slide_text_color": "#fbf9f9",
-              "video_button_link": "",
-              "video_button_text": "Read more here",
-              "video_button_link_2": "https:\/\/cockpitusa.com\/pages\/the-cockpit-story",
-              "video_button_text_2": "Read More Here",
-              "video_cta_color": "#ffffff",
-              "video_cta_background": "#000000",
-              "video_caption_alignment": "left",
-              "caption_horizontal_position": 5,
-              "caption_vertical_position": 5,
-              "video_caption_background": "transparent",
-              "video_caption_background_opacity": 20,
-              "video_caption_border": "transparent"
-            }
-          },
-          "1586448235577-2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/kids.jpg",
-              "image_heading": "Blue Collar Prep",
-              "image_subheading": "Cockpit USA Blog",
-              "image_button_link": "https:\/\/cockpit-usa.myshopify.com\/blogs\/blog\/joint-forces-featuring-eric-wertz-from-bluecollarprep",
-              "image_button_text": "Read More Here",
-              "image_button_text_2": "Add a 2nd button",
-              "image_button_link_2": "",
-              "image_caption_alignment": "left",
-              "caption_horizontal_position": 5,
-              "caption_vertical_position": 5,
-              "image_slide_text_color": "#ffffff",
-              "image_cta_color": "#ffffff",
-              "image_cta_background": "#000000",
-              "image_caption_background": "transparent",
-              "image_caption_background_opacity": 20,
-              "image_caption_border": "transparent"
-            }
-          }
-        },
-        "block_order": [
-          "1586448235577-1",
-          "1586448235577-2"
-        ],
-        "settings": {
-          "full_width": true,
-          "slide_controls": "arrows",
-          "video_audio": "off",
-          "slide_height": 38,
-          "slide_heading_size": 22,
-          "slide_heading_weight": "bold",
-          "subheading_size": 18,
-          "cta_size": 14,
-          "cta_weight": "bold",
-          "use_mobile_height": true
-        }
-      },
-      "1586452665539": {
-        "type": "parallax-image",
-        "disabled": true,
-        "settings": {
-          "image": "",
-          "background_effect": "fixed",
-          "page_height": 400,
-          "heading": "Image with text overlay",
-          "heading_font_size": 26,
-          "heading_font_weight": "400",
-          "heading_color": "#000",
-          "subheading": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.",
-          "subheading_font_size": 16,
-          "subheading_font_weight": "400",
-          "subheading_color": "#000",
-          "button_text": "Add a button",
-          "button_weight": "light",
-          "button_link": "",
-          "button_text_color": "#fff",
-          "button_color": "#000"
         }
       },
       "shop-the-look": {
@@ -6087,6 +5864,41 @@
           "border_top": false,
           "border_bottom": false
         }
+      },
+      "1599857238285": {
+        "type": "collection-list",
+        "blocks": {
+          "1599857238285-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "kids"
+            }
+          },
+          "1599857238285-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "accessories"
+            }
+          },
+          "1599857238285-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "women"
+            }
+          }
+        },
+        "block_order": [
+          "1599857238285-0",
+          "1599857238285-1",
+          "1599857238285-2"
+        ],
+        "settings": {
+          "full_width": false,
+          "heading": "Collection list",
+          "heading_color": "#000",
+          "background_color": "#fff",
+          "grid": 3
+        }
       }
     },
     "content_for_index": [
@@ -6094,14 +5906,7 @@
       "1561574067213",
       "1586279190981",
       "1559084715445",
-      "1586279538889",
-      "1583332882727",
-      "1583333080349",
-      "1561574293261",
-      "1561574432974",
-      "1586448235577",
-      "1583333445952",
-      "1586452665539"
+      "1599857238285"
     ]
   }
 }
