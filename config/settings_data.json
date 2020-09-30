@@ -5297,19 +5297,65 @@
       "1559067219938": {
         "type": "slideshow",
         "blocks": {
-          "1596055610351": {
+          "1599147152165": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Catalog-Vintage-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Lamb-Skin-Z2567MM-2-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 75,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Vintage-Catalog-Collage-Mobile-Slide-Template.jpg",
+              "caption_horizontal": 21,
+              "caption_vertical": 37,
+              "mobile_image": "shopify:\/\/shop_images\/Z2567MM-2-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Celebrating 45 Years of Cockpit USA",
-              "subheading": "We're giving away a free leather jacket every two weeks!",
-              "link": "https:\/\/cockpitusa.com\/pages\/the-cockpit-story",
-              "button_text": "Our Story",
+              "heading": "A-2 Collections",
+              "subheading": "Featuring the Antique Lamb A-2 Bomber Jacket",
+              "link": "shopify:\/\/collections\/a-2-flight-jackets",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 40
+            }
+          },
+          "1599856398832": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/M-65-z26l008-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 80,
+              "caption_vertical": 37,
+              "mobile_image": "shopify:\/\/shop_images\/M-65-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Field & Deck Jackets",
+              "subheading": "Featuring the M-65 Field Jacket.",
+              "link": "shopify:\/\/collections\/field-deck-jackets",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          },
+          "1600964159503": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z2102MB-b3-4-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 30,
+              "caption_vertical": 34,
+              "mobile_image": "shopify:\/\/shop_images\/Z2102MB-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "B-3 Sheepskin Jackets",
+              "subheading": "Featuring the Authentic B-3 in Black.",
+              "link": "",
+              "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
               "second_button_text": "Button 2 text",
@@ -5320,45 +5366,45 @@
               "caption_background_opacity": 20
             }
           },
-          "1599147152165": {
+          "1600964541998": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Clip-Jacket-Through-years-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Womens-2-B-3-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 51,
-              "caption_vertical": 74,
-              "mobile_image": "shopify:\/\/shop_images\/Clip-Jacket-Mobile-Slide-Template.jpg",
+              "caption_horizontal": 26,
+              "caption_vertical": 33,
+              "mobile_image": "shopify:\/\/shop_images\/Womens-B3-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "",
-              "subheading": "Win !!! The Classic \"Air Rescue Parka\" ©",
-              "link": "shopify:\/\/products\/air-rescue-parka-©",
+              "heading": "Women's Bombers",
+              "subheading": "Featuring The Women's B-3 Bomber Jacket",
+              "link": "shopify:\/\/collections\/bomber-jackets",
               "button_text": "Shop Here",
               "second_button": false,
               "second_link": "",
-              "second_button_text": "",
+              "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
+              "caption_background": "transparent",
               "caption_background_opacity": 40
             }
           },
-          "1599856398832": {
+          "1596055610351": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Air-Rescue-Parka-2-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Catalog-Vintage-Template-Image-Slideshow-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 30,
+              "caption_horizontal": 76,
               "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Air-Rescue-Parka-Mobile-Slide-Template.jpg",
+              "mobile_image": "shopify:\/\/shop_images\/Vintage-Catalog-Collage-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Your Turn",
-              "subheading": "Share your Cockpit Style  #45YearsOfCockpitUSA on Instagram or below.",
-              "link": "shopify:\/\/pages\/contest",
-              "button_text": "Enter To Win",
-              "second_button": true,
-              "second_link": "shopify:\/\/products\/air-rescue-parka-©",
-              "second_button_text": "Shop The Look",
+              "heading": "Celebrating 45 Years of Cockpit USA",
+              "subheading": "",
+              "link": "shopify:\/\/pages\/about-cockpit-usa",
+              "button_text": "Our Story",
+              "second_button": false,
+              "second_link": "shopify:\/\/pages\/contest",
+              "second_button_text": "Enter To Win",
               "slide_text_color": "#000000",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
@@ -5368,9 +5414,11 @@
           }
         },
         "block_order": [
-          "1596055610351",
           "1599147152165",
-          "1599856398832"
+          "1599856398832",
+          "1600964159503",
+          "1600964541998",
+          "1596055610351"
         ],
         "settings": {
           "slider_speed": 4,
@@ -5628,6 +5676,7 @@
       },
       "1561574067213": {
         "type": "gallery",
+        "disabled": true,
         "blocks": {
           "1561574067213-0": {
             "type": "image",
