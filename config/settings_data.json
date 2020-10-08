@@ -5296,6 +5296,7 @@
       },
       "1559067219938": {
         "type": "slideshow",
+        "disabled": true,
         "blocks": {
           "1599147152165": {
             "type": "image",
@@ -5424,7 +5425,7 @@
           "slider_speed": 4,
           "slide_heading_size": 30,
           "slide_heading_weight": "700",
-          "subheading_size": 28,
+          "subheading_size": 32,
           "cta_size": 15,
           "cta_weight": "400"
         }
@@ -5746,6 +5747,7 @@
       },
       "1586279190981": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5948,13 +5950,70 @@
           "background_color": "#fff",
           "grid": 3
         }
+      },
+      "1601668428348": {
+        "type": "slideshow",
+        "blocks": {
+          "1601668428348-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Edgar-Enciso-Winner--Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 75,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Contest-Winner-Edgar-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Congratulations Edgar On winning the #45yearsofcockpitusa Contest!",
+              "subheading": "Edgar is wearing the 40th Anniversary  Bottoms Up A-2  Pin-up Jacket",
+              "link": "shopify:\/\/collections\/collectors-items",
+              "button_text": "Collector's Items",
+              "second_button": true,
+              "second_link": "shopify:\/\/collections\/contest-finalists",
+              "second_button_text": "Follow Contest",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "1601668428348-0"
+        ],
+        "settings": {
+          "slider_speed": 5,
+          "slide_heading_size": 27,
+          "slide_heading_weight": "700",
+          "subheading_size": 25,
+          "cta_size": 14,
+          "cta_weight": "400"
+        }
+      },
+      "1601668701986": {
+        "type": "image-with-text-row",
+        "settings": {
+          "full_width": true,
+          "remove_top_padding": true,
+          "remove_bottom_padding": true,
+          "image": "shopify:\/\/shop_images\/The-Agent-Trench-Coat-650-1000.jpg",
+          "layout": "left",
+          "image_width": "50%",
+          "text_align": "left",
+          "title": "New Arrival: The Agent Trench Coat",
+          "text": "<p>Ready for whatever the fall season brings, rain or shine. \"The Agent Trench Coat&rdquo; is fashioned from the traditional Army Officer&rsquo;s coats of WWII. Made from waterproof laminated-cotton, boasting a removable mouton-fur collar, this trench is the perfect lightweight outerwear shell to transition into any season. The asymmetrical front is anchored down with simple-to-use snap closures, Black Watch Regiment plaid accented top collar can be found under the fur collar and inside the front pockets. The Agent Trench Coat is full of casual style, or it could be styled sharply for those nights out on the town.<\/p>",
+          "link": "shopify:\/\/products\/the-agent-trench-coat",
+          "button": "Visit Here"
+        }
       }
     },
     "content_for_index": [
+      "1601668701986",
       "1559067219938",
       "1561574067213",
       "1586279190981",
       "1559084715445",
+      "1601668428348",
       "1599857238285"
     ]
   }
