@@ -5296,111 +5296,18 @@
       },
       "1559067219938": {
         "type": "slideshow",
-        "disabled": true,
         "blocks": {
-          "1599147152165": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Lamb-Skin-Z2567MM-2-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 21,
-              "caption_vertical": 37,
-              "mobile_image": "shopify:\/\/shop_images\/Z2567MM-2-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "A-2 Collections",
-              "subheading": "Featuring the Antique Lamb A-2 Bomber Jacket",
-              "link": "shopify:\/\/collections\/a-2-flight-jackets",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 40
-            }
-          },
-          "1599856398832": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/M-65-z26l008-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 80,
-              "caption_vertical": 37,
-              "mobile_image": "shopify:\/\/shop_images\/M-65-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "Field & Deck Jackets",
-              "subheading": "Featuring the M-65 Field Jacket.",
-              "link": "shopify:\/\/collections\/field-deck-jackets",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
-          "1600964159503": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z2102MB-b3-4-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 30,
-              "caption_vertical": 34,
-              "mobile_image": "shopify:\/\/shop_images\/Z2102MB-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "B-3 Sheepskin Jackets",
-              "subheading": "Featuring the Authentic B-3 in Black.",
-              "link": "",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
-          "1600964541998": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Womens-2-B-3-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 26,
-              "caption_vertical": 33,
-              "mobile_image": "shopify:\/\/shop_images\/Womens-B3-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "Women's Bombers",
-              "subheading": "Featuring The Women's B-3 Bomber Jacket",
-              "link": "shopify:\/\/collections\/bomber-jackets",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "transparent",
-              "caption_background_opacity": 40
-            }
-          },
           "1596055610351": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Catalog-Vintage-Template-Image-Slideshow-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Vintage-catalogs-2-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 76,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Vintage-Catalog-Collage-Mobile-Slide-Template.jpg",
+              "caption_horizontal": 81,
+              "caption_vertical": 60,
+              "mobile_image": "shopify:\/\/shop_images\/Vintage-Catalog-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Celebrating 45 Years of Cockpit USA",
-              "subheading": "",
+              "heading": "Celebrating #45YearsofCockpitUSA",
+              "subheading": "We're giving away a free leather jacket from the Cockpit USA's Iconic Collection.",
               "link": "shopify:\/\/pages\/about-cockpit-usa",
               "button_text": "Our Story",
               "second_button": false,
@@ -5412,21 +5319,41 @@
               "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
+          },
+          "1599147152165": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Leather-Naval-Officers-6-Peacoat-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 51,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Leather-Naval-Officers-Coat-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Win Our Vintage Leather Naval Officer's Coat!",
+              "subheading": "Featured on actor Leonardo DiCaprio",
+              "link": "shopify:\/\/products\/vintage-leather-naval-officers-coat",
+              "button_text": "Shop Here",
+              "second_button": true,
+              "second_link": "shopify:\/\/pages\/contest",
+              "second_button_text": "Enter To Win",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 40
+            }
           }
         },
         "block_order": [
-          "1599147152165",
-          "1599856398832",
-          "1600964159503",
-          "1600964541998",
-          "1596055610351"
+          "1596055610351",
+          "1599147152165"
         ],
         "settings": {
           "slider_speed": 4,
-          "slide_heading_size": 30,
+          "slide_heading_size": 25,
           "slide_heading_weight": "700",
-          "subheading_size": 32,
-          "cta_size": 15,
+          "subheading_size": 17,
+          "cta_size": 14,
           "cta_weight": "400"
         }
       },
@@ -5677,57 +5604,56 @@
       },
       "1561574067213": {
         "type": "gallery",
-        "disabled": true,
         "blocks": {
           "1561574067213-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z2567M-2-Antique-Lamb-Image-Gallery-View-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z21Z002-Suede-Trucker-Image-Gallery-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/collections\/a-2-flight-jackets",
-              "heading": "A-2 Flight Jackets",
-              "button": "Explore Here",
+              "link": "shopify:\/\/products\/suede-trucker-jacket",
+              "heading": "Suede Trucker",
+              "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 50,
-              "align_text": "center"
+              "horizontal_position": 14,
+              "align_text": "left"
             }
           },
           "1561574067213-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/M-65-Field-Jacket-Image-Gallery-View-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z28P006-USN-ADMIRAL-PEA-COAT-Image-Gallery-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/collections\/field-deck-jackets",
-              "heading": "Field & Deck Jackets",
-              "button": "Explore Here",
+              "link": "shopify:\/\/products\/admiral-usn-peacoat",
+              "heading": "Admiral USN Peacoat",
+              "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 50,
-              "align_text": "center"
+              "horizontal_position": 14,
+              "align_text": "left"
             }
           },
           "1561574067213-2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z2102MB-B-3-final-3-Image-Gallery-View-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z21W011-Dispatch-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/collections\/b-3-bomber-jackets",
-              "heading": "B-3 Bomber Jackets",
-              "button": "Explore Here",
+              "link": "shopify:\/\/products\/dispatch-motorcycle-jacket",
+              "heading": "Dispatch Motorcycle Jacket",
+              "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 50,
-              "align_text": "center"
+              "horizontal_position": 14,
+              "align_text": "left"
             }
           }
         },
@@ -5738,16 +5664,15 @@
         ],
         "settings": {
           "full_width": true,
-          "heading": "Classic Styles",
+          "heading": "Featured Styles",
           "promo_background_color": "#fff",
           "promo_heading_weight": "light",
-          "promo_heading_size": 23,
+          "promo_heading_size": 24,
           "promo_button_size": 14
         }
       },
       "1586279190981": {
         "type": "image-with-text-row",
-        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5918,6 +5843,7 @@
       },
       "1599857238285": {
         "type": "collection-list",
+        "disabled": true,
         "blocks": {
           "1599857238285-0": {
             "type": "featured_collection",
@@ -5957,24 +5883,24 @@
           "1601668428348-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Edgar-Enciso-Winner--Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 75,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Contest-Winner-Edgar-Mobile-Slide-Template.jpg",
+              "image": "shopify:\/\/shop_images\/The-Bridge-Edit-3-Coat-Slideshow-Full-Width-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 25,
+              "caption_vertical": 35,
+              "mobile_image": "shopify:\/\/shop_images\/The-Bridge-coat-Z28C101-Mobile.jpg",
               "hide_caption_background": false,
-              "heading": "Congratulations Edgar On winning the #45yearsofcockpitusa Contest!",
-              "subheading": "Edgar is wearing the 40th Anniversary  Bottoms Up A-2  Pin-up Jacket",
-              "link": "shopify:\/\/collections\/collectors-items",
-              "button_text": "Collector's Items",
-              "second_button": true,
-              "second_link": "shopify:\/\/collections\/contest-finalists",
-              "second_button_text": "Follow Contest",
-              "slide_text_color": "#000000",
+              "heading": "The Bridge Coat",
+              "subheading": "",
+              "link": "shopify:\/\/products\/the-usn-bridge-coat",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "",
+              "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
+              "caption_background": "#8d6544",
+              "caption_background_opacity": 40
             }
           }
         },
@@ -5983,15 +5909,16 @@
         ],
         "settings": {
           "slider_speed": 5,
-          "slide_heading_size": 27,
+          "slide_heading_size": 36,
           "slide_heading_weight": "700",
-          "subheading_size": 25,
-          "cta_size": 14,
+          "subheading_size": 23,
+          "cta_size": 22,
           "cta_weight": "400"
         }
       },
       "1601668701986": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": true,
@@ -6009,11 +5936,11 @@
     },
     "content_for_index": [
       "1601668701986",
-      "1559067219938",
+      "1601668428348",
       "1561574067213",
       "1586279190981",
       "1559084715445",
-      "1601668428348",
+      "1559067219938",
       "1599857238285"
     ]
   }
