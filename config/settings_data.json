@@ -5296,6 +5296,7 @@
       },
       "1559067219938": {
         "type": "slideshow",
+        "disabled": true,
         "blocks": {
           "1596055610351": {
             "type": "image",
@@ -5883,33 +5884,81 @@
           "1601668428348-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/The-Bridge-Edit-3-Coat-Slideshow-Full-Width-1920x900.jpg",
-              "text_align": "left",
-              "caption_horizontal": 25,
-              "caption_vertical": 35,
-              "mobile_image": "shopify:\/\/shop_images\/The-Bridge-coat-Z28C101-Mobile.jpg",
+              "image": "shopify:\/\/shop_images\/Halloween-Contest-Slide-2-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 75,
+              "caption_vertical": 60,
+              "mobile_image": "shopify:\/\/shop_images\/Holloween-mobile-slide.jpg",
               "hide_caption_background": false,
-              "heading": "The Bridge Coat",
+              "heading": "",
               "subheading": "",
-              "link": "shopify:\/\/products\/the-usn-bridge-coat",
-              "button_text": "Shop Here",
+              "link": "shopify:\/\/pages\/contest",
+              "button_text": "Enter Here",
+              "second_button": true,
+              "second_link": "https:\/\/www.instagram.com\/explore\/tags\/45yearsofcockpitusa\/",
+              "second_button_text": "Follow Here",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#e1941b",
+              "cta_background": "rgba(0,0,0,0)",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 40
+            }
+          },
+          "1603398028123": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Guy-Clutton-Diessen-1920x900_7d0e8a11-6546-4fa8-b0f4-6a71bea3c8eb.jpg",
+              "text_align": "center",
+              "caption_horizontal": 74,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Winner-Guy-C-Mobile.jpg",
+              "hide_caption_background": false,
+              "heading": "Congratulations! Guy C.",
+              "subheading": "The  winner of our 2nd #45yearsofcockpitusa contest.",
+              "link": "shopify:\/\/collections\/leather-jackets",
+              "button_text": "Shop Leather Jackets",
               "second_button": false,
               "second_link": "",
-              "second_button_text": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#110101",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          },
+          "1603398028261": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Halloween-Slide-2-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 53,
+              "caption_vertical": 92,
+              "mobile_image": "shopify:\/\/shop_images\/Hollywood-Fit-Mobile.jpg",
+              "hide_caption_background": false,
+              "heading": "The Hollywood Fit",
+              "subheading": "9 signature jackets that are as notable as the heroes who have worn them.",
+              "link": "shopify:\/\/collections\/hollywood-fit",
+              "button_text": "Visit Here",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "#8d6544",
-              "caption_background_opacity": 40
+              "caption_background": "#000000",
+              "caption_background_opacity": 20
             }
           }
         },
         "block_order": [
-          "1601668428348-0"
+          "1601668428348-0",
+          "1603398028261",
+          "1603398028123"
         ],
         "settings": {
           "slider_speed": 5,
-          "slide_heading_size": 36,
+          "slide_heading_size": 25,
           "slide_heading_weight": "700",
           "subheading_size": 23,
           "cta_size": 22,
@@ -5932,6 +5981,48 @@
           "link": "shopify:\/\/products\/the-agent-trench-coat",
           "button": "Visit Here"
         }
+      },
+      "1603398319938": {
+        "type": "slideshow-video",
+        "blocks": {
+          "1603398319938-1": {
+            "type": "video",
+            "settings": {
+              "video_url": "https:\/\/www.youtube.com\/watch?v=VwweKlVvYuU",
+              "video_url_mp4": "",
+              "video_heading": "Cockpit USA's M-51",
+              "video_subheading": "Styled by @CaliforniaTomCruise",
+              "video_slide_text_color": "#ffffff",
+              "video_button_link": "shopify:\/\/products\/m-51-field-jacket",
+              "video_button_text": "Get The Look Here",
+              "video_button_link_2": "",
+              "video_button_text_2": "Add a 2nd button",
+              "video_cta_color": "#ffffff",
+              "video_cta_background": "#000000",
+              "video_caption_alignment": "center",
+              "caption_horizontal_position": 5,
+              "caption_vertical_position": 5,
+              "video_caption_background": "transparent",
+              "video_caption_background_opacity": 20,
+              "video_caption_border": "transparent"
+            }
+          }
+        },
+        "block_order": [
+          "1603398319938-1"
+        ],
+        "settings": {
+          "full_width": true,
+          "slide_controls": "arrows",
+          "video_audio": "on",
+          "slide_height": 38,
+          "slide_heading_size": 30,
+          "slide_heading_weight": "bold",
+          "subheading_size": 20,
+          "cta_size": 14,
+          "cta_weight": "normal",
+          "use_mobile_height": true
+        }
       }
     },
     "content_for_index": [
@@ -5941,7 +6032,8 @@
       "1586279190981",
       "1559084715445",
       "1559067219938",
-      "1599857238285"
+      "1599857238285",
+      "1603398319938"
     ]
   }
 }
