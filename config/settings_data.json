@@ -5988,8 +5988,8 @@
           "1603398319938-1": {
             "type": "video",
             "settings": {
-              "video_url": "https:\/\/www.youtube.com\/watch?v=VwweKlVvYuU",
-              "video_url_mp4": "",
+              "video_url": "",
+              "video_url_mp4": "https:\/\/cs.minionmade.cloud\/cockpitusa\/tcvid.mp4",
               "video_heading": "Cockpit USA's M-51",
               "video_subheading": "Styled by @CaliforniaTomCruise",
               "video_slide_text_color": "#ffffff",
