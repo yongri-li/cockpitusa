@@ -5904,29 +5904,6 @@
               "caption_background_opacity": 40
             }
           },
-          "1603398028123": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Guy-Clutton-Diessen-1920x900_7d0e8a11-6546-4fa8-b0f4-6a71bea3c8eb.jpg",
-              "text_align": "center",
-              "caption_horizontal": 74,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Winner-Guy-C-Mobile.jpg",
-              "hide_caption_background": false,
-              "heading": "Congratulations! Guy C.",
-              "subheading": "The  winner of our 2nd #45yearsofcockpitusa contest.",
-              "link": "shopify:\/\/collections\/leather-jackets",
-              "button_text": "Shop Leather Jackets",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#110101",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
           "1603398028261": {
             "type": "image",
             "settings": {
@@ -5947,6 +5924,29 @@
               "cta_color": "#ffffff",
               "cta_background": "#000000",
               "caption_background": "#000000",
+              "caption_background_opacity": 20
+            }
+          },
+          "1603398028123": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Guy-Clutton-Diessen-1920x900_7d0e8a11-6546-4fa8-b0f4-6a71bea3c8eb.jpg",
+              "text_align": "center",
+              "caption_horizontal": 74,
+              "caption_vertical": 50,
+              "mobile_image": "shopify:\/\/shop_images\/Winner-Guy-C-Mobile.jpg",
+              "hide_caption_background": false,
+              "heading": "Congratulations! Guy C.",
+              "subheading": "The  winner of our 2nd #45yearsofcockpitusa contest.",
+              "link": "shopify:\/\/collections\/leather-jackets",
+              "button_text": "Shop Leather Jackets",
+              "second_button": false,
+              "second_link": "",
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#110101",
+              "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
           }
@@ -6014,7 +6014,7 @@
         "settings": {
           "full_width": true,
           "slide_controls": "arrows",
-          "video_audio": "on",
+          "video_audio": "off",
           "slide_height": 38,
           "slide_heading_size": 30,
           "slide_heading_weight": "bold",
