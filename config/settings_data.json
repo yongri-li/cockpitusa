@@ -4964,7 +4964,6 @@
             "type": "submenu_with_image",
             "settings": {
               "menu_item": "SHOP",
-              "nav_image": "",
               "nav_image_position": "left",
               "link": "shopify:\/\/collections"
             }
@@ -4980,12 +4979,11 @@
           "header_cover": false,
           "header_border": false,
           "show_announcement": true,
-          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1,000<\/a>&nbsp;&amp;&nbsp;<a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>&nbsp;<\/p>",
+          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1,000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a> <\/p>",
           "announcement_text_size": 24,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
-          "logo_alt": "",
           "logo_max_width": 220,
           "logo_position": "inline",
           "logo_align": "center",
@@ -5273,7 +5271,7 @@
           "1590160618893": {
             "type": "text",
             "settings": {
-              "text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Return Policy &amp; International&nbsp;Orders<\/a><\/p>"
+              "text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Return Policy &amp; International Orders<\/a><\/p>"
             }
           }
         },
@@ -5292,70 +5290,6 @@
           "border_bottom": false,
           "text_size": 14,
           "height": 40
-        }
-      },
-      "1559067219938": {
-        "type": "slideshow",
-        "disabled": true,
-        "blocks": {
-          "1596055610351": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Vintage-catalogs-2-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 81,
-              "caption_vertical": 60,
-              "mobile_image": "shopify:\/\/shop_images\/Vintage-Catalog-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "Celebrating #45YearsofCockpitUSA",
-              "subheading": "We're giving away a free leather jacket from the Cockpit USA's Iconic Collection.",
-              "link": "shopify:\/\/pages\/about-cockpit-usa",
-              "button_text": "Our Story",
-              "second_button": false,
-              "second_link": "shopify:\/\/pages\/contest",
-              "second_button_text": "Enter To Win",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
-          "1599147152165": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Leather-Naval-Officers-6-Peacoat-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 51,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Leather-Naval-Officers-Coat-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "The Vintage Leather Naval Officer's Coat",
-              "subheading": "Featured on actor Leonardo DiCaprio",
-              "link": "shopify:\/\/products\/vintage-leather-naval-officers-coat",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_link": "shopify:\/\/pages\/contest",
-              "second_button_text": "Enter To Win",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 40
-            }
-          }
-        },
-        "block_order": [
-          "1596055610351",
-          "1599147152165"
-        ],
-        "settings": {
-          "slider_speed": 4,
-          "slide_heading_size": 25,
-          "slide_heading_weight": "700",
-          "subheading_size": 17,
-          "cta_size": 14,
-          "cta_weight": "400"
         }
       },
       "featured-content": {
@@ -5609,52 +5543,52 @@
           "1561574067213-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z21Z002-Suede-Trucker-Image-Gallery-View-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z2108-G-1-MIL-SPEC-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/products\/suede-trucker-jacket",
-              "heading": "Suede Trucker",
+              "link": "shopify:\/\/products\/u-s-navy-issue-mil-spec-g-1-jacket",
+              "heading": "U.S. Navy Issue Mil Spec G-1 Jacket",
               "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 14,
-              "align_text": "left"
+              "horizontal_position": 10,
+              "align_text": "center"
             }
           },
           "1561574067213-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z28P006-USN-ADMIRAL-PEA-COAT-Image-Gallery-View-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/products\/admiral-usn-peacoat",
-              "heading": "Admiral USN Peacoat",
+              "link": "shopify:\/\/products\/the-usn-bridge-coat",
+              "heading": "The USN Bridge Coat©",
               "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
-              "button_background": "#000",
+              "button_background": "#000000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 14,
-              "align_text": "left"
+              "horizontal_position": 50,
+              "align_text": "center"
             }
           },
           "1561574067213-2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z21W011-Dispatch-View-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Z21E013-G1-BLACK-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/products\/dispatch-motorcycle-jacket",
-              "heading": "Dispatch Motorcycle Jacket",
+              "link": "shopify:\/\/products\/black-leather-g-1-military-spec-jacket",
+              "heading": "Black Leather G-1 Mil Spec Jacket",
               "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
-              "button_background": "#000",
+              "button_background": "#000000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 14,
-              "align_text": "left"
+              "horizontal_position": 8,
+              "align_text": "center"
             }
           }
         },
@@ -5664,9 +5598,9 @@
           "1561574067213-2"
         ],
         "settings": {
-          "full_width": true,
-          "heading": "Featured Styles",
-          "promo_background_color": "#fff",
+          "full_width": false,
+          "heading": "Celebrating U.S Navy Month",
+          "promo_background_color": "#ffffff",
           "promo_heading_weight": "light",
           "promo_heading_size": 24,
           "promo_button_size": 14
@@ -5873,14 +5807,36 @@
         "settings": {
           "full_width": false,
           "heading": "Collection list",
-          "heading_color": "#000",
-          "background_color": "#fff",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
           "grid": 3
         }
       },
       "1601668428348": {
         "type": "slideshow",
         "blocks": {
+          "1603398028123": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/20-percent-off-sale-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 55,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/20-off-sale-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "20% Off October Sales",
+              "subheading": "For a limited time.",
+              "link": "shopify:\/\/collections\/20-off-sale",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#110101",
+              "caption_background": "#000000",
+              "caption_background_opacity": 20
+            }
+          },
           "1601668428348-0": {
             "type": "image",
             "settings": {
@@ -5918,7 +5874,6 @@
               "link": "shopify:\/\/collections\/hollywood-fit",
               "button_text": "Visit Here",
               "second_button": false,
-              "second_link": "",
               "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
@@ -5926,35 +5881,12 @@
               "caption_background": "#000000",
               "caption_background_opacity": 20
             }
-          },
-          "1603398028123": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Guy-Clutton-Diessen-1920x900_7d0e8a11-6546-4fa8-b0f4-6a71bea3c8eb.jpg",
-              "text_align": "center",
-              "caption_horizontal": 74,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Winner-Guy-C-Mobile.jpg",
-              "hide_caption_background": false,
-              "heading": "Congratulations! Guy C.",
-              "subheading": "The  winner of our 2nd #45yearsofcockpitusa contest.",
-              "link": "shopify:\/\/collections\/leather-jackets",
-              "button_text": "Shop Leather Jackets",
-              "second_button": false,
-              "second_link": "",
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#110101",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
           }
         },
         "block_order": [
+          "1603398028123",
           "1601668428348-0",
-          "1603398028261",
-          "1603398028123"
+          "1603398028261"
         ],
         "settings": {
           "slider_speed": 5,
@@ -5965,75 +5897,60 @@
           "cta_weight": "400"
         }
       },
-      "1601668701986": {
-        "type": "image-with-text-row",
-        "disabled": true,
-        "settings": {
-          "full_width": true,
-          "remove_top_padding": true,
-          "remove_bottom_padding": true,
-          "image": "shopify:\/\/shop_images\/The-Agent-Trench-Coat-650-1000.jpg",
-          "layout": "left",
-          "image_width": "50%",
-          "text_align": "left",
-          "title": "New Arrival: The Agent Trench Coat",
-          "text": "<p>Ready for whatever the fall season brings, rain or shine. \"The Agent Trench Coat&rdquo; is fashioned from the traditional Army Officer&rsquo;s coats of WWII. Made from waterproof laminated-cotton, boasting a removable mouton-fur collar, this trench is the perfect lightweight outerwear shell to transition into any season. The asymmetrical front is anchored down with simple-to-use snap closures, Black Watch Regiment plaid accented top collar can be found under the fur collar and inside the front pockets. The Agent Trench Coat is full of casual style, or it could be styled sharply for those nights out on the town.<\/p>",
-          "link": "shopify:\/\/products\/the-agent-trench-coat",
-          "button": "Visit Here"
-        }
-      },
-      "1603398319938": {
-        "type": "slideshow-video",
+      "1603891529b5c2ae8c": {
+        "type": "slideshow",
         "blocks": {
-          "1603398319938-1": {
-            "type": "video",
+          "1603891529b5c2ae8c-0": {
+            "type": "image",
             "settings": {
-              "video_url": "",
-              "video_url_mp4": "https:\/\/cdn.shopify.com\/s\/files\/1\/0054\/1186\/4669\/files\/IMG_9057.MP4.mp4?v=1603462704",
-              "video_heading": "Cockpit USA's M-51",
-              "video_subheading": "Styled by @CaliforniaTomCruise",
-              "video_slide_text_color": "#ffffff",
-              "video_button_link": "shopify:\/\/products\/m-51-field-jacket",
-              "video_button_text": "Get The Look Here",
-              "video_button_link_2": "",
-              "video_button_text_2": "Add a 2nd button",
-              "video_cta_color": "#ffffff",
-              "video_cta_background": "#000000",
-              "video_caption_alignment": "center",
-              "caption_horizontal_position": 5,
-              "caption_vertical_position": 5,
-              "video_caption_background": "transparent",
-              "video_caption_background_opacity": 20,
-              "video_caption_border": "transparent"
+              "image": "shopify:\/\/shop_images\/Rutherford-5-Z21U025-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 25,
+              "caption_vertical": 66,
+              "mobile_image": "shopify:\/\/shop_images\/Edited-Template-rutherford-short-leather-pcoat.jpg",
+              "hide_caption_background": false,
+              "heading": "Naval Short Leather Peacoat",
+              "subheading": "Featured on  @MrRutherford",
+              "link": "shopify:\/\/products\/naval-short-leather-peacoat",
+              "button_text": "Shop Here",
+              "second_button": true,
+              "second_link": "shopify:\/\/pages\/contest",
+              "second_button_text": "Enter To Win",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
             }
           }
         },
         "block_order": [
-          "1603398319938-1"
+          "1603891529b5c2ae8c-0"
         ],
         "settings": {
-          "full_width": true,
-          "slide_controls": "arrows",
-          "video_audio": "off",
-          "slide_height": 38,
-          "slide_heading_size": 30,
-          "slide_heading_weight": "bold",
+          "slider_speed": 5,
+          "slide_heading_size": 24,
+          "slide_heading_weight": "700",
           "subheading_size": 20,
-          "cta_size": 14,
-          "cta_weight": "normal",
-          "use_mobile_height": true
+          "cta_size": 21,
+          "cta_weight": "400"
+        }
+      },
+      "page-contest-template": {
+        "type": "page-contest-template",
+        "settings": {
+          "page_size": "thin",
+          "sidebar_positon": "none"
         }
       }
     },
     "content_for_index": [
-      "1601668701986",
-      "1601668428348",
+      "1603891529b5c2ae8c",
       "1561574067213",
+      "1601668428348",
       "1586279190981",
       "1559084715445",
-      "1559067219938",
-      "1599857238285",
-      "1603398319938"
+      "1599857238285"
     ]
   }
 }
