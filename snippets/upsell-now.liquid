@@ -32,9 +32,9 @@ Helper for Upsell Now (https://apps.shopify.com/upsell-now)
 
   {% if customer %}
     window.un.customer_tags = "{{customer.tags | join: ','}}";
-    window.un.customer_id = "{{customer.id}}";
+    window.un.customer_id = "{{customer.id}}"; 
   {% endif %}
-  
+
   {% if template contains 'product' %}
     {% unless product.id == blank %}
       window.un.product = {
@@ -52,7 +52,7 @@ Helper for Upsell Now (https://apps.shopify.com/upsell-now)
   window.un.cache = {};
   window.un.cache.products = {};
   window.un.cache.collections = {};
-  
+
   {% if cart %}
   	window.un.cart = {{cart | json}}
     window.un.cart.items = [];
@@ -65,7 +65,7 @@ Helper for Upsell Now (https://apps.shopify.com/upsell-now)
         {% endfor %}
       window.un.cart.items.push(cart_item);
     {% endfor %}
-    
+
     if (typeof window.un.cart.items == "object") {
       for (var i=0; i<window.un.cart.items.length; i++) {
         ["sku", "vendor", "url", "image", "handle", "product_type", "product_description"].map(function(a) {
@@ -73,7 +73,7 @@ Helper for Upsell Now (https://apps.shopify.com/upsell-now)
         })
       }
     }
-  {% endif %} 
+  {% endif %}
 </script>
 
 {% render 'upsell-now-settings' %}
