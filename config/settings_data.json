@@ -5543,24 +5543,24 @@
           "1561574067213-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z2108-G-1-MIL-SPEC-3600x5400.jpg",
-              "image_width": "33%",
-              "link": "shopify:\/\/products\/u-s-navy-issue-mil-spec-g-1-jacket",
-              "heading": "U.S. Navy Issue Mil Spec G-1 Jacket",
+              "image": "shopify:\/\/shop_images\/Z21C122-C444-edit-3600x5400.jpg",
+              "image_width": "66%",
+              "link": "shopify:\/\/products\/z21c122-c444",
+              "heading": "The New C-44 Sheepskin Flight Jacket",
               "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
               "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 10,
+              "vertical_position": 4,
+              "horizontal_position": 46,
               "align_text": "center"
             }
           },
           "1561574067213-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-Gallery-edit-2-View-3600x5400.jpg",
               "image_width": "33%",
               "link": "shopify:\/\/products\/the-usn-bridge-coat",
               "heading": "The USN Bridge Coat©",
@@ -5577,17 +5577,17 @@
           "1561574067213-2": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z21E013-G1-BLACK-3600x5400.jpg",
+              "image": "shopify:\/\/shop_images\/Shop-the-look-Z2107H-Adam-View-3600x5400.jpg",
               "image_width": "33%",
-              "link": "shopify:\/\/products\/black-leather-g-1-military-spec-jacket",
-              "heading": "Black Leather G-1 Mil Spec Jacket",
+              "link": "shopify:\/\/products\/wwii-government-issue-a-2-jacket",
+              "heading": "WWII Government Issue A-2",
               "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
               "text_options": "on_image",
               "vertical_position": 12,
-              "horizontal_position": 8,
+              "horizontal_position": 24,
               "align_text": "center"
             }
           }
@@ -5598,12 +5598,12 @@
           "1561574067213-2"
         ],
         "settings": {
-          "full_width": false,
-          "heading": "Celebrating U.S Navy Month",
+          "full_width": true,
+          "heading": "Featured Styles",
           "promo_background_color": "#ffffff",
           "promo_heading_weight": "light",
           "promo_heading_size": 24,
-          "promo_button_size": 14
+          "promo_button_size": 19
         }
       },
       "1586279190981": {
@@ -5812,115 +5812,29 @@
           "grid": 3
         }
       },
-      "1601668428348": {
-        "type": "slideshow",
-        "blocks": {
-          "1603398028123": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/20-percent-off-sale-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 55,
-              "caption_vertical": 100,
-              "mobile_image": "shopify:\/\/shop_images\/20-off-sale-Mobile-Slide-Template.jpg",
-              "hide_caption_background": false,
-              "heading": "20% Off October Sales",
-              "subheading": "For a limited time.",
-              "link": "shopify:\/\/collections\/20-off-sale",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#ffffff",
-              "cta_background": "#110101",
-              "caption_background": "#000000",
-              "caption_background_opacity": 20
-            }
-          },
-          "1601668428348-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Halloween-Contest-Slide-2-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 75,
-              "caption_vertical": 60,
-              "mobile_image": "shopify:\/\/shop_images\/Holloween-mobile-slide.jpg",
-              "hide_caption_background": false,
-              "heading": "",
-              "subheading": "",
-              "link": "shopify:\/\/pages\/contest",
-              "button_text": "Enter Here",
-              "second_button": true,
-              "second_link": "https:\/\/www.instagram.com\/explore\/tags\/45yearsofcockpitusa\/",
-              "second_button_text": "Follow Here",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#e1941b",
-              "cta_background": "rgba(0,0,0,0)",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 40
-            }
-          },
-          "1603398028261": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Halloween-Slide-2-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 53,
-              "caption_vertical": 92,
-              "mobile_image": "shopify:\/\/shop_images\/Hollywood-Fit-Mobile.jpg",
-              "hide_caption_background": false,
-              "heading": "The Hollywood Fit",
-              "subheading": "9 signature jackets that are as notable as the heroes who have worn them.",
-              "link": "shopify:\/\/collections\/hollywood-fit",
-              "button_text": "Visit Here",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "#000000",
-              "caption_background_opacity": 20
-            }
-          }
-        },
-        "block_order": [
-          "1603398028123",
-          "1601668428348-0",
-          "1603398028261"
-        ],
-        "settings": {
-          "slider_speed": 5,
-          "slide_heading_size": 25,
-          "slide_heading_weight": "700",
-          "subheading_size": 23,
-          "cta_size": 22,
-          "cta_weight": "400"
-        }
-      },
       "1603891529b5c2ae8c": {
         "type": "slideshow",
         "blocks": {
           "1603891529b5c2ae8c-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Rutherford-5-Z21U025-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Z203615-Hooded-B3-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 25,
-              "caption_vertical": 66,
-              "mobile_image": "shopify:\/\/shop_images\/Edited-Template-rutherford-short-leather-pcoat.jpg",
+              "caption_horizontal": 80,
+              "caption_vertical": 51,
               "hide_caption_background": false,
-              "heading": "Naval Short Leather Peacoat",
-              "subheading": "Featured on  @MrRutherford",
-              "link": "shopify:\/\/products\/naval-short-leather-peacoat",
+              "heading": "The Road to Denver",
+              "subheading": "Featuring Cockpit USA's  B-3 Hooded Sheepskin",
+              "link": "shopify:\/\/products\/b-3-hooded-sheepskin-bomber-jacket",
               "button_text": "Shop Here",
-              "second_button": true,
+              "second_button": false,
               "second_link": "shopify:\/\/pages\/contest",
               "second_button_text": "Enter To Win",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
+              "caption_background": "#8d6544",
+              "caption_background_opacity": 30
             }
           }
         },
@@ -5929,9 +5843,9 @@
         ],
         "settings": {
           "slider_speed": 5,
-          "slide_heading_size": 24,
+          "slide_heading_size": 30,
           "slide_heading_weight": "700",
-          "subheading_size": 20,
+          "subheading_size": 25,
           "cta_size": 21,
           "cta_weight": "400"
         }
@@ -5942,15 +5856,53 @@
           "page_size": "thin",
           "sidebar_positon": "none"
         }
+      },
+      "16046035366848d955": {
+        "type": "slideshow",
+        "blocks": {
+          "16046035366848d955-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z21V029-edit-2-Pilot-Clement-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 21,
+              "caption_vertical": 22,
+              "mobile_image": "shopify:\/\/shop_images\/Clement-Blog-Photo-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "Off Duty With Pilot Clément",
+              "subheading": "Featuring the Aces and Eights Flight Jacket",
+              "link": "shopify:\/\/blogs\/blog\/off-duty-with-professional-pilot-clement",
+              "button_text": "Visit Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "#8d6544",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "16046035366848d955-0"
+        ],
+        "settings": {
+          "slider_speed": 5,
+          "slide_heading_size": 26,
+          "slide_heading_weight": "700",
+          "subheading_size": 20,
+          "cta_size": 16,
+          "cta_weight": "400"
+        }
       }
     },
     "content_for_index": [
       "1603891529b5c2ae8c",
       "1561574067213",
-      "1601668428348",
       "1586279190981",
       "1559084715445",
-      "1599857238285"
+      "1599857238285",
+      "16046035366848d955"
     ]
   }
 }
