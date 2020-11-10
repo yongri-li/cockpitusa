@@ -1,0 +1,34 @@
+{% if product.tags contains 'Product Video' %}
+<script src="https://kit.fontawesome.com/ce693af495.js" crossorigin="anonymous"></script>
+{% case media.media_type %}
+  {% when 'image' %}
+  {% when 'external_video' %}
+  <a data-fancybox class="product-size-chart" data-src="#product-video" href="javascript:;"><i class="far fa-play-circle"></i> Product Video</a>
+  <div id="product-video" style="display: none;">
+  {% for media in product.media %}
+  {% include 'media' %}
+  {% endfor %}
+  </div>
+  {% when 'video' %}
+  <a data-fancybox class="product-size-chart" data-src="#product-video" href="javascript:;"><i class="far fa-play-circle"></i> Product Video</a>
+  <div id="product-video" style="display: none;">
+  {% for media in product.media %}
+  {% include 'media' %}
+  {% endfor %}
+  </div>
+  {% when 'model' %}
+  <a data-fancybox class="product-size-chart" data-src="#product-video" href="javascript:;"><i class="far fa-play-circle"></i> Product Video</a>
+  <div id="product-video" style="display: none;">
+  {% for media in product.media %}
+  {% include 'media' %}
+  {% endfor %}
+  </div>
+  {% else %}
+  <a data-fancybox class="product-size-chart" data-src="#product-video" href="javascript:;"><i class="far fa-play-circle"></i> Product Video</a>
+  <div id="product-video" style="display: none;">
+  {% for media in product.media %}
+  {% include 'media' %}
+  {% endfor %}
+  </div>
+{% endcase %}
+{% endif %}
