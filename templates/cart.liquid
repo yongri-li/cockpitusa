@@ -66,7 +66,7 @@
               <div class="item-pricing">
                 <p><b>{{ 'cart.general.price' | t }}</b></p>
                 <p><span class="cart-item-price money {% if item.original_price > item.final_price or item.variant.compare_at_price > item.final_price %}onsale{% endif %}" data-key="{{item.key}}" style="margin-right: 5px;"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_price" data-item-key="{{item.key}}" style="display:none !important;"></span>{{ item.final_price | money }}</span>
-                  <del>{% if item.original_price > item.final_price %}{{ item.original_price | money }}{% elsif item.variant.compare_at_price > item.final_price %}{{ item.variant.compare_at_price | money }}{% endif %}</del>
+                  <del>{% if item.original_price > item.final_price %}<div class="un-line-item-unit-price" data-id="{{ item.key }}">{{ item.original_price | money }}</div>{% elsif item.variant.compare_at_price > item.final_price %}{{ item.variant.compare_at_price | money }}{% endif %}</del>
               </div>
               <div class="qty">
                 <label for="quantity">{{ 'products.product.quantity' | t }}</label>
@@ -76,7 +76,7 @@
                 <p><b>{{ 'cart.general.total' | t }}</b></p>
                 <h5>
                   <p><span class="cart-item-price money {% if item.original_price > item.final_price or item.variant.compare_at_price > item.final_price %}onsale{% endif %}" data-key="{{item.key}}" style="margin-right: 5px;"><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total_2" data-item-key="{{item.key}}" style="display:none !important;"></span>{{ item.final_line_price | money }}</span>
-                    {% if item.original_line_price > item.final_line_price %}<del><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span>{{ item.original_line_price | money }}</del>{% endif %}</p>
+                    {% if item.original_line_price > item.final_line_price %}<del><span class="Bold-theme-hook-DO-NOT-DELETE bold_cart_item_total" data-item-key="{{item.key}}" style="display:none !important;"></span><div class="un-line-item-total" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div></del>{% endif %}</p>
                 </h5>
               </div>
               {% if item.line_level_discount_allocations.size > 0 %}
@@ -155,7 +155,7 @@
         </div>
 
         {% render 'signature-required' %}
-        
+
         <div class="cart-buttons">
           <input type="submit" name="checkout" id="checkout" value="{{ 'cart.general.checkout' | t }}" class="button" />
           <div class="clear"></div>
