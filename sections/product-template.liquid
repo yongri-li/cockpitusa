@@ -104,7 +104,6 @@
         {% endif %}
 
       {% endif %}  <!-- Product / product.quick variations end -->
-
     </div>
 
     	<div {% if template != 'product.quick' %}id="sticky-container"{% endif %} class="product-right {{ descr_width }}">
@@ -174,7 +173,6 @@
                     {% endcase %}
                   {% endfor %}
                 {% endunless %}
-                {% include 'product-video' %}
                 {% if section.settings.size_chart_type == 'product-tab' and product.description contains '[#size]' %}
                     <a data-fancybox class="product-size-chart" data-src="#product-size-chart" href="javascript:;"><i class="fas fa-ruler"></i> Size Chart</a>
                     <div id="product-size-chart" style="display: none;">
@@ -231,7 +229,7 @@
         <div class="clear"></div>
        {% endif %}
       </div>
-    </div>
+    </div> 
   </div><!-- Close the wrapper / container allowing full width layout for lower  container -->
   {%- if section.settings.show_social_share -%}
   {% include 'social' with product %}

@@ -4727,7 +4727,7 @@
     "main_font": "baskerville_no_2_n4",
     "nav_font": "lora_n4",
     "heading_font": "baskerville_no_2_n4",
-    "font-size": 20,
+    "font-size": 18,
     "h1-size": 27,
     "h2-size": 27,
     "h3-size": 27,
@@ -4979,12 +4979,12 @@
           "header_cover": false,
           "header_border": false,
           "show_announcement": true,
-          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1,000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a> <\/p>",
-          "announcement_text_size": 24,
+          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on all orders over $1000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>  (<a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\" target=\"_blank\">Return policy &amp; International Orders) <\/a><\/p>",
+          "announcement_text_size": 12,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
-          "logo_max_width": 220,
+          "logo_max_width": 190,
           "logo_position": "inline",
           "logo_align": "center",
           "main_nav": "main-menu",
@@ -5280,9 +5280,9 @@
         ],
         "settings": {
           "hidden_on_homepage": false,
-          "arrows": false,
+          "arrows": true,
           "autoplay": true,
-          "desktop_slides_shown": 1,
+          "desktop_slides_shown": 3,
           "slider_speed": 8,
           "info_text": "#080400",
           "info_background": "rgba(0,0,0,0)",
@@ -5305,6 +5305,7 @@
       },
       "1559084715445": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "heading": "Heritage Collection",
@@ -5331,7 +5332,7 @@
           "1586968370980": {
             "type": "image_text_overlay",
             "settings": {
-              "pio_image": "shopify:\/\/shop_images\/Header_3034683_16.9-1024x576.jpg",
+              "pio_image": "shopify:\/\/shop_images\/Seer-Sucker-2-July-4th-Image-Slideshow-Full-Width-1920x900.jpg",
               "pio_background_effect": "fixed",
               "pio_page_height": 500,
               "pio_heading": "Movie Heroes",
@@ -5537,77 +5538,9 @@
           "cf_custom_field_two_type": "input"
         }
       },
-      "1561574067213": {
-        "type": "gallery",
-        "blocks": {
-          "1561574067213-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z21C122-C444-edit-3600x5400.jpg",
-              "image_width": "66%",
-              "link": "shopify:\/\/products\/z21c122-c444",
-              "heading": "The New C-44 Sheepskin Flight Jacket",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "on_image",
-              "vertical_position": 4,
-              "horizontal_position": 46,
-              "align_text": "center"
-            }
-          },
-          "1561574067213-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-Gallery-edit-2-View-3600x5400.jpg",
-              "image_width": "33%",
-              "link": "shopify:\/\/products\/the-usn-bridge-coat",
-              "heading": "The USN Bridge Coat©",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 50,
-              "align_text": "center"
-            }
-          },
-          "1561574067213-2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Shop-the-look-Z2107H-Adam-View-3600x5400.jpg",
-              "image_width": "33%",
-              "link": "shopify:\/\/products\/wwii-government-issue-a-2-jacket",
-              "heading": "WWII Government Issue A-2",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 24,
-              "align_text": "center"
-            }
-          }
-        },
-        "block_order": [
-          "1561574067213-0",
-          "1561574067213-1",
-          "1561574067213-2"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "Featured Styles",
-          "promo_background_color": "#ffffff",
-          "promo_heading_weight": "light",
-          "promo_heading_size": 24,
-          "promo_button_size": 19
-        }
-      },
       "1586279190981": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5620,6 +5553,41 @@
           "text": "<p>Born from a passion for history and inspired by the iconic styles that have defined our heroes. Finely crafted tributes to the aviators, sailors, and soldiers who wore these classic garments with each one having a story that preserves their legacy through timeless style.<\/p>",
           "link": "shopify:\/\/collections\/heritage-collection",
           "button": "Shop Here"
+        }
+      },
+      "1586279538889": {
+        "type": "collection-list",
+        "blocks": {
+          "1586279538889-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "kids"
+            }
+          },
+          "1599670213551": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "accessories"
+            }
+          },
+          "1587153009101": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "women"
+            }
+          }
+        },
+        "block_order": [
+          "1586279538889-1",
+          "1599670213551",
+          "1587153009101"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "Featured Collections",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
+          "grid": 3
         }
       },
       "shop-the-look": {
@@ -5776,98 +5744,363 @@
           "border_bottom": false
         }
       },
-      "1599857238285": {
-        "type": "collection-list",
+      "1602606977414": {
+        "type": "slideshow",
         "disabled": true,
         "blocks": {
-          "1599857238285-0": {
-            "type": "featured_collection",
+          "4e799e56-e485-4a19-867a-bc6f71a44741": {
+            "type": "image",
             "settings": {
-              "collection": "kids"
+              "image": "shopify:\/\/shop_images\/20-percent-off-sale-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 55,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/20-off-sale-Mobile-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "20% Off October Sales",
+              "subheading": "For a limited time.",
+              "link": "shopify:\/\/collections\/20-off-sale",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
             }
           },
-          "1599857238285-1": {
-            "type": "featured_collection",
+          "1603312848083": {
+            "type": "image",
             "settings": {
-              "collection": "accessories"
+              "image": "shopify:\/\/shop_images\/Halloween-Contest-Slide-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 72,
+              "caption_vertical": 60,
+              "mobile_image": "shopify:\/\/shop_images\/Holloween-mobile-slide.jpg",
+              "hide_caption_background": false,
+              "heading": "",
+              "subheading": "",
+              "link": "shopify:\/\/pages\/contest",
+              "button_text": "Enter Here",
+              "second_button": true,
+              "second_link": "https:\/\/www.instagram.com\/explore\/tags\/45yearsofcockpitusa\/",
+              "second_button_text": "Follow Contest",
+              "slide_text_color": "rgba(0,0,0,0)",
+              "cta_color": "#e1941b",
+              "cta_background": "rgba(0,0,0,0)",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
             }
           },
-          "1599857238285-2": {
-            "type": "featured_collection",
+          "1602606977414-0": {
+            "type": "image",
             "settings": {
-              "collection": "women"
+              "image": "shopify:\/\/shop_images\/Halloween-Slide-2-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 53,
+              "caption_vertical": 92,
+              "mobile_image": "shopify:\/\/shop_images\/Hollywood-Fit-Mobile.jpg",
+              "hide_caption_background": false,
+              "heading": "The Hollywood Fit",
+              "subheading": "9 signature jackets that are as notable as the heroes who have worn them.",
+              "link": "shopify:\/\/collections\/halloween-collection",
+              "button_text": "Visit Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#fdfdfd",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "#0f0701",
+              "caption_background_opacity": 20
             }
           }
         },
         "block_order": [
-          "1599857238285-0",
-          "1599857238285-1",
-          "1599857238285-2"
+          "4e799e56-e485-4a19-867a-bc6f71a44741",
+          "1603312848083",
+          "1602606977414-0"
         ],
         "settings": {
-          "full_width": false,
-          "heading": "Collection list",
-          "heading_color": "#000000",
-          "background_color": "#ffffff",
-          "grid": 3
+          "slider_speed": 5,
+          "slide_heading_size": 25,
+          "slide_heading_weight": "700",
+          "subheading_size": 23,
+          "cta_size": 22,
+          "cta_weight": "400"
         }
       },
-      "1603891529b5c2ae8c": {
+      "1603474659074": {
         "type": "slideshow",
         "blocks": {
-          "1603891529b5c2ae8c-0": {
+          "6f962bbd-5ce4-4347-ba2c-dff73070007b": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z203615-Hooded-B3-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Black-Friday-Slide-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 80,
-              "caption_vertical": 51,
+              "caption_horizontal": 55,
+              "caption_vertical": 100,
               "hide_caption_background": false,
-              "heading": "The Road to Denver",
-              "subheading": "Featuring Cockpit USA's  B-3 Hooded Sheepskin",
-              "link": "shopify:\/\/products\/b-3-hooded-sheepskin-bomber-jacket",
-              "button_text": "Shop Here",
+              "heading": "",
+              "subheading": "",
+              "link": "shopify:\/\/pages\/black-friday-page-demo",
+              "button_text": "Learn More",
               "second_button": false,
-              "second_link": "shopify:\/\/pages\/contest",
-              "second_button_text": "Enter To Win",
+              "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "#8d6544",
+              "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 30
             }
           }
         },
         "block_order": [
-          "1603891529b5c2ae8c-0"
+          "6f962bbd-5ce4-4347-ba2c-dff73070007b"
         ],
         "settings": {
-          "slider_speed": 5,
+          "slider_speed": 4,
           "slide_heading_size": 30,
           "slide_heading_weight": "700",
           "subheading_size": 25,
           "cta_size": 21,
-          "cta_weight": "400"
+          "cta_weight": "300"
         }
       },
-      "page-contest-template": {
-        "type": "page-contest-template",
-        "settings": {
-          "page_size": "thin",
-          "sidebar_positon": "none"
-        }
-      },
-      "16046035366848d955": {
-        "type": "slideshow",
+      "1603988299270b4ba1": {
+        "type": "shop-the-look",
+        "disabled": true,
         "blocks": {
-          "16046035366848d955-0": {
+          "11d5186a-3a06-4205-9256-7e421a83a050": {
+            "type": "image",
+            "settings": {
+              "image_width": "66%",
+              "image": "shopify:\/\/shop_images\/Z21C122-C444-3600x5400.jpg",
+              "lookbook_product_1": "",
+              "hotspot_horizontal_1": 40,
+              "hotspot_vertical_1": 40,
+              "hotspot_color_1": "#000000",
+              "lookbook_product_2": "",
+              "hotspot_horizontal_2": 40,
+              "hotspot_vertical_2": 40,
+              "hotspot_color_2": "#000000",
+              "lookbook_product_3": "",
+              "hotspot_horizontal_3": 40,
+              "hotspot_vertical_3": 40,
+              "hotspot_color_3": "#000000",
+              "lookbook_product_4": "",
+              "hotspot_horizontal_4": 40,
+              "hotspot_vertical_4": 40,
+              "hotspot_color_4": "#000000",
+              "lookbook_product_5": "",
+              "hotspot_horizontal_5": 40,
+              "hotspot_vertical_5": 40,
+              "hotspot_color_5": "#000000"
+            }
+          },
+          "1603988299270b4ba1-0": {
+            "type": "image",
+            "settings": {
+              "image_width": "33%",
+              "image": "shopify:\/\/shop_images\/Shop-the-look-Z2107H-Adam-View-3600x5400.jpg",
+              "lookbook_product_1": "wwii-government-issue-a-2-jacket",
+              "hotspot_horizontal_1": 37,
+              "hotspot_vertical_1": 61,
+              "hotspot_color_1": "#000000",
+              "lookbook_product_2": "",
+              "hotspot_horizontal_2": 40,
+              "hotspot_vertical_2": 40,
+              "hotspot_color_2": "#000000",
+              "lookbook_product_3": "",
+              "hotspot_horizontal_3": 40,
+              "hotspot_vertical_3": 40,
+              "hotspot_color_3": "#000000",
+              "lookbook_product_4": "",
+              "hotspot_horizontal_4": 40,
+              "hotspot_vertical_4": 40,
+              "hotspot_color_4": "#000000",
+              "lookbook_product_5": "",
+              "hotspot_horizontal_5": 40,
+              "hotspot_vertical_5": 40,
+              "hotspot_color_5": "#000000"
+            }
+          },
+          "45f49e9b-abd7-4a0f-8c7f-6b49832ae750": {
+            "type": "image",
+            "settings": {
+              "image_width": "33%",
+              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-Gallery-edit-2-View-3600x5400.jpg",
+              "lookbook_product_1": "the-usn-bridge-coat",
+              "hotspot_horizontal_1": 38,
+              "hotspot_vertical_1": 63,
+              "hotspot_color_1": "#000000",
+              "lookbook_product_2": "",
+              "hotspot_horizontal_2": 40,
+              "hotspot_vertical_2": 40,
+              "hotspot_color_2": "#000000",
+              "lookbook_product_3": "",
+              "hotspot_horizontal_3": 40,
+              "hotspot_vertical_3": 40,
+              "hotspot_color_3": "#000000",
+              "lookbook_product_4": "",
+              "hotspot_horizontal_4": 40,
+              "hotspot_vertical_4": 40,
+              "hotspot_color_4": "#000000",
+              "lookbook_product_5": "",
+              "hotspot_horizontal_5": 40,
+              "hotspot_vertical_5": 40,
+              "hotspot_color_5": "#000000"
+            }
+          }
+        },
+        "block_order": [
+          "11d5186a-3a06-4205-9256-7e421a83a050",
+          "1603988299270b4ba1-0",
+          "45f49e9b-abd7-4a0f-8c7f-6b49832ae750"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "Featured Styles"
+        }
+      },
+      "1603988316f3d0b9f2": {
+        "type": "slideshow-video",
+        "disabled": true,
+        "blocks": {
+          "a682e442-92a0-47d0-a1d1-0b8e151f166f": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z21V029-edit-2-Pilot-Clement-1920x900.jpg",
+              "image_heading": "Off Duty With Pilot Clément",
+              "image_subheading": "Featuring the Aces and Eights A-2 Flight Jacket",
+              "image_button_link": "shopify:\/\/blogs\/blog\/off-duty-with-professional-pilot-clement",
+              "image_button_text": "Visit Here",
+              "image_button_text_2": "Add a 2nd button",
+              "image_caption_alignment": "center",
+              "caption_horizontal_position": 5,
+              "caption_vertical_position": 55,
+              "image_slide_text_color": "#000000",
+              "image_cta_color": "#ffffff",
+              "image_cta_background": "#000000",
+              "image_caption_background": "#ffffff",
+              "image_caption_background_opacity": 20,
+              "image_caption_border": "rgba(0,0,0,0)"
+            }
+          }
+        },
+        "block_order": [
+          "a682e442-92a0-47d0-a1d1-0b8e151f166f"
+        ],
+        "settings": {
+          "full_width": true,
+          "slide_controls": "dots",
+          "video_audio": "off",
+          "slide_height": 48,
+          "slide_heading_size": 26,
+          "slide_heading_weight": "bold",
+          "subheading_size": 20,
+          "cta_size": 14,
+          "cta_weight": "normal",
+          "use_mobile_height": true
+        }
+      },
+      "1604436785e13b1416": {
+        "type": "image-with-text-row",
+        "disabled": true,
+        "settings": {
+          "full_width": true,
+          "remove_top_padding": true,
+          "remove_bottom_padding": true,
+          "image": "shopify:\/\/shop_images\/Z21C122-C444-edit-3600x5400.jpg",
+          "layout": "left",
+          "image_width": "50%",
+          "text_align": "left",
+          "title": "The Road to Denver",
+          "text": "<p>Featuring Cockpit USA&#x27;s C-444 light weight sheepskin.<\/p>",
+          "button": ""
+        }
+      },
+      "16045899002aba172d": {
+        "type": "gallery",
+        "disabled": true,
+        "blocks": {
+          "16045899002aba172d-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z21C122-C444-edit-3600x5400.jpg",
+              "image_width": "66%",
+              "link": "shopify:\/\/products\/the-c44-sheepskin-flight-jacket",
+              "heading": "The New C-44 Sheepskin Flight Jacket",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 4,
+              "horizontal_position": 46,
+              "align_text": "center"
+            }
+          },
+          "16045899002aba172d-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Shop-the-look-Z2107H-Adam-View-3600x5400.jpg",
+              "image_width": "33%",
+              "link": "shopify:\/\/products\/reissue-a-2-jacket",
+              "heading": "Reissue A-2 Jacket",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 12,
+              "horizontal_position": 24,
+              "align_text": "center"
+            }
+          },
+          "16045899002aba172d-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-Gallery-edit-2-View-3600x5400.jpg",
+              "image_width": "33%",
+              "link": "shopify:\/\/products\/the-usn-bridge-coat",
+              "heading": "USN Bridge Coat ©",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 4,
+              "horizontal_position": 30,
+              "align_text": "center"
+            }
+          }
+        },
+        "block_order": [
+          "16045899002aba172d-0",
+          "16045899002aba172d-2",
+          "16045899002aba172d-1"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "Featured Styles",
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "normal",
+          "promo_heading_size": 24,
+          "promo_button_size": 19
+        }
+      },
+      "16045940745b6a9687": {
+        "type": "slideshow",
+        "disabled": true,
+        "blocks": {
+          "1604594074c1ba92ce-0": {
             "type": "image",
             "settings": {
               "image": "shopify:\/\/shop_images\/Z21V029-edit-2-Pilot-Clement-1920x900.jpg",
               "text_align": "center",
               "caption_horizontal": 21,
               "caption_vertical": 22,
-              "mobile_image": "shopify:\/\/shop_images\/Clement-Blog-Photo-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
               "heading": "Off Duty With Pilot Clément",
               "subheading": "Featuring the Aces and Eights Flight Jacket",
@@ -5877,14 +6110,14 @@
               "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
-              "cta_background": "#000000",
+              "cta_background": "#3a3a3a",
               "caption_background": "#8d6544",
               "caption_background_opacity": 20
             }
           }
         },
         "block_order": [
-          "16046035366848d955-0"
+          "1604594074c1ba92ce-0"
         ],
         "settings": {
           "slider_speed": 5,
@@ -5894,15 +6127,81 @@
           "cta_size": 16,
           "cta_weight": "400"
         }
+      },
+      "1605294335057326aa": {
+        "type": "Creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fb01a84faf7ea16b6a99ae9\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "1605373960f3b6a6de": {
+        "type": "gallery",
+        "blocks": {
+          "1605373960f3b6a6de-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Holiday-Gift-2-guide-Three-Images-ormore-Gallery-600x400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/pages\/aam-flight-experience",
+              "heading": "",
+              "button": "",
+              "heading_color": "#ffffff",
+              "button_color": "#f9f1f1",
+              "button_background": "#000000",
+              "text_options": "below_image",
+              "vertical_position": 12,
+              "horizontal_position": 14,
+              "align_text": "center"
+            }
+          },
+          "1605373960f3b6a6de-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z2102M-B3-SHEEPSKIN-BOMBER-Three-Images-ormore-Gallery-600x400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/collections\/b-3-sheepskin-jackets",
+              "heading": "",
+              "button": "",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "rgba(0,0,0,0)",
+              "text_options": "on_image",
+              "vertical_position": 12,
+              "horizontal_position": 14,
+              "align_text": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1605373960f3b6a6de-0",
+          "1605373960f3b6a6de-1"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "",
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "light",
+          "promo_heading_size": 26,
+          "promo_button_size": 14
+        }
       }
     },
     "content_for_index": [
-      "1603891529b5c2ae8c",
-      "1561574067213",
+      "1603474659074",
+      "1605294335057326aa",
+      "1605373960f3b6a6de",
+      "16045899002aba172d",
+      "1604436785e13b1416",
+      "1603988299270b4ba1",
+      "1602606977414",
       "1586279190981",
+      "1586279538889",
       "1559084715445",
-      "1599857238285",
-      "16046035366848d955"
+      "1603988316f3d0b9f2",
+      "16045940745b6a9687"
     ]
   }
 }

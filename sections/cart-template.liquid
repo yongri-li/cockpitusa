@@ -54,7 +54,7 @@
                 {%- assign property_size = item.properties | size -%}
                 {% if property_size > 0 %}
                   <div class="cart__meta-text">
-                    {% for p in item.properties %}{% assign first_character_in_key = p.first | truncate: 1, '' %}{% if first_character_in_key == '_'%}{% continue %}{% endif %}
+                    {% for p in item.properties %}
                       {% unless p.last == blank %}
                         {{ p.first }}:
 
@@ -82,7 +82,7 @@
                       <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                     </dt>
                     <dd>
-                      <s><div class="un-line-item-unit-price" data-id="{{ item.key }}">{{ item.original_price | money }}</div></s>
+                      <s>{{ item.original_price | money }}</s>
                     </dd>
                     <dt>
                       <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
@@ -92,7 +92,7 @@
                     </dd>
                   </dl>
                 {%- else -%}
-                  <div class="un-line-item-unit-price" data-id="{{ item.key }}">{{ item.original_price | money }}</div>
+                  {{ item.original_price | money }}
                 {%- endif -%}
 
                 {%- if item.line_level_discount_allocations != blank -%}
@@ -125,7 +125,7 @@
                       <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
                     </dt>
                     <dd>
-                      <s><div class="un-line-item-total" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div></s>
+                      <s>{{ item.original_line_price | money }}</s>
                     </dd>
                     <dt>
                       <span class="visually-hidden">{{ 'products.product.sale_price' | t }}</span>
@@ -135,7 +135,7 @@
                     </dd>
                   </dl>
                 {%- else -%}
-                  <div class="un-line-item-total" data-id="{{ item.key }}">{{ item.original_line_price | money }}</div>
+                  {{ item.original_line_price | money }}
                 {%- endif -%}
               </td>
             </tr>
