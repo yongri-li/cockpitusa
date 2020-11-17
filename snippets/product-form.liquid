@@ -1,5 +1,5 @@
 
-  {% form 'product', product, data-product-form:product_form_config %}
+  {% form 'product', product, data-product-form:product_form_config %}{% if content_for_header contains '.mageworx.com\/groupedproducts\/source.js?' and product.tags contains 'mw_grouped_product' %}<div class="mw-gp-container"></div>{% endif %}
     {% if section.settings.show_vendor %}
       <h3>{{ 'products.product.designer' | t }}: {{ product.vendor }}</h3>
       <div class="clear"></div>

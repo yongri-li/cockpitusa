@@ -212,12 +212,12 @@ data-aos="{{ settings.scroll_animation }}">
             .caption-inners h2, .caption-inners p {
               color: {{ settings.slide_text_color }} !important;
             }
-          } 
+          }
         </style>
 
         <script>
         // Set the date we're counting down to
-        var countDownDate = new Date("{{ block.settings.subheading }}").getTime();
+        var countDownDate = new Date("{{ block.settings.subheading }}").getTime(); 
 
         // Update the count down every 1 second
         var x = setInterval(function() {

@@ -7,6 +7,8 @@
 
   <meta charset="utf-8" />
 
+  <meta name="google-site-verification" content="MRKAjauvgaWP4BPkNorJRdyqfWYJbPBLgV60yAj6cWk" />
+
   {% include 'google-fonts' %}
   {% include 'social-media-meta-tags' %}
 
@@ -46,11 +48,12 @@
   {{ "customer_area.js"  | shopify_asset_url | script_tag }}
   {% endif %}
   {{ content_for_header }}
+{{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
+
 {%- render 'bold-pr' -%}
 {%- render 'bold-common' -%}
   <link rel="next" href="/next"/>
   <link rel="prev" href="/prev"/>
-
 </head>
 
 <body class="gridlock shifter-left {{ template }}">
@@ -160,7 +163,7 @@
   <script>
     function loadJS(u) {
         var r = document.getElementsByTagName("script")[0],
-            s = document.createElement("script");
+            s = document.createElement("script"); 
         s.src = u;
         r.parentNode.insertBefore(s, r);
     }
@@ -189,8 +192,13 @@
   <!-- Fancybox JS -->
   {{ 'jquery.fancybox.js' | asset_url | script_tag }}
 
-  {% include 'mm-sale-countdown' %}
-
 {% render 'spurit_po2_theme_snippet' %}
+{% include 'mw_GP_objects' %}{% render 'upsell-now', customer: customer, product: product, template: template, cart: cart %}
+
+{% render 'afterpay' %}
+
+{% include 'mm-sale-countdown' %}
+
+<script>(function(document, tag) { var script = document.createElement(tag); var element = document.getElementsByTagName('body')[0]; script.src = 'https://acsbap.com/apps/app/assets/js/acsb.js'; script.async = true; script.defer = true; (typeof element === 'undefined' ? document.getElementsByTagName('html')[0] : element).appendChild(script); script.onload = function() { acsbJS.init({ statementLink : '', feedbackLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, language : 'en', position : 'right', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'default', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 0, triggerOffsetY : 0, triggerRadius : '0' } }); };}(document, 'script'));</script>
 </body>
 </html>

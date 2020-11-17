@@ -85,7 +85,7 @@ data-aos="{{ settings.scroll_animation }}">
             </div>
           {% else %}
             <div class="item video" data-slide-type="video" {{ block.shopify_attributes }}>
-              <video class="slide-video slide-media" loop {% if section.settings.video_audio == 'off' %}muted{% endif %} preload="metadata">
+              <video class="slide-video slide-media" autoplay loop playsinline {% if section.settings.video_audio == 'off' %}muted{% endif %} preload="metadata">
                 <source src="{{ block.settings.video_url_mp4 }}" type="video/mp4" />
               </video>
               {{ caption }}
