@@ -4980,13 +4980,13 @@
           "header_border": false,
           "show_announcement": true,
           "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1,000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a> <\/p>",
-          "announcement_text_size": 24,
+          "announcement_text_size": 16,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
-          "logo_max_width": 220,
+          "logo_max_width": 130,
           "logo_position": "inline",
-          "logo_align": "center",
+          "logo_align": "left",
           "main_nav": "main-menu",
           "product_menu": true
         }
@@ -5267,17 +5267,6 @@
       },
       "scrolling-announcements": {
         "type": "scrolling-announcements",
-        "blocks": {
-          "1590160618893": {
-            "type": "text",
-            "settings": {
-              "text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Return Policy &amp; International Orders<\/a><\/p>"
-            }
-          }
-        },
-        "block_order": [
-          "1590160618893"
-        ],
         "settings": {
           "hidden_on_homepage": false,
           "arrows": false,
