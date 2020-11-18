@@ -4979,8 +4979,8 @@
           "header_cover": false,
           "header_border": false,
           "show_announcement": true,
-          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on orders over $1,000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a> <\/p>",
-          "announcement_text_size": 16,
+          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on all orders over $1000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>  (<a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\" target=\"_blank\">Return policy &amp; International Orders) <\/a><\/p>",
+          "announcement_text_size": 12,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
@@ -5294,6 +5294,7 @@
       },
       "1559084715445": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "heading": "Heritage Collection",
@@ -5528,6 +5529,7 @@
       },
       "1561574067213": {
         "type": "gallery",
+        "disabled": true,
         "blocks": {
           "1561574067213-0": {
             "type": "image",
@@ -5597,6 +5599,7 @@
       },
       "1586279190981": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5767,7 +5770,6 @@
       },
       "1599857238285": {
         "type": "collection-list",
-        "disabled": true,
         "blocks": {
           "1599857238285-0": {
             "type": "featured_collection",
@@ -5807,22 +5809,21 @@
           "1603891529b5c2ae8c-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z203615-Hooded-B3-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Black-Friday-Slide-2-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 80,
-              "caption_vertical": 51,
+              "caption_horizontal": 82,
+              "caption_vertical": 40,
               "hide_caption_background": false,
-              "heading": "The Road to Denver",
-              "subheading": "Featuring Cockpit USA's  B-3 Hooded Sheepskin",
-              "link": "shopify:\/\/products\/b-3-hooded-sheepskin-bomber-jacket",
-              "button_text": "Shop Here",
+              "heading": "<span id=\"mm-coutdown\"><\/span>",
+              "subheading": "",
+              "link": "shopify:\/\/pages\/black-friday-2020",
+              "button_text": "Learn More",
               "second_button": false,
-              "second_link": "shopify:\/\/pages\/contest",
               "second_button_text": "Enter To Win",
-              "slide_text_color": "#ffffff",
+              "slide_text_color": "#000000",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "#8d6544",
+              "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 30
             }
           }
@@ -5852,22 +5853,22 @@
           "16046035366848d955-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z21V029-edit-2-Pilot-Clement-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Womens-B-3-Full-Width-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 21,
-              "caption_vertical": 22,
-              "mobile_image": "shopify:\/\/shop_images\/Clement-Blog-Photo-Mobile-Slide-Template.jpg",
+              "caption_horizontal": 55,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/Womens-B3-Mobile-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Off Duty With Pilot Clément",
-              "subheading": "Featuring the Aces and Eights Flight Jacket",
-              "link": "shopify:\/\/blogs\/blog\/off-duty-with-professional-pilot-clement",
-              "button_text": "Visit Here",
+              "heading": "Women's Sheepskins",
+              "subheading": "",
+              "link": "shopify:\/\/collections\/womens-sheepskin-jackets",
+              "button_text": "Shop Here",
               "second_button": false,
               "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "#000000",
-              "caption_background": "#8d6544",
+              "caption_background": "rgba(0,0,0,0)",
               "caption_background_opacity": 20
             }
           }
@@ -5877,21 +5878,83 @@
         ],
         "settings": {
           "slider_speed": 5,
-          "slide_heading_size": 26,
+          "slide_heading_size": 25,
           "slide_heading_weight": "700",
-          "subheading_size": 20,
-          "cta_size": 16,
+          "subheading_size": 23,
+          "cta_size": 22,
           "cta_weight": "400"
+        }
+      },
+      "160571433479b1e3e8": {
+        "type": "gallery",
+        "blocks": {
+          "160571433479b1e3e8-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Shopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/collections\/heritage-collection",
+              "heading": "",
+              "button": "",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "rgba(0,0,0,0)",
+              "text_options": "on_image",
+              "vertical_position": 12,
+              "horizontal_position": 14,
+              "align_text": "left"
+            }
+          },
+          "160571433479b1e3e8-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z2102M-B3-SHEEPSKIN-BOMBER-2-Three-Images-ormore-Gallery-600x400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/collections\/b-3-sheepskin-jackets",
+              "heading": "",
+              "button": "",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "rgba(0,0,0,0)",
+              "text_options": "on_image",
+              "vertical_position": 12,
+              "horizontal_position": 14,
+              "align_text": "left"
+            }
+          }
+        },
+        "block_order": [
+          "160571433479b1e3e8-0",
+          "160571433479b1e3e8-1"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "",
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "light",
+          "promo_heading_size": 26,
+          "promo_button_size": 14
+        }
+      },
+      "16057205573488e9a9": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fb01a84faf7ea16b6a99ae9\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
         }
       }
     },
     "content_for_index": [
       "1603891529b5c2ae8c",
       "1561574067213",
+      "16057205573488e9a9",
       "1586279190981",
       "1559084715445",
-      "1599857238285",
-      "16046035366848d955"
+      "160571433479b1e3e8",
+      "16046035366848d955",
+      "1599857238285"
     ]
   }
 }
