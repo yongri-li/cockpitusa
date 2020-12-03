@@ -5294,6 +5294,7 @@
       },
       "1559084715445": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "heading": "Heritage Collection",
@@ -5598,6 +5599,7 @@
       },
       "1586279190981": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5902,19 +5904,18 @@
       },
       "16061571275c234981": {
         "type": "slideshow",
-        "disabled": true,
         "blocks": {
           "1606157127fddd6b8f-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z2109-RAF-Sheepskin-Full-Width-1920x900.jpg",
+              "image": "shopify:\/\/shop_images\/Z203615-Hooded-B3-Full-Width-1920x900.jpg",
               "text_align": "center",
               "caption_horizontal": 35,
               "caption_vertical": 50,
               "mobile_image": "shopify:\/\/shop_images\/Rhys-Brown-mobile-z2109.jpg",
               "hide_caption_background": false,
-              "heading": "Congratulations to Rhys!",
-              "subheading": "Winner of the 3rd #45YearsofCockpitUSA Contest Featuring  the R.A.F Sheepskin Bomber Jacket",
+              "heading": "Placement Holder For Heritage",
+              "subheading": "",
               "link": "shopify:\/\/products\/r-a-f-sheepskin-bomber-jacket",
               "button_text": "Shop Here",
               "second_button": false,
@@ -5981,6 +5982,7 @@
       },
       "1606457145965fa699": {
         "type": "collection-list",
+        "disabled": true,
         "blocks": {
           "1606457145965fa699-0": {
             "type": "featured_collection",
@@ -6009,8 +6011,8 @@
         "settings": {
           "full_width": false,
           "heading": "Featured Collections",
-          "heading_color": "#000",
-          "background_color": "#fff",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
           "grid": 3
         }
       },
@@ -6019,7 +6021,7 @@
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fbeaa92faf7ea16b6b309b7\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc8139a78264966c6a10e16\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
           "text_size": "large"
         }
       },
@@ -6028,13 +6030,24 @@
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fbeab77ad04236b4d8179b6\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "medium"
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc7f7dc705c693a048b2276\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "16069515238fd63403": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc80bac78264966c6a10290\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
         }
       }
     },
     "content_for_index": [
       "16064572931c550a92",
+      "16064572006fa00f0d",
+      "16069515238fd63403",
       "16061571275c234981",
       "1599857238285",
       "1561574067213",
@@ -6043,8 +6056,7 @@
       "160571433479b1e3e8",
       "16046035366848d955",
       "1606158541c7ad1f25",
-      "1606457145965fa699",
-      "16064572006fa00f0d"
+      "1606457145965fa699"
     ]
   }
 }
