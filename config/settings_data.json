@@ -4980,7 +4980,7 @@
           "header_border": false,
           "show_announcement": true,
           "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on all orders over $1000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>  (<a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\" target=\"_blank\">Return policy &amp; International Orders) <\/a><\/p>",
-          "announcement_text_size": 12,
+          "announcement_text_size": 16,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
@@ -5294,7 +5294,6 @@
       },
       "1559084715445": {
         "type": "featured-collection",
-        "disabled": true,
         "settings": {
           "full_width": true,
           "heading": "Heritage Collection",
@@ -5590,7 +5589,7 @@
         ],
         "settings": {
           "full_width": true,
-          "heading": "",
+          "heading": "Featured Styles",
           "promo_background_color": "#ffffff",
           "promo_heading_weight": "light",
           "promo_heading_size": 24,
@@ -5599,7 +5598,6 @@
       },
       "1586279190981": {
         "type": "image-with-text-row",
-        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5797,8 +5795,8 @@
           "1599857238285-2"
         ],
         "settings": {
-          "full_width": false,
-          "heading": "Collections",
+          "full_width": true,
+          "heading": "Featured Collections",
           "heading_color": "#000000",
           "background_color": "#ffffff",
           "grid": 3
@@ -5813,61 +5811,37 @@
       },
       "16046035366848d955": {
         "type": "slideshow",
-        "disabled": true,
         "blocks": {
           "16046035366848d955-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Thanksgiving-Home-Page-Slide.jpg",
+              "image": "shopify:\/\/shop_images\/Chuck-Yeager-1920x900.jpg",
               "text_align": "center",
-              "caption_horizontal": 68,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Happy-Thanksgiving-Mobile-Slide-Template.jpg",
+              "caption_horizontal": 55,
+              "caption_vertical": 100,
               "hide_caption_background": false,
-              "heading": "Happy Thanksgiving from all of us at Cockpit USA",
-              "subheading": "Our offices & warehouse will close Thursday, November 26th and re-open Monday, November 30th, 2020.",
+              "heading": "Remembering Aviation Legend Chuck Yeager",
+              "subheading": "February 13, 1923 - December 7, 2020",
+              "link": "shopify:\/\/collections\/womens-sheepskin-jackets",
               "button_text": "",
               "second_button": false,
               "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
+              "slide_text_color": "#ffffff",
               "cta_color": "#ffffff",
               "cta_background": "rgba(0,0,0,0)",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
-            }
-          },
-          "c8ba3328-10ff-48f4-be6c-67a734921991": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z2109-RAF-Sheepskin-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 33,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Rhys-Brown-mobile-z2109.jpg",
-              "hide_caption_background": false,
-              "heading": "Congratulations Rhys!",
-              "subheading": "Winner of the 3rd #45YearsofCockpitUSA Contest Featuring the R.A.F Sheepskin Bomber Jacket",
-              "link": "shopify:\/\/products\/r-a-f-sheepskin-bomber-jacket",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 20
+              "caption_background": "#000000",
+              "caption_background_opacity": 10
             }
           }
         },
         "block_order": [
-          "16046035366848d955-0",
-          "c8ba3328-10ff-48f4-be6c-67a734921991"
+          "16046035366848d955-0"
         ],
         "settings": {
           "slider_speed": 5,
-          "slide_heading_size": 30,
+          "slide_heading_size": 23,
           "slide_heading_weight": "700",
-          "subheading_size": 21,
+          "subheading_size": 20,
           "cta_size": 22,
           "cta_weight": "400"
         }
@@ -5924,33 +5898,118 @@
           "promo_button_size": 14
         }
       },
-      "1606846376e098454d": {
-        "type": "image-with-text-row",
+      "1606158541c7ad1f25": {
+        "type": "slideshow",
         "disabled": true,
+        "blocks": {
+          "1606158541c7ad1f25-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Small-Gifts-Big-Gestures-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 28,
+              "caption_vertical": 37,
+              "mobile_image": "shopify:\/\/shop_images\/Small-Gifts-BigGestures.jpg",
+              "hide_caption_background": false,
+              "heading": "Small Gifts & Big Statements",
+              "subheading": "Holiday Gift Guide",
+              "link": "shopify:\/\/collections\/gift-guide",
+              "button_text": "Visit Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#ffffff",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "1606158541c7ad1f25-0"
+        ],
         "settings": {
-          "full_width": true,
-          "remove_top_padding": true,
-          "remove_bottom_padding": true,
-          "image": "shopify:\/\/shop_images\/The-Champ-Z21C101-Image-Gallery-View-3600x5400.jpg",
-          "layout": "right",
-          "image_width": "50%",
-          "text_align": "left",
-          "title": "Introducing The Champ Sheepskin Jacket",
-          "text": "<p>The Champ sheepskin bomber harkens back to the custom bomber designed for a legendary Hollywood actor who would go on to wear it on screen in a now-classic film series. Modeled after the classic RAF Shearling design of WWII the jacket instead is made from the same Sheepskin normally found on the American styled B-3 making it unique in its own right. Signature features include full weight high-quality sheepskin, the leather belted waist, a collar strap, and zippered cuffs blending features of two classic bomber jackets into one. <\/p>",
-          "link": "shopify:\/\/products\/the-champ-sheepskin-jacket",
-          "button": "Visit Here"
+          "slider_speed": 5,
+          "slide_heading_size": 36,
+          "slide_heading_weight": "700",
+          "subheading_size": 23,
+          "cta_size": 18,
+          "cta_weight": "400"
         }
       },
-      "16075499838d111c8e": {
+      "1606457145965fa699": {
+        "type": "collection-list",
+        "disabled": true,
+        "blocks": {
+          "1606457145965fa699-0": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "kids"
+            }
+          },
+          "1606457145965fa699-1": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "accessories"
+            }
+          },
+          "1606457145965fa699-2": {
+            "type": "featured_collection",
+            "settings": {
+              "collection": "women"
+            }
+          }
+        },
+        "block_order": [
+          "1606457145965fa699-0",
+          "1606457145965fa699-1",
+          "1606457145965fa699-2"
+        ],
+        "settings": {
+          "full_width": false,
+          "heading": "Featured Collections",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
+          "grid": 3
+        }
+      },
+      "16064572006fa00f0d": {
         "type": "content-creator",
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fcfdc6c705c693a048f6698\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc8139a78264966c6a10e16\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "16064572931c550a92": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc7f7dc705c693a048b2276\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "16069515238fd63403": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc80bac78264966c6a10290\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "16070374153b3aba06": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc9724878264966c6a21016\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
           "text_size": "medium"
         }
       },
-      "1607624001fbcab683": {
+      "160703969864f66f81": {
         "type": "content-creator",
         "disabled": true,
         "settings": {
@@ -5962,15 +6021,19 @@
       }
     },
     "content_for_index": [
-      "1607624001fbcab683",
-      "16075499838d111c8e",
-      "1606846376e098454d",
-      "16046035366848d955",
+      "160703969864f66f81",
+      "16064572931c550a92",
+      "16064572006fa00f0d",
+      "16069515238fd63403",
+      "16070374153b3aba06",
       "1561574067213",
       "1586279190981",
       "1559084715445",
+      "16046035366848d955",
       "1599857238285",
-      "160571433479b1e3e8"
+      "160571433479b1e3e8",
+      "1606158541c7ad1f25",
+      "1606457145965fa699"
     ]
   }
 }

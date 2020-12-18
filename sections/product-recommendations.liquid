@@ -1,4 +1,6 @@
 {% if section.settings.show_product_recommendations %}
+<div class="bold-brain-widget" data-widget-id="bold-brain-widget-qjUDALYTMPELTiWg"></div>
+{% comment %}
 <div class="desktop-12 tablet-6 span-12 mobile-3" id="related" data-aos="{{ settings.scroll_animation }}">
   <div class="row grid_wrapper">
     <div class="product-recommendations" data-product-id="{{ product.id }}" data-limit="4">
@@ -23,8 +25,10 @@
     </div>
   </div>
 </div>
+{% endcomment %} 
 {% endif %}
 
+{% comment %}
 {% javascript %}
   var loadProductRecommendationsIntoSection = function() {
     // Look for an element with class 'product-recommendations'
@@ -60,7 +64,7 @@
   // Fetching the recommendations on page load
   loadProductRecommendationsIntoSection();
 {% endjavascript %}
-
+{% endcomment %}
 
 {% schema %}
 {
