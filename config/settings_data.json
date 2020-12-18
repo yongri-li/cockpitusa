@@ -5294,6 +5294,7 @@
       },
       "1559084715445": {
         "type": "featured-collection",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "heading": "Heritage Collection",
@@ -5528,6 +5529,7 @@
       },
       "1561574067213": {
         "type": "gallery",
+        "disabled": true,
         "blocks": {
           "1561574067213-0": {
             "type": "image",
@@ -5597,6 +5599,7 @@
       },
       "1586279190981": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5767,6 +5770,7 @@
       },
       "1599857238285": {
         "type": "collection-list",
+        "disabled": true,
         "blocks": {
           "1599857238285-0": {
             "type": "featured_collection",
@@ -5936,9 +5940,30 @@
           "link": "shopify:\/\/products\/the-champ-sheepskin-jacket",
           "button": "Visit Here"
         }
+      },
+      "16075499838d111c8e": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fcfdc6c705c693a048f6698\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "medium"
+        }
+      },
+      "1607624001fbcab683": {
+        "type": "content-creator",
+        "disabled": true,
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc97ca4705c693a048c5cf5\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
       }
     },
     "content_for_index": [
+      "1607624001fbcab683",
+      "16075499838d111c8e",
       "1606846376e098454d",
       "16046035366848d955",
       "1561574067213",
