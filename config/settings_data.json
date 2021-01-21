@@ -5533,63 +5533,45 @@
           "1561574067213-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Z21C122-C444-edit-3600x5400.jpg",
-              "image_width": "66%",
+              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-Cofee-Shop-3600x5400.jpg",
+              "image_width": "50%",
               "link": "shopify:\/\/products\/z21c122-c444",
-              "heading": "The New C-44 Sheepskin Flight Jacket",
-              "button": "Shop Here",
+              "heading": "Inspired By History",
+              "button": "",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
-              "button_background": "#000000",
+              "button_background": "rgba(0,0,0,0)",
               "text_options": "on_image",
-              "vertical_position": 4,
-              "horizontal_position": 46,
-              "align_text": "center"
+              "vertical_position": 14,
+              "horizontal_position": 10,
+              "align_text": "left"
             }
           },
           "1561574067213-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/USN-Bridge-Coat-Gallery-edit-2-View-3600x5400.jpg",
-              "image_width": "33%",
+              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-3600x5400.jpg",
+              "image_width": "50%",
               "link": "shopify:\/\/products\/the-usn-bridge-coat",
-              "heading": "The USN Bridge Coat©",
+              "heading": "",
               "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
               "text_options": "on_image",
-              "vertical_position": 12,
+              "vertical_position": 2,
               "horizontal_position": 50,
-              "align_text": "center"
-            }
-          },
-          "1561574067213-2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Shop-the-look-Z2107H-Adam-View-3600x5400.jpg",
-              "image_width": "33%",
-              "link": "shopify:\/\/products\/wwii-government-issue-a-2-jacket",
-              "heading": "WWII Government Issue A-2",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 24,
               "align_text": "center"
             }
           }
         },
         "block_order": [
           "1561574067213-0",
-          "1561574067213-1",
-          "1561574067213-2"
+          "1561574067213-1"
         ],
         "settings": {
           "full_width": true,
-          "heading": "Featured Styles",
+          "heading": "The New B-2 Sheepskin Jacket",
           "promo_background_color": "#ffffff",
           "promo_heading_weight": "light",
           "promo_heading_size": 24,
@@ -5809,95 +5791,6 @@
           "sidebar_positon": "none"
         }
       },
-      "16046035366848d955": {
-        "type": "slideshow",
-        "blocks": {
-          "16046035366848d955-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Chuck-Yeager-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 55,
-              "caption_vertical": 100,
-              "hide_caption_background": false,
-              "heading": "Remembering Aviation Legend Chuck Yeager",
-              "subheading": "February 13, 1923 - December 7, 2020",
-              "link": "shopify:\/\/collections\/womens-sheepskin-jackets",
-              "button_text": "",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#ffffff",
-              "cta_background": "rgba(0,0,0,0)",
-              "caption_background": "#000000",
-              "caption_background_opacity": 10
-            }
-          }
-        },
-        "block_order": [
-          "16046035366848d955-0"
-        ],
-        "settings": {
-          "slider_speed": 5,
-          "slide_heading_size": 23,
-          "slide_heading_weight": "700",
-          "subheading_size": 20,
-          "cta_size": 22,
-          "cta_weight": "400"
-        }
-      },
-      "160571433479b1e3e8": {
-        "type": "gallery",
-        "disabled": true,
-        "blocks": {
-          "160571433479b1e3e8-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Shopify-Template-Three-Images-ormore-Gallery-600x400.jpg",
-              "image_width": "50%",
-              "link": "shopify:\/\/collections\/heritage-collection",
-              "heading": "",
-              "button": "",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "rgba(0,0,0,0)",
-              "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 14,
-              "align_text": "left"
-            }
-          },
-          "160571433479b1e3e8-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z2102M-B3-SHEEPSKIN-BOMBER-2-Three-Images-ormore-Gallery-600x400.jpg",
-              "image_width": "50%",
-              "link": "shopify:\/\/collections\/b-3-sheepskin-jackets",
-              "heading": "",
-              "button": "",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "rgba(0,0,0,0)",
-              "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 14,
-              "align_text": "left"
-            }
-          }
-        },
-        "block_order": [
-          "160571433479b1e3e8-0",
-          "160571433479b1e3e8-1"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "",
-          "promo_background_color": "#ffffff",
-          "promo_heading_weight": "light",
-          "promo_heading_size": 26,
-          "promo_button_size": 14
-        }
-      },
       "1606158541c7ad1f25": {
         "type": "slideshow",
         "disabled": true,
@@ -5973,65 +5866,105 @@
           "grid": 3
         }
       },
-      "16064572006fa00f0d": {
+      "1609882786caf813f1": {
         "type": "content-creator",
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc8139a78264966c6a10e16\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"5ff4da9bfaf7ea6d8841b64d\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
           "text_size": "large"
         }
       },
-      "16064572931c550a92": {
-        "type": "content-creator",
+      "1609964604ae17abf1": {
+        "type": "gallery",
+        "disabled": true,
+        "blocks": {
+          "1609964604ae17abf1-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Screen_Shot_2021-01-06_at_1.29.39_PM.png",
+              "image_width": "100%",
+              "heading": "Our collections",
+              "button": "Explore",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 12,
+              "horizontal_position": 14,
+              "align_text": "left"
+            }
+          }
+        },
+        "block_order": [
+          "1609964604ae17abf1-0"
+        ],
         "settings": {
           "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc7f7dc705c693a048b2276\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "large"
+          "heading": "Place Holder",
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "light",
+          "promo_heading_size": 24,
+          "promo_button_size": 14
         }
       },
-      "16069515238fd63403": {
-        "type": "content-creator",
-        "settings": {
-          "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc80bac78264966c6a10290\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "large"
-        }
-      },
-      "16070374153b3aba06": {
-        "type": "content-creator",
-        "settings": {
-          "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc9724878264966c6a21016\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "medium"
-        }
-      },
-      "160703969864f66f81": {
+      "1609967175421069bc": {
         "type": "content-creator",
         "disabled": true,
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"5fc97ca4705c693a048c5cf5\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"5ff622b17826495ce969c03d\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
           "text_size": "large"
+        }
+      },
+      "16099673746ac97d7e": {
+        "type": "slideshow",
+        "blocks": {
+          "1609967374d79ff68d-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Varsity-Jacket-Full-Width-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 18,
+              "caption_vertical": 50,
+              "hide_caption_background": false,
+              "heading": "Varsity Style",
+              "subheading": "Introducing the new Award Jacket",
+              "link": "shopify:\/\/products\/award-jacket-z21e105",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "#000000",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "#fdfdfd",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "1609967374d79ff68d-0"
+        ],
+        "settings": {
+          "slider_speed": 5,
+          "slide_heading_size": 27,
+          "slide_heading_weight": "700",
+          "subheading_size": 16,
+          "cta_size": 20,
+          "cta_weight": "400"
         }
       }
     },
     "content_for_index": [
-      "160703969864f66f81",
-      "16064572931c550a92",
-      "16064572006fa00f0d",
-      "16069515238fd63403",
-      "16070374153b3aba06",
+      "16099673746ac97d7e",
+      "1609964604ae17abf1",
       "1561574067213",
+      "1609967175421069bc",
+      "1609882786caf813f1",
       "1586279190981",
       "1559084715445",
-      "16046035366848d955",
       "1599857238285",
-      "160571433479b1e3e8",
       "1606158541c7ad1f25",
       "1606457145965fa699"
     ]
