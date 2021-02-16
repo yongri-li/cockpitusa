@@ -155,7 +155,7 @@
                   {% for block in section.blocks %}
                     {% case block.type %}
                     {% when 'description' %}
-                      <div id="{{ block.id }}" class="tab{{ forloop.index | plus:1 }} tabbed-block rte">
+                      <div id="{{ block.id }}" class="tab{{ forloop.index | plus:1 }} tabbed-block rte" itemprop="description">
                         {% if product.description contains '[#' %}
                         {{ product.description | split: '[#' | first }}
                         {% else %}

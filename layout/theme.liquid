@@ -57,6 +57,9 @@
 </head>
 
 <body class="gridlock shifter-left {{ template }}">
+
+  {% include 'mm-schema' %}
+  
   {% if settings.ajax_cart_method == 'drawer' %}
     {% include 'timber-cart' %}
   {% endif %}
@@ -163,7 +166,7 @@
   <script>
     function loadJS(u) {
         var r = document.getElementsByTagName("script")[0],
-            s = document.createElement("script"); 
+            s = document.createElement("script");
         s.src = u;
         r.parentNode.insertBefore(s, r);
     }
