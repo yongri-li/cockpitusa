@@ -1,3 +1,4 @@
+{% if template contains 'product' %}
 <!-- Copyright //. 2020 Version 2.34 -->
 {% assign fa_current_variant = product.selected_or_first_available_variant %}
 {%- assign fa_variant_count = product.variants | size -%}
@@ -126,3 +127,4 @@
 }
 </script>
 <!-- Copyright //. 2020 Version 2.34 -->
+{% endif %}
