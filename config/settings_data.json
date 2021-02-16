@@ -5758,12 +5758,6 @@
               "collection": "kids"
             }
           },
-          "1599857238285-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "accessories"
-            }
-          },
           "1599857238285-2": {
             "type": "featured_collection",
             "settings": {
@@ -5773,15 +5767,14 @@
         },
         "block_order": [
           "1599857238285-0",
-          "1599857238285-1",
           "1599857238285-2"
         ],
         "settings": {
           "full_width": true,
-          "heading": "Featured Collections",
+          "heading": "",
           "heading_color": "#000000",
           "background_color": "#ffffff",
-          "grid": 3
+          "grid": 2
         }
       },
       "page-contest-template": {
@@ -5871,7 +5864,7 @@
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"5ff4da9bfaf7ea6d8841b64d\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"600b2688faf7ea1f930e469b\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
           "text_size": "large"
         }
       },
@@ -5908,63 +5901,135 @@
           "promo_button_size": 14
         }
       },
-      "1609967175421069bc": {
-        "type": "content-creator",
+      "1613063660434e97fe": {
+        "type": "shop-the-look",
         "disabled": true,
-        "settings": {
-          "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"5ff622b17826495ce969c03d\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "large"
-        }
-      },
-      "16099673746ac97d7e": {
-        "type": "slideshow",
         "blocks": {
-          "1609967374d79ff68d-0": {
+          "1613063660434e97fe-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Varsity-Jacket-Full-Width-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 18,
-              "caption_vertical": 50,
-              "hide_caption_background": false,
-              "heading": "Varsity Style",
-              "subheading": "Introducing the new Award Jacket",
-              "link": "shopify:\/\/products\/award-jacket-z21e105",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "#fdfdfd",
-              "caption_background_opacity": 20
+              "image_width": "50%",
+              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-3600x5400.jpg",
+              "lookbook_product_1": "b-2-sheepskin-jacket-z21c106",
+              "hotspot_horizontal_1": 37,
+              "hotspot_vertical_1": 25,
+              "hotspot_color_1": "#000000",
+              "lookbook_product_2": "",
+              "hotspot_horizontal_2": 10,
+              "hotspot_vertical_2": 25,
+              "hotspot_color_2": "#000000",
+              "lookbook_product_3": "",
+              "hotspot_horizontal_3": 40,
+              "hotspot_vertical_3": 40,
+              "hotspot_color_3": "#000000",
+              "lookbook_product_4": "",
+              "hotspot_horizontal_4": 40,
+              "hotspot_vertical_4": 40,
+              "hotspot_color_4": "#000000",
+              "lookbook_product_5": "",
+              "hotspot_horizontal_5": 40,
+              "hotspot_vertical_5": 40,
+              "hotspot_color_5": "#000000"
+            }
+          },
+          "1613063660434e97fe-1": {
+            "type": "image",
+            "settings": {
+              "image_width": "50%",
+              "image": "shopify:\/\/shop_images\/Award-Jacket-Side-Block-3600x5400.jpg",
+              "lookbook_product_1": "award-jacket-z21e105",
+              "hotspot_horizontal_1": 38,
+              "hotspot_vertical_1": 28,
+              "hotspot_color_1": "#000000",
+              "lookbook_product_2": "",
+              "hotspot_horizontal_2": 40,
+              "hotspot_vertical_2": 40,
+              "hotspot_color_2": "#000000",
+              "lookbook_product_3": "",
+              "hotspot_horizontal_3": 40,
+              "hotspot_vertical_3": 40,
+              "hotspot_color_3": "#000000",
+              "lookbook_product_4": "",
+              "hotspot_horizontal_4": 40,
+              "hotspot_vertical_4": 40,
+              "hotspot_color_4": "#000000",
+              "lookbook_product_5": "",
+              "hotspot_horizontal_5": 40,
+              "hotspot_vertical_5": 40,
+              "hotspot_color_5": "#000000"
             }
           }
         },
         "block_order": [
-          "1609967374d79ff68d-0"
+          "1613063660434e97fe-0",
+          "1613063660434e97fe-1"
         ],
         "settings": {
-          "slider_speed": 5,
-          "slide_heading_size": 27,
-          "slide_heading_weight": "700",
-          "subheading_size": 16,
-          "cta_size": 20,
-          "cta_weight": "400"
+          "full_width": true,
+          "heading": "New Arrivals"
+        }
+      },
+      "161316446514e167a6": {
+        "type": "gallery",
+        "blocks": {
+          "161316446523a4d18a-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-3600x5400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/products\/b-2-sheepskin-jacket-z21c106",
+              "heading": "",
+              "button": "Learn More",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "below_image",
+              "vertical_position": 8,
+              "horizontal_position": 40,
+              "align_text": "center"
+            }
+          },
+          "161316446523a4d18a-2": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Award-Jacket-Side-Block-3600x5400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/products\/award-jacket-z21e105",
+              "heading": "",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "below_image",
+              "vertical_position": 8,
+              "horizontal_position": 38,
+              "align_text": "left"
+            }
+          }
+        },
+        "block_order": [
+          "161316446523a4d18a-0",
+          "161316446523a4d18a-2"
+        ],
+        "settings": {
+          "full_width": true,
+          "heading": "New Arrivals",
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "light",
+          "promo_heading_size": 24,
+          "promo_button_size": 20
         }
       }
     },
     "content_for_index": [
-      "16099673746ac97d7e",
-      "1609964604ae17abf1",
-      "1561574067213",
-      "1609967175421069bc",
+      "161316446514e167a6",
       "1609882786caf813f1",
       "1586279190981",
       "1559084715445",
       "1599857238285",
+      "1613063660434e97fe",
+      "1609964604ae17abf1",
+      "1561574067213",
       "1606158541c7ad1f25",
       "1606457145965fa699"
     ]
