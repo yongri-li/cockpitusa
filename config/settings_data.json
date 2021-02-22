@@ -5979,7 +5979,7 @@
               "image_width": "50%",
               "link": "shopify:\/\/products\/b-2-sheepskin-jacket-z21c106",
               "heading": "",
-              "button": "Learn More",
+              "button": "Shop Here",
               "heading_color": "#ffffff",
               "button_color": "#ffffff",
               "button_background": "#000000",
@@ -6019,9 +6019,19 @@
           "promo_heading_size": 24,
           "promo_button_size": 20
         }
+      },
+      "16136631020d0b7b3c": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"60182607ad04231a85daa3fe\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "medium"
+        }
       }
     },
     "content_for_index": [
+      "16136631020d0b7b3c",
       "161316446514e167a6",
       "1609882786caf813f1",
       "1586279190981",

@@ -59,7 +59,7 @@
 <body class="gridlock shifter-left {{ template }}">
 
   {% include 'mm-schema' %}
-  
+
   {% if settings.ajax_cart_method == 'drawer' %}
     {% include 'timber-cart' %}
   {% endif %}
@@ -196,7 +196,7 @@
   {{ 'jquery.fancybox.js' | asset_url | script_tag }}
 
 {% render 'spurit_po2_theme_snippet' %}
-{% include 'mw_GP_objects' %}{% render 'upsell-now', customer: customer, product: product, template: template, cart: cart %}
+{% include 'mw_GP_objects' %} 
 
 {% render 'afterpay' %}
 
