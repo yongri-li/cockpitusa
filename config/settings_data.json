@@ -4980,7 +4980,7 @@
           "header_border": false,
           "show_announcement": true,
           "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on all orders over $1000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>  (<a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\" target=\"_blank\">Return policy &amp; International Orders) <\/a><\/p>",
-          "announcement_text_size": 16,
+          "announcement_text_size": 17,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
@@ -5526,60 +5526,9 @@
           "cf_custom_field_two_type": "input"
         }
       },
-      "1561574067213": {
-        "type": "gallery",
-        "disabled": true,
-        "blocks": {
-          "1561574067213-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-Cofee-Shop-3600x5400.jpg",
-              "image_width": "50%",
-              "link": "shopify:\/\/products\/z21c122-c444",
-              "heading": "Inspired By History",
-              "button": "",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "rgba(0,0,0,0)",
-              "text_options": "on_image",
-              "vertical_position": 14,
-              "horizontal_position": 10,
-              "align_text": "left"
-            }
-          },
-          "1561574067213-1": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-3600x5400.jpg",
-              "image_width": "50%",
-              "link": "shopify:\/\/products\/the-usn-bridge-coat",
-              "heading": "",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "on_image",
-              "vertical_position": 2,
-              "horizontal_position": 50,
-              "align_text": "center"
-            }
-          }
-        },
-        "block_order": [
-          "1561574067213-0",
-          "1561574067213-1"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "The New B-2 Sheepskin Jacket",
-          "promo_background_color": "#ffffff",
-          "promo_heading_weight": "light",
-          "promo_heading_size": 24,
-          "promo_button_size": 19
-        }
-      },
       "1586279190981": {
         "type": "image-with-text-row",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "remove_top_padding": false,
@@ -5748,35 +5697,6 @@
           "border_bottom": false
         }
       },
-      "1599857238285": {
-        "type": "collection-list",
-        "disabled": true,
-        "blocks": {
-          "1599857238285-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "kids"
-            }
-          },
-          "1599857238285-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "women"
-            }
-          }
-        },
-        "block_order": [
-          "1599857238285-0",
-          "1599857238285-2"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "",
-          "heading_color": "#000000",
-          "background_color": "#ffffff",
-          "grid": 2
-        }
-      },
       "page-contest-template": {
         "type": "page-contest-template",
         "settings": {
@@ -5784,23 +5704,196 @@
           "sidebar_positon": "none"
         }
       },
-      "1606158541c7ad1f25": {
-        "type": "slideshow",
+      "16136631020d0b7b3c": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"606360f52c842c674b91c976\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "medium"
+        }
+      },
+      "16146211436f561d73": {
+        "type": "content-creator",
         "disabled": true,
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"604f960d7826497494b4256b\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "1617120641276f6eca": {
+        "type": "slideshow",
         "blocks": {
-          "1606158541c7ad1f25-0": {
+          "1617120641276f6eca-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Small-Gifts-Big-Gestures-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 28,
-              "caption_vertical": 37,
-              "mobile_image": "shopify:\/\/shop_images\/Small-Gifts-BigGestures.jpg",
+              "image": "shopify:\/\/shop_images\/Khaki-Story-Slide-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 100,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/Khaki-Slide-Template.jpg",
               "hide_caption_background": false,
-              "heading": "Small Gifts & Big Statements",
-              "subheading": "Holiday Gift Guide",
-              "link": "shopify:\/\/collections\/gift-guide",
-              "button_text": "Visit Here",
+              "heading": "",
+              "subheading": "",
+              "link": "shopify:\/\/collections\/the-gents-shop",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "rgba(0,0,0,0)",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "1617120641276f6eca-0"
+        ],
+        "settings": {
+          "slider_speed": 5,
+          "slide_heading_size": 20,
+          "slide_heading_weight": "700",
+          "subheading_size": 13,
+          "cta_size": 20,
+          "cta_weight": "400"
+        }
+      },
+      "1617120767c92b3670": {
+        "type": "featured-collection",
+        "settings": {
+          "full_width": true,
+          "heading": "Weekend Gear",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
+          "collection": "weekend-gear",
+          "homepage_product_layout": "grid",
+          "limit": 4,
+          "grid": 4,
+          "slide_controls": "arrows"
+        }
+      },
+      "16171208959f78bed1": {
+        "type": "slideshow",
+        "blocks": {
+          "16171208959f78bed1-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Sage-Story-Slide-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 100,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/Sage-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "",
+              "subheading": "",
+              "link": "shopify:\/\/collections\/utility-gear",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "rgba(0,0,0,0)",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "16171208959f78bed1-0"
+        ],
+        "settings": {
+          "slider_speed": 5,
+          "slide_heading_size": 20,
+          "slide_heading_weight": "700",
+          "subheading_size": 13,
+          "cta_size": 20,
+          "cta_weight": "400"
+        }
+      },
+      "161712101211fffc7e": {
+        "type": "featured-collection",
+        "settings": {
+          "full_width": true,
+          "heading": "Utility Gear",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
+          "collection": "utility-gear",
+          "homepage_product_layout": "grid",
+          "limit": 4,
+          "grid": 4,
+          "slide_controls": "arrows"
+        }
+      },
+      "16171210737c20cfe5": {
+        "type": "slideshow",
+        "blocks": {
+          "16171210737c20cfe5-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Black-Story-Slide-2-1920x900.jpg",
+              "text_align": "left",
+              "caption_horizontal": 100,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/Black-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "",
+              "subheading": "",
+              "link": "shopify:\/\/collections\/signature-wear",
+              "button_text": "Shop Here",
+              "second_button": false,
+              "second_button_text": "Button 2 text",
+              "slide_text_color": "rgba(0,0,0,0)",
+              "cta_color": "#ffffff",
+              "cta_background": "#000000",
+              "caption_background": "rgba(0,0,0,0)",
+              "caption_background_opacity": 20
+            }
+          }
+        },
+        "block_order": [
+          "16171210737c20cfe5-0"
+        ],
+        "settings": {
+          "slider_speed": 5,
+          "slide_heading_size": 20,
+          "slide_heading_weight": "700",
+          "subheading_size": 13,
+          "cta_size": 20,
+          "cta_weight": "400"
+        }
+      },
+      "1617121156de721f1c": {
+        "type": "featured-collection",
+        "settings": {
+          "full_width": true,
+          "heading": "Signature Gear",
+          "heading_color": "#000000",
+          "background_color": "#ffffff",
+          "collection": "signature-gear",
+          "homepage_product_layout": "grid",
+          "limit": 4,
+          "grid": 4,
+          "slide_controls": "arrows"
+        }
+      },
+      "1617121870bcd6759c": {
+        "type": "slideshow",
+        "blocks": {
+          "1617121870bcd6759c-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Heritage-W201035--Story-1920x900.jpg",
+              "text_align": "center",
+              "caption_horizontal": 100,
+              "caption_vertical": 100,
+              "mobile_image": "shopify:\/\/shop_images\/Heritage-Z2107H-Slide-Template.jpg",
+              "hide_caption_background": false,
+              "heading": "",
+              "subheading": "",
+              "button_text": "Shop Here",
               "second_button": false,
               "second_button_text": "Button 2 text",
               "slide_text_color": "#ffffff",
@@ -5812,236 +5905,30 @@
           }
         },
         "block_order": [
-          "1606158541c7ad1f25-0"
+          "1617121870bcd6759c-0"
         ],
         "settings": {
           "slider_speed": 5,
-          "slide_heading_size": 36,
-          "slide_heading_weight": "700",
-          "subheading_size": 23,
-          "cta_size": 18,
+          "slide_heading_size": 27,
+          "slide_heading_weight": "400",
+          "subheading_size": 13,
+          "cta_size": 20,
           "cta_weight": "400"
-        }
-      },
-      "1606457145965fa699": {
-        "type": "collection-list",
-        "disabled": true,
-        "blocks": {
-          "1606457145965fa699-0": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "kids"
-            }
-          },
-          "1606457145965fa699-1": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "accessories"
-            }
-          },
-          "1606457145965fa699-2": {
-            "type": "featured_collection",
-            "settings": {
-              "collection": "women"
-            }
-          }
-        },
-        "block_order": [
-          "1606457145965fa699-0",
-          "1606457145965fa699-1",
-          "1606457145965fa699-2"
-        ],
-        "settings": {
-          "full_width": false,
-          "heading": "Featured Collections",
-          "heading_color": "#000000",
-          "background_color": "#ffffff",
-          "grid": 3
-        }
-      },
-      "1609882786caf813f1": {
-        "type": "content-creator",
-        "settings": {
-          "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"600b2688faf7ea1f930e469b\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "large"
-        }
-      },
-      "1609964604ae17abf1": {
-        "type": "gallery",
-        "disabled": true,
-        "blocks": {
-          "1609964604ae17abf1-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Screen_Shot_2021-01-06_at_1.29.39_PM.png",
-              "image_width": "100%",
-              "heading": "Our collections",
-              "button": "Explore",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "on_image",
-              "vertical_position": 12,
-              "horizontal_position": 14,
-              "align_text": "left"
-            }
-          }
-        },
-        "block_order": [
-          "1609964604ae17abf1-0"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "Place Holder",
-          "promo_background_color": "#ffffff",
-          "promo_heading_weight": "light",
-          "promo_heading_size": 24,
-          "promo_button_size": 14
-        }
-      },
-      "1613063660434e97fe": {
-        "type": "shop-the-look",
-        "disabled": true,
-        "blocks": {
-          "1613063660434e97fe-0": {
-            "type": "image",
-            "settings": {
-              "image_width": "50%",
-              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-3600x5400.jpg",
-              "lookbook_product_1": "b-2-sheepskin-jacket-z21c106",
-              "hotspot_horizontal_1": 37,
-              "hotspot_vertical_1": 25,
-              "hotspot_color_1": "#000000",
-              "lookbook_product_2": "",
-              "hotspot_horizontal_2": 10,
-              "hotspot_vertical_2": 25,
-              "hotspot_color_2": "#000000",
-              "lookbook_product_3": "",
-              "hotspot_horizontal_3": 40,
-              "hotspot_vertical_3": 40,
-              "hotspot_color_3": "#000000",
-              "lookbook_product_4": "",
-              "hotspot_horizontal_4": 40,
-              "hotspot_vertical_4": 40,
-              "hotspot_color_4": "#000000",
-              "lookbook_product_5": "",
-              "hotspot_horizontal_5": 40,
-              "hotspot_vertical_5": 40,
-              "hotspot_color_5": "#000000"
-            }
-          },
-          "1613063660434e97fe-1": {
-            "type": "image",
-            "settings": {
-              "image_width": "50%",
-              "image": "shopify:\/\/shop_images\/Award-Jacket-Side-Block-3600x5400.jpg",
-              "lookbook_product_1": "award-jacket-z21e105",
-              "hotspot_horizontal_1": 38,
-              "hotspot_vertical_1": 28,
-              "hotspot_color_1": "#000000",
-              "lookbook_product_2": "",
-              "hotspot_horizontal_2": 40,
-              "hotspot_vertical_2": 40,
-              "hotspot_color_2": "#000000",
-              "lookbook_product_3": "",
-              "hotspot_horizontal_3": 40,
-              "hotspot_vertical_3": 40,
-              "hotspot_color_3": "#000000",
-              "lookbook_product_4": "",
-              "hotspot_horizontal_4": 40,
-              "hotspot_vertical_4": 40,
-              "hotspot_color_4": "#000000",
-              "lookbook_product_5": "",
-              "hotspot_horizontal_5": 40,
-              "hotspot_vertical_5": 40,
-              "hotspot_color_5": "#000000"
-            }
-          }
-        },
-        "block_order": [
-          "1613063660434e97fe-0",
-          "1613063660434e97fe-1"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "New Arrivals"
-        }
-      },
-      "161316446514e167a6": {
-        "type": "gallery",
-        "blocks": {
-          "161316446523a4d18a-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Z21C106-B-2-Sheepskin-3600x5400.jpg",
-              "image_width": "50%",
-              "link": "shopify:\/\/products\/b-2-sheepskin-jacket-z21c106",
-              "heading": "",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "below_image",
-              "vertical_position": 8,
-              "horizontal_position": 40,
-              "align_text": "center"
-            }
-          },
-          "161316446523a4d18a-2": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Award-Jacket-Side-Block-3600x5400.jpg",
-              "image_width": "50%",
-              "link": "shopify:\/\/products\/award-jacket-z21e105",
-              "heading": "",
-              "button": "Shop Here",
-              "heading_color": "#ffffff",
-              "button_color": "#ffffff",
-              "button_background": "#000000",
-              "text_options": "below_image",
-              "vertical_position": 8,
-              "horizontal_position": 38,
-              "align_text": "left"
-            }
-          }
-        },
-        "block_order": [
-          "161316446523a4d18a-0",
-          "161316446523a4d18a-2"
-        ],
-        "settings": {
-          "full_width": true,
-          "heading": "New Arrivals",
-          "promo_background_color": "#ffffff",
-          "promo_heading_weight": "light",
-          "promo_heading_size": 24,
-          "promo_button_size": 20
-        }
-      },
-      "16136631020d0b7b3c": {
-        "type": "content-creator",
-        "settings": {
-          "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"60182607ad04231a85daa3fe\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "medium"
         }
       }
     },
     "content_for_index": [
       "16136631020d0b7b3c",
-      "161316446514e167a6",
-      "1609882786caf813f1",
+      "16146211436f561d73",
       "1586279190981",
-      "1559084715445",
-      "1599857238285",
-      "1613063660434e97fe",
-      "1609964604ae17abf1",
-      "1561574067213",
-      "1606158541c7ad1f25",
-      "1606457145965fa699"
+      "1617120641276f6eca",
+      "1617120767c92b3670",
+      "16171208959f78bed1",
+      "161712101211fffc7e",
+      "16171210737c20cfe5",
+      "1617121156de721f1c",
+      "1617121870bcd6759c",
+      "1559084715445"
     ]
   }
 }

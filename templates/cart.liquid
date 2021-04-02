@@ -44,7 +44,7 @@
               {% assign property_size = item.properties | size %}
               {% if property_size > 0 %}
                 {% for p in item.properties %}
-                {%- if p.first.first == '_' -%}{%- continue -%}{%- endif -%}
+{%- if p.first.first == '_' -%}{%- continue -%}{%- endif -%}
                   {% unless p.last == blank %}
                   {{ p.first }}:
 
