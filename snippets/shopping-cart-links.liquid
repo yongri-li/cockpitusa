@@ -33,6 +33,6 @@
     <span class="cart-words"></span>
   &nbsp;<i class="la la-shopping-cart" aria-hidden="true"></i>
     <span class="CartCount">{{ cart.item_count }}</span>
-    &nbsp;<span class="CartCost">{{ cart.total_price | money }}</span>
+    &nbsp;<span class="CartCost"><span class="money" data-cart-total>{{ cart.total_price | money }}</span></span>
   </a>
 </li>

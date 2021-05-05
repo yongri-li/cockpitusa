@@ -100,7 +100,7 @@
         <div class="cart-final-details">
           <div class="subtotal">
             <p class="title">{{ 'cart.general.subtotal' | t }}</p>
-            <p class="subtotal-price"><span class="cart-original-total money">{{ cart.items_subtotal_price | money }}</span></p>
+            <p class="subtotal-price"><span class="cart-original-total money"><span class="money" data-cart-total>{{ cart.items_subtotal_price | money }}</span></span></p>
           </div>
           {%- if settings.show_tax_note -%}
             <div class="tax">
