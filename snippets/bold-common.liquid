@@ -102,7 +102,7 @@ It may be overwritten and any customizations would be lost.
     {%- assign bold_apps_installed = shop | map: 'metafields' | map: 'bold_apps_installed' | first -%}
     window.BOLD.apps_installed = {{ bold_apps_installed | json }} || {};
 
-    {%- unless bold_apps_installed contains 'Customer Pricing' or bold_apps_installed contains 'Product Bundles' or bold_apps_installed contains 'Product Discount' or bold_apps_installed contains 'Quantity Breaks' or bold_apps_installed contains 'Custom Order' or bold_apps_installed contains 'Order Manager' or bold_apps_installed contains 'The Motivator'-%}
+    {%- unless bold_apps_installed contains 'Product Options' or bold_apps_installed contains 'Customer Pricing' or bold_apps_installed contains 'Product Bundles' or bold_apps_installed contains 'Product Discount' or bold_apps_installed contains 'Quantity Breaks' or bold_apps_installed contains 'Custom Order' or bold_apps_installed contains 'Order Manager' or bold_apps_installed contains 'The Motivator'-%}
         {%- comment -%} collection page {%- endcomment -%}
         {%- for product in collection.products -%}
             window.BOLD.common.Shopify.saveProduct({{ product.handle | json }}, {{ product.id | json }});
@@ -124,7 +124,7 @@ It may be overwritten and any customizations would be lost.
         window.BOLD.common.Shopify.metafields[{{ namespace | json }}] = {{ shop.metafields[namespace] | json }};
     {%- endfor -%}
     window.BOLD.common.cacheParams = window.BOLD.common.cacheParams || {};
-    window.BOLD.common.cacheParams.bundles = 1617396247;
+    window.BOLD.common.cacheParams.bundles = 1592322947;
 </script>
 
 {%- comment -%} INCLUDE APP SCRIPTS BELOW {%- endcomment -%}

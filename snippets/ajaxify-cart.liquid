@@ -65,15 +65,6 @@ Shopify.AjaxifyCart = (function($) {
             }, _config.howLongTillBtnReturnsToNormal);
             // Update cart count and show cart link.
             $.getJSON(_config.shopifyAjaxCartURL, function(cart) {
-              {% assign id = linklists.gift-wrapping.links.first.object.variants.first.id %}
-              if (cart.items.length == 1) {
-                $.ajax({
-                  type: 'POST',
-                  url: '/cart/update.js',
-                  data: { updates: { {{ id }}: 1 }, attributes: { 'gift-wrapping': true } },
-                  dataType: 'json'
-                });
-              }
               if (_config.cartCountSelector && $(_config.cartCountSelector).size()) {
                 var value = $(_config.cartCountSelector).html();
                 $(_config.cartCountSelector).html(value.replace(/[0-9]+/,cart.item_count));

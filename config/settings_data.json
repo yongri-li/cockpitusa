@@ -4979,14 +4979,14 @@
           "header_cover": false,
           "header_border": false,
           "show_announcement": true,
-          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on all orders over $1000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>  (<a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\" target=\"_blank\">Return policy &amp; International Orders) <\/a><\/p>",
+          "announcement_text": "<p><a href=\"\/pages\/returnpolicy-and-internationalorders\" title=\"Return Policy &amp; International Orders\">Free Shipping on all orders over $1000<\/a> &amp; <a href=\"\/collections\/free-shipping-items\" title=\"Free Shipping On Selected Items\">Free Shipping in the U.S.A on Selected Items<\/a>  (<a href=\"\/pages\/returnpolicy-and-internationalorders\" target=\"_blank\" title=\"Return Policy &amp; International Orders\">Return policy &amp; International Orders) <\/a><\/p>",
           "announcement_text_size": 17,
           "top_nav": "",
           "cart_position": "header",
           "logo": "shopify:\/\/shop_images\/Cockpit-Logo-Color.png",
-          "logo_max_width": 130,
+          "logo_max_width": 185,
           "logo_position": "inline",
-          "logo_align": "left",
+          "logo_align": "center",
           "main_nav": "main-menu",
           "product_menu": true
         }
@@ -5526,23 +5526,6 @@
           "cf_custom_field_two_type": "input"
         }
       },
-      "1586279190981": {
-        "type": "image-with-text-row",
-        "disabled": true,
-        "settings": {
-          "full_width": true,
-          "remove_top_padding": false,
-          "remove_bottom_padding": false,
-          "image": "shopify:\/\/shop_images\/Heritage-Shopify-Template-Two-Images-Gallery-900x600.jpg",
-          "layout": "left",
-          "image_width": "50%",
-          "text_align": "left",
-          "title": "Heritage Collection",
-          "text": "<p>Born from a passion for history and inspired by the iconic styles that have defined our heroes. Finely crafted tributes to the aviators, sailors, and soldiers who wore these classic garments with each one having a story that preserves their legacy through timeless style.<\/p>",
-          "link": "shopify:\/\/collections\/heritage-collection",
-          "button": "Shop Here"
-        }
-      },
       "shop-the-look": {
         "type": "shop-the-look",
         "settings": {
@@ -5704,144 +5687,245 @@
           "sidebar_positon": "none"
         }
       },
-      "16136631020d0b7b3c": {
-        "type": "content-creator",
-        "settings": {
-          "full_width": true,
-          "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"606360f52c842c674b91c976\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
-          "text_size": "medium"
-        }
-      },
       "16146211436f561d73": {
         "type": "content-creator",
+        "disabled": true,
         "settings": {
           "full_width": true,
           "section_title": "",
-          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"605e0290ad04233ba1966d49\" data-company=\"5fa065caad04234fc033a879\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"60954dbbad042311e5e2bc77\" data-company=\"5fa065caad04234fc033a879\" data-speed=\"1\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/wrapper.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
           "text_size": "large"
         }
       },
-      "1617120767c92b3670": {
-        "type": "featured-collection",
+      "16196240281322ce5d": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"60897353a3dd516c732fa6f0\" data-company=\"5fa065caad04234fc033a879\" data-speed=\"1\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/wrapper.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "large"
+        }
+      },
+      "1619624262c42a0797": {
+        "type": "content-creator",
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-group=\"609593d0a3dd516c733553d7\" data-company=\"5fa065caad04234fc033a879\" data-speed=\"1\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/wrapper.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "medium"
+        }
+      },
+      "16206587651f64764d": {
+        "type": "slideshow-video",
+        "disabled": true,
+        "blocks": {
+          "8c533b09-1df7-4e7e-b6fd-ae693f21ddfa": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Heritage--option-two-AAM-Full-Width-1920x900.jpg",
+              "image_heading": "Heritage",
+              "image_subheading": "Featuring the American Airpower Museum & Core Collection",
+              "image_button_link": "https:\/\/americanairpowermuseum.com\/",
+              "image_button_text": "Visit Here",
+              "image_button_text_2": "Shop Here",
+              "image_button_link_2": "shopify:\/\/collections\/heritage-collection",
+              "image_caption_alignment": "center",
+              "caption_horizontal_position": 5,
+              "caption_vertical_position": 60,
+              "image_slide_text_color": "#000000",
+              "image_cta_color": "#ffffff",
+              "image_cta_background": "#000000",
+              "image_caption_background": "rgba(0,0,0,0)",
+              "image_caption_background_opacity": 20,
+              "image_caption_border": "rgba(0,0,0,0)"
+            }
+          }
+        },
+        "block_order": [
+          "8c533b09-1df7-4e7e-b6fd-ae693f21ddfa"
+        ],
+        "settings": {
+          "full_width": true,
+          "slide_controls": "arrows",
+          "video_audio": "off",
+          "slide_height": 58,
+          "slide_heading_size": 36,
+          "slide_heading_weight": "bold",
+          "subheading_size": 22,
+          "cta_size": 14,
+          "cta_weight": "normal",
+          "use_mobile_height": false
+        }
+      },
+      "16206630105d6a5d0d": {
+        "type": "content-creator",
+        "disabled": true,
+        "settings": {
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"609aac032c842c7864432ab7\" data-company=\"5fa065caad04234fc033a879\" data-speed=\"1\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/wrapper.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "medium"
+        }
+      },
+      "16206692460beba8b5": {
+        "type": "gallery",
+        "disabled": true,
+        "blocks": {
+          "16206692460beba8b5-1": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Light-Weight-Tanker-3600x5400.jpg",
+              "image_width": "50%",
+              "heading": "",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 12,
+              "horizontal_position": 14,
+              "align_text": "left"
+            }
+          },
+          "16206692460beba8b5-0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Camo-Seer-Sucker-Z26Z007-3600x5400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/products\/seersucker-bomber-jacket-navy-blue",
+              "heading": "Featuring the Seersucker Bomber Jacket",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 2,
+              "horizontal_position": 14,
+              "align_text": "center"
+            }
+          },
+          "d3c448c9-f44f-4700-9af9-d8b85fb508ae": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Light-Weight-Tanker-View-3600x5400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/products\/light-weight-tanker-jacket",
+              "heading": "Featuring the Light Weight Tanker",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 8,
+              "horizontal_position": 14,
+              "align_text": "center"
+            }
+          },
+          "2c3d5adc-e247-4310-bcf5-bdf9d7def3e0": {
+            "type": "image",
+            "settings": {
+              "image": "shopify:\/\/shop_images\/Seersuker-Lightweight-Tanker-3600x5400.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/collections\/beach-essentials",
+              "heading": "Beach Essentials",
+              "button": "Visit Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "on_image",
+              "vertical_position": 8,
+              "horizontal_position": 14,
+              "align_text": "center"
+            }
+          }
+        },
+        "block_order": [
+          "16206692460beba8b5-1",
+          "16206692460beba8b5-0",
+          "d3c448c9-f44f-4700-9af9-d8b85fb508ae",
+          "2c3d5adc-e247-4310-bcf5-bdf9d7def3e0"
+        ],
         "settings": {
           "full_width": true,
           "heading": "",
-          "heading_color": "#000000",
-          "background_color": "rgba(0,0,0,0)",
-          "collection": "graphic-t-shirts",
-          "homepage_product_layout": "grid",
-          "limit": 4,
-          "grid": 4,
-          "slide_controls": "arrows"
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "light",
+          "promo_heading_size": 24,
+          "promo_button_size": 14
         }
       },
-      "16171210737c20cfe5": {
-        "type": "slideshow",
+      "162067088778804de9": {
+        "type": "gallery",
+        "disabled": true,
         "blocks": {
-          "16171210737c20cfe5-0": {
+          "162067088778804de9-0": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Pilot-Ryan-Blog-Z21Z002-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 32,
-              "caption_vertical": 88,
-              "hide_caption_background": false,
-              "heading": "Meet Pilot Jack Ryan",
-              "subheading": "Featuring the Suede Trucker",
-              "link": "shopify:\/\/blogs\/blog\/off-duty-with-pilot-jack-ryan",
-              "button_text": "Our Blog",
-              "second_button": true,
-              "second_link": "shopify:\/\/products\/suede-trucker-jacket",
-              "second_button_text": "Shop Here",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "#ffffff",
-              "caption_background_opacity": 20
+              "image": "shopify:\/\/shop_images\/Tees-Shop-Ben-Steele.jpg",
+              "image_width": "50%",
+              "link": "shopify:\/\/collections\/graphic-t-shirts",
+              "heading": "Tee Shop",
+              "button": "Shop Here",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "below_image",
+              "vertical_position": 50,
+              "horizontal_position": 50,
+              "align_text": "center"
             }
           },
-          "f5d943fd-2a83-4650-8874-426d4ab00203": {
+          "162067088778804de9-1": {
             "type": "image",
             "settings": {
-              "image": "shopify:\/\/shop_images\/Mother_s-Day-Photo-3.jpg",
-              "text_align": "center",
-              "caption_horizontal": 79,
-              "caption_vertical": 50,
-              "mobile_image": "shopify:\/\/shop_images\/Mother_s-Day-Photo.jpg",
-              "hide_caption_background": false,
-              "heading": "Every Day is Mother's Day",
-              "subheading": "Shop gift cards, jackets, and accessories",
-              "link": "shopify:\/\/collections\/mothers-day-collection",
-              "button_text": "Visit Here",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#ffffff",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "#7e8598",
-              "caption_background_opacity": 100
+              "image": "shopify:\/\/shop_images\/Made-In-USA-Accessories.jpg",
+              "image_width": "50%",
+              "link": "https:\/\/cockpitusa.com\/collections\/beach-vibes",
+              "heading": "Made in USA Accessories",
+              "button": "Explore",
+              "heading_color": "#ffffff",
+              "button_color": "#ffffff",
+              "button_background": "#000000",
+              "text_options": "below_image",
+              "vertical_position": 8,
+              "horizontal_position": 14,
+              "align_text": "center"
             }
           }
         },
         "block_order": [
-          "16171210737c20cfe5-0",
-          "f5d943fd-2a83-4650-8874-426d4ab00203"
+          "162067088778804de9-0",
+          "162067088778804de9-1"
         ],
         "settings": {
-          "slider_speed": 5,
-          "slide_heading_size": 36,
-          "slide_heading_weight": "400",
-          "subheading_size": 20,
-          "cta_size": 20,
-          "cta_weight": "400"
+          "full_width": true,
+          "heading": "",
+          "promo_background_color": "#ffffff",
+          "promo_heading_weight": "light",
+          "promo_heading_size": 24,
+          "promo_button_size": 14
         }
       },
-      "1617121870bcd6759c": {
-        "type": "slideshow",
-        "blocks": {
-          "1617121870bcd6759c-0": {
-            "type": "image",
-            "settings": {
-              "image": "shopify:\/\/shop_images\/Flying-Tigers-Z21V60-3-1920x900.jpg",
-              "text_align": "center",
-              "caption_horizontal": 85,
-              "caption_vertical": 22,
-              "hide_caption_background": false,
-              "heading": "Heritage Collection",
-              "subheading": "Featuring the Flying Tigers A-2 Jacket",
-              "button_text": "Shop Here",
-              "second_button": false,
-              "second_button_text": "Button 2 text",
-              "slide_text_color": "#000000",
-              "cta_color": "#ffffff",
-              "cta_background": "#000000",
-              "caption_background": "rgba(0,0,0,0)",
-              "caption_background_opacity": 50
-            }
-          }
-        },
-        "block_order": [
-          "1617121870bcd6759c-0"
-        ],
+      "162075128527eb38ae": {
+        "type": "content-creator",
         "settings": {
-          "slider_speed": 5,
-          "slide_heading_size": 36,
-          "slide_heading_weight": "400",
-          "subheading_size": 16,
-          "cta_size": 16,
-          "cta_weight": "400"
+          "full_width": true,
+          "section_title": "",
+          "text": "<link rel=\"stylesheet\" type=\"text\/css\" href=\"\/\/c.zmags.com\/static\/styles.css\"><div class=\"zmags-viewer-container\" data-experience=\"609ab0bc7826494e7907a631\" data-company=\"5fa065caad04234fc033a879\" data-speed=\"1\"><\/div><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/wrapper.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/manifest.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/vendor.js\"><\/script><script defer type=\"text\/javascript\" src=\"\/\/c.zmags.com\/static\/client.js\"><\/script>",
+          "text_size": "medium"
         }
       }
     },
     "content_for_index": [
-      "16136631020d0b7b3c",
+      "1619624262c42a0797",
+      "16206692460beba8b5",
+      "16206630105d6a5d0d",
+      "162075128527eb38ae",
       "16146211436f561d73",
-      "1617120767c92b3670",
-      "1617121870bcd6759c",
+      "162067088778804de9",
+      "16206587651f64764d",
       "1559084715445",
-      "16171210737c20cfe5",
-      "1586279190981"
+      "16196240281322ce5d"
     ]
   }
 }
