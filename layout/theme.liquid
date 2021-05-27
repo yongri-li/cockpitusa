@@ -5,9 +5,52 @@
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
 <head>
 
+  <script>
+    window.performance.mark('parse_head_start');
+    function marks (name) {
+      return {
+        name,
+        get start () {
+          return `${this.name}_start`;
+        },
+        get end () {
+          return `${this.name}_end`;
+        }
+      };
+    }
+    window.markNames = {
+      head: marks('parse_head'),
+      body: marks('parse_body'),
+      bodyLayout: marks('parse_body_layout'),
+      bodyEndScripts: marks('parse_body_endscripts')
+    };
+  </script>
+
   <meta charset="utf-8" />
 
   <meta name="google-site-verification" content="MRKAjauvgaWP4BPkNorJRdyqfWYJbPBLgV60yAj6cWk" />
+
+  <link rel="preload" href="{{ 'stylesheet.css' | asset_url }}" as="style">
+  <link rel="preload" href="{{ 'queries.css' | asset_url }}" as="style">
+  <link rel="preload" href="{{ 'minion.scss' | asset_url }}" as="style">
+
+  <link rel="preload" href="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script">
+  <link rel="preload" href="//unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js" as="script">
+  <link rel="preload" href="https://static.boldcommerce.com/bold-platform/sf/pr.js" as="script">
+  <link rel="preload" href="https://bundles.boldapps.net/js/bundles.js" as="script">
+  <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'option_selection.js' | asset_url }}" as="script">
+  <link rel="preload" href="//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" as="script">
+  <link rel="preload" href="{{ 'jquery.products.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'handlebars.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'handlebars.min.js' | asset_url }}" as="script">
+  {% if settings.ajax_cart_method == 'drawer' %}
+    <link rel="preload" href="{{ 'ajax-cart.js' | asset_url }}" as="script">
+  {% endif %}
+  <link rel="preload" href="{{ 'ls.rias.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'ls.bgset.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'lazysizes.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'jquery.fancybox.js' | asset_url }}" as="script">
 
   {% include 'google-fonts' %}
   {% include 'social-media-meta-tags' %}
@@ -29,15 +72,7 @@
   {{ 'queries.css' | asset_url | stylesheet_tag }}
   {{ 'minion.scss' | asset_url | stylesheet_tag }}
 
-    <!-- JS
-  ================================================== -->
-
-  {{ "//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" | script_tag }}
-  {{ "//unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js" | script_tag }}
-
-  {{ 'theme.js' | asset_url | script_tag }}
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
+    
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% if settings.favicon %}
@@ -50,15 +85,20 @@
   {{ content_for_header }}
 {{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
 
-{%- render 'bold-pr' -%}
-{%- render 'bold-common' -%}
+
   <link rel="next" href="/next"/>
   <link rel="prev" href="/prev"/>
 	{% include 'vitals-loader' %}
 
+  <script>window.performance.mark(window.markNames.head.end);</script>
+
 </head>
 
 <body class="gridlock shifter-left {{ template }}">
+
+  <script>window.performance.mark(window.markNames.body.start);</script>
+  <script>window.performance.mark(window.markNames.bodyLayout.start);</script>
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHWRWK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
@@ -111,6 +151,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   <div class="fancybox-wrapper"></div>
   <div class="clear"></div>
+
+  <script>window.performance.mark(window.markNames.bodyLayout.end);</script>
+  <script>window.performance.mark(window.markNames.bodyEndScripts.start);</script>
+
+  {%- render 'bold-pr' -%}
+  {%- render 'bold-common' -%}
+
+  <!-- JS
+  ================================================== -->
+
+  {{ "//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" | script_tag }}
+  {{ "//unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js" | script_tag }}
+
+  {{ 'theme.js' | asset_url | script_tag }}
+  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
+
 
   <!-- Begin Recently Viewed Products -->
   <script type="text/javascript" charset="utf-8">
@@ -210,5 +266,34 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 {% include 'mm-sale-countdown' %}
 
 <script>(function(document, tag) { var script = document.createElement(tag); var element = document.getElementsByTagName('body')[0]; script.src = 'https://acsbap.com/apps/app/assets/js/acsb.js'; script.async = true; script.defer = true; (typeof element === 'undefined' ? document.getElementsByTagName('html')[0] : element).appendChild(script); script.onload = function() { acsbJS.init({ statementLink : '', feedbackLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, language : 'en', position : 'right', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'default', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 0, triggerOffsetY : 0, triggerRadius : '0' } }); };}(document, 'script'));</script>
+<script>
+  window.addEventListener("load", function(){
+    Object.keys(window.markNames).forEach((name) => {
+      mark = window.markNames[name]
+      performance.measure(mark.name, mark.start, mark.end);
+    });
+    window.requestIdleCallback(() => {
+      var getShopifyResourceByType = (type) => {
+        return performance.getEntriesByType('resource').filter((resource) => {
+          return resource.name.indexOf('cdn.shopify.com') != -1 
+                  && resource.initiatorType === type;
+        })
+      };
+
+      // You can send this information to whatever analytics vendor
+      // For now, we are just outputting in console
+      console.log('############ PERFORMANCE METRICS ############');
+      console.log(performance.getEntriesByType('measure'));
+      console.log(performance.getEntriesByType('paint'));
+      console.log(performance.getEntriesByType('navigation'));
+      console.log(getShopifyResourceByType('script'));
+      console.log(getShopifyResourceByType('link'));
+      console.log(getShopifyResourceByType('css'));
+      console.log(getShopifyResourceByType('img'));
+    });
+  });
+  window.performance.mark(window.markNames.bodyEndScripts.end);
+  window.performance.mark(window.markNames.body.end);
+</script>
 </body>
 </html>
