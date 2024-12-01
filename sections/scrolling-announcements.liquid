@@ -1,34 +1,27 @@
 {% if section.blocks.size != 0 %}
   {% unless template == 'index' and section.settings.hidden_on_homepage %}
-    <section data-section-id="{{ section.id }}" class="info-bar" data-section-type="scrolling-announcements">
+    <section
+    data-section-id="{{ section.id }}"
+    class="scrolling__announcements"
+    data-section-type="scrolling-announcements">
 
-      {% case section.settings.slider_speed %}
-      {% when 2 %}
-        {%- assign slider_speed = 2000 -%}
-      {% when 3 %}
-        {%- assign slider_speed = 3000 -%}
-      {% when 4 %}
-        {%- assign slider_speed = 4000 -%}
-      {% when 5 %}
-        {%- assign slider_speed = 5000 -%}
-      {% when 6 %}
-        {%- assign slider_speed = 6000 -%}
-      {% when 7 %}
-        {%- assign slider_speed = 7000 -%}
-      {% when 8 %}
-        {%- assign slider_speed = 8000 -%}
-      {% when 9 %}
-        {%- assign slider_speed = 9000 -%}
-      {% when 10 %}
-        {%- assign slider_speed = 10000 -%}
-      {% endcase %}
+      {%- assign slider_speed = section.settings.slider_speed | times: 1000 -%}
+      {% capture slideshow_config %}{
+        "wrapAround":false,
+        "contain": true,
+        "dragThreshold":"15",
+        "pauseAutoPlayOnHover":false,
+        "autoPlay": {{ slider_speed }},
+        "pageDots":false,
+        "prevNextButtons": false
+      }{% endcapture %}
 
       <div class="gridlock-fluid">
         <div class="row">
-          <div class="info-bar-wrapper row">
-            <div class="info-bar-content desktop-12 tablet-6 mobile-3" data-speed="{{ slider_speed }}" data-shown="{{ section.settings.desktop_slides_shown }}"{% if section.settings.arrows %} data-arrows="true"{% else %} data-arrows="false"{% endif %}{% if section.settings.autoplay %} data-autoplay="true"{% else %} data-autoplay="false"{% endif %}>
+          <div class="scrolling__announcements--wrapper row">
+            <div class="scrolling__announcements--carousel flickity__section desktop-12 tablet-6 mobile-3" data-flickity='{{ slideshow_config }}'>
               {% for block in section.blocks %}
-                <div class="info-bar-item" {{ block.shopify_attributes }}>
+                <div class="scrolling__announcements--item" {{ block.shopify_attributes }} data-slider-index="{{ forloop.index0 }}">
                   {{ block.settings.text }}
                 </div>
               {% endfor %}
@@ -36,50 +29,49 @@
           </div>
         </div>
       </div>
+      {% case section.settings.sa_grid %}
+      {% when 1 %}
+      {%- assign grid = 100 -%}
+      {% when 2 %}
+      {%- assign grid = 50 -%}
+      {% when 3 or 4 or 5 %}
+      {%- assign grid = 33.333 -%}
+      {% endcase %}
       <style>
-        .info-bar-wrapper {
-          background: {{ section.settings.info_background }};
+        .scrolling__announcements--wrapper {
+          background: {{ section.settings.background }};
           {% if section.settings.border_top %}border-top: 1px solid {{ settings.dotted_color }};{% endif %}
           {% if section.settings.border_bottom %}border-bottom: 1px solid {{ settings.dotted_color }};{% endif %}
         }
-
-        .info-bar-item, .info-bar-item p, .info-bar-item a {
-          color: {{ section.settings.info_text }};
+        .scrolling__announcements--item {
+          width: {{ grid }}%;
+          padding: 0 10px 0;
+          height: calc({{ section.settings.height }}px + 30px) !important;
+        }
+        .scrolling__announcements--item,
+        .scrolling__announcements--item p,
+        .scrolling__announcements--item a {
+          color: {{ section.settings.text }};
           font-size: {{ section.settings.text_size }}px;
           margin-bottom: 0! important;
         }
-        .info-bar-content a.slick-arrow {
-          color: {{ section.settings.info_text }};
-        }
-        .info-bar-content .slick-slide {
-          max-height: calc({{ section.settings.height }}px + 30px) !important;
-        }
-        .info-bar-content, .info-bar-content .slick-track {
-            min-height: {{ section.settings.height }}px;
-            padding: 10px;
+        .scrolling__announcements--carousel.flickity__section .flickity-button,
+        .scrolling__announcements--carousel.flickity__section .flickity-button:hover {
+          color: {{ section.settings.text }};
+          background: transparent !important;
         }
         {% if section.settings.hidden_on_homepage %}
-          body.index .info-bar-wrapper {
+          body.index .scrolling__announcements {
             display: none;
           }
         {% endif %}
-          .info-bar-content {
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 1s ease;
-            -webkit-transition: opacity 1s ease;
-          }
-          .info-bar-content.slick-initialized {
-            visibility: visible;
-            opacity: 1;
-          }
       </style>
     </section>
   {% endunless %}
 {% endif %}
 
 {% schema %}
-{
+  {
     "name": "Scrolling Announcements",
 	  "max_blocks": 5,
     "settings": [
@@ -97,20 +89,10 @@
       "label": "Hide on home page"
     },
     {
-      "type": "checkbox",
-      "id": "arrows",
-      "label": "Show control arrows"
-    },
-    {
-      "type": "checkbox",
-      "id": "autoplay",
-      "label": "Autoplay"
-    },
-    {
       "type": "range",
-      "id": "desktop_slides_shown",
+      "id": "sa_grid",
       "min": 1,
-      "max": 4,
+      "max": 3,
       "step": 1,
       "label": "Items to show on desktop",
       "default": 3
@@ -118,7 +100,7 @@
     {
       "type": "range",
       "id": "slider_speed",
-      "min": 2,
+      "min": 1,
       "max": 10,
       "step": 1,
       "label": "Slide speed (seconds)",
@@ -126,14 +108,14 @@
     },
     {
       "type": "color",
-      "id": "info_text",
-      "label": "Info bar text",
+      "id": "text",
+      "label": "Text color",
       "default": "#000"
     },
     {
       "type": "color",
-      "id": "info_background",
-      "label": "Info bar background",
+      "id": "background",
+      "label": "Background color",
       "default": "#ccc"
     },
     {
@@ -168,18 +150,18 @@
     }
   ],
  "blocks":[
-  {
-    "type": "text",
-    "name": "Text",
-    "settings":[
-    {
-        "id": "text",
-        "type": "richtext",
-        "label": "Text",
-        "default": "<p>Add content to a sliding text message bar</p>"
-     }
-    ]
-   }
-   ]
+      {
+        "type": "text",
+        "name": "Text",
+        "settings":[
+            {
+              "id": "text",
+              "type": "richtext",
+              "label": "Text",
+              "default": "<p>Add content to a sliding text message bar</p>"
+            }
+          ]
+      }
+     ]
   }
 {% endschema %}

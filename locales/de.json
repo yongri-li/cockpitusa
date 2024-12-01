@@ -48,6 +48,13 @@
     },
     "accessibility": {
       "unit_price_separator": "pro"
+    },
+    "map_errors": {
+      "get_directions": "Anweisungen bekommen",
+      "address_error": "Fehler beim Nachschlagen dieser Adresse",
+      "address_no_results": "Keine Ergebnisse für diese Adresse",
+      "address_query_limit": "Sie haben das Nutzungslimit für die Google API überschritten. Erwägen Sie ein Upgrade auf einen Premium-Plan (https:\/\/developers.google.com\/maps\/premium\/usage-limits).",
+      "auth_error": "Beim Authentifizieren Ihres Google Maps-Kontos ist ein Problem aufgetreten. Erstellen und aktivieren Sie die JavaScript-API (https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key) and Geocoding API (https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key) permissions of your app."
     }
   },
   "blogs": {
@@ -96,7 +103,7 @@
       "summary": "Zusammenfassung Einkaufswagen",
       "close_cart": "Schließen",
       "shipping": "Versand",
-      "tax": "Steuer",
+      "tax": "MwSt",
       "at_checkout": "An der Kasse berechnet",
       "empty": "Ihr Einkaufswagen ist momentan leer..",
       "product": "Produkt",
@@ -110,7 +117,7 @@
       "checkout": "Kasse",
       "note": "Bitte geben Sie spezielle Anweisungen hierunter:",
       "recently_viewed": "Sie haben sich auch angesehen",
-      "cart_discount": "Rabattcode (wird an der Kasse angewandt)",
+      "cart_discount": "Rabattcode (An der Kasse angewendet)",
       "free_shipping_before": "Sie sind nur",
       "free_shipping_after": "weg von kostenlosem Versand im Inland!",
       "free_shipping_qualified": "Ihre Bestellung ist für kostenlosen Inlandsversand qualifiziert!",
@@ -118,7 +125,22 @@
       "discounts": "Rabatte",
       "savings": "Ersparnisse insgesamt",
       "discount_applied": "Rabatt angewandt:",
-      "items": "Artikel"
+      "items": "Artikel",
+      "cart_error": "Warenkorbfehler",
+      "update_qty_error": "Einige Artikel waren nicht mehr verfügbar. Aktualisieren Sie die Menge und versuchen Sie es erneut.",
+      "shipping_no_destination": "Wir versenden nicht an dieses Ziel.",
+      "shipping_single_rate": "Es gibt eine Versandkostenpauschale für ",
+      "shipping_multi_rate_one": "Es gibt ",
+      "shipping_multi_rate_two": " Versandkosten verfügbar für ",
+      "shipping_multi_rate_three": ", beginnt um ",
+      "overview": "Bestellübersicht",
+      "calc_error": "Rechnerfehler:",
+      "calc_heading": "Versand schätzen",
+      "calc_shipping": "Berechnen Sie Versandkosten",
+      "calc_calculating": "Berechnen...",
+      "go_shopping": "Einkaufen gehen",
+      "in_shopping_cart": "in Ihrem Warenkorb",
+      "view_cart": "Warenkorb ansehen"
     }
   },
   "collections": {
@@ -305,6 +327,8 @@
       "unavailable": "Nicht erhältlich",
       "compare_at": "Vergleichen bei",
       "add_to_cart": "Zum Einkaufswagen hinzufügen",
+      "adding": "… wird zugefügt",
+      "added": "Zum Einkaufswagen hinzugefügt",
       "quantity": "Menge",
       "select_options": "Optionen anzeigen",
       "details": "Alle Details ansehen",
@@ -312,10 +336,8 @@
       "video": "Video",
       "model": "Produktpflege",
       "back_to": "Zurück nach",
-      "adding": "… wird zugefügt",
       "thank_you": "Dankesehr!",
-      "added": "Zum Einkaufswagen hinzugefügt",
-      "view_cart": "Einkaufswagen ansehen",
+      "view_cart": "Einkaufswagen Cart",
       "or": "oder",
       "continue": "Weiter einkaufen",
       "qty_error_first": "Nur",

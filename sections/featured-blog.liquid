@@ -2,7 +2,7 @@
 data-aos="{{ settings.scroll_animation }}"
  data-section-id="{{ section.id }}">
 
-  {% if section.settings.full_width %}<div class="gridlock-fluid"><div class="row">{% endif %}
+
   {%- assign blog = blogs[section.settings.blog] -%}
   {% if section.settings.heading != blank %}
     <div class="section-title row">
@@ -11,16 +11,17 @@ data-aos="{{ settings.scroll_animation }}"
   {% endif %}
 
   {%- assign post_limit = section.settings.post_limit -%}
-  <div class="row">
+  <div class="row articles">
     {% if blog == blank %}
-      {% include 'onboard-blog' %}
+      {% render 'onboard-blog' %}
     {% else %}
       {% for article in blog.articles limit: post_limit %}
-        {% include 'article-loop' %}
+      {% capture articleCycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% render 'article-loop', article: article, blog: blog, forloop: forloop, articleCycle: articleCycle %}
       {% endfor %}
     {% endif %}
   </div>
-  {% if section.settings.full_width %}</div></div>{% endif %}
+
 
 </section>
 <div class="clear"></div>
@@ -28,7 +29,6 @@ data-aos="{{ settings.scroll_animation }}"
 <style>
   section.homepage-blog-{{ section.id }} {
     background: {{ section.settings.background_color }};
-    padding-bottom: 0;
   }
   section.homepage-blog-{{ section.id }} h2, section.homepage-blog-{{ section.id }} h2 a {
     color: {{ section.settings.heading_color }} !important;
@@ -36,6 +36,53 @@ data-aos="{{ settings.scroll_animation }}"
     border-color: {{ section.settings.heading_color }} !important;
     {% endif %}
   }
+  {% if section.settings.blog_layout_grid %}
+  .articles {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 30px;
+      row-gap: 30px;
+  }
+  .articles .single-article {
+    margin-bottom: 0;
+    padding-bottom: 0;
+  }
+  .articles .article-image {
+      width: 100%;
+      margin: 0 0 20px 0;
+      height: 300px;
+      overflow: hidden;
+      position: relative;
+      display: block !important;
+  }
+  .articles .single-article.even .article-image {
+      margin-left: 0 !important;
+  }
+  .article-image img {
+    width: 100%;
+    object-fit: cover;
+    height: 300px;
+  }
+  .articles .article-body {
+      padding: 10px !important;
+      text-align: center;
+      position: unset !important;
+      width: 100%;
+      margin: 0 !important;
+  }
+  .articles .single-article .posted {
+      text-align: center !important;
+      float: none !important;
+  }
+  @media screen and (max-width: 740px) {
+    .articles {
+      grid-template-columns: 1fr;
+    }
+    .articles .article-image {
+      height: 250px;
+    }
+  }
+  {% endif %}
 </style>
 
 
@@ -44,11 +91,6 @@ data-aos="{{ settings.scroll_animation }}"
   "name": "Blog posts",
   "class": "index-section",
   "settings": [
-    {
-      "type": "checkbox",
-      "id": "full_width",
-      "label": "Full width"
-    },
     {
       "id": "blog",
       "type": "blog",
@@ -80,6 +122,12 @@ data-aos="{{ settings.scroll_animation }}"
       "step": 1,
       "label": "Posts shown",
       "default": 2
+    },
+    {
+      "type": "checkbox",
+      "id": "blog_layout_grid",
+      "label": "Layout as a grid",
+      "default": true
     },
     {
       "type": "checkbox",

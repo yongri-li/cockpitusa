@@ -1,32 +1,46 @@
+{% case settings.product_image_size %}
+{% when 'natural' %}
+{% assign aspect_ratio = 'natural' %}
+{% when 'square' %}
+{% assign aspect_ratio = 'square' %}
+{% when 'landscape' %}
+{% assign aspect_ratio = 'landscape' %}
+{% when 'portrait' %}
+{% assign aspect_ratio = 'portrait' %}
+{% endcase %}
+
 <div class="ci">
-  {% if product.available %}
-    {% for col in product.collections %}
-      {% if col.handle == 'new' %}
-        <div class="new icn">{{ 'products.general.new' | t }}</div>
-      {% endif %}
-    {% endfor %}
-
-    {% if product.price < product.compare_at_price %}
-      <div class="sale-item icn">{{ 'products.general.sale' | t }}</div>
+{% if product.available %}
+  {% for col in product.collections %}
+    {% if col.handle == 'new' %}
+      <div class="new icn">{{ 'products.general.new' | t }}</div>
     {% endif %}
+  {% endfor %}
 
-  {% else %}
-    <div class="so icn">{{ 'products.general.sold' | t }}</div>
+  {% if product.price < product.compare_at_price %}
+    <div class="sale-item icn">{{ 'products.general.sale' | t }}</div>
   {% endif %}
 
-    {% if product.featured_image %}
+{% else %}
+  <div class="so icn">{{ 'products.general.sold' | t }}</div>
+{% endif %}
+
+  <div class="prod-image image_{{ aspect_ratio }}">
+    {% if product.featured_media %}
       <a href="{{ product.url | within: collection }}" title="{{ product.title | escape }}">
         <div class="reveal">
-          {% include "basic-responsive-image", type: product.featured_image %}
+          {%- assign preview_image = product.featured_media.preview_image -%}
+          {%- assign second_image = product.media[1] -%}
+          {% render "basic-responsive-image", type: preview_image %}
           <noscript>
-            <img src="{{ product.featured_image | img_url: '1024x' }}" alt="{{ product.featured_image.alt | escape }}">
+            <img src="{{ preview_image | img_url: '1024x' }}" alt="{{ preview_image.alt | escape }}">
           </noscript>
 
-          {% if settings.image_flip and product.images.size > 1 %}
+          {% if settings.image_flip and product.media.size > 1 %}
             <div class="hidden">
-              {% include "basic-responsive-image", type: product.images[1] %}
+              {% render "basic-responsive-image", type: product.media[1] %}
               <noscript>
-                <img src="{{ product.images[1] | img_url: '1024x' }}" alt="{{ product.images[1].alt | escape }}">
+                <img src="{{ product.media[1] | img_url: '1024x' }}" alt="{{ product.media[1].alt | escape }}">
               </noscript>
             </div>
           {% endif %}
@@ -36,17 +50,14 @@
       {% capture current %}{% cycle 1, 2, 3, 4, 5, 6 %}{% endcapture %}
       {{ 'product-' | append: current | placeholder_svg_tag: 'placeholder-svg' }}
     {%- endif -%}
-    {% if settings.quickview %}
-      <div class="product-info">
-        <a data-fancybox="quick-view" data-type="ajax" class="fancybox.ajax product-modal" rel="nofollow" href="{{ product.url | within: collection }}?view=quick">
-          {{ 'products.general.quick_view' | t }}
-        </a>
-      </div>
+    {% if settings.quickview and template != 'search' %}
+        <button class="quick-view-{{ product.id }} product-listing__quickview-trigger js-modal-open js-quickview-trigger" type="button" name="button" data-wau-modal-target="quickview" data-product-url="{{ product.url }}?view=quick">{{ 'products.general.quick_view' | t }}</button>
     {% endif %}
   </div>
+</div>
 
 <div class="product-details">
-  <a href="{{ product.url | within: collection }}">
+  <a href="{{ product.url | within: collection }}" class="js-product-details-link">
     {% if settings.vendor %}
       <h4>{{ product.vendor }}</h4>
     {% endif %}
@@ -54,42 +65,26 @@
   </a>
 
   {% unless product.template_suffix == 'not-for-sale' %}
-  <div class="price">
-    {% if product.price < product.compare_at_price %}
-      <div class="onsale">
-        <span class="money" data-product-id="{{ product.id }}">{{ product.price | money }}</span>
-      </div>
-      <div class="was-listing">
-        {{ product.compare_at_price | money }}
-      </div>
-    {% else %}
-      <div class="prod-price">
-        {% if product.price_varies %}
-          {{ 'products.general.from' | t }} <span class="money" data-product-id="{{ product.id }}">{{ product.price_min | money }}</span> - <span class="money" data-product-id="{{ product.id }}">{{ product.price_max | money }}</span>
-        {% else %}
-          <span class="money" data-product-id="{{ product.id }}">{{ product.price | money }}</span>
-        {% endif %}
-      </div>
-    {% endif %}
-  </div>
+
+  {% render 'product-price-listing', product: product %}
 
   <div class="product_listing_options">
   {% if product.variants.size > 1 %}
      {% if settings.product_info == 'sizes' and product.available %}
-       {% include 'show-sizes' %}
+       {% render 'show-sizes', product: product %}
      {% elsif settings.product_info == 'colors' and product.available %}
-       {% include 'show-colors' %}
+       {% render 'show-colors', product: product %}
      {% endif %}
    {% endif %}
 
   {% if settings.product_info == 'add_to_cart' and settings.quickview == false %}
-    {% include 'product-grid-add' %}
+    {% render 'product-grid-add', product: product %}
   {% endif %}
 
   {% if settings.show_reviews %}
     <span class="shopify-product-reviews-badge" data-id="{{ product.id }}"></span>
   {% endif %}
   </div>
-    {% endunless %}
+ {% endunless %}
 
 </div>

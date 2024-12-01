@@ -74,6 +74,20 @@
       </span>
     </div>
   </div>
+  
+  {%- if product.title contains "Gift Card" -%}
+                  {%- assign productIsIneligible = true -%}
+                {%- endif -%}
+                <afterpay-placement 
+                     data-locale="en_US"
+                     data-currency="USD" 
+                     data-amount="{{variant.price | money}}"
+                     data-amount-selector="[data-regular-price]"
+                     data-logo-type="compact-badge"
+                     data-size="sm"
+                     data-is-eligible="{%if productIsIneligible%}false{%else%}true{%endif%}"
+                ></afterpay-placement>
+  
   <div class="price__unit">
     <dt>
       <span class="visually-hidden visually-hidden--inline">{{ 'products.product.unit_price_label' | t }}</span>

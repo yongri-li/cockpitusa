@@ -15,21 +15,21 @@
               {% case block.settings.iwt_image_width %}
               {% when '33%' %}
                 {%- assign image_size = '700x' -%}
-                {%- assign image_width = 'desktop-4 tablet-2 span-4' -%}
-                {%- assign image_offset = 'desktop-8 tablet-4 span-8' -%}
+                {%- assign image_width = 'span-4 auto' -%}
+                {%- assign image_offset = 'span-8 auto' -%}
               {% when '50%' %}
                 {%- assign image_size = '1000x' -%}
-                {%- assign image_width = 'desktop-6 tablet-3 span-6' -%}
-                {%- assign image_offset = 'desktop-6 tablet-3 span-6' -%}
+                {%- assign image_width = 'span-6 auto' -%}
+                {%- assign image_offset = 'span-6 auto' -%}
               {% when '66%' %}
                 {%- assign image_size = '1400x' -%}
-                {%- assign image_width = 'desktop-8 tablet-4 span-8' -%}
-                {%- assign image_offset = 'desktop-4 tablet-2 span-4' -%}
+                {%- assign image_width = 'span-8 auto' -%}
+                {%- assign image_offset = 'span-4 auto' -%}
               {% endcase %}
               {% capture image_layout %}
-                <div class="{{ image_width }} mobile-3 text-with-image contained {% if section.settings.layout == 'right' %}image-right{% endif %}">
+                <div class="{{ image_width }} sm-span-12 text-with-image contained {% if section.settings.layout == 'right' %}image-right{% endif %}">
                   {% if block.settings.iwt_image != blank %}
-                    {% include 'basic-responsive-image' |  type: block.settings.iwt_image %}
+                    {% render 'basic-responsive-image', type: block.settings.iwt_image, data_widths: '[180, 360, 540, 720, 900]' %}
                     <noscript>
                       <img src="{{ block.settings.iwt_image | img_url: '800x' }}" alt="{{ section.settings.image.alt }}">
                     </noscript>
@@ -43,12 +43,8 @@
               <div class="image-with-text-wrapper grid_wrapper">
                 {% if block.settings.iwt_layout == 'left' %}
                   {{ image_layout }}
-                {% else %}
-                  <div class="mobile-image span-3">
-                    {{ image_layout }}
-                  </div>
                 {% endif %}
-                <div class="{{ image_offset }} mobile-3 contained text-with-image text_section"
+                <div class="{{ image_offset }} sm-span-12 auto contained text-with-image text_section"
                 data-aos="{{ settings.scroll_animation }}" data-aos-delay="300" data-aos-duration="1000">
                   {% if block.settings.iwt_title != blank %}
                     <h3 class="text-title">
@@ -70,6 +66,13 @@
                 </div>
                 {% if block.settings.iwt_layout == 'right' %}
                   {{ image_layout }}
+                  <style>
+                  @media screen and (max-width: 740px) {
+                    .text-with-image.text_section {
+                      grid-row: 2;
+                    }
+                  }
+                  </style>
                 {% endif %}
               </div>
               <style>
@@ -85,23 +88,20 @@
             {% if block.settings.iwt_full_width %}</div></div>{% endif %}
           {% when 'image_text_overlay' %}
             {% assign img_url = block.settings.io_image | img_url: '1x1' | replace: '_1x1.', '_{width}x.' %}
-
             <section
-              class="parallax-{{ block.id }} parallax parallax-window lazyload lazyload-fade{% if block.settings.io_full_width %} gridlock-fluid{% endif %}"
-              data-bgset="{% include 'bgset', image: block.settings.io_image %}"
+              class="parallax-{{ block.id }} parallax lazyload lazyload-fade{% if block.settings.io_full_width %} gridlock-fluid{% endif %}"
+              data-bgset="{% render 'bgset', image: block.settings.io_image %}"
               data-sizes="auto"
-              data-mirror-container=".parallax-{{ block.id }}"
               data-section-id="{{ block.id }}">
-
+              <div class="image-overlay"></div>
               <article class="row">
-                <div class="parallax-content desktop-12 tablet-6 mobile-3">
-
+                <div class="parallax-content">
                   <div class="parallax-text">
                     {% unless block.settings.io_heading == blank %}
                       <h2>{{ block.settings.io_heading | escape }}</h2>
                     {% endunless %}
                     {% unless block.settings.io_subheading == blank %}
-                      <p>{{ block.settings.io_subheading }}</p>
+                      {{ block.settings.io_subheading }}
                     {% endunless %}
                     {% unless block.settings.io_button_link == blank %}
                       <div class="clear"></div>
@@ -110,13 +110,12 @@
                       </a>
                     {% endunless %}
                   </div>
-
-                  {% if block.settings.io_image == blank %}
-                    <div class="onboard plax-placehold">
-                      {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
-                    </div>
-                  {% endif %}
                 </div>
+                {% if block.settings.io_image == blank %}
+                  <div class="onboard plax-placehold">
+                    {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                  </div>
+                {% endif %}
               </article>
               <style>
                 {% if block.settings.io_background_effect == 'fixed' %}
@@ -146,9 +145,33 @@
                   height: {{ block.settings.io_page_height }}px;
                   min-height: {{ block.settings.io_page_height }}px;
                 }
+                .parallax-{{ block.id }} .image-overlay {
+                  position: absolute;
+                  z-index: 2;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  {% assign bg_color = '#000000' %}
+                  {% assign number = block.settings.overlay_opacity %}
+                  {% assign overlay_opacity = number | divided_by: 100.0 %}
+                  background: {{ bg_color | color_modify: 'alpha', overlay_opacity }};
+                }
+                .parallax-{{ block.id }} .parallax-content {
+                  width: fit-content;
+                  position: absolute;
+                  z-index: 2;
+                  top: {{ block.settings.io_caption_vertical }}%;
+                  left: {{ block.settings.io_caption_horizontal }}%;
+                  -webkit-transform: translate(-{{ block.settings.io_caption_horizontal }}%, -{{ block.settings.io_caption_vertical }}%);
+                    -ms-transform: translate(-{{ block.settings.io_caption_horizontal }}%, -{{ block.settings.io_caption_vertical }}%);
+                      -moz-transform: translate(-{{ block.settings.io_caption_horizontal }}%, -{{ block.settings.io_caption_vertical }}%); -o-transform: translate(-{{ block.settings.io_caption_horizontal }}%, -{{ block.settings.io_caption_vertical }}%); transform: translate(-{{ block.settings.io_caption_horizontal }}%, -{{ block.settings.io_caption_vertical }}%);
+                }
+                .parallax-{{ block.id }} .parallax-text {
+                  text-align: {{ block.settings.io_text_align }};
+                }
                 .parallax-{{ block.id }} .parallax-text h2 {
                   font-size: {{ block.settings.io_heading_font_size }}px;
-                  font-weight: {{ block.settings.io_heading_font_weight }};
                   display: inline-block;
                 }
                 @media screen and (max-width: 500px) {
@@ -159,16 +182,14 @@
                 .parallax-{{ block.id }} .parallax-text h2,
                 .parallax-{{ block.id }} .parallax-text a h2,
                 .parallax-{{ block.id }} .parallax-text a:visited h2 {
-                  color: {{ block.settings.io_heading_color }};
+                  color: {{ block.settings.io_text_color }};
                 }
                 .parallax-{{ block.id }} .parallax-text a:hover h2 {
                   opacity: 0.8;
                 }
                 .parallax-{{ block.id }} .parallax-text p {
                   font-size: {{ block.settings.io_subheading_font_size }}px;
-                  font-weight: {{ block.settings.io_subheading_font_weight }};
-                  color: {{ block.settings.io_subheading_color }};
-                  max-width: 60%;
+                  color: {{ block.settings.io_text_color }};
                   margin: auto;
                 }
                 @media screen and (max-width: 500px) {
@@ -180,7 +201,6 @@
                 .parallax-{{ block.id }} .parallax-text a.button:visited {
                   background: {{ block.settings.io_button_color }};
                   color: {{ block.settings.io_button_text_color }};
-                  font-weight: {{ block.settings.io_button_weight }};
                 }
                 .parallax-text a.button:hover {
                   opacity: 0.8;
@@ -217,12 +237,12 @@
                   <div class="image-column desktop-4 tablet-2 mobile-3 image-column-{{ block.id }}">
                     <div class="image-container">
                       {% if column_image != blank %}
-                        <a href="{{ column_link }}">
-                          {% include 'basic-responsive-image' | type: column_image %}
+                        {% if column_link != blank %}<a href="{{ column_link }}">{% endif %}
+                          {% render 'basic-responsive-image', type: column_image, data_widths: '[180, 360, 540, 720]' %}
                           <noscript>
                             <img src="{{ column_image | img_url: '800x' }}" alt="{{ column_image.alt }}">
                           </noscript>
-                        </a>
+                        {% if column_link != blank %}</a>{% endif %}
                       {% else %}
                         <div class="onboard">
                           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
@@ -240,7 +260,7 @@
                                 {{ column_text }}
                               </div>
                             {% endif %}
-                            {% if column_button_text != blank %}
+                            {% if column_button_text != blank and column_link != blank %}
                               <span class="cta">
                                 <a href="{{ column_link }}">{{ column_button_text | escape }}</a>
                               </span>
@@ -268,97 +288,87 @@
               </div>
             {% if block.settings.ic_full_width %}</div></div>{% endif %}
           {% when 'featured_collection' %}
+
             {% assign coll = collections[block.settings.fc_collection] %}
-            {% assign prod_limit = block.settings.fc_limit %}
-            <div class="row feat-col-{{ block.id }} featured-collection" data-section-id="{{ block.id }}" data-aos="{{ settings.scroll_animation }}" data-section-type="carousel-section" {{ block.shopify_attributes }}>
-              <div class="collection-carousel" data-slider-controls="{{ block.settings.slide_controls }}" data-grid="{{ block.settings.fc_grid }}" {{ block.shopify_attributes }}>
+            {% if block.settings.fc_carousel %}{%- assign is_carousel = true -%}{%- endif -%}
+            {%- assign prod_limit = block.settings.fc_limit -%}
+            {%- assign grid = block.settings.fc_grid -%}
+            {% capture slideshow_config %}{
+              "wrapAround":true,
+              "cellAlign": "left",
+              "dragThreshold":"15",
+              "pauseAutoPlayOnHover":false,
+              "prevNextButtons":true,
+              "pageDots": false
+            }{% endcapture %}
+
+            <section class="row featured__collection--{{ block.id }}" data-section-id="{{ block.id }}" data-aos="{{ settings.scroll_animation }}" data-section-type="carousel-section" {{ block.shopify_attributes }}>
+              <div class="featured__collection{% if is_carousel %}-carousel flickity__section js-carousel{% endif %} product-loop"{% if is_carousel %} data-flickity='{{ slideshow_config }}'{% endif %}>
+                {% if block.settings.fc_collection == blank %}
+                {% render 'onboard-product', prod_limit: prod_limit, grid: grid %}
+                {% else %}
                 {% for product in coll.products limit: prod_limit  %}
-<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
-                  <div class="product-index" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
-                    {% include 'product-listing' | with coll %}
+                  <div class="featured__collection-product product-index" id="product-listing-{{ product.id }}" data-product-id="{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
+                    {% render 'product-listing', collection: coll, product: product %}
                   </div>
                 {% endfor %}
+                {% endif %}
               </div>
+              {% case block.settings.fc_grid %}
+              {% when 2 %}
+              {%- assign prod_grid = 50 -%}
+              {% when 3 %}
+              {%- assign prod_grid = 33.333 -%}
+              {% when 4 %}
+              {%- assign prod_grid = 25 -%}
+              {% when 5 %}
+              {%- assign prod_grid = 20 -%}
+              {% endcase %}
               <style>
-                .collection-carousel .slick-slide {
-                  padding: 0 5px;
-                  height: unset! important;
-                }
-                .collection-carousel .slick-arrow {
-                  text-align: center;
-                  display: block !important;
-                  font-size: 0;
-                  cursor: pointer;
-                  position: absolute;
-                  background: {{ settings.direction_background }};
-                  color: {{ settings.direction_color }};
-                  font-family: LineAwesome;
-                  font-size: 18px;
-                  outline: none;
-                  z-index: 1;
-                  height: 48px;
-                  line-height: 48px;
-                  padding: 0 20px;
-                }
-                .collection-carousel .slick-arrow:hover {
-                  color: {{ settings.direction_color }};
-                  background: {{ settings.direction_hover }};
-                }
-                .collection-carousel .slick-arrow i:before {
-                  font-family: LineAwesome;
-                  font-size: 25px !important;
-                }
-                .collection-carousel .slick-arrow i {
-                  color: {{ settings.direction_color }};
-                  vertical-align: middle;
-                }
-                .collection-carousel .slick-arrow i:hover {
-                  color: {{ settings.direction_color }};
-                }
-                .collection-carousel .slick-prev.slick-arrow {
-                  top: 42%;
-                  left: -2%;
-                  -webkit-transform: translate(-50%, 0);
-                  -ms-transform: translate(-50%, 0);
-                  -moz-transform: translate(-50%, 0);
-                  -o-transform: translate(-50%, 0);
-                }
-                .collection-carousel .slick-next.slick-arrow {
-                  top: 42%;
-                  left: 102%;
-                  -webkit-transform: translate(-50%, 0);
-                  -ms-transform: translate(-50%, 0);
-                  -moz-transform: translate(-50%, 0);
-                  -o-transform: translate(-50%, 0);
-                }
-                .collection-carousel ul.slick-dots {
-                  right: 50%;
-                  width: 20%;
-                  margin-right: -10%;
-                  bottom: -30px;
-                }
-                .collection-carousel {
+                .featured__collection--{{ block.id }} {
+                  padding-bottom: 30px;
                   margin-bottom: 30px;
                 }
+                {% if is_carousel %}
+                  section.featured__collection--{{ block.id }} .featured__collection-carousel .featured__collection-product {
+                    width: {{ prod_grid }}%;
+                  }
+                  .featured__collection-carousel .flickity-button {
+                    color: {{ settings.direction_color }};
+                    background-color: {{ settings.direction_background }};
+                    width: 45px;
+                    height: 45px;
+                    margin: 0;
+                  }
+                  .featured__collection-carousel .flickity-button:hover {
+                    background-color: {{ settings.direction_hover }};
+                  }
+                {% else %}
+                  section.featured__collection--{{ block.id }} .featured__collection {
+                    display: grid;
+                    grid-template-columns: repeat({{ grid }}, {{ prod_grid }}%);
+                  }
+              {% endif %}
               </style>
-            </div>
+            </section>
+
           {% when 'collection_list' %}
             {% if block.settings.cl_full_width %}<div class="gridlock-fluid"><div class="row">{% endif %}
             <div class="product-loop row grid_wrapper col-loop-{{ block.id }}" data-aos="{{ settings.scroll_animation }}">
               {%- case block.settings.cl_collections_per_row -%}
               {%- when 2 -%}
-              {% assign column_width = 'desktop-6 tablet-6 mobile-half span-6' %}
+              {% assign column_width = 'span-6 sm-span-12 auto' %}
               {%- when 3 -%}
-              {% assign column_width = 'desktop-4 tablet-6 mobile-half span-4' %}
+              {% assign column_width = 'span-4 md-span-6 sm-span-6 auto' %}
               {%- when 4 -%}
-              {% assign column_width = 'desktop-3 tablet-6 mobile-half span-3' %}
+              {% assign column_width = 'span-3 md-span-6 sm-span-6 auto' %}
               {%- endcase -%}
               {% for n in (1..4) %}
                 {% assign collection = "cl_collection_" | append: n %}
                 {% assign collection = collections[block.settings[collection]] | default: false %}
                 <div class="product-index {{ column_width }}" data-alpha="{{ collection.title }}">
                   {% if collection %}
-                    {% include 'collection-grid-item' %}
+                    {% render 'collection-grid-item', collection: collection %}
                   {% else %}
                     {% capture current %}{{ forloop.index }}{% endcapture %}
                     {%- assign placeholder = 'collection-' | append: current -%}
@@ -392,7 +402,7 @@
                     <div class="promo-inner">
                       {% if c_image != blank %}
                         <a href="{{ c_link }}">
-                          {% include 'basic-responsive-image' | type: c_image %}
+                          {% render 'basic-responsive-image', type: c_image, data_widths: '[180, 360, 540, 720, 900, 1080, 1296, 1512]' %}
                           <noscript>
                             <img src="{{ c_image | img_url: '800x' }}" alt="{{ c_image.alt }}">
                           </noscript>
@@ -402,10 +412,11 @@
                           {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
                         </div>
                       {% endif %}
+                      <div class="image-overlay"></div>
                       <div class="caption">
                         {% if c_heading != blank %}
                           <div class="caption-content">
-                            <p>{{ c_heading | escape }}</p>
+                            {{ c_heading }}
                             {% if c_button != blank %}
                             <span class="cta">
                               <a href="{{ c_link }}">{{ c_button | escape }}</a>
@@ -432,19 +443,36 @@
                       {% assign color = block.settings[color] | default: false %}
                       {% assign size = "heading_size_" | append: n %}
                       {% assign size = block.settings[size] | default: false %}
-                      .homepage-promo.promo-{{ n }} .promo-inner .caption-content {
-                        text-align: {{ align_text }};
+                      {% assign overlay_opacity = "overlay_opacity_" | append: n %}
+                      {% assign overlay_opacity = block.settings[overlay_opacity] | default: false %}
+
+                      .homepage-promo.promo-{{ n }} .image-overlay {
+                        position: absolute;
+                        z-index: 1;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        {% assign bg_color = '#000000' %}
+                        {% assign number = overlay_opacity %}
+                        {% assign overlay_opacity = number | divided_by: 100.0 %}
+                        background: {{ bg_color | color_modify: 'alpha', overlay_opacity }};
                       }
                       .homepage-promo.promo-{{ n }} .promo-inner .caption-content p {
                         color: {{ color }};
                         font-size: {{ size }}px;
                         text-align: {{ align_text }};
+                        line-height: initial;
                       }
                       {% if text_options == 'on_image' %}
                         .homepage-promo.promo-{{ n }} .promo-inner .caption-content {
                           position: absolute;
                           bottom: {{ vertical_position }}%;
                           left: {{ horizontal_position }}%;
+                          {% if horizontal_position == 50 %}
+                          width: 100%;
+                          {% endif %}
+                          transform: translate(-{{ horizontal_position }}%, {{ vertical_position }}%);
                           text-align: {{ align_text }};
                         }
                       {% endif %}
@@ -458,6 +486,7 @@
                         width: 100%;
                         height: 100%;
                         top: 0;
+                        z-index: 2;
                       }
                       {% else %}
                       .homepage-promo .promo-inner .caption {
@@ -468,7 +497,7 @@
                   </div>
                 {% endfor %}
                 {% if section.blocks.size == 0 %}
-                  {% include 'no-blocks' %}
+                  {% render 'no-blocks' %}
                 {% endif %}
               </div>
             {% if block.settings.ig_full_width %}</div></div>{% endif %}
@@ -520,7 +549,6 @@
     .promotions .homepage-promo,
     .promotions .image-column,
     .promotions .cta,
-    .promotions .product-index,
     .promotions .collection-carousel,
     .promotions .product-loop {
       margin-bottom: 0;
@@ -610,16 +638,27 @@
             "label": "Image"
           },
           {
+            "type":      "range",
+            "id":        "overlay_opacity_1",
+            "min":       0,
+            "max":       100,
+            "step":      5,
+            "unit":      "%",
+            "label":     "Image overlay opacity",
+            "info":      "Adding an overlay to your image can help with text contrast",
+            "default":   15
+          },
+          {
             "type": "url",
             "id": "link_1",
             "label": "Link",
             "info": "Optional"
           },
           {
-            "type": "text",
+            "type": "richtext",
             "id": "heading_1",
             "label": "Heading",
-            "default": "Our collections"
+            "default": "<p>Our collections</p>"
           },
           {
             "type": "text",
@@ -721,16 +760,27 @@
             "label": "Image"
           },
           {
+            "type":      "range",
+            "id":        "overlay_opacity_2",
+            "min":       0,
+            "max":       100,
+            "step":      5,
+            "unit":      "%",
+            "label":     "Image overlay opacity",
+            "info":      "Adding an overlay to your image can help with text contrast",
+            "default":   15
+          },
+          {
             "type": "url",
             "id": "link_2",
             "label": "Link",
             "info": "Optional"
           },
           {
-            "type": "text",
+            "type": "richtext",
             "id": "heading_2",
             "label": "Heading",
-            "default": "Our collections"
+            "default": "<p>Our collections</p>"
           },
           {
             "type": "text",
@@ -832,16 +882,27 @@
             "label": "Image"
           },
           {
+            "type":      "range",
+            "id":        "overlay_opacity_3",
+            "min":       0,
+            "max":       100,
+            "step":      5,
+            "unit":      "%",
+            "label":     "Image overlay opacity",
+            "info":      "Adding an overlay to your image can help with text contrast",
+            "default":   15
+          },
+          {
             "type": "url",
             "id": "link_3",
             "label": "Link",
             "info": "Optional"
           },
           {
-            "type": "text",
+            "type": "richtext",
             "id": "heading_3",
             "label": "Heading",
-            "default": "Our collections"
+            "default": "<p>Our collections</p>"
           },
           {
             "type": "text",
@@ -939,15 +1000,22 @@
         "type": "image_text_overlay",
         "name": "Image w/Text Overlay",
         "settings": [
-          {
-            "type": "checkbox",
-            "id": "io_full_width",
-            "label": "Full width"
-          },
+
           {
             "type": "image_picker",
             "id": "io_image",
             "label": "Image"
+          },
+          {
+            "type":      "range",
+            "id":        "overlay_opacity",
+            "min":       0,
+            "max":       100,
+            "step":      5,
+            "unit":      "%",
+            "label":     "Image overlay opacity",
+            "info":      "Adding an overlay to your image can help with text contrast",
+            "default":   15
           },
           {
             "type": "select",
@@ -975,13 +1043,71 @@
           },
           {
             "type": "header",
-            "content": "Overlay Heading"
+            "content": "Text content"
+          },
+          {
+            "type": "select",
+            "id": "io_text_align",
+            "label": "Caption alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "io_caption_horizontal",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Caption horizontal position",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "io_caption_vertical",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Caption vertical position",
+            "default": 50
           },
           {
             "type": "text",
             "id": "io_heading",
             "label": "Heading",
             "default": "Image with text overlay"
+          },
+          {
+            "type": "richtext",
+            "id": "io_subheading",
+            "label": "Text",
+            "default": "<p>Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story.</p>"
+          },
+          {
+           "id": "io_button_text",
+           "type": "text",
+           "label": "Button text",
+           "default": "Add a button",
+           "info": "Visible only if a link is chosen"
+          },
+          {
+            "type": "url",
+            "id": "io_button_link",
+            "label": "Button link"
           },
           {
             "type": "range",
@@ -994,41 +1120,6 @@
             "default": 26
           },
           {
-            "type": "select",
-            "id": "io_heading_font_weight",
-            "label": "Heading weight",
-            "options": [
-              {
-                "value": "400",
-                "label": "Normal"
-              },
-              {
-                "value": "300",
-                "label": "Light"
-              },
-              {
-                "value": "700",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
-            "type": "color",
-            "id": "io_heading_color",
-            "label": "Heading",
-            "default": "#000"
-          },
-          {
-            "type": "header",
-            "content": "Overlay Text"
-          },
-          {
-            "type": "textarea",
-            "id": "io_subheading",
-            "label": "Text",
-            "default": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story."
-          },
-          {
             "type": "range",
             "id": "io_subheading_font_size",
             "min": 12,
@@ -1039,64 +1130,10 @@
             "default": 16
           },
           {
-            "type": "select",
-            "id": "io_subheading_font_weight",
-            "label": "Text weight",
-            "options": [
-              {
-                "value": "400",
-                "label": "Normal"
-              },
-              {
-                "value": "300",
-                "label": "Light"
-              },
-              {
-                "value": "700",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
             "type": "color",
-            "id": "io_subheading_color",
-            "label": "Text color",
+            "id": "io_text_color",
+            "label": "Heading",
             "default": "#000"
-          },
-          {
-            "type": "header",
-            "content": "Overlay Button"
-          },
-          {
-           "id": "io_button_text",
-           "type": "text",
-           "label": "Button text",
-           "default": "Add a button",
-           "info": "Visible only if a link is chosen"
-          },
-          {
-            "type": "select",
-            "id": "io_button_weight",
-            "label": "Button weight",
-            "options": [
-              {
-                "value": "light",
-                "label": "Light"
-              },
-              {
-                "value": "normal",
-                "label": "Normal"
-              },
-              {
-                "value": "bold",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
-            "type": "url",
-            "id": "io_button_link",
-            "label": "Button link"
           },
           {
             "type": "color",
@@ -1323,6 +1360,11 @@
             "label": "Collection"
           },
           {
+            "id": "fc_carousel",
+            "type": "checkbox",
+            "label": "Display in carousel"
+          },
+          {
             "type": "range",
             "id": "fc_grid",
             "min": 2,
@@ -1338,23 +1380,7 @@
             "max": 30,
             "step": 1,
             "label": "Products shown",
-            "default": 3
-          },
-          {
-            "type": "select",
-            "id": "slide_controls",
-            "label": "Carousel control style",
-            "default": "arrows",
-            "options": [
-              {
-                "value": "arrows",
-                "label": "Arrows"
-              },
-              {
-                "value": "dots",
-                "label": "Dots"
-              }
-            ]
+            "default": 8
           }
         ]
       },

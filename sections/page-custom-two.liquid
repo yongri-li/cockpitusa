@@ -1,64 +1,16 @@
-{% include 'custom-blocks' %}
+{% render 'custom-blocks', page: page %}
 
 {% schema %}
 {
     "name": "Custom page two",
 	  "max_blocks": 40,
     "settings": [
-      {
-        "type": "text",
-        "id": "heading",
-        "label": "Heading",
-        "default": "Featured collection"
-      },
-      {
-        "type": "color",
-        "id": "color",
-        "label": "Text color",
-        "default": "#000"
-      },
-      {
-        "type": "color",
-        "id": "background",
-        "label": "background color",
-        "default": "#f7f7f7"
-      },
-      {
-        "type":"checkbox",
-        "id":"border_top",
-        "label":"Border top"
-      },
-      {
-        "type":"checkbox",
-        "id":"border_bottom",
-        "label":"Border bottom"
-      }
     ],
     "blocks": [
       {
         "type": "page_title",
         "name": "Page Title",
         "settings": [
-          {
-            "type": "select",
-            "id": "pt_align",
-            "label": "Heading alignment",
-            "default": "center",
-            "options": [
-              {
-                "value":"center",
-                "label":"Center"
-              },
-              {
-                "value":"left",
-                "label":"Left"
-              },
-              {
-                "value":"right",
-                "label":"Right"
-              }
-            ]
-          }
         ]
       },
       {
@@ -235,6 +187,17 @@
             "label": "Image"
           },
           {
+            "type":      "range",
+            "id":        "overlay_opacity",
+            "min":       0,
+            "max":       100,
+            "step":      5,
+            "unit":      "%",
+            "label":     "Image overlay opacity",
+            "info":      "Adding an overlay to your image can help with text contrast",
+            "default":   15
+          },
+          {
             "type": "select",
             "id": "pio_background_effect",
             "label": "Image effect",
@@ -260,13 +223,71 @@
           },
           {
             "type": "header",
-            "content": "Overlay Heading"
+            "content": "Text content"
+          },
+          {
+            "type": "select",
+            "id": "pio_text_align",
+            "label": "Caption alignment",
+            "default": "left",
+            "options": [
+              {
+                "value": "left",
+                "label": "Left"
+              },
+              {
+                "value": "center",
+                "label": "Center"
+              },
+              {
+                "value": "right",
+                "label": "Right"
+              }
+            ]
+          },
+          {
+            "type": "range",
+            "id": "pio_caption_horizontal",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Caption horizontal position",
+            "default": 50
+          },
+          {
+            "type": "range",
+            "id": "pio_caption_vertical",
+            "min": 0,
+            "max": 100,
+            "step": 1,
+            "unit": "%",
+            "label": "Caption vertical position",
+            "default": 50
           },
           {
             "type": "text",
             "id": "pio_heading",
             "label": "Heading",
             "default": "Image with text overlay"
+          },
+          {
+            "type": "textarea",
+            "id": "pio_subheading",
+            "label": "Text",
+            "default": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story."
+          },
+          {
+           "id": "pio_button_text",
+           "type": "text",
+           "label": "Button text",
+           "default": "Add a button",
+           "info": "Visible only if a link is chosen"
+          },
+          {
+            "type": "url",
+            "id": "pio_button_link",
+            "label": "Button link"
           },
           {
             "type": "range",
@@ -279,41 +300,6 @@
             "default": 26
           },
           {
-            "type": "select",
-            "id": "pio_heading_font_weight",
-            "label": "Heading weight",
-            "options": [
-              {
-                "value": "400",
-                "label": "Normal"
-              },
-              {
-                "value": "300",
-                "label": "Light"
-              },
-              {
-                "value": "700",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
-            "type": "color",
-            "id": "pio_heading_color",
-            "label": "Heading",
-            "default": "#000"
-          },
-          {
-            "type": "header",
-            "content": "Overlay Text"
-          },
-          {
-            "type": "textarea",
-            "id": "pio_subheading",
-            "label": "Text",
-            "default": "Use overlay text to give your customers insight into your brand. Select imagery and text that relates to your style and story."
-          },
-          {
             "type": "range",
             "id": "pio_subheading_font_size",
             "min": 12,
@@ -324,64 +310,10 @@
             "default": 16
           },
           {
-            "type": "select",
-            "id": "pio_subheading_font_weight",
-            "label": "Text weight",
-            "options": [
-              {
-                "value": "400",
-                "label": "Normal"
-              },
-              {
-                "value": "300",
-                "label": "Light"
-              },
-              {
-                "value": "700",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
             "type": "color",
-            "id": "pio_subheading_color",
-            "label": "Text color",
+            "id": "pio_text_color",
+            "label": "Heading",
             "default": "#000"
-          },
-          {
-            "type": "header",
-            "content": "Overlay Button"
-          },
-          {
-           "id": "pio_button_text",
-           "type": "text",
-           "label": "Button text",
-           "default": "Add a button",
-           "info": "Visible only if a link is chosen"
-          },
-          {
-            "type": "select",
-            "id": "pio_button_weight",
-            "label": "Button weight",
-            "options": [
-              {
-                "value": "light",
-                "label": "Light"
-              },
-              {
-                "value": "normal",
-                "label": "Normal"
-              },
-              {
-                "value": "bold",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
-            "type": "url",
-            "id": "pio_button_link",
-            "label": "Button link"
           },
           {
             "type": "color",
@@ -394,6 +326,12 @@
             "id": "pio_button_color",
             "label": "Button background",
             "default": "#000"
+          },
+          {
+            "type": "color",
+            "id": "pio_background",
+            "label": "Caption background",
+            "default": "#fff"
           }
         ]
       },
@@ -411,16 +349,27 @@
             "label": "Image"
           },
           {
+            "type":      "range",
+            "id":        "overlay_opacity_1",
+            "min":       0,
+            "max":       100,
+            "step":      5,
+            "unit":      "%",
+            "label":     "Image overlay opacity",
+            "info":      "Adding an overlay to your image can help with text contrast",
+            "default":   15
+          },
+          {
             "type": "url",
             "id": "link_1",
             "label": "Link",
             "info": "Optional"
           },
          {
-          "type": "text",
+          "type": "richtext",
           "id": "heading_1",
           "label": "Heading",
-          "default": "Our collections"
+          "default": "<p>Our collections</p>"
          },
          {
           "type": "text",
@@ -522,16 +471,27 @@
           "label": "Image"
         },
         {
+          "type":      "range",
+          "id":        "overlay_opacity_2",
+          "min":       0,
+          "max":       100,
+          "step":      5,
+          "unit":      "%",
+          "label":     "Image overlay opacity",
+          "info":      "Adding an overlay to your image can help with text contrast",
+          "default":   15
+        },
+        {
           "type": "url",
           "id": "link_2",
           "label": "Link",
           "info": "Optional"
         },
         {
-        "type": "text",
+        "type": "richtext",
         "id": "heading_2",
         "label": "Heading",
-        "default": "Our collections"
+        "default": "<p>Our collections</p>"
         },
         {
         "type": "text",
@@ -633,16 +593,27 @@
           "label": "Image"
         },
         {
+          "type":      "range",
+          "id":        "overlay_opacity_3",
+          "min":       0,
+          "max":       100,
+          "step":      5,
+          "unit":      "%",
+          "label":     "Image overlay opacity",
+          "info":      "Adding an overlay to your image can help with text contrast",
+          "default":   15
+        },
+        {
           "type": "url",
           "id": "link_3",
           "label": "Link",
           "info": "Optional"
         },
         {
-        "type": "text",
+        "type": "richtext",
         "id": "heading_3",
         "label": "Heading",
-        "default": "Our collections"
+        "default": "<p>Our collections</p>"
         },
         {
         "type": "text",
@@ -734,7 +705,7 @@
           }
         ]
         }
-      ]
+       ]
       },
       {
         "type": "text_columns_with_images",
@@ -929,6 +900,7 @@
       {
         "type": "featured_collection",
         "name": "Featured Collection",
+        "limit":1,
         "settings": [
           {
             "id": "fc_collection",
@@ -936,20 +908,9 @@
             "label": "Collection"
           },
           {
-            "type": "select",
-            "id": "fc_homepage_product_layout",
-            "label": "Products layout",
-            "default": "carousel",
-            "options": [
-              {
-                "value": "grid",
-                "label": "Grid"
-              },
-              {
-                "value": "carousel",
-                "label": "Carousel"
-              }
-            ]
+            "id": "fc_carousel",
+            "type": "checkbox",
+            "label": "Display in carousel"
           },
           {
             "type": "range",
@@ -967,23 +928,7 @@
             "max": 30,
             "step": 1,
             "label": "Products shown",
-            "default": 3
-          },
-          {
-            "type": "select",
-            "id": "slide_controls",
-            "label": "Carousel control style",
-            "default": "arrows",
-            "options": [
-              {
-                "value": "arrows",
-                "label": "Arrows"
-              },
-              {
-                "value": "dots",
-                "label": "Dots"
-              }
-            ]
+            "default": 8
           }
         ]
       },
@@ -1180,12 +1125,6 @@
             "default": "Subscribe to our newsletter"
           },
           {
-            "type": "color",
-            "id": "ns_heading_color",
-            "label": "Heading",
-            "default": "#000000"
-          },
-          {
             "type": "richtext",
             "id": "ns_newsletter_subheading",
             "label": "Subheading",
@@ -1202,24 +1141,9 @@
             "default": 16
           },
           {
-            "type": "select",
-            "id": "ns_subheading_font_weight",
-            "label": "Subheading weight",
-            "options": [
-              {
-                "value": "normal",
-                "label": "Normal"
-              },
-              {
-                "value": "bold",
-                "label": "Bold"
-              }
-            ]
-          },
-          {
             "type": "color",
             "id": "ns_subheading_color",
-            "label": "Subheading",
+            "label": "Text color",
             "default": "#000"
           },
           {
@@ -1243,6 +1167,12 @@
             "id": "ac_section_heading",
             "label": "Heading",
             "default": "Accordion"
+          },
+          {
+            "type": "checkbox",
+            "id": "allow_multiple",
+            "label": "Allow multiple accordions open at one time",
+            "default": false
           },
           {
             "type": "text",

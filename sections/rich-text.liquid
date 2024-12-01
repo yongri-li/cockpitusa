@@ -1,4 +1,4 @@
-<section class="homepage-rich-text-{{ section.id }} no-fouc" data-section-id="{{ section.id }}" data-aos="{{ settings.scroll_animation }}">
+<section class="homepage-rich-text-{{ section.id }}" data-section-id="{{ section.id }}" data-aos="{{ settings.scroll_animation }}">
   {% if section.settings.heading != blank %}
     <div class="section-title row">
       <h2>{{ section.settings.heading | escape }}</h2>
@@ -29,11 +29,13 @@
   section.homepage-rich-text-{{ section.id }} {
     background: {{ section.settings.background_color }};
   }
-  section.homepage-rich-text-{{ section.id }} h2 {
-    color: {{ section.settings.heading_color }} !important;
-    {% if settings.section_titles != 'text_only' %}
-    border-color: {{ section.settings.heading_color }} !important;
-    {% endif %}
+  section.homepage-rich-text-{{ section.id }} h2,
+  section.homepage-rich-text-{{ section.id }} p {
+    color: {{ section.settings.text_color }} !important;
+  }
+
+  section.homepage-rich-text-{{ section.id }} .section-title:after {
+    background: {{ section.settings.text_color }};
   }
 </style>
 
@@ -51,8 +53,8 @@
     },
     {
       "type": "color",
-      "id": "heading_color",
-      "label": "Heading color",
+      "id": "text_color",
+      "label": "Text color",
       "default": "#000"
     },
     {
@@ -65,7 +67,6 @@
     	"type": "richtext",
     	"id": "rich_text",
     	"label": "Text",
-    	"info": "Use basic HTML to format text",
     	"default": "<p>Use this text to share information about your brand with your customers. Describe a product, share announcements, or welcome customers to your store.</p>"
     },
     {

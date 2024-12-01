@@ -24,7 +24,7 @@ data-aos="{{ settings.scroll_animation }}">
 
             {% if block.settings.image != blank %}
             <a href="{{ block.settings.link }}">
-              {% include 'basic-responsive-image' | type: block.settings.image %}
+              {% render 'basic-responsive-image', type: block.settings.image, data_widths: '[180, 360, 540, 720, 900]' %}
               <noscript>
                 <img src="{{ block.settings.image | img_url: '800x' }}" alt="{{ block.settings.image.alt }}">
               </noscript>
@@ -45,8 +45,8 @@ data-aos="{{ settings.scroll_animation }}">
                   <span class="cta">
                     <a href="{{ block.settings.link }}">{{ block.settings.button | escape }}</a>
                   </span>
-               </div>
               {% endif %}
+               </div>
               {% endif %}
             </div>
           </a>
@@ -63,12 +63,11 @@ data-aos="{{ settings.scroll_animation }}">
         }
         .image-column-{{ block.id }} .text-content h3 {
           font-size: {{ section.settings.heading_size }}px;
-          font-weight: {{ section.settings.heading_weight }};
-          color: {{ block.settings.text_color }};
+          color: {{ section.settings.text_color }};
           margin-top: 10px;
         }
         .image-column-{{ block.id }} .text-content p {
-          color: {{ block.settings.text_color }};
+          color: {{ section.settings.text_color }};
           margin-top: 10px;
         }
         .image-column-{{ block.id }} .text-content .cta {
@@ -78,7 +77,7 @@ data-aos="{{ settings.scroll_animation }}">
       </style>
     {% endfor %}
     {% if section.blocks.size == 0 %}
-      {% include 'no-blocks' %}
+      {% render 'no-blocks' %}
     {% endif %}
   </article>
   {% if section.settings.full_width %}</div></div>{% endif %}
@@ -110,25 +109,6 @@ data-aos="{{ settings.scroll_animation }}">
         "default": "#000000"
       },
       {
-        "type": "select",
-        "id": "heading_weight",
-        "label": "Heading weight",
-        "options": [
-          {
-            "value": "light",
-            "label": "Light"
-          },
-          {
-            "value": "normal",
-            "label": "Normal"
-          },
-          {
-            "value": "bold",
-            "label": "Bold"
-          }
-        ]
-      },
-      {
         "type": "range",
         "id": "heading_size",
         "min": 12,
@@ -147,7 +127,8 @@ data-aos="{{ settings.scroll_animation }}">
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Image"
+          "label": "Image",
+          "info" : "800px x 600px recommended if 3 per row"
         },
         {
           "type": "select",

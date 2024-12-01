@@ -51,7 +51,7 @@
   <div class="wrap">
 
     <header role="banner" id="header">
-      <a href="{{ shop.url }}" class="logo">{{ shop.name }}</a>
+      <a href="{{ routes.root_url }}" class="logo">{{ shop.name }}</a>
     </header>
 
     <main role="main">
@@ -111,7 +111,7 @@
                 });
               </script>
               <div id="gift-card-actions">
-                <a href="{{ shop.url }}" class="btn center" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
+                <a href="{{ routes.root_url }}" class="btn center" target="_blank">{{ 'gift_cards.issued.shop_link' | t }}</a>
                 <a href="#" class="action-link left" onclick="window.print();"><i class="la la-print" aria-hidden="true"></i>{{ 'gift_cards.issued.print' | t }}</a>
               </div>
 

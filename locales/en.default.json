@@ -2,7 +2,7 @@
   "password": {
     "general": {
       "thanks": "Thank you for joining our list",
-      "enter_store": "Enter Store using Password:",
+      "enter_store": "Login with Password:",
       "password": "Password",
       "enter": "Enter",
       "email_address": "Email Address",
@@ -39,6 +39,22 @@
       "title": "Search",
       "placeholder": "Search",
       "submit": "Search"
+    },
+    "currency": {
+      "dropdown_label": "Currency"
+    },
+    "language": {
+      "dropdown_label": "Language"
+    },
+    "accessibility": {
+      "unit_price_separator": "per"
+    },
+    "map_errors": {
+      "get_directions": "Get directions",
+      "address_error": "Error looking up that address",
+      "address_no_results": "No results for that address",
+      "address_query_limit": "You have exceeded the Google API usage limit. Consider upgrading to a Premium Plan (https:\/\/developers.google.com\/maps\/premium\/usage-limits).",
+      "auth_error": "There was a problem authenticating your Google Maps account. Create and enable the JavaScript API (https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key) and Geocoding API (https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key) permissions of your app."
     }
   },
   "blogs": {
@@ -71,14 +87,21 @@
       "tags": "Filter Article Tags"
     }
   },
+  "store_availability": {
+    "general": {
+      "view_store_info": "View store information",
+      "check_other_stores": "Check availability at other stores",
+      "pick_up_available": "Pickup available",
+      "pick_up_currently_unavailable": "Pickup currently unavailable",
+      "pick_up_available_at_html": "Pickup available at <strong>{{ location_name }}<\/strong>",
+      "pick_up_unavailable_at_html": "Pickup currently unavailable at <strong>{{ location_name }}<\/strong>"
+    }
+  },
   "cart": {
     "general": {
       "title": "My Cart",
       "summary": "Cart Summary",
       "close_cart": "Close",
-      "shipping": "Shipping",
-      "tax": "Tax",
-      "at_checkout": "Calculated at checkout",
       "empty": "Your cart is currently empty.",
       "product": "Product",
       "price": "Price",
@@ -99,7 +122,22 @@
       "discounts": "Discounts",
       "savings": "Total Savings",
       "discount_applied": "Discount Applied!",
-      "items": "Item(s)"
+      "items": "Item(s)",
+      "cart_error": "Cart Error",
+      "update_qty_error": "Some items became unavailable. Update the quantity and try again.",
+      "tax": "Tax",
+      "shipping": "Shipping",
+      "at_checkout": "Calculated at checkout",
+      "shipping_no_destination": "We do not ship to this destination.",
+      "shipping_single_rate": "There is one shipping rate available for ",
+      "shipping_multi_rate_one": "There are ",
+      "shipping_multi_rate_two": " shipping rates available for ",
+      "shipping_multi_rate_three": ", starting at ",
+      "overview": "Order Summary",
+      "calc_error": "Calculator Error:",
+      "calc_heading": "Get shipping estimate",
+      "calc_shipping": "Calculate Shipping",
+      "calc_calculating": "Calculating..."
     }
   },
   "collections": {
@@ -145,10 +183,12 @@
   "customer": {
     "account": {
       "title": "Account",
-      "logout": "logout",
+      "logout": "Logout",
+      "link": "Back to Account",
       "signup": "Login or create an account",
       "details": "Account Details",
       "view_addresses": "View Addresses",
+      "returns_content": "Return\/Exchange",
       "return": "Return to Account Details"
     },
     "activate_account": {
@@ -161,7 +201,7 @@
     },
     "addresses": {
       "title": "Your Addresses",
-      "default": "Default",
+      "default": "Primary Address",
       "add_new": "Add a New Address",
       "edit_address": "Edit address",
       "first_name": "First Name",
@@ -212,6 +252,7 @@
       "discount": "Discount",
       "shipping": "Shipping",
       "tax": "Tax",
+      "order_details": "Order Details",
       "details": {
         "product": "Product",
         "sku": "SKU",
@@ -257,6 +298,11 @@
       "onboarding": {
         "no_content": "This section doesn’t currently include any content. Add content to this section using the sidebar."
       }
+    },
+    "mobile_nav": {
+      "account": "Account",
+      "login": "Log In\/Create Account",
+      "logout": "Logout"
     }
   },
   "products": {
@@ -267,6 +313,7 @@
       "quick_view": "Quick View",
       "from": "From",
       "view_full": "View Full Details",
+      "view_all": "View All",
       "related": "More in this Collection",
       "sale_price": "Sale",
       "regular_price": "Regular"
@@ -274,9 +321,13 @@
     "product": {
       "designer": "Designer",
       "sold_out": "Sold Out",
+      "from_lowest_price_html": "from {{ lowest_price }}",
       "unavailable": "Unavailable",
       "compare_at": "Compare at",
       "add_to_cart": "Add to Cart",
+      "adding": "Adding...",
+      "thank_you": "Thank You!",
+      "added": "Added to Cart",
       "quantity": "Quantity",
       "select_options": "View options",
       "details": "Details",
@@ -284,18 +335,18 @@
       "video": "Video",
       "model": "Product Care",
       "back_to": "Back To",
-      "adding": "Adding...",
-      "thank_you": "Thank You!",
-      "added": "Added to Cart",
       "view_cart": "View Cart",
       "or": "or",
       "continue": "Continue Shopping",
       "qty_error_first": "Only",
       "qty_error_last": "of this item is available",
-      "qty_sold_out": "This item is soldout",
+      "qty_sold_out": "This item is sold out",
       "back_in_stock": "Please send me an email when this is available",
       "back_in_stock_confirm": "Thanks, we will contact you when this is available",
-      "readmore": "Read More"
+      "readmore": "Read More",
+      "view_in_space": "View in your space",
+      "view_in_space_label": "View in your space, loads item in augmented reality window",
+      "unit_price_label": "Unit Price"
     }
   },
   "gift_cards": {

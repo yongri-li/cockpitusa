@@ -38,7 +38,7 @@
         "priceCurrency": "{{ shop.currency }}",
         "price": "{{ fa_current_variant.price | money_without_currency  | strip_html | remove: ',' }}",
         "itemCondition" : "http://schema.org/NewCondition",
-        "availability" : "http://schema.org/{% if product.available %}InStock{% else %}PreOrder{% endif %}",
+        "availability" : "http://schema.org/{% if fa_current_variant.available %}InStock{% else %}PreOrder{% endif %}",
         "url" : "{{ shop.url }}{{ fa_current_variant.url }}",
             {%- if fa_current_variant.image -%}
               {% assign variant_image_size = fa_current_variant.image.width | append: 'x' %}

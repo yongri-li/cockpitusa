@@ -3,20 +3,18 @@
 {%- assign nav_font = settings.nav_font -%}
 {%- assign heading_font = settings.heading_font -%}
   :root {
-    --main-family: {{ main_font.family }};
+    --main-family: {{ main_font.family }}, {{ main_font.fallback_families }};
     --main-weight: {{ main_font.weight }};
-    --nav-family: {{ nav_font.family }};
+    --nav-family: {{ nav_font.family }}, {{ nav_font.fallback_families }};
     --nav-weight: {{ nav_font.weight }};
-    --heading-family: {{ heading_font.family }};
+    --heading-family: {{ heading_font.family }}, {{ heading_font.fallback_families }};
     --heading-weight: {{ heading_font.weight }};
 
-    --font-size: {{ settings.font_size }};
-    --h1-size: {{ settings.h1_size }};
-    --h2-size: {{ settings.h2_size }};
-    --h3-size: {{ settings.h3_size }};
-    --h4-size: {{ settings.h4_size }};
-    --h5-size: {{ settings.h5_size }};
-    --nav-size: {{ settings.nav_size }};
+    --font-size: {{ settings.font_size }}px;
+    --h1-size: {{ settings.h1_size }}px;
+    --h2-size: {{ settings.h2_size }}px;
+    --h3-size: {{ settings.h3_size }}px;
+    --nav-size: {{ settings.nav_size }}px;
 
     --announcement-bar-background: {{ settings.announcement_bar_background }};
     --announcement-bar-text-color: {{ settings.announcement_bar_text_color }};
@@ -30,7 +28,6 @@
     --scroll-background: {{ settings.scroll_background }};
     --submenu-color: {{ settings.submenu_color }};
     --dropdown-background: {{ settings.dropdown_background }};
-    --nav-border-color: {{ settings.nav_border_color }};
     --secondary-color: {{ settings.secondary_color }};
     --background: {{ settings.background }};
     --header-color: {{ settings.header_color }};
@@ -63,9 +60,9 @@
     --swatch-color: {{ settings.swatch_color }};
     --swatch-background: {{ settings.swatch_background }};
     --swatch-border: {{ settings.swatch_border }};
-    --swatch-selected_color: {{ settings.swatch_selected_color }};
-    --swatch-selected_background: {{ settings.swatch_selected_background }};
-    --swatch-selected_border: {{ settings.swatch_selected_border }};
+    --swatch-selected-color: {{ settings.swatch_selected_color }};
+    --swatch-selected-background: {{ settings.swatch_selected_background }};
+    --swatch-selected-border: {{ settings.swatch_selected_border }};
     --footer-border: {{ settings.footer_border }};
     --footer-background: {{ settings.footer_background }};
     --footer-text: {{ settings.footer_text }};
@@ -75,5 +72,38 @@
     --footer-input-text: {{ settings.footer_input_text }};
     --footer-button: {{ settings.footer_button }};
     --footer-button-text: {{ settings.footer_button_text }};
+    --error-msg-dark: #e81000;
+    --error-msg-light: {{ '#e81000' | color_lighten: 50 }};
+    --success-msg-dark: #007f5f;
+    --success-msg-light: {{ '#007f5f' | color_lighten: 70 }};
+    --free-shipping-bg: {{ settings.free_shipping_bg }};
+    --free-shipping-text: {{ settings.free_shipping_text }};
+    --error-color: {{ settings.error_color }};
+    --error-color-light: {{ settings.error_color | color_lighten: 50 }};
+    --keyboard-focus: {{ settings.keyboard_focus }};
+    --focus-border-style: {{ settings.focus_border_style }};
+    --focus-border-weight: {{ settings.focus_border_weight }}px;
+    --section-padding: {{ settings.section_padding }}px;
+    --section-title-align: {{ settings.section_title_align }};
+    --section-title-border: {{ settings.section_title_border }}px;
+    --border-width: {{ settings.border-width }}px;
+    --grid-column-gap: {{ settings.grid_column_gap }}px;
+    --details-align: {{ settings.details_align }};
+    --select-arrow-bg: url({{ 'select-arrow.png' | asset_url }});
+    --icon-border-color: {{ settings.text_color | color_lighten: 90 }};
+    --grid-space: {{ settings.grid_space }}px;
+
+    --color-body-text: var(--text-color);
+    --color-body: var(--background);
+    --color-bg: var(--background);
   }
+  @media (max-width: 740px) {
+     :root {
+       --font-size: calc({{ settings.font_size }}px - ({{ settings.font_size }}px * 0.15));
+       --nav-size: calc({{ settings.nav_size }}px - ({{ settings.nav_size }}px * 0.15));
+       --h1-size: calc({{ settings.h1_size }}px - ({{ settings.h1_size }}px * 0.15));
+       --h2-size: calc({{ settings.h2_size }}px - ({{ settings.h2_size }}px * 0.15));
+       --h3-size: calc({{ settings.h3_size }}px - ({{ settings.h3_size }}px * 0.15));
+     }
+   }
 {% endstyle %}

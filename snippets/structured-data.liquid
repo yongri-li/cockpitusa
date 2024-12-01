@@ -16,11 +16,11 @@
      "url": "{{ routes.root_url }}"
    },
    "sameAs": [
-   	"{{ shop.url }}",
-      {% if settings.facebook_url != blank %}"{{ settings.facebook_url }}",{% endif %}
-      {% if settings.twitter_url != blank %}"{{ settings.twittername }}",{% endif %}
-      {% if settings.pinterest_url != blank %}"{{ settings.pinterest_url }}",{% endif %}
-      {% if settings.instagram_url != blank %}"//instagram.com/{{ settings.instagram-id }}"{% endif %}
+    "{{ shop.url }}"
+      {%- if settings.facebook_url != blank -%},"{{ settings.facebook_url }}"{%- endif -%}
+      {%- if settings.twitter_url != blank -%},"{{ settings.twitter_url }}"{%- endif -%}
+      {%- if settings.pinterest_url != blank -%},"{{ settings.pinterest_url }}"{%- endif -%}
+      {%- if settings.tiktok_url != blank -%},"{{ settings.tiktok_url }}"{% endif -%}
      ]
    }
  </script>

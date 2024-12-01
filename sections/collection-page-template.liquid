@@ -1,20 +1,49 @@
+{% liquid
+  assign number = section.settings.products_per_page
+  assign sidebar = false
+  assign sidebar_grid = 'lg-hide md-span-12 sm-span-12 auto'
+  assign full_width = section.settings.full_width
+
+  if section.settings.filter_position == 'left_sidebar'
+    assign sidebar = true
+    assign sidebar_grid = 'span-3 md-span-12 sm-span-12 auto'
+  endif
+
+  if section.settings.description_position == 'top_description' and collection.description != blank
+    assign top_description = true
+  else
+    assign top_description = false
+  endif
+
+  case section.settings.grid
+  when 2
+    assign grid_item_width = 'span-6 md-span-6 sm-span-6 auto'
+  when 3
+    assign grid_item_width = 'span-4 md-span-4 sm-span-6 auto'
+  when 4
+    assign grid_item_width = 'span-3 md-span-4 sm-span-6 auto'
+  when 5
+    assign grid_item_width = ''
+  when 6
+    assign grid_item_width = 'span-2 md-span-4 sm-span-6 auto'
+  endcase
+%}
 <div class="collection-page-{{ section.id }}" data-section-id="{{ section.id }}" data-section-type="collection-section">
-  {% assign number = section.settings.products_per_page %}
   {% paginate collection.products by number %}
-  {% assign sidebar = false %}
 
   {% if collection.description contains '[banner]' %}
-    <div class="collection-banner">
-      {% include 'collection-banner-image' %}
+    <div class="collection__page--banner collection-banner">
+      {% render 'collection-banner-image', collection: collection %}
     </div>
   {% endif %}
 
-    {% if section.settings.full_width %}<div class="gridlock-fluid">{% endif %}
+    {% if full_width %}<div class="gridlock-fluid">{% endif %}
       <div id="content" class="row">
         <div id="main-content" class="grid_wrapper">
-          {% include 'breadcrumb' %}
 
-          <div class="section-title desktop-12 mobile-3 span-12">
+          {% render 'breadcrumb' %}
+
+          <div class="collection__page--section-title section-title span-12 sm-span-12 auto">
             <h1>
               {% if collection.handle == 'all' %}
                 {{ 'collections.general.all_products' | t }}
@@ -22,55 +51,41 @@
                 {{ collection.title }}
               {% endif %}
             </h1>
-
-            <br><br>
-
-            {{ collection.description | remove: '[banner]' | remove: 'collection.title' }}
           </div>
 
-
-          <div class="span-12">
-          {% include 'mm-search' %}
-          </div>
-
-          {% comment %}
-
-          {% if section.settings.filter_position == 'left_sidebar' %}
-            <div class="desktop-sidebar desktop-3 tablet-6 mobile-3 span-3">
-              {% include 'collection-sidebar' %}
+          <div class="collection__page--sidebar desktop-sidebar {{ sidebar_grid }}">
+            <div class="slideout__trigger--open lg-hide">
+              <button class="slideout__trigger-filters js-slideout-open" data-wau-slideout-target="collection-filters" data-slideout-direction="right" aria-label="Open filters" tabindex="0" type="button" name="button">
+                {{ 'collections.filter.refine' | t }}
+              </button>
             </div>
-          {% endif %}
+            {% render 'collection-sidebar', collection: collection %}
+          </div>
 
-          <div class="{% if section.settings.filter_position == 'left_sidebar' %}desktop-9 span-9{% else %}desktop-12 span-12{% endif %} tablet-6 mobile-3">
-            {% if section.settings.description_position == 'top_description' and collection.description != blank %}
-              <div id="collection-description">
-                <div class="rte">
-                  {{ collection.description | remove: "[banner]" }}
-                </div>
-              </div>
-            {% endif %}
+          <div class="collection__page--content {% if section.settings.filter_position == 'left_sidebar' %}span-9{% else %}span-12{% endif %} md-span-12 sm-span-12 auto">
+
 
             {% if section.blocks.size != 0 %}
-              <div id="full-width-filter" class="{% if section.settings.filter_position == 'left_sidebar' %}desktop-hide{% endif %} {% if section.settings.is_sticky and section.settings.filter_position != 'left_sidebar' %} is_sticky{% endif %} mobile-hide">
+              <div id="full-width-filter" class="collection__page--full-width-filters js-col-filter-full {% if sidebar %}lg-hide{% endif %} mobile-hide">
                 {% for block in section.blocks %}
                   {% if block.type == 'vendor_list' %}
                     {% if collection.handle == "all" %}
-                      <div class="filter {% cycle '', 'right-filter' %}" {{ block.shopify_attributes }}>
-                        <button class="filter-menu">
-                          <h4>{{ block.settings.shop_by_designer_title }}</h4>
+                      <div class="collection__sidebar--filter-wrapper filter js-col-filter {% cycle '', 'right-filter' %}" {{ block.shopify_attributes }}>
+                        <button class="collection__filters--trigger js-col-filter-trigger">
+                          {{ block.settings.shop_by_designer_title }}
                         </button>
-                        <ul class="filter-list" style="display: none;">
+                        <ul class="collection__filters--filter-list js-col-filter-list" style="display: none;">
                           {% for product_vendor in shop.vendors %}
                           <li>{{ product_vendor | link_to_vendor  }}</li>
                           {% endfor %}
                         </ul>
                       </div>
                     {% else %}
-                      <div class="filter {% cycle '', 'right-filter' %}" {{ block.shopify_attributes }}>
-                        <button class="filter-menu">
-                          <h4>{{ block.settings.shop_by_designer_title }}</h4>
+                      <div class="collection__sidebar--filter-wrapper filter js-col-filter {% cycle '', 'right-filter' %}" {{ block.shopify_attributes }}>
+                        <button class="collection__filters--trigger js-col-filter-trigger">
+                          {{ block.settings.shop_by_designer_title }}
                         </button>
-                        <ul class="filter-list">
+                        <ul class="collection__filters--filter-list js-col-filter-list">
                           {% for product_vendor in collection.all_vendors %}
                           <li class="{{ product_vendor | handelize }}">{{ product_vendor | link_to_vendor }}</li>
                           {% endfor %}
@@ -78,11 +93,11 @@
                       </div>
                     {% endif %}
                   {% elsif block.type == 'menu' %}
-                    <div class="filter {% cycle '', 'right-filter' %}" {{ block.shopify_attributes }}>
-                      <button class="filter-menu">
-                        <h4>{{ block.settings.title }}</h4>
+                    <div class="collection__sidebar--filter-wrapper filter js-col-filter {% cycle '', 'right-filter' %}" {{ block.shopify_attributes }}>
+                      <button class="collection__filters--trigger js-col-filter-trigger">
+                        {{ block.settings.title }}
                       </button>
-                      <ul class="filter-list sidebar-menu" style="display: none;">
+                      <ul class="collection__filters--filter-list js-col-filter-list sidebar-menu" style="display: none;">
                         {% for link in linklists[block.settings.side_nav].links %}
                         {% if link.links != blank %}
                         <li class="extend has_sub_menu" aria-haspopup="true" aria-expanded="false"><a href="{{ link.url }}">{{ link.title }}</a></li>
@@ -99,96 +114,28 @@
                     </div>
                   {% endif %}
 
-                  {% include 'filters' %}
+                  {% render 'filters', collection: collection block: block, forloop: forloop %}
                 {% endfor %}
               </div>
               <div class="clear"></div>
-
-              <a id="filtersButton" class="button desktop-hide" href="#">{{ 'collections.filter.refine' | t }}</a>
-              <div id="collection-filters" class="mobile-or-full desktop-hide">
-                <h2>{{ 'collections.filter.refine' | t }}</h2>
-                {% include 'collection-sidebar' %}
-              </div>
-              <div class="clear"></div>
-
-              <div id="current-filters" class="desktop-12 tablet-6 mobile-3 span-12" style="display: none;">
-                <h5>{{ 'collections.filter.filtering_by' | t }}</h5>
-              </div>
             {% endif %}
 
+            <div id="current-filters" class="collection__filters--cur_wrapper span-12 md-span-12 sm-span-12 auto js-col-filters-current" style="display: none;">
+              <h5>{{ 'collections.filter.filtering_by' | t }}</h5>
+              <ul class="collection__filters--cur_list js-col-filters-current-list"></ul>
+            </div>
             <div class="clear"></div>
-
-            {% case section.settings.grid %}
-            {% when 2 %}
-              {%- assign grid_item_width = 'desktop-6 tablet-3 mobile-half span-6' -%}
-            {% when 3 %}
-              {%- assign grid_item_width = 'desktop-4 tablet-2 mobile-half span-4' -%}
-            {% when 4 %}
-              {%- assign grid_item_width = 'desktop-3 tablet-2 mobile-half span-3' -%}
-            {% when 5 %}
-              {%- assign grid_item_width = 'desktop-fifth tablet-2 mobile-half span-one-fifth' -%}
-              <style>
-                @media screen and ( min-width: 981px ) {
-                  @supports (display: grid) {
-                    .collection-page-{{ section.id }} .product-loop.grid_wrapper {
-                        grid-template-columns: repeat(5, 1fr);
-                    }
-                  }
-                }
-                @media screen and ( min-width: 741px ) and ( max-width: 980px ) {
-                  @supports (display: grid) {
-                    .collection-page-{{ section.id }} .product-loop.grid_wrapper {
-                        grid-template-columns: repeat(3, 1fr);
-                    }
-                  }
-                }
-                @media screen and ( max-width: 740px ) {
-                @supports (display: grid) {
-                  .collection-page-{{ section.id }} .product-loop.grid_wrapper {
-                      grid-template-columns: repeat(2, 1fr);
-                  }
-                }
-              }
-              </style>
-            {% when 6 %}
-              {%- assign grid_item_width = 'desktop-2 tablet-2 mobile-half span-2' -%}
-            {% endcase %}
 
             <div class="grid_wrapper product-loop{% if section.settings.infinite_scroll %} is_infinite{% endif %}">
               {% for product in collection.products %}
-<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
-                <div class="{{ grid_item_width }} product-index" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}" data-aos="{{ settings.scroll_animation }}">
-                  {% include 'product-listing' %}
+                <div class="{{ grid_item_width }} product-index" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}" data-aos="{{ settings.scroll_animation }}" data-product-id="{{ product.id }}">
+                  {% render 'product-listing', collection: collection, product: product %}
                 </div>
               {% endfor %}
-              <style media="screen">
-              {% if section.settings.grid == 2 %}
-                .collection-page-{{ section.id }} .product-index:nth-child(2n + 1) {
-                  clear:left;
-                }
-              {% elsif section.settings.grid == 3 %}
-                .collection-page-{{ section.id }} .product-index:nth-child(3n + 1) {
-                  clear:left;
-                }
-              {% elsif section.settings.grid == 4 %}
-                .collection-page-{{ section.id }} .product-index:nth-child(4n + 1) {
-                  clear:left;
-                }
-              {% elsif section.settings.grid == 5 %}
-                .collection-page-{{ section.id }} .product-index:nth-child(5n + 1) {
-                  clear:left;
-                }
-              {% elsif section.settings.grid == 6 %}
-                .collection-page-{{ section.id }} .product-index:nth-child(6n + 1) {
-                  clear:left;
-                }
-              {% endif %}
-              </style>
             </div>
-
             <div class="clear"></div>
 
-            {% if section.settings.description_position == 'bottom_description' and collection.description != blank %}
+            {% if top_description == false %}
               <div id="collection-description">
                 <div class="rte">
                   {{ collection.description | remove: "[banner]" }}
@@ -200,13 +147,66 @@
 
           <div class="clear"></div>
 
-          {% include 'pagination' %}
-          {% endcomment %}
+          {% render 'pagination', paginate: paginate %}
+
 
         </div>
       </div>
-    {% if section.settings.full_width %}</div>{% endif %}
+      <div id="collection-description" class="row">
+        <div class="rte">
+          {{ collection.description | remove: "[banner]" }}
+        </div>
+      </div>
+    {% if full_width %}</div>{% endif %}
   {% assign sp_paginate_by = paginate.page_size %}{% endpaginate %}
+
+  <style media="screen">
+    {% if section.settings.grid == 5 %}
+      @media screen and ( min-width: 981px ) {
+        @supports (display: grid) {
+          .collection-page-{{ section.id }} .product-loop.grid_wrapper {
+              grid-template-columns: repeat(5, 1fr);
+          }
+        }
+      }
+      @media screen and ( min-width: 741px ) and ( max-width: 980px ) {
+        @supports (display: grid) {
+          .collection-page-{{ section.id }} .product-loop.grid_wrapper {
+              grid-template-columns: repeat(3, 1fr);
+          }
+        }
+      }
+      @media screen and ( max-width: 740px ) {
+        @supports (display: grid) {
+          .collection-page-{{ section.id }} .product-loop.grid_wrapper {
+              grid-template-columns: repeat(2, 1fr);
+          }
+        }
+      }
+    {% endif %}
+
+    .collection__sidebar--filter-wrapper {
+      color: {{ section.settings.filter_text_color }};
+      border: 1px solid {{ section.settings.filter_border_color }};
+      background-color: {{ section.settings.filter_bg_color }};
+    }
+    ul.collection__filters--filter-list {
+      color: {{ section.settings.filter_text_color }};
+      background-color: {{ section.settings.filter_bg_color }};
+    }
+    button.collection__filters--trigger:after {
+      background-color: transparent;
+      color: {{ section.settings.filter_text_color }};
+    }
+    ul.collection__filters--filter-list li a {
+      color: {{ section.settings.filter_text_color }};
+    }
+    .collection__sidebar--wrapper .collection__sidebar--filter-wrapper button,
+    .collection__filters--trigger button {
+      border-color: {{ section.settings.filter_border_color }};
+      color: {{ section.settings.filter_text_color }};
+    }
+  </style>
 </div>
 
 {% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}{% schema %}
@@ -366,7 +366,8 @@
      {
        "type":"image_picker",
        "id":"image",
-       "label":"Image"
+       "label":"Image",
+       "info" : "1800px x 400px recommended"
      },
      {
        "type":"url",

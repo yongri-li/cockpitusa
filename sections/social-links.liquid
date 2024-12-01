@@ -7,7 +7,7 @@ data-aos="{{ settings.scroll_animation }}">
         <h4>{{ section.settings.heading | escape }}</h4>
       {% endif %}
         <ul id="social-icons">
-        {% if settings.facebook_url != blank %}<li><a href="{{ settings.facebook_url }}" target="_blank"><i class="la fab-facebook-f la-2x" aria-hidden="true"></i></a></li>{% endif %}
+        {% if settings.facebook_url != blank %}<li><a href="{{ settings.facebook_url }}" target="_blank"><i class="fab fa-facebook-f la-2x" aria-hidden="true"></i></a></li>{% endif %}
         {% if settings.instagram-id != blank %}<li><a href="//instagram.com/{{ settings.instagram-id }}" target="_blank"><i class="la la-instagram la-2x" aria-hidden="true"></i></a></li>{% endif %}
         {% if settings.twittername != blank %}<li><a href="{{ settings.twittername }}" target="_blank"><i class="la la-twitter la-2x" aria-hidden="true"></i></a></li>{% endif %}
         {% if settings.pinterest_url != blank %}<li><a href="{{ settings.pinterest_url }}" target="_blank"><i class="la la-pinterest la-2x" aria-hidden="true"></i></a></li>{% endif %}
@@ -40,7 +40,7 @@ data-aos="{{ settings.scroll_animation }}">
     background: {{ section.settings.homepage_social_background }};
   }
 
-  section.homepage-social h2 {
+  section.homepage-social h4 {
     color: {{ section.settings.homepage_social_color }}!important;
   }
 </style>

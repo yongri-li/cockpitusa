@@ -2,7 +2,7 @@
 
   {% if section.settings.image != blank %}
     <div class="collection-banner">
-      {%- include 'basic-responsive-image', type: section.settings.image -%}
+      {%- render 'basic-responsive-image', type: section.settings.image, data_widths: '[180, 360, 540, 720, 900, 1080, 1296, 1512]' -%}
       <noscript>
         <img src="{{ section.settings.image | img_url: '1024x' }}" alt="{{ section.settings.image.alt }}">
       </noscript>
@@ -10,7 +10,7 @@
   {% endif %}
 
   <div id="content" class="row">
-    {% include 'breadcrumb' %}
+    {% render 'breadcrumb' %}
     <div class="section-title desktop-12 mobile-3">
       <h1>
         {% if current_tags %}
@@ -41,13 +41,13 @@
             {% if block.settings.promo_image != blank %}
               <a class="promo desktop-4 tablet-2 mobile-3 block-{{ block.id }}" href="{{ block.settings.promo_link }}">
                 <div class="promo-inner lazyload lazyload-fade"
-                data-bgset="{% include 'bgset', image: block.settings.promo_image %}"
+                data-bgset="{% render 'bgset', image: block.settings.promo_image %}"
                 data-sizes="auto">
                   <noscript>
                     <img src="{{ block.settings.promo_image | img_url: '800x' }}" alt="{{ block.settings.promo_image.alt }}">
                   </noscript>
                   <div class="promo-caption section-heading">
-                    <h2>{{ block.settings.promo_text }}</h2>
+                    <h3>{{ block.settings.promo_text }}</h3>
                   </div>
                 </div>
               </a>
@@ -55,7 +55,7 @@
               <a class="promo desktop-4 tablet-2 mobile-3 block-{{ block.id }}" href="{{ block.settings.promo_link }}">
                 <div class="promo-inner" style="background-color: #eee;">
                   <div class="promo-caption section-heading">
-                    <h2>{{ block.settings.promo_text }}</h2>
+                    <h3>{{ block.settings.promo_text }}</h3>
                   </div>
                 </div>
               </a>
@@ -63,7 +63,7 @@
          {%- when 'banner_image' -%}
            {% if block.settings.banner_image != blank %}
              <a class="blog-banner block-{{ block.id }} desktop-12 tablet-6 mobile-3" href="{{ block.settings.banner_link }}">
-               {%- include 'basic-responsive-image', type: block.settings.banner_image -%}
+               {%- render 'basic-responsive-image', type: block.settings.banner_image,  data_widths: '[180, 360, 540, 720, 900, 1080, 1296, 1512]' -%}
                <noscript>
                  <img src="{{ block.settings.banner_image | img_url: '1024x' }}" alt="{{ block.settings.banner_image.alt }}">
                </noscript>
@@ -75,15 +75,16 @@
     </section>
     <div class="clear"></div>
     {% paginate blog.articles by 10 %}
-    <div id="blog-articles">
+    <div id="blog-articles" class="articles">
       {% for article in blog.articles  %}
-        {% include 'article-loop' %}
+      {% capture articleCycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+        {% render 'article-loop', article: article, forloop: forloop, articleCycle: articleCycle %}
       {% endfor %}
     </div>
 
     <div class="clear"></div>
 
-    {% include 'pagination' %}
+    {% render 'pagination', paginate: paginate %}
 
     {% assign sp_paginate_by = paginate.page_size %}{% endpaginate %}
 
@@ -98,6 +99,53 @@
     .article-body a:visited {
       color: {{ section.settings.excerpt_text_color }} !important;
     }
+    {% if section.settings.blog_layout_grid %}
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+    .articles .single-article {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .articles .article-image {
+        width: 100%;
+        margin: 0 0 20px 0;
+        height: 300px;
+        overflow: hidden;
+        position: relative;
+        display: block !important;
+    }
+    .articles .single-article.even .article-image {
+        margin-left: 0 !important;
+    }
+    .article-image img {
+      width: 100%;
+      object-fit: cover;
+      height: 300px;
+    }
+    .articles .article-body {
+        padding: 10px !important;
+        text-align: center;
+        position: unset !important;
+        width: 100%;
+        margin: 0 !important;
+    }
+    .articles .single-article .posted {
+        text-align: center !important;
+        float: none !important;
+    }
+    @media screen and (max-width: 740px) {
+      .articles {
+        grid-template-columns: 1fr;
+      }
+      .articles .article-image {
+        height: 250px;
+      }
+    }
+    {% endif %}
   </style>
 </div>
 {% if sp_paginate_by %}{% render 'spurit_po2_collection_template_snippet', paginate_by: sp_paginate_by %}{% endif %}{% schema %}
@@ -111,7 +159,8 @@
       {
         "type": "image_picker",
         "id": "image",
-        "label": "Banner Image"
+        "label": "Banner Image",
+        "info" : "1800px x 400px recommended"
       },
       {
         "type":"header",
@@ -137,6 +186,12 @@
            "label":"Center"
          }
        ]
+      },
+      {
+        "type": "checkbox",
+        "id": "blog_layout_grid",
+        "label": "Layout as a grid",
+        "default": true
       },
       {
         "type": "checkbox",
@@ -167,6 +222,7 @@
       {
         "type":"promo_image",
         "name":"Promo Image",
+        "limit": 3,
         "settings":[
           {
             "type": "image_picker",
@@ -182,22 +238,6 @@
           {
             "type": "url",
             "id": "promo_link",
-            "label": "Link"
-          }
-        ]
-      },
-      {
-        "type": "banner_image",
-        "name": "Banner Image",
-        "settings": [
-          {
-            "type": "image_picker",
-            "id": "banner_image",
-            "label": "Image"
-          },
-          {
-            "type": "url",
-            "id": "banner_link",
             "label": "Link"
           }
         ]

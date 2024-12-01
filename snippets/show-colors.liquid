@@ -21,7 +21,7 @@
             {% assign variant_image_url =  variant.image | img_url: '1000x' %}
           {% endif %}
 
-          <li data-option-title="{{ value | escape }}" data-href="{{ variant.featured_image | product_img_url: 'large' }}" class="color {{ value | handle }}">
+          <li data-option-title="{{ value | escape }}" data-href="{{ variant.featured_media | product_img_url: 'large' }}" class="color {{ value | handle }}">
             <a href="{{ variant.url | within: collection }}">
               {% if settings.color_swatch_options == 'variant-image' and variant_image_url != blank %}
                 <img class="variant-image" src="{{ variant_image_url }}" alt="{{ value }}">

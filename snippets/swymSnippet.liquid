@@ -1,31 +1,12 @@
-<link rel="dns-prefetch" href="https://store.swymrelay.com">
-<link rel="dns-prefetch" href="https://swymprod.azureedge.net/code/swym-shopify.js">
-<link rel="preconnect" href="https://swymprod.azureedge.net/code/swym-shopify.js">
+{% comment %}
+<!-- DO NOT EDIT!! - Auto generated file->
+<!-- To add modifications, create a separate file and include in theme.liquid after {% include swymSnippet %}-->
+{% endcomment %}
+<link rel="dns-prefetch" href="https://swymstore-v3free-01.swymrelay.com" crossorigin>
+<link rel="dns-prefetch" href="//swymv3free-01.azureedge.net/code/swym-shopify.js">
+<link rel="preconnect" href="//swymv3free-01.azureedge.net/code/swym-shopify.js">
 <script id="swym-snippet">
   window.swymLandingURL = document.URL;
-  (function loadSwymFaster(){
-    var elScripts = document.querySelectorAll("script:not([src]):not([class]):not([id])"), scriptLoadScript, scriptLoadScriptText;
-    for(var i = 0; i < elScripts.length; i++){
-      var elScript = elScripts[i];
-      // TODO change swym- check to script metafield
-      if(elScript.innerText.indexOf('swym-shopify.js') > -1){
-        scriptLoadScriptText = elScript.innerText;
-        break;
-      }
-    }
-    if(scriptLoadScriptText) {
-      var startStr = 'var urls =';
-      var startIdx = scriptLoadScriptText.indexOf(startStr);
-      var endStr = '"];';
-      var endIdx = scriptLoadScriptText.indexOf(endStr,startIdx);
-      var listOfUrlsText = scriptLoadScriptText.slice(startIdx + startStr.length, endIdx + endStr.length);
-      var s = document.createElement('script');
-      s.type = 'text/javascript';
-      s.src = ({{ shop.metafields.swym.js_path | json }} || "//swymprod.azureedge.net/code/swym-shopify.js") + "?shop={{shop.permanent_domain | url_encode}}";
-      var x = document.getElementsByTagName('script')[0];
-      x.parentNode.insertBefore(s, x);
-    }
-  })();
   window.swymCart = {{ cart | json }};
   window.swymPageLoad = function(){
     window.SwymProductVariants = window.SwymProductVariants || {};
@@ -35,7 +16,7 @@
     var variants = [];
     window.SwymProductInfo.product = {{ product | json }};
     window.SwymProductInfo.variants = window.SwymProductInfo.product.variants;
-    var piu = {{ product.featured_image | json }};
+    var piu = {{ product.featured_image | img_url: '620x620' | json }};
     {% if product.selected_or_first_available_variant %}
     {% assign currentVariant = product.selected_or_first_available_variant%}
     {% else %}
@@ -49,7 +30,7 @@
         empi:window.SwymProductInfo.product.id,epi:{{variant.id|json}},
         dt: {{ product.title | json }},
         du: "{{ shop.url }}{{ product.url }}",
-        iu: {{ variant.image.src | json}} || piu,
+        iu: {% if variant.image %} {{ variant | img_url: '620x620' | json }} {% else %} piu {% endif %},
         stk: {{variant.inventory_quantity}},
         pr: {{variant.price}}/100,
         ct: window.SwymProductInfo.product.type,
@@ -62,7 +43,7 @@
       et: 1, empi: window.SwymProductInfo.product.id, epi: window.SwymProductInfo.currentVariant,
       dt: {{ product.title | json }}, du: "{{ shop.url }}{{ product.url }}",
       ct: window.SwymProductInfo.product.type, pr: {{ currentVariant.price }}/100,
-      iu: {{ currentVariant.image.src | json }} || piu, variants: [{ {{currentVariant.title | json}} : {{currentVariant.id | json}} }],
+      iu: {% if currentVariant.image %} {{ currentVariant | img_url: '620x620' | json }} {% else %} piu {% endif %}, variants: [{ {{currentVariant.title | json}} : {{currentVariant.id | json}} }],
       stk:{{ currentVariant.inventory_quantity }} {% if currentVariant.compare_at_price %} ,op:{{currentVariant.compare_at_price}}/100 {% endif %}
     };
     window.SwymPageData = product_data;
@@ -105,7 +86,9 @@
     })();
   }
   window.swymCustomerId = {% if customer %}"{{ customer.id }}"{% else %}null{% endif %};
-  var swappName = ({{ shop.metafields.swym.app | json }} || "Watchlist");
+  window.swymCustomerExtraCheck = {% if customer and customer.tags.size > 0 %}true{% else %}null{% endif %};
+
+  var swappName = ({{ shop.metafields.swym.app | json }} || "Wishlist");
   var swymJSObject = {
     pid: {{ shop.metafields.swym.pid | json }} || "jUd/V7Mw2axWz4E33hGry/08j9eDQ5jAnQak/eMdhzU=",
     interface: "/apps/swym" + swappName + "/interfaces/interfaceStore.php?appname=" + swappName
@@ -159,6 +142,20 @@
     {% endif %}
   }
 </script>
+{% if customer %}
+<script id="swym-wrap-login-handler">
+window.SwymCallbacks = window.SwymCallbacks || [];
+window.SwymCallbacks.push(function(swat) {
+  if(swat.isAlreadyAuth()) {
+    var postLoginRedirect = swat.storage.get(swat.key.POSTLOGINRD);
+    if(postLoginRedirect && postLoginRedirect != window.location) {
+      swat.storage.remove(swat.key.POSTLOGINRD);
+      window.location = postLoginRedirect;
+    }
+  }
+});
+</script>
+{% endif %}
 <style id="safari-flasher-pre"></style>
 <script>
   if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -177,14 +174,16 @@
         // flash-preventer
         var x = function(){
           SwymUtils.onDOMReady(function() {
-            $(document.head).append("<style id='safari-flasher-post'>"
+            var d = document.createElement("div");
+            d.innerHTML = "<style id='safari-flasher-post'>"
               + "#swym-plugin:not(.swym-ready),#swym-hosted-plugin:not(.swym-ready){display: none;}"
               + ".swym-button.swym-add-to-wishlist:not(.swym-loaded){display: none;}"
               + ".swym-button.swym-add-to-watchlist:not(.swym-loaded){display: none;}"
               + "#swym-plugin.swym-ready  #swym-notepad, #swym-plugin.swym-ready  #swym-overlay, #swym-plugin.swym-ready  #swym-notification,"
               + "#swym-hosted-plugin.swym-ready  #swym-notepad, #swym-hosted-plugin.swym-ready  #swym-overlay, #swym-hosted-plugin.swym-ready  #swym-notification"
               + "{-webkit-transition: opacity 0.3s, visibility 0.3ms, -webkit-transform 0.3ms !important;-moz-transition: opacity 0.3s, visibility 0.3ms, -moz-transform 0.3ms !important;-ms-transition: opacity 0.3s, visibility 0.3ms, -ms-transform 0.3ms !important;-o-transition: opacity 0.3s, visibility 0.3ms, -o-transform 0.3ms !important;transition: opacity 0.3s, visibility 0.3ms, transform 0.3ms !important;}"
-              + "</style>");
+              + "</style>";
+            document.head.appendChild(d);
           });
         };
         setTimeout(x, 10);

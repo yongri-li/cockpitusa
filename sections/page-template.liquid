@@ -4,15 +4,15 @@
     <div class="gridlock-fluid">
     {% endif %}
 
-    <div id="content" class="row grid_wrapper {% if page.handle == 'top-gun-collection' or page.handle == 'featured-collection' %}top-gun-page{% endif %}">
-      {% include 'breadcrumb' %}
+    <div id="content" class="row grid_wrapper">
+      {% render 'breadcrumb' %}
 
-      <div class="section-title span-12">
+      <div class="section-title span-12 auto">
         <h1>{{ page.title }}</h1>
       </div>
 
       {% capture sidebar %}
-      <div class="desktop-3 tablet-2 mobile-hide span-3" id="page_sidebar">
+      <div class="span-3 md-span-3 sm-span-12 auto" id="page_sidebar">
         {% for block in section.blocks %}
           {% if block.type == 'collection' %}
           <div class="collection_side_block">
@@ -21,7 +21,7 @@
             <h4>{{ collection.title }}</h4>
             {% for product in collection.products limit: prod_limit  %}
               <div class="product-index" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}">
-                {% include 'product-listing' %}
+                {% render 'product-listing', product: product, collection: collection %}
               </div>
             {% endfor %}
           </div>
@@ -75,26 +75,26 @@
 
           {% when 'left' %}
             {% if section.settings.page_size == 'thin' %}
-            {%- assign width = 'desktop-6 tablet-4 span-6' -%}
+            {%- assign width = 'span-6 md-span-8 auto' -%}
             {% endif %}
             {% if section.settings.page_size == 'full_page' or section.settings.page_size == 'full_width' %}
-            {%- assign width = 'desktop-9 tablet-4 span-9' -%}
+            {%- assign width = 'span-9 auto' -%}
             {% endif %}
 
           {% when 'right' %}
             {% if section.settings.page_size == 'thin' %}
-            {%- assign width = 'desktop-6 desktop-push-3 tablet-4 span-6 push-3' -%}
+            {%- assign width = 'span-6 push-3 auto' -%}
             {% endif %}
             {% if section.settings.page_size == 'full_page' or section.settings.page_size == 'full_width' %}
-            {%- assign width = 'desktop-9 tablet-4 span-9' -%}
+            {%- assign width = 'span-9 auto' -%}
             {% endif %}
 
           {% when 'none' %}
             {% if section.settings.page_size == 'thin' %}
-            {%- assign width = 'desktop-8 desktop-push-2 tablet-4 tablet-push-1 span-8 push-2' -%}
+            {%- assign width = 'span-8 push-2 auto' -%}
             {% endif %}
             {% if section.settings.page_size == 'full_page' or section.settings.page_size == 'full_width' %}
-            {%- assign width = 'desktop-12 tablet-6 span-12' -%}
+            {%- assign width = 'span-12 auto' -%}
             {% endif %}
 
         {% endcase %}
@@ -103,17 +103,9 @@
       {{ sidebar }}
       {% endif %}
 
-      <div id="page_content" class="{{ width }} mobile-3">
+      <div id="page_content" class="{{ width }} sm-span-12 auto">
         <div class="rte">
           {{ page.content }}
-
-          {% if page.handle == 'style-guide' %}
-          {% include 'style-guide' %}
-          {% endif %}
-          {% if page.handle == 'digital-catalog' %}
-          {% include 'digital-catalog' %}
-          {% endif %}
-
         </div>
       </div>
 

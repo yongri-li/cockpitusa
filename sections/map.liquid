@@ -23,6 +23,10 @@
 
   <script data-map-config type="application/json">
     {
+      "address_no_results": {{ "general.map_errors.address_no_results" | t | json }},
+      "address_query_limit": {{ "general.map_errors.address_query_limit" | t | json }},
+      "address_error": {{ "general.map_errors.address_error" | t | json }},
+      "auth_error": {{ "general.map_errors.auth_error" | t | json }},
       "api_key": {{ api_key | json }},
       "address": {{ address | json }},
       "zoom": 12,
@@ -219,15 +223,15 @@
         <div class="map-section-content-wrapper desktop-3 tablet-2 mobile-3">
           <div class="map-section-content">
             {% if section.settings.hours_heading != blank %}
-              <h2>{{ section.settings.hours_heading }}</h2>
+              <h3>{{ section.settings.hours_heading }}</h3>
             {% endif %}
 
             {% if section.settings.hours != blank %}
               <p>{{ section.settings.hours }}</p>
             {% endif %}
 
-            {% if section.settings.address_heading != blank %}
-              <h2>{{ section.settings.address_heading }}</h2>
+            {% if address and section.settings.address_heading != blank %}
+              <h3>{{ section.settings.address_heading }}</h3>
             {% endif %}
 
             {% if section.settings.map_address != blank %}
@@ -248,7 +252,7 @@
         <div class="map-section-background-wrapper contained desktop-9 tablet-4 mobile-3">
           {%- if bg_image -%}
             <div class="map-section-image lazyload lazyload-fade"
-              data-bgset="{% include 'bgset', image: bg_image %}"
+              data-bgset="{% render 'bgset', image: bg_image %}"
               data-sizes="auto"
               data-parent-fit="cover"
               data-bg-image
@@ -277,8 +281,11 @@
 #MapSection--{{ section.id }} .map-section-wrapper {
   background-color: {{ section.settings.background_color }} !important;
 }
-#MapSection--{{ section.id }} h2.section-title {
+#MapSection--{{ section.id }} .section-title h2 {
   color: {{ section.settings.heading_color }} !important;
+}
+#MapSection--{{ section.id }} .section-title:after {
+  background: {{ section.settings.heading_color }} !important;
 }
 </style>
 

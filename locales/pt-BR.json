@@ -48,6 +48,13 @@
     },
     "accessibility": {
       "unit_price_separator": "por"
+    },
+    "map_errors": {
+      "get_directions": "Obter direções",
+      "address_error": "Erro ao procurar esse endereço",
+      "address_no_results": "Nenhum resultado para esse endereço",
+      "address_query_limit": "Você excedeu o limite de uso da API do Google. Considere fazer o upgrade para um Plano Premium (https:\/\/developers.google.com\/maps\/premium\/usage-limits).",
+      "auth_error": "Ocorreu um problema ao autenticar sua conta do Google Maps. Crie e ative a API JavaScript (https:\/\/developers.google.com\/maps\/documentation\/javascript\/get-api-key) and Geocoding API (https:\/\/developers.google.com\/maps\/documentation\/geocoding\/get-api-key) permissions of your app."
     }
   },
   "blogs": {
@@ -95,9 +102,6 @@
       "title": "Meu carrinho",
       "summary": "Resumo do carrinho",
       "close_cart": "Fechar",
-      "shipping": "Frete",
-      "tax": "Imposto",
-      "at_checkout": "Calculado ao finalizar a compra",
       "empty": "Seu carrinho está vazio.",
       "product": "Produto",
       "price": "Preço",
@@ -118,7 +122,25 @@
       "discounts": "Descontos",
       "savings": "Total de descontos",
       "discount_applied": "Desconto aplicado:",
-      "items": "Item(ns)"
+      "items": "Item(ns)",
+      "cart_error": "Erro no carrinho",
+      "update_qty_error": "Alguns itens ficaram indisponíveis. Atualize a quantidade e tente novamente.",
+      "tax": "Imposto",
+      "shipping": "Remessa",
+      "at_checkout": "Calcular ao finalizar",
+      "shipping_no_destination": "Não enviamos para este destino.",
+      "shipping_single_rate": "Existe uma taxa de envio disponível para ",
+      "shipping_multi_rate_one": "Tem ",
+      "shipping_multi_rate_two": " taxas de envio disponíveis para ",
+      "shipping_multi_rate_three": ", começando às ",
+      "overview": "Resumo do pedido",
+      "calc_error": "Erro de calculadora:",
+      "calc_heading": "Obtenha estimativa de envio",
+      "calc_shipping": "Calcular Frete",
+      "calc_calculating": "Calculando...",
+      "go_shopping": "Vai fazer compras",
+      "in_shopping_cart": "no seu carrinho de compras",
+      "view_cart": "Ver carrinho"
     }
   },
   "collections": {
@@ -306,6 +328,8 @@
       "unavailable": "Indisponível",
       "compare_at": "Comparar em",
       "add_to_cart": "Adicionar ao carrinho",
+      "adding": "Adicionando...",
+      "added": "Adicionado ao carrinho",
       "quantity": "Quantidade",
       "select_options": "Ver opções",
       "details": "Detalhes",
@@ -313,10 +337,8 @@
       "video": "Vídeo",
       "model": "Cuidados com o produto",
       "back_to": "Voltar para",
-      "adding": "Adicionando...",
       "thank_you": "Obrigado!",
-      "added": "Adicionado ao carrinho",
-      "view_cart": "Ver carrinho",
+      "view_cart": "Ver Carrinho",
       "or": "ou",
       "continue": "Continuar comprando",
       "qty_error_first": "Somente",

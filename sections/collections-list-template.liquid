@@ -2,13 +2,13 @@
 
   {% case section.settings.grid %}
   {% when 2 %}
-    {%- assign grid_item_width = 'desktop-6 tablet-3 mobile-half span-6' -%}
+    {%- assign grid_item_width = 'span-6 md-span-4 sm-span-6 auto' -%}
   {% when 3 %}
-    {%- assign grid_item_width = 'desktop-4 tablet-2 mobile-half span-4' -%}
+    {%- assign grid_item_width = 'span-4 md-span-4 sm-span-6 auto' -%}
   {% when 4 %}
-    {%- assign grid_item_width = 'desktop-3 tablet-2 mobile-half span-3' -%}
+    {%- assign grid_item_width = 'span-4 md-span-4 sm-span-6 auto' -%}
   {% when 5 %}
-    {%- assign grid_item_width = 'desktop-fifth tablet-2 mobile-half span-one-fifth' -%}
+    {%- assign grid_item_width = '' -%}
     <style>
     @media screen and ( min-width: 981px ) {
       @supports (display: grid) {
@@ -33,13 +33,13 @@
     }
     </style>
     {% when 6 %}
-      {%- assign grid_item_width = 'desktop-2 tablet-2 mobile-half span-2' -%}
+      {%- assign grid_item_width = 'span-2 md-span-4 sm-span-6 auto' -%}
   {% endcase %}
   {% assign lim = section.settings.grid %}
 
 {% if section.settings.image != blank %}
   <div class="collection-banner">
-    {% include 'basic-responsive-image' | type: section.settings.image %}
+    {% render 'basic-responsive-image', type: section.settings.image,  data_widths: '[180, 360, 540, 720, 900, 1080, 1296, 1512]' %}
     <noscript>
       <img src="{{ section.settings.image | img_url: '1024x' }}" alt="{{ section.settings.image.alt }}">
     </noscript>
@@ -50,14 +50,14 @@
     <div id="content" class="row">
 
       <div class="grid_wrapper">
-        {% include 'breadcrumb' %}
+        {% render 'breadcrumb' %}
 
-        <div class="section-title desktop-12 mobile-3 span-12">
+        <div class="section-title span-12 auto">
           <h1>{{ 'collections.general.all_collections' | t }}</h1>
         </div>
 
         {% if section.settings.text != blank %}
-          <div id="collection-description" class="desktop-12 tablet-6 mobile-3 span-12" style="text-align: {{ section.settings.text_align }}">
+          <div id="collection-description" class="span-12 auto" style="text-align: {{ section.settings.text_align }}">
             <div class="rte">
               {{ section.settings.text }}
             </div>
@@ -72,9 +72,8 @@
             <h2><a href="{{ collection.url }}" title="{{ collection_title }}">{{ collection.title }}</a></h2>
           </div>
           {% for product in collection.products limit: lim %}
-<script type='application/json' class='bold-product-json'>{{ product | json }}</script>
             <div class="product-index {{ grid_item_width }}" id="prod-{{ product.id }}" data-alpha="{{ product.title }}" data-price="{{ product.price }}" data-aos="{{ settings.scroll_animation }}">
-              {% include 'product-listing' %}
+              {% render 'product-listing', collection: collection, product: product %}
             </div>
           {% endfor %}
         </div>
@@ -83,7 +82,7 @@
         <div class="product-loop grid_wrapper">
           {% for collection in collections %}
             <div class="{{ grid_item_width }}" data-alpha="{{ collection.title }}" data-aos="{{ settings.scroll_animation }}">
-                {% include 'collection-grid-item' %}
+                {% render 'collection-grid-item', collection: collection %}
             </div>
         {% endfor %}
         </div>
@@ -102,7 +101,7 @@
                   <h3><a href="#">Sample collection {{ forloop.index }}</a></h3>
                 </div>
               {% else %}
-                {% include 'collection-grid-item' %}
+                {% render 'collection-grid-item', collection: collection %}
               {% endif %}
             </div>
         {% endfor %}
@@ -132,7 +131,8 @@
   {
     "type": "image_picker",
     "id": "image",
-    "label": "Banner image"
+    "label": "Banner image",
+    "info" : "1800px x 400px recommended"
   },
   {
     "id": "text",

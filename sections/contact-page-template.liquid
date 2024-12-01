@@ -2,7 +2,7 @@
 
   {% if section.settings.image != blank %}
     <div class="collection-banner">
-      {% include 'basic-responsive-image' | type: section.settings.image %}
+      {% render 'basic-responsive-image', type: section.settings.image, data_widths: '[180, 360, 540, 720, 900, 1080, 1296, 1512]' %}
       <noscript>
         <img src="{{ section.settings.image | img_url: '1024x' }}" alt="{{ section.settings.image.alt }}">
       </noscript>
@@ -20,7 +20,7 @@
           </div>
         </div>
       <div class="desktop-6 mobile-3 tablet-6">
-        {% include 'custom-contact' type: section %}
+        {% render 'custom-contact' type: section %}
       </div>
       {% else %}
         {% comment %}If we have the contact form centered only {% endcomment %}
@@ -28,7 +28,7 @@
           <div class="rte">
             {{ page.content }}
           </div>
-          {% include 'custom-contact' type: section %}
+          {% render 'custom-contact' type: section %}
         </div>
       {% endif %}
   </div>

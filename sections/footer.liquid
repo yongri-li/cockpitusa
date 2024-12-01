@@ -113,6 +113,13 @@
             </a>
           </li>
         {% endif %}
+        {% if settings.tiktok_url != blank %}
+          <li>
+            <a href="{{ settings.tiktok_url }}" title="Tiktok" target="_blank">
+              <svg aria-hidden="true" focusable="false" data-prefix="fab" data-icon="tiktok" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style="width: 18px; vertical-align: sub;"><path fill="currentColor" d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"></path></svg>
+            </a>
+          </li>
+        {% endif %}
         {% if settings.snapchat-id != blank %}
           <li>
             <a href="//snapchat.com/add/{{ settings.snapchat-id }}" target="_blank">
@@ -148,7 +155,10 @@
         </div>
 
         <p>
-          <small><a href="{{ routes.root_url }}">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</a> • <a href="https://www.shopify.com/?ref=minion-made" target="blank"> Powered by Shopify.</a></small>
+          <small><a href="{{ routes.root_url }}">&copy; {{ 'now' | date: "%Y" }} {{ shop.name }}</a> • 
+          <a href="https://minionmade.com?utm_source={{ shop.permanent_domain | remove: '.myshopify.com' }}" target="_blank">Managed by Minion Made.</a>
+<a href="https://www.shopify.com/?ref=minion-made&utm_campaign={{ shop.permanent_domain | remove: '.myshopify.com' }}" target="_blank"> Powered by Shopify.</a>
+</small>
         </p>
       </div>
     </div>
@@ -165,7 +175,7 @@
 {% schema %}
 {
     "name": "Footer",
-	"max_blocks": 4,
+  "max_blocks": 4,
     "settings": [
      {
         "type": "select",
@@ -235,7 +245,7 @@
       "type": "newsletter",
       "name": "Newsletter signup",
       "limit": 1,
-	    "settings":[
+      "settings":[
         {
           "type": "text",
           "id": "title",
@@ -248,8 +258,8 @@
          "label": "Mailing list subheading",
          "default": "<p>Join our mailing list for updates</p>"
         }
-	    ]
-	  }
+      ]
+    }
    ]
   }
 {% endschema %}

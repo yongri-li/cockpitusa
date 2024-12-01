@@ -1,132 +1,111 @@
 <!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en" class="no-js"> <!--<![endif]-->
+<html lang="en" class="no-js">
 <head>
-
-  <script>
-    window.performance.mark('parse_head_start');
-    function marks (name) {
-      return {
-        name,
-        get start () {
-          return `${this.name}_start`;
-        },
-        get end () {
-          return `${this.name}_end`;
-        }
-      };
-    }
-    window.markNames = {
-      head: marks('parse_head'),
-      body: marks('parse_body'),
-      bodyLayout: marks('parse_body_layout'),
-      bodyEndScripts: marks('parse_body_endscripts')
-    };
-  </script>
-
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="HB4hl911lbHUNwDpUkA4BV7GHMVDM9mQF8IOjRcBK28" /> 
+<script>(function(w,d,t,r,u){var f,n,i;w[u]=w[u]||[],f=function(){var o={ti:"33000136"};o.q=w[u],w[u]=new UET(o),w[u].push("pageLoad")},n=d.createElement(t),n.src=r,n.async=1,n.onload=n.onreadystatechange=function(){var s=this.readyState;s&&s!=="loaded"&&s!=="complete"||(f(),n.onload=n.onreadystatechange=null)},i=d.getElementsByTagName(t)[0],i.parentNode.insertBefore(n,i)})(window,document,"script","//bat.bing.com/bat.js","uetq");</script>
+  <!-- Establish early connection to external domains -->
+  <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.shopify.com" crossorigin>
+  <link rel="preconnect" href="https://monorail-edge.shopifysvc.com">
+  <link rel="preconnect" href="//ajax.googleapis.com" crossorigin />
 
-  <meta name="google-site-verification" content="MRKAjauvgaWP4BPkNorJRdyqfWYJbPBLgV60yAj6cWk" />
+  {%- assign main_font = settings.main_font -%}
+  {%- assign heading_font = settings.heading_font -%}
+  {%- assign nav_font = settings.nav_font -%}
+  {%- assign main_font_bold = main_font | font_modify: 'weight', 'bolder' -%}
+  {%- assign main_font_italic = main_font | font_modify: 'style', 'italic' -%}
+  {%- assign main_font_bold_italic = main_font_bold | font_modify: 'style', 'italic' -%}
 
-  <link rel="preload" href="{{ 'stylesheet.css' | asset_url }}" as="style">
-  <link rel="preload" href="{{ 'queries.css' | asset_url }}" as="style">
-  <link rel="preload" href="{{ 'minion.scss' | asset_url }}" as="style">
+  <!-- Preload onDomain stylesheets and script libraries -->
+  <link rel="preload" href="{{ 'stylesheet.min.css' | asset_url }}" as="style">
+  <link rel="preload" as="font" href="{{ main_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ nav_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="{{ heading_font | font_url }}" type="font/woff2" crossorigin>
+  <link rel="preload" href="{{ 'eventemitter3.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'theme.min.js' | asset_url }}" as="script">
+  <link rel="preload" href="{{ 'option_selection.js' | shopify_asset_url }}" as="script">
 
-  <link rel="preload" href="//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" as="script">
-  <link rel="preload" href="//unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js" as="script">
-  <link rel="preload" href="https://static.boldcommerce.com/bold-platform/sf/pr.js" as="script">
-  <link rel="preload" href="https://bundles.boldapps.net/js/bundles.js" as="script">
-  <link rel="preload" href="{{ 'theme.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'option_selection.js' | asset_url }}" as="script">
-  <link rel="preload" href="//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js" as="script">
-  <link rel="preload" href="{{ 'jquery.products.min.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'handlebars.min.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'handlebars.min.js' | asset_url }}" as="script">
-  {% if settings.ajax_cart_method == 'drawer' %}
-    <link rel="preload" href="{{ 'ajax-cart.js' | asset_url }}" as="script">
-  {% endif %}
-  <link rel="preload" href="{{ 'ls.rias.min.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'ls.bgset.min.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'lazysizes.min.js' | asset_url }}" as="script">
-  <link rel="preload" href="{{ 'jquery.fancybox.js' | asset_url }}" as="script">
 
-  {% include 'google-fonts' %}
-  {% include 'social-media-meta-tags' %}
-
-    <!-- SEO
-  ================================================== -->
-  <title>
-    {% if template == 'index' %}{% if page_title contains 'Welcome' %}{{ shop.name }} &ndash; Welcome{% else %}{{ page_title }}{% endif %}{% elsif template == '404' %}Page Not Found{% elsif page_title contains shop.name %}{{ page_title }}{% else %}{{ page_title }} &ndash; {{ shop.name }}{% endif %}
-  </title>
-  {% if page_description %}
-  <meta name="description" content="{{ page_description }}" />
-  {% endif %}
+  {% if settings.favicon %}<link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />{% endif %}
   <link rel="canonical" href="{{ canonical_url }}" />
 
-    <!-- CSS
-  ================================================== -->
+  <title>{% if template == 'index' %}{% if page_title contains 'Welcome' %}{{ shop.name }} &ndash; Welcome{% else %}{{ page_title }}{% endif %}{% elsif template == '404' %}Page Not Found{% elsif page_title contains shop.name %}{{ page_title }}{% else %}{{ page_title }} &ndash; {{ shop.name }}{% endif %}</title>
+  {% if page_description %}<meta name="description" content="{{ page_description }}" />{% endif %}
 
-  {{ 'stylesheet.css' | asset_url | stylesheet_tag }}
-  {{ 'queries.css' | asset_url | stylesheet_tag }}
-  {{ 'minion.scss' | asset_url | stylesheet_tag }}
+  {% render 'social-media-meta-tags' %}
+  {% render 'structured-data' %}
+  {% render 'css-variables' %}
 
-    
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="{{ 'stylesheet.min.css' | asset_url }}" type="text/css">
 
-  {% if settings.favicon %}
-  <link rel="shortcut icon" href="{{ settings.favicon | img_url: '32x32' }}" type="image/png" />
-  {% endif %}
-  {% if template contains 'customers' %}
-  {{ "shopify_common.js" | shopify_asset_url | script_tag }}
-  {{ "customer_area.js"  | shopify_asset_url | script_tag }}
-  {% endif %}
+  <style>
+  {{ main_font | font_face: font_display: 'swap' }}
+  {{ nav_font | font_face: font_display: 'swap' }}
+  {{ heading_font | font_face: font_display: 'swap' }}
+  {{ main_font_bold | font_face: font_display: 'swap' }}
+  {{ main_font_italic | font_face: font_display: 'swap' }}
+  {{ main_font_bold_italic | font_face: font_display: 'swap' }}
+  </style>
+
   {{ content_for_header }}
+{%- render 'bold-common' -%}
+
 {{ 'bold-brain-widget.css' | asset_url | stylesheet_tag }}
 
-
-  <link rel="next" href="/next"/>
-  <link rel="prev" href="/prev"/>
-	{% include 'vitals-loader' %}
-
-  <script>window.performance.mark(window.markNames.head.end);</script>
-
+<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	{% render 'vitals-loader' %}
+<script
+    src="https://js.afterpay.com/afterpay-1.x.js"
+    data-min="1.00"
+    data-max="2000.00"
+    async 
+></script>
+  <!-- Start Kutoku referral snippet -->
+<script>
+!(function (w) {
+  if (w.location.search.search(/(ktk|tap_a|tap_s)=/) === -1) return;
+  var script = document.createElement("script");
+  script.src = "https://eyfdnwgh.cockpitusa.com/r/z3Ms7J.js?" + [
+    "url=" + encodeURIComponent(w.location.href),
+    "cid=" + encodeURIComponent(Date.now() + '_' + Math.random().toString(36).substr(2))
+  ].join("&");
+  w.document.head.appendChild(script);
+})(window)
+</script>
+<!-- End Kutoku referral snippet -->
 </head>
-
-<body class="gridlock shifter-left {{ template }}">
-
-  <script>window.performance.mark(window.markNames.body.start);</script>
-  <script>window.performance.mark(window.markNames.bodyLayout.start);</script>
-
-<!-- Google Tag Manager (noscript) -->
+<body class="gridlock shifter-left template-{{ template | handleize }} js-slideout-toggle-wrapper js-modal-toggle-wrapper {% render 'body-classes' %}">
+  <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MHWRWK"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-  
-  
-  {% include 'mm-schema' %}
+  <div class="js-slideout-overlay site-overlay"></div>
+  <div class="js-modal-overlay site-overlay"></div>
 
-  {% if settings.ajax_cart_method == 'drawer' %}
-    {% include 'timber-cart' %}
-  {% endif %}
+  <aside class="slideout slideout__drawer-left" data-wau-slideout="mobile-navigation" id="slideout-mobile-navigation">
+    {% section 'mobile-navigation' %}
+  </aside>
 
-  <div class="shifter-page {% if settings.ajax_cart_method == 'drawer' %} is-moved-by-drawer{% endif %}" id="PageContainer">
+  <div class="site-wrap">
 
     {% section 'header' %}
     <div class="page-wrap">
     {% if settings.scrolling_bar_position == 'header' %}
       {% section 'scrolling-announcements' %}
     {% endif %}
+    <main class="content-wrapper" role="main">
 
       {% if template == 'index' or template contains 'blog' or template contains 'collection' or template contains 'page' or template contains 'product' %}
         {{ content_for_layout }}
       {% else %}
         <div id="content" class="row">
-          {% include 'breadcrumb' %}
+          {% render 'breadcrumb' %}
           {{ content_for_layout }}
         </div>
       {% endif %}
+    </main>
     </div>
 
     {% unless template == 'index' %}
@@ -143,106 +122,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       {% section 'scrolling-announcements' %}
     {% endif %}
 
-    {% include 'popup' %}
   </div>
-  {% section 'mobile-navigation' %}
+
+  {%- if settings.cart_type == 'drawer' -%}
+  <aside class="slideout slideout__drawer-right mini-cart" data-wau-slideout="ajax-cart" id="slideout-ajax-cart">
+    {% render 'cart-mini' %}
+  </aside>
+  {% elsif settings.cart_type == 'modal_cart' %}
+  <div class="modal__container" data-wau-modal="ajax-cart" id="modal-ajax-cart">
+    <div class="modal__inner-wrapper">
+      {% render 'cart-mini' %}
+    </div>
+  </div>
+  {%- endif -%}
+  {%- if settings.quickview -%}
+  <div class="modal__container" data-wau-modal="quickview" id="modal-quickview-cart">
+    <div class="modal__inner-wrapper">
+      {%- render 'product-quickview' -%}
+    </div>
+  </div>
+{%- endif -%}
+
+  <script src="{{ 'eventemitter3.min.js' | asset_url }}"></script>
+  <script src="{{ 'theme.min.js' | asset_url }}"></script>
+  <script src="{{ 'option_selection.js' | shopify_asset_url }}" defer></script>
 
   <a href="#" class="scrollup"><i class="la la-chevron-up" aria-hidden="true"></i> TOP</a>
-
-  <div class="fancybox-wrapper"></div>
+  {% section 'popup' %}
   <div class="clear"></div>
 
-  <script>window.performance.mark(window.markNames.bodyLayout.end);</script>
-  <script>window.performance.mark(window.markNames.bodyEndScripts.start);</script>
-
-  {%- render 'bold-pr' -%}
-  {%- render 'bold-common' -%}
-
-  <!-- JS
-  ================================================== -->
-
-  {{ "//ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js" | script_tag }}
-  {{ "//unpkg.com/eventemitter3@latest/umd/eventemitter3.min.js" | script_tag }}
-
-  {{ 'theme.js' | asset_url | script_tag }}
-  {{ 'option_selection.js' | shopify_asset_url | script_tag }}
-
-
-  <!-- Begin Recently Viewed Products -->
-  <script type="text/javascript" charset="utf-8">
-    //<![CDATA[
-    // Including api.jquery.js conditionnally.
-    if (typeof Shopify.resizeImage === 'undefined') {
-      document.write({{ "api.jquery.js" | shopify_asset_url | script_tag | json }});
-    }
-    //]]>
-  </script>
-
-  {{ '//ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js' | script_tag }}
-  {{ 'jquery.products.min.js' | asset_url | script_tag }}
-
-  <!-- Facebook Widget -->
-  <div id="fb-root"></div>
-  <script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=127142210767229";
-  fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
-
-  <!-- Ajax Cart -->
-  {{ 'handlebars.min.js' | asset_url | script_tag }}
-  {% include 'ajax-cart-template' %}
-
-  {% if settings.ajax_cart_method == 'drawer' %}
-    {{ 'ajax-cart.js' | asset_url | script_tag }}
-    <script>
-      jQuery(function($) {
-        ajaxCart.init({
-          formSelector: '[data-product-form]',
-          cartContainer: '#CartContainer',
-          addToCartSelector: '#AddToCart',
-          cartCountSelector: '.CartCount',
-          cartCostSelector: '.CartCost',
-          moneyFormat: {{ shop.money_format | json }}
-        });
-        });
-        {% if settings.ajax_cart_method == 'drawer' %}
-        jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
-          // Bind to 'ajaxCart.afterCartLoad' to run any javascript after the cart has loaded in the DOM
-          timber.RightDrawer.open();
-        });
-        {% endif %}
-        {% if settings.show_multiple_currencies %}
-        jQuery('body').on('ajaxCart.afterCartLoad', function(evt, cart) {
-          // Convert currency when ajaxcart opens
-          Currency.convertAll(shopCurrency, Currency.currentCurrency);
-        });
-        {% endif %}
-    </script>
-  {% else %}
-    {% include 'ajaxify-cart' %}
-  {% endif %}
-
-  <!-- No JS -->
   <script>
-    function loadJS(u) {
-        var r = document.getElementsByTagName("script")[0],
-            s = document.createElement("script");
-        s.src = u;
-        r.parentNode.insertBefore(s, r);
-    }
-  </script>
-  <script>
-      document.documentElement.className =
-         document.documentElement.className.replace("no-js","js");
+    window.lazySizesConfig = window.lazySizesConfig || {};
+    window.lazySizesConfig.minSize = 360;
   </script>
 
-  <!-- Responsive Images -->
-  {{ 'ls.rias.min.js' | asset_url | script_tag }}
-  {{ 'ls.bgset.min.js' | asset_url | script_tag }}
-  {{ 'lazysizes.min.js' | asset_url | script_tag }}
+  <script src="{{ 'shopify_common.js' | shopify_asset_url }}" defer="defer"></script>
+
+  {%- if request.page_type contains 'customers/' -%}
+    <script src="{{ 'customer_area.js' | shopify_asset_url }}" defer="defer"></script>
+  {%- endif -%}
 
   <script>
     if (!window.HTMLPictureElement) {
@@ -250,50 +168,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
   </script>
 
-  <!-- JS Variable Helpers -->
   <script>
-      var template = {{ template | json }};
+      document.documentElement.className =
+         document.documentElement.className.replace("no-js","js");
   </script>
 
-  <!-- Fancybox JS -->
-  {{ 'jquery.fancybox.js' | asset_url | script_tag }}
+  <!-- Root element of PhotoSwipe. Must have class pswp. -->
+  <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe.
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides.
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+          <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+          </button>
+          <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+          </button>
+          <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+        </div>
+    </div>
+  </div>
 
+
+  <script>
+    if (typeof AOS != 'undefined') {
+      AOS.init();
+    }
+ </script>
 {% render 'spurit_po2_theme_snippet' %}
-{% include 'mw_GP_objects' %} 
+  
+  <script> (function(){ var s = document.createElement('script'); var h = document.querySelector('head') || document.body; s.src = 'https://acsbapp.com/apps/app/dist/js/app.js'; s.async = true; s.onload = function(){ acsbJS.init({ statementLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, disableBgProcess : false, language : 'en', position : 'right', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'people', triggerSize : 'bottom', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 20, triggerOffsetY : 20, triggerRadius : '20' } }); }; h.appendChild(s); })();</script>
 
-{% render 'afterpay' %}
+{% include 'swymSnippet' %}
 
-{% include 'mm-sale-countdown' %}
-
-<script>(function(document, tag) { var script = document.createElement(tag); var element = document.getElementsByTagName('body')[0]; script.src = 'https://acsbap.com/apps/app/assets/js/acsb.js'; script.async = true; script.defer = true; (typeof element === 'undefined' ? document.getElementsByTagName('html')[0] : element).appendChild(script); script.onload = function() { acsbJS.init({ statementLink : '', feedbackLink : '', footerHtml : '', hideMobile : false, hideTrigger : false, language : 'en', position : 'right', leadColor : '#146FF8', triggerColor : '#146FF8', triggerRadius : '50%', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerIcon : 'default', triggerSize : 'medium', triggerOffsetX : 20, triggerOffsetY : 20, mobile : { triggerSize : 'small', triggerPositionX : 'right', triggerPositionY : 'bottom', triggerOffsetX : 0, triggerOffsetY : 0, triggerRadius : '0' } }); };}(document, 'script'));</script>
-<script>
-  window.addEventListener("load", function(){
-    Object.keys(window.markNames).forEach((name) => {
-      mark = window.markNames[name]
-      performance.measure(mark.name, mark.start, mark.end);
-    });
-    window.requestIdleCallback(() => {
-      var getShopifyResourceByType = (type) => {
-        return performance.getEntriesByType('resource').filter((resource) => {
-          return resource.name.indexOf('cdn.shopify.com') != -1 
-                  && resource.initiatorType === type;
-        })
-      };
-
-      // You can send this information to whatever analytics vendor
-      // For now, we are just outputting in console
-      console.log('############ PERFORMANCE METRICS ############');
-      console.log(performance.getEntriesByType('measure'));
-      console.log(performance.getEntriesByType('paint'));
-      console.log(performance.getEntriesByType('navigation'));
-      console.log(getShopifyResourceByType('script'));
-      console.log(getShopifyResourceByType('link'));
-      console.log(getShopifyResourceByType('css'));
-      console.log(getShopifyResourceByType('img'));
-    });
-  });
-  window.performance.mark(window.markNames.bodyEndScripts.end);
-  window.performance.mark(window.markNames.body.end);
-</script>
 </body>
 </html>
